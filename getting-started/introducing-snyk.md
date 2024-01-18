@@ -6,7 +6,7 @@
 Snyk is a platform that allows you to scan, prioritize, and fix security vulnerabilities in your code, open-source dependencies, container images, and infrastructure as code configurations.
 {% endhint %}
 
-## The Snyk developer-first approach
+## The Snyk developer-first approach!
 
 Snyk provides visibility in a developer’s workflow and actionable insights. The benefit is engaging developers in security practices as part of their development work. Thus, the focus is on building a secure application rather than overhead-intensive work, such as putting in hard QA gates.
 

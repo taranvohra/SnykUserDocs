@@ -12,7 +12,7 @@ You can have an integration connected or paused. Click play or pause to enable o
 
 ## Add a new profile for an integration
 
-Each integration can be configured to run on more than one profile. This is helpful when you want to retrieve data from multiple instances within the same source.
+Each integration can be configured to run on more than one profile. This is helpful when you want to retrieve data from multiple instances within the same source.&#x20;
 
 You can add a new profile by following these steps:
 

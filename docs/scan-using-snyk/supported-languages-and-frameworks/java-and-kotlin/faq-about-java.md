@@ -92,17 +92,17 @@ The following explains how Snyk analyzes and treats each of the previous example
 * Project POM - Snyk creates a Project with a single dependency of `log4j,` with `v1.2.12.` Snyk applies the rules from the parent BOM to identify the correct version for `log4j`. The dependency `commons-logging` is not included, as it is not directly declared in the Project POM.
 
 {% hint style="info" %}
-If a BOM has direct dependencies outside`dependencyManagement`, then Snyk creates a Project for that BOM.
+If a BOM has direct dependencies outside`dependencyManagement`, then Snyk creates a Project for that BOM.&#x20;
 {% endhint %}
 
 ### Fix PRs
 
-Snyk offers fix advice, including recommendations for upgrading vulnerable packages with the Fix PR feature.
+Snyk offers fix advice, including recommendations for upgrading vulnerable packages with the Fix PR feature.&#x20;
 
 Fix PRs can only be created for dependencies whose versions are managed in the POM file where the issue is reported.
 
-If the version or dependency is managed in a parent BOM, then even though Snyk sees that it could fix the vulnerable path by changing the version, it cannot apply the fix.
+If the version or dependency is managed in a parent BOM, then even though Snyk sees that it could fix the vulnerable path by changing the version,  it cannot apply the fix.
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

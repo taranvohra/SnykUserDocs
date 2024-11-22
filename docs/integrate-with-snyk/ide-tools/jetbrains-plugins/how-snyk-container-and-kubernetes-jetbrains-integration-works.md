@@ -11,4 +11,4 @@ For each image found, perform a test with the Snyk CLI.
 
 * Refer to the [doc for testing a container image](https://docs.snyk.io/products/snyk-container/snyk-cli-for-container-security#testing-an-image) for more information about how Snyk Container performs a test on the image.
 * While testing the image the CLI downloads the image if it is not already available locally in your Docker daemon.
-* Snyk plans to expand the scope of container scanning, so if there are more files, such as Dockerfiles or workflows that you want to be supported, submit a feature request [to Snyk support](https://support.snyk.io/hc/en-us/requests/new).
+* Snyk plans to expand the scope of container scanning, so if there are more files, such as  Dockerfiles or workflows that you want to be supported, submit a feature request [to Snyk support](https://support.snyk.io/hc/en-us/requests/new).

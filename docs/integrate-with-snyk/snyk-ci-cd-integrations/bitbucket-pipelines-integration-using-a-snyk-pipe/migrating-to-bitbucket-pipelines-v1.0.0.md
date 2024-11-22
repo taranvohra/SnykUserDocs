@@ -89,4 +89,4 @@ Where the supported language/framework has reached EOL, it is **highly recommend
 | [snyk/snyk-cli:1.1228.0-gradle-5.4](https://hub.docker.com/layers/snyk/snyk-cli/1.1228.0-gradle-5.4/images/sha256-2bc490a3b49398117282f39d0619213c9e7ba4b20dc8ed695bb121201dab7b38?context=explore)                 | _no direct equivalent\*_                                                                                                                                          |
 | [snyk/snyk-cli:1.1228.0-gradle-5.4\_java11](https://hub.docker.com/layers/snyk/snyk-cli/1.1228.0-gradle-5.4\_java11/images/sha256-9a05884de9da4de8b7098039bb28d634e3ca6ae0f3e47d4c5df43ff697e48c20?context=explore) | _no direct equivalent\*_                                                                                                                                          |
 
-_\* There are a_ [_selection_](https://hub.docker.com/r/snyk/snyk/tags?page=1\&name=gradle) _of gradle Snyk Images which may suit your needs_
+&#x20;_\* There are a_ [_selection_](https://hub.docker.com/r/snyk/snyk/tags?page=1\&name=gradle) _of gradle Snyk Images which may suit your needs_

@@ -5,7 +5,7 @@
 Enterprise plans have pre-defined Snyk roles: administrators, viewers, and collaborators, as well as custom roles. Roles are defined by permissions. Manging permissions is available on Snyk Enterprise plans. See [Plans and pricing](https://snyk.io/plans/) for details.
 {% endhint %}
 
-To change the permissions of a user, you must change the role of that user.
+To change the permissions of a user,  you must change the role of that user.
 
 ## Prerequisites for changing the role of a user
 
@@ -27,3 +27,4 @@ Alternatively, use the [Manage member's roles in the organization API v1 calls](
 {% hint style="info" %}
 If the user is not already a part of your Group, you must first add that user as a member of at least one Organization; see [Add members on the Manage users in Organizations page](../manage-users-in-organizations-and-groups/manage-users-in-organizations.md#add-members). The user then appears on the **Group > Members** page with the role **Group Member**, allowing you to change the role to Group Admin or Group Viewer.
 {% endhint %}
+

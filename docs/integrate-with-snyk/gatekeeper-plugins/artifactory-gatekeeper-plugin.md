@@ -45,7 +45,7 @@ Snyk calls [`https://snyk.io/api/v1/test`](https://snyk.io/api/v1/test) for the 
 ## Installation of the Artifactory Plugin
 
 1. Log in to your Snyk account.
-2. Select **Settings** > **General** to locate, copy, and save the following:
+2. Select **Settings**  > **General** to locate, copy, and save the following:
    1. Service account token or Organization API token
    2. The Organization ID for any one of your organizations
 3. Navigate to [the Snyk Artifactory plugin repo in GitHub](https://github.com/snyk/artifactory-snyk-security-plugin) and then to the **Releases**.

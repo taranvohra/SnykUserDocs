@@ -16,11 +16,13 @@ To ignore an issue via the Snyk Web UI:
 
 1. Navigate to your Organization's Cloud tab.
 2. Select the issue you want to ignore.
-3.  Select the **Ignore** button.\\
+3.  Select the **Ignore** button.\
+
 
     <figure><img src="../../../../.gitbook/assets/snyk-cloud-ignore-button.png" alt="The Ignore button in a cloud issue in the Snyk Web UI"><figcaption><p>The Ignore button in a coud issue in the Snyk Web UI</p></figcaption></figure>
 4. Add a comment about why this issue is ignored.
-5.  From the **Ignore for** drop-down menu, set how long the issue should be ignored. You can permanently ignore an issue by selecting **Does not expire**, or you can ignore the issue for 14, 30, 60, or 90 days, or a custom time period.\\
+5.  From the **Ignore for** drop-down menu, set how long the issue should be ignored. You can permanently ignore an issue by selecting **Does not expire**, or you can ignore the issue for 14, 30, 60, or 90 days, or a custom time period.\
+
 
     <figure><img src="../../../../.gitbook/assets/snyk-cloud-ignore-settings.png" alt="Setting ignore details for a cloud issue in the Snyk Web UI"><figcaption><p>Setting ignore details for a cloud issue in the Snyk Web UI</p></figcaption></figure>
 6. Select **Confirm**.\

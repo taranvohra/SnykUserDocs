@@ -43,7 +43,7 @@ Each of the Kubernetes nodes will require at least the following **free** resour
 * 14 Core CPU
 * 50GB Ephemeral Storage
 
-The size of the minimum node will depend on what your environment requires, but these are the minimum free resources required.
+The size of the minimum node will depend on what your environment requires, but these are the minimum free resources required.&#x20;
 
 The total required resources for each flavour of the Snyk Code Local Engine are identified in the following list. Actual memory and storage consumption depend on the usage and the size of repositories scanned. The minimum total required resources can then be divided into multiple nodes.
 
@@ -60,3 +60,4 @@ After your CSM has configured the URL for your Organization, you can view it fro
 ## Configure and deploy the Local Engine
 
 The instructions to configure and deploy the Local Engine in your environment are in the Readme file in the Local Engine installation package. For more information and assistance, contact your Snyk account team.
+

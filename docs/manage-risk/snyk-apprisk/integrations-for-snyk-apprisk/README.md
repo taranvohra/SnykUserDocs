@@ -9,7 +9,7 @@ The following supported Snyk data are automatically synced:
 * Snyk Open Source
 * Snyk Code
 * Snyk IaC
-* Snyk Container
+* Snyk Container&#x20;
 
 Each connected integration enables you to:
 
@@ -65,3 +65,4 @@ Enable the Snyk AppRisk flag in your Snyk Broker deployment environment before r
   * [environment variables](../../../enterprise-setup/snyk-broker/install-and-configure-snyk-broker/azure-repos-install-and-configure-broker/azure-repos-environment-variables-for-snyk-broker.md)
 
 You can find on [GitHub](https://github.com/snyk/broker/tree/565242baf003f06f445489dd96cc68c8386ede38/defaultFilters/apprisk) all the updated `.json` files that include the allowed list of accessible endpoints for the integrations.
+

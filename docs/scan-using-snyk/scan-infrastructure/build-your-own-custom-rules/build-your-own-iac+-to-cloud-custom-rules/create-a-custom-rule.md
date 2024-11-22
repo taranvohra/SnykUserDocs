@@ -1,6 +1,6 @@
 # Create a Custom Rule
 
-With the Snyk CLI, you can create a template for a Custom Rule, which includes a file titled `main.rego`. Using Rego, you can populate the rule that can then be consistently applied across the Snyk Platform. When the rule is finished, it can look like this example rule for enforcing a password policy:
+With the Snyk CLI, you can create a template for a Custom Rule, which includes a file titled `main.rego`. Using Rego, you can populate the rule that can then be consistently applied across the Snyk Platform. When the rule is finished, it can look like this example rule for enforcing a password policy:&#x20;
 
 {% code title="rules/NEW_PASSWORD_POLICY/main_test.rego" %}
 ```

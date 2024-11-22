@@ -4,7 +4,7 @@ These pages explain how you can try a few scans to see the results.
 
 Snyk has a number of tools and processes that help secure your entire software development lifecycle. With Snyk, you can validate your code while you are coding. You can also monitor code when you are not working on it. Snyk also provides visibility into issues across your Projects with a Git repository integration and can work with your CI/CD through integrations, the CLI, or curated containers. It is common practice to integrate Snyk into several points of your development process for enabling your developers, for visibility, and for gating your applications.
 
-If this is your first time performing a scan, or you are interested in the results for a single application while you are working on it, scanning in your local environment is a great place to start, and that is covered in this guide.
+If this is your first time performing a scan, or you are interested in the results for a single application while you are working on it, scanning in your local environment is a great place to start, and that is covered in this guide.&#x20;
 
 If you have a set of applications you are responsible for, as an individual or a team, Snyk recommends configuring the Git repository integration to start getting visibility for the issues in your repositories in a few clicks.
 
@@ -74,6 +74,6 @@ A scan with [**Snyk iac test**](../snyk-cli/scan-and-maintain-projects-using-the
 
 ## What’s next?
 
-* When you are ready to start scanning more applications, see [Preparing for Implementation: Free and Team plans](preparing-for-implementation-free-and-team-plans.md).
+* When you are ready to start scanning more applications, see [Preparing for Implementation:  Free and Team plans](preparing-for-implementation-free-and-team-plans.md).
 * To get specific recommendations for your tech stack, see the pages specific to your language.
 * If you decide you want to expand the use of Snyk throughout your business and involve more teams in Snyk, read the [Enterprise implementation guide](../enterprise-setup/enterprise-implementation-guide/).

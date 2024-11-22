@@ -26,7 +26,7 @@ Priority Scores are visible for each Issue card, with all issues sorted by score
 
 You can filter issues by Priority Score range in the left sidebar.
 
-<figure><img src="../../.gitbook/assets/screen_shot_2021-07-14_at_1.41.24_pm.png" alt="Filter issues"><figcaption><p>Filter issues</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screen_shot_2021-07-14_at_1.41.24_pm.png" alt="Filter issues"><figcaption><p>Filter issues </p></figcaption></figure>
 
 ## View Priority Score in Reports
 

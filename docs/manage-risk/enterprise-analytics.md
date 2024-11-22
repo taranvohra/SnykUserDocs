@@ -15,7 +15,7 @@ Data is refreshed in Enterprise Analytics daily approximately between 13:00 and 
 
 Enterprise Analytics provides executives as well as Application Security (AppSec) leaders and practitioners a view into the performance of their AppSec program. Snyk customers can understand at a glance the strengths and weaknesses of their program, identify where successful practices can be discerned, and uncover the largest opportunities for improvement that warrant investment.
 
-The following is an example of the Enterprise Analytics dashboard showing AppSec performance for your Groups and Organizations.
+The following is an example of the Enterprise Analytics dashboard showing AppSec performance for your Groups and Organizations.&#x20;
 
 <figure><img src="https://lh3.googleusercontent.com/7ZCFLTUzQ0r--P354i0p14zVLdE7YjhjvkgODlCfbUho8UMtDUh-EqdFzXmLV8PrvPLIbvE1bDE-qfl1ccYRkNqRksLDhXKr7nvldehocZ89Xa8YQ99nnqt8SmJ-lLTkGO_U05Rl_yrLvXVlOUpmpKg" alt="AppSec performance display"><figcaption><p>AppSec performance dashboard</p></figcaption></figure>
 
@@ -97,10 +97,12 @@ Enterprise Analytics takes an opinionated approach, focusing teams on a relative
 
 Metrics are organized within the pillars of the AppSec performance framework. It is critical to understand both the current state of metrics and the trend so you can identify anomalies or patterns that contradict expectations.
 
-Enterprise Analytics is designed to make a top-level metric and its associated trend for each pillar visible at all times to support a quick understanding of the state of the program. You can navigate to a more granular view of each tab as needed. Different pillars and metrics on these views may be more or less relevant at different times to different companies, business units, products, teams, and any other participants.
+Enterprise Analytics is designed to make a top-level metric and its associated trend for each pillar visible at all times to support a quick understanding of the state of the program. You can navigate to a more granular view of each tab as needed. Different pillars and metrics on these views may be more or less relevant at different times to different companies, business units, products, teams, and any other participants.&#x20;
 
 Use the tooltips throughout the pages of the Enterprise Analytics application for explanations of metrics and terms.
 
 You can filter Enterprise Analytics on Groups or Organizations manually as needed.
 
-\\
+
+
+\

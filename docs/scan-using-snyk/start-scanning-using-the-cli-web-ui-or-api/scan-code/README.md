@@ -14,3 +14,4 @@ Before scanning your code with Snyk Code, ensure you:
 * Have completed the [quickstart](../../../getting-started/quickstart/) steps.
 * Your repositories contain code in a supported language and platform. See [Introduction to Snyk-supported languages and frameworks](../../supported-languages-and-frameworks/introduction-to-snyk-supported-languages-and-frameworks.md).
 * [Activate Snyk Code using the Web UI](activate-snyk-code-using-the-web-ui.md).
+

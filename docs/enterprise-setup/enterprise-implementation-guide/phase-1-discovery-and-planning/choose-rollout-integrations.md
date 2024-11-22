@@ -2,7 +2,7 @@
 
 ## **SDLC integration points**
 
-Snyk offers many integrations to work seamlessly with Snyk in every stage of the SDLC.
+Snyk offers many integrations to work seamlessly with Snyk in every stage of the SDLC.&#x20;
 
 Many businesses roll out automated solutions first, and then slowly introduce tools to enable the developers. In addition, gating features are gradually turned on over a period of time, to minimize disruption.
 
@@ -35,14 +35,14 @@ See [Git repositories (SCMs)](../../../integrate-with-snyk/git-repositories-scms
 If you have an on-premise Git repository, you must consider deploying [Snyk Broker](https://docs.snyk.io/snyk-admin/snyk-broker) for Snyk to communicate with your repositories.
 
 {% hint style="info" %}
-Enterprise customers can enable and manage [Snyk Broker](https://docs.snyk.io/enterprise-setup/snyk-broker) via API.
+Enterprise customers can enable and manage [Snyk Broker](https://docs.snyk.io/enterprise-setup/snyk-broker) via API.&#x20;
 
 [Paid services](../../../more-info/snyk-terms-of-support-and-services-glossary.md) can be engaged to assist in Snyk Broker deployments.
 {% endhint %}
 
 ### Continuous Integration/Continuous Deployment (CI/CD) pipeline integrations
 
-Integrating Snyk into CI/CD pipelines, such as Jenkins, Travis CI, or CircleCI, automates security checks during the build and deployment process. This ensures that vulnerabilities are detected early in the software development lifecycle and prevents their propagation into production. Typical features include
+Integrating Snyk into CI/CD pipelines, such as Jenkins, Travis CI, or CircleCI, automates security checks during the build and deployment process. This ensures that vulnerabilities are detected early in the software development lifecycle and prevents their propagation into production. Typical features include:
 
 * (Optional) Ability to passively monitor results during build and view results in Snyk
 * (Optional) Ability to test and potentially break the build if results are found based on criteria you specified
@@ -50,20 +50,20 @@ Integrating Snyk into CI/CD pipelines, such as Jenkins, Travis CI, or CircleCI, 
 The advantages of CI/CD integrations are:
 
 * Assess local code vulnerabilities
-* Full control over testing: which tests to run and where in the builld script
+* Full control over testing: which tests to run and where in the build script
 * Automation by CI/CD if desired
 
 See [Snyk CI/CD integrations](../../../integrate-with-snyk/snyk-ci-cd-integrations/) for more details.
 
 ### IDE Integrations
 
-Integrated Development Environment (IDE) integrations like Visual Studio Code, IntelliJ IDEA, and Eclipse allow developers to access Snyk security features directly within their coding environment. This enables real-time scanning and issue remediation as developers write code.
+Integrated Development Environment (IDE) integrations like Visual Studio Code, IntelliJ IDEA, and Eclipse allow developers to access Snyk security features directly within their coding environment. This enables real-time scanning and issue remediation as developers write code.&#x20;
 
 See [Use Snyk in your IDE](../../../integrate-with-snyk/ide-tools/) for more details.
 
-## Considerations for import strategies
+## Considerations for import strategies&#x20;
 
-<table><thead><tr><th width="200">Project Import Strategy</th><th>Considerations</th><th>Advantages</th><th>Disadvantages</th></tr></thead><tbody><tr><td>CLI (automated with CI/CD)</td><td>Has to be configured for each application within CI/CD</td><td><ul><li>Can select what to test and when: which package managers, where in the process, which language to analyze</li><li>May need development effort for integration</li></ul></td><td>Requires configuration per application.</td></tr><tr><td>CLI (run locally by user)</td><td>Can be used to perform testing locally while the developer is working on an application, very configurable per scan type.</td><td>Local use case</td><td>Not meant for visibility or automation. Can require buildable code or dependencies to be installed, for example, Gradle without lockfile, Scala</td></tr><tr><td>API</td><td><ul><li>Typically for advanced use cases.</li><li>Integration into CI/CD workflows or custom tooling.</li></ul></td><td>Automated integration into CI/CD pipelines</td><td>Requires API familiarity, access through the Enterprise plan.</td></tr><tr><td>Git Code Repository Integration</td><td>Used for onboarding and daily monitoring: rapid vulnerability assessment across application portfolio</td><td><ul><li>Continuous monitoring of repositories, even when you are not working on it</li><li>Centralized visibility for teams</li><li>Monitors specified branch</li><li>Code does not need to be built</li></ul></td><td><ul><li>Can be initiated theough the UI, however larger portfolios should use API to initiate onboarding of repositories with the <a href="https://docs.snyk.io/snyk-api/other-tools/tool-snyk-api-import">Api Import Tool</a></li><li>Some languages/package managers have better resolution through use of the CLI: Gradle without lockfile, Scala</li></ul></td></tr><tr><td></td><td><ul><li>Pull request (PR)/merge request (MR) scanning</li></ul></td><td><ul><li>Immediate feedback on introduced issues on the PR/MR against any branch on repository</li></ul></td><td>Configurable rules for pass/fail</td></tr></tbody></table>
+<table><thead><tr><th width="200">Project Import Strategy</th><th>Considerations</th><th>Advantages</th><th>Disadvantages</th></tr></thead><tbody><tr><td>CLI (automated with CI/CD)</td><td>Has to be configured for each application within CI/CD</td><td><ul><li>Can select what to test and when: which package managers, where in the process, which language to analyze</li><li>May need development effort for integration</li></ul></td><td>Requires configuration per application.</td></tr><tr><td>CLI (run locally by user)</td><td>Can be used to perform testing locally while the developer is working on an application, very configurable per scan type.</td><td>Local use case</td><td>Not meant for visibility or automation. Can require buildable code or dependencies to be installed, for example, Gradle without lockfile, Scala</td></tr><tr><td>API</td><td><ul><li>Typically for advanced use cases.</li><li>Integration into CI/CD workflows or custom tooling. </li></ul></td><td>Automated integration into CI/CD pipelines</td><td>Requires API familiarity, access through the  Enterprise plan.</td></tr><tr><td>Git Code Repository Integration</td><td>Used for onboarding and daily monitoring: rapid vulnerability assessment across application portfolio</td><td><p></p><ul><li>Continuous monitoring of repositories, even when you are not working on it</li><li>Centralized visibility for teams</li><li>Monitors specified branch</li><li>Code does not need to be built</li></ul></td><td><ul><li>Can be initiated theough the UI, however larger portfolios should use API to initiate onboarding of repositories with the <a href="https://docs.snyk.io/snyk-api/other-tools/tool-snyk-api-import">Api Import Tool</a></li><li>Some languages/package managers have better resolution through use of  the CLI: Gradle without lockfile, Scala</li></ul></td></tr><tr><td></td><td><ul><li>Pull request (PR)/merge request (MR)  scanning</li></ul></td><td><ul><li>Immediate feedback on introduced issues on the PR/MR against any branch on repository</li></ul></td><td>Configurable rules for pass/fail</td></tr></tbody></table>
 
 ## Additional considerations for integrations
 

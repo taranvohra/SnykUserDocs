@@ -22,7 +22,7 @@ Later, Projects in the same Group as the Organization (in this example, the plat
 
 The current logic of the feature is that for the same image repository (same repo and name), Snyk recommends the newest image based on the semantic versioning of the image tag. If Snyk is unable to find a [standard semantic versioning schema](https://semver.org/) in the tag, the recommendation is the last image that was marked as a custom base image based on the timestamp of marking.
 
-To receive custom base image recommendations, you must specify a Dockerfile in the Project.
+To receive custom base image recommendations, you must specify a Dockerfile in the Project.&#x20;
 
 All custom base image recommendations are considered minor upgrades, regardless of the image tag.
 
@@ -52,13 +52,13 @@ The team that is responsible for creating and maintaining custom base images for
 
     1.  On the Project page, navigate to **Settings**.
 
-        <figure><img src="../../../../.gitbook/assets/settings_project_page.png" alt="Settings tab on the Project page"><figcaption><p>Settings tab on the Project page</p></figcaption></figure>
+        <figure><img src="../../../../.gitbook/assets/settings_project_page.png" alt="Settings tab on the Project page"><figcaption><p> Settings tab on the Project page</p></figcaption></figure>
     2. On the **Settings** page, under **Custom Base Image Recommendation**, select **Treat as custom base image**.
     3. Click **Update image status**.
 
-    Alternatively, you can use the [Snyk API](https://apidocs.snyk.io/?version=2023-08-31%7Ebeta#get-/custom\_base\_images) to mark an image as a custom base image.
+    Alternatively, you can use the [Snyk API](https://apidocs.snyk.io/?version=2023-08-31%7Ebeta#get-/custom\_base\_images) to mark an image as a custom base image.&#x20;
 5. Mark whether the image should be eligible for recommendations.
-   1. On the **Settings** page, under **Custom Base Image Recommendation,** check the **Use in recommendations** checkbox.
+   1. On the **Settings** page, under **Custom Base Image Recommendation,** check the  **Use in recommendations** checkbox.
    2. Click **Update image status**.
 6. Test the feature and get recommendations by going through the previous steps for at least two different images from the same repository.
 

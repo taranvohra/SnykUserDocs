@@ -15,7 +15,7 @@ You can set the following configuration options in the Snyk preferences.
 * `Additional Parameters`: Specify additional parameters to pass to the CLI , for example, `--all-projects` or `--debug.` For all .NET Projects, Snyk recommends adding the `--all-projects` additional parameter.
 * `Additional Environment`: Add environment variables to Language Server; multiple variable can be separated by `;`. Example: `JAVA_HOME=/usr/local/bin;GOPATH=/usr/local/bin`
 * `Update and install Snyk binaries automatically`: If `disabled`, no updates are downloaded, and updates must be performed manually. Snyk recommends always using the most recent version of the CLI. Ensure that the location for the CLI points to an existent, current binary.
-* `Base URL for CLI download:` Specify an alternative download host for the CLI, for example, `https://static.snyk.io/fips`. This must provide the CLI and necessary files as the default `https://static.snyk.io` does, that is, the following files. See also GitHub[ releases](https://github.com/snyk/cli/releases).
+* `Base URL for CLI download:` Specify an alternative download host for the CLI, for example,  `https://static.snyk.io/fips`. This must provide the CLI and necessary files as the default `https://static.snyk.io` does, that is, the following files. See also  GitHub[ releases](https://github.com/snyk/cli/releases).
   * %Base URL%/cli/v%VERSION%/%CLI-BINARY-NAME%
   * %Base URL%/cli/v%VERSION%/%CLI-BINARY-NAME%.sha256
   * %Base URL%/cli/v%VERSION%/sha256sums.txt.asc
@@ -29,6 +29,6 @@ You can set the following configuration options in the Snyk preferences.
 * `Snyk CLI`: Specify the location of the Snyk CLI.
 * `Send error reports to Snyk`: Send errors from Language Server to Snyk to enable quick bug fixing. Default: `Enabled`.
 * `Send usage statistics to Snyk`: Allow Snyk to get usage data to improve workflows. Default: `Enabled`.
-* `Trusted Folders`: specify, which directories should be considered safe, e.g. the parent directory of all your projects.
+* `Trusted Folders`:  specify, which directories should be considered safe, e.g. the parent directory of all your projects.
 
 ###

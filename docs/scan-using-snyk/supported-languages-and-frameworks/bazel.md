@@ -14,7 +14,7 @@ The Snyk API is available with Enterprise plans. See [pricing plans](https://sny
 The Dep Graph API requires additional permissions. [Contact Snyk Support](https://support.snyk.io/hc/en-us/requests/new) to request access.
 {% endhint %}
 
-## Getting started with Snyk for Bazel
+## Getting started with Snyk for Bazel&#x20;
 
 Bazel is defined on [bazel.build](https://docs.bazel.build/versions/master/bazel-overview.html) as follows:
 
@@ -272,4 +272,4 @@ This particular package (`ch.qos.logback:logback-core@1.0.13`) contains a vulner
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

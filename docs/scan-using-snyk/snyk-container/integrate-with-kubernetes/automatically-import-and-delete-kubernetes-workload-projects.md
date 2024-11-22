@@ -136,3 +136,4 @@ helm upgrade --install snyk-monitor snyk-charts/snyk-monitor \
 ```
 
 Now, you can deploy the Snyk Controller, or restart it if it is already running, in order for it to pick up the policy. New workloads are now visible in Snyk.
+

@@ -6,9 +6,9 @@ See [Policies](../../../scan-using-snyk/policies/) for more details.
 
 ## Security policies
 
-Group administrators can define security policies, thus providing an automated way to identify certain issues or types of issues, and apply actions like changing the severity or ignoring the issue based on your conditions.
+Group administrators can define security policies, thus providing an automated way to identify certain issues or types of issues, and apply actions like changing the severity or ignoring the issue based on your conditions.&#x20;
 
-* Configure policies to increase priority or decrease it as needed.
+* Configure policies to increase priority or decrease it as needed.&#x20;
 * Create ignores where needed
 
 See [Security policies](../../../scan-using-snyk/policies/security-policies/) for more details.
@@ -25,3 +25,10 @@ By default, Snyk determines the severity of licenses in the following way:
 Configure policies to match your requirements.
 
 See [Snyk License Compliance Management](../../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/snyk-license-compliance-management.md) for more details.
+
+
+
+
+
+
+

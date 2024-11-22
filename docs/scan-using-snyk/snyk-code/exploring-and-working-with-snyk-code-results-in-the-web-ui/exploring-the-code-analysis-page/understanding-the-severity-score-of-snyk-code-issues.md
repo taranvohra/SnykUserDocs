@@ -23,6 +23,8 @@ In addition, Snyk incorporates a variety of quantitative and qualitative factors
 
 If a vulnerability is detected in code, filename, or folder with the word `test`, it is deemed a low-severity vulnerability. This applies to all languages.
 
+
+
 The severity of CWEs may change depending on the environment.
 {% endhint %}
 
@@ -37,3 +39,4 @@ For CEW-22 Path Traversal, if the vulnerability occurs in a test, it is Low seve
 For CEW-2601 Open Redirect, if the vulnerability occurs in a test, it is Low severity. If not, and it comes from a direct source, it is Medium severity.
 
 <figure><img src="../../../../.gitbook/assets/image (5) (8).png" alt="Decision flow chart for Priority Score CWE-601 Oen Redirect"><figcaption><p>Decision flow chart for Priority Score CWE-601 Oen Redirect</p></figcaption></figure>
+

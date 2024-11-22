@@ -1,4 +1,4 @@
-# View IaC+ and cloud resources
+# View resources
 
 You can view all attributes for IaC+ and cloud resources in an Organization. This allows you to inventory all of your resources across cloud provider accounts or see the recorded state of any resource during the most recent scan.
 
@@ -129,7 +129,7 @@ For a list of supported parameters, see the [List resources API documentation](h
 
 ## View details for a single resource
 
-To view details for a single resource through the Snyk API, send a request in the following format.
+To view details for a single resource through the Snyk API, send a request in the following format.&#x20;
 
 ```
 curl -X GET \

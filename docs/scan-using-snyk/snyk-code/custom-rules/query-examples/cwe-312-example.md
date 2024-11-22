@@ -51,7 +51,7 @@ This matches a sensitive data flow from `ReadLine` to `WriteAllText`. Given the 
 
 ### Restricting to specific log files only
 
-The first caveat is that perhaps only `testFile.txt` is considered unsafe. Files like `cache.txt` should be considered safe.
+The first caveat is that perhaps only `testFile.txt` is considered unsafe. Files like `cache.txt` should be considered safe.&#x20;
 
 ```csharp
 // Create a warning on this one
@@ -61,7 +61,7 @@ File.WriteAllText("testFile.txt", userData);
 File.WriteAllText("cache.txt", userData);
 ```
 
-To achieve this, we use the `CallExpression` and `HasArg1` templates.
+To achieve this, we use the `CallExpression` and `HasArg1` templates.&#x20;
 
 ```ada
 Taint<
@@ -171,3 +171,4 @@ Taint<
   >
 >
 ```
+

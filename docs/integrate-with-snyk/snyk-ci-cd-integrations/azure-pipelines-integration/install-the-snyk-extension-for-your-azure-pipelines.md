@@ -24,6 +24,8 @@ To start using the Snyk task as part of your pipeline build, from the [Visual St
 
 <figure><img src="../../../.gitbook/assets/Azure-authentication-connection-setup.png" alt="New Snyk authentication service connection"><figcaption><p>New Snyk authentication service connection</p></figcaption></figure>
 
+
+
 {% hint style="info" %}
 If you are using the Snyk EU or AU data center, you must add another line above the -task lines as follows.
 

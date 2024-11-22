@@ -1,4 +1,4 @@
-# Jenkins plugin integration with Snyk
+# Jenkins Plugin
 
 Snyk offers a native plugin for Jenkins that is based on the [Snyk CLI](https://docs.snyk.io/snyk-cli/cli-reference), to test and monitor Projects for vulnerabilities in your pipelines.
 

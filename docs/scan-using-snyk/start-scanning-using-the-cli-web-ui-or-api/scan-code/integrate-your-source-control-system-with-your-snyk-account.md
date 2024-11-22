@@ -24,6 +24,10 @@ If you already have an integrated SCM, it is marked as **Configured**. If you wa
 
 2\. From the available options, select the SCM system you want to integrate by clicking **Edit settings**.
 
+{% hint style="info" %}
+
+{% endhint %}
+
 The **Source control** integrations display only SCMs that are supported by Snyk Code.
 
 <figure><img src="../../../.gitbook/assets/code_source_control_options.png" alt=""><figcaption><p>Source control options for Snyk Code</p></figcaption></figure>

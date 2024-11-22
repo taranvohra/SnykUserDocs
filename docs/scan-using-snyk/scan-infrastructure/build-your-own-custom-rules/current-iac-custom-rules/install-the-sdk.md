@@ -78,7 +78,7 @@ brew install snyk-iac-rules
 
 ## Install the SDK with the Windows Scoop package manager
 
-From Windows environments, you can use Scoop to install the `snyk-iac-rules` SDK. The repository for installation is stored in the [Snyk GitHub](https://github.com/snyk/scoop-snyk).
+From Windows environments, you can use Scoop to install the  `snyk-iac-rules` SDK. The repository for installation is stored in the [Snyk GitHub](https://github.com/snyk/scoop-snyk).
 
 ### **Prerequisites for installing the SDK with the Windows Scoop package manager**
 

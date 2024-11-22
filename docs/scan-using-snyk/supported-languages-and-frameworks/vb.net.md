@@ -6,7 +6,7 @@
 
 ## Getting started with Snyk for VB.NET across environments <a href="#getting-started-with-snyk-for-apex-across-environments" id="getting-started-with-snyk-for-apex-across-environments"></a>
 
-### Snyk CLI <a href="#snyk-cli" id="snyk-cli"></a>
+### Snyk CLI  <a href="#snyk-cli" id="snyk-cli"></a>
 
 #### **Prerequisites**
 
@@ -32,7 +32,7 @@ To customize test options, run other commands, exclude directories and files, an
 * ​[Open a Fix PR](https://app.gitbook.com/o/-M4tdxG8qotLgGZnLpFR/s/-MdwVZ6HOZriajCf5nXH/\~/diff/\~/changes/5641/scan-applications/supported-languages-and-frameworks/apex#open-a-fix-pr)
 * ​[Configure PR Checks](https://app.gitbook.com/o/-M4tdxG8qotLgGZnLpFR/s/-MdwVZ6HOZriajCf5nXH/\~/diff/\~/changes/5641/scan-applications/run-pr-checks/configure-pr-checks)​
 
-### Snyk integrations <a href="#snyk-integrations" id="snyk-integrations"></a>
+### Snyk integrations  <a href="#snyk-integrations" id="snyk-integrations"></a>
 
 :link: For integrated development environments, see [Use Snyk in your IDE](https://app.gitbook.com/o/-M4tdxG8qotLgGZnLpFR/s/-MdwVZ6HOZriajCf5nXH/\~/diff/\~/changes/5641/integrations/ide-tools).​
 

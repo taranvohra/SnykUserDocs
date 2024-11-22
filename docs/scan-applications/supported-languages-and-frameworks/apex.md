@@ -12,17 +12,17 @@ Interfile is currently not supported. The data flow is monitored within a single
 
 ## Getting started with Snyk for Apex across environments
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Prerequisites
 
 * [Create a Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md)
 * [Install Snyk CLI and authenticate your machine](../../snyk-cli/getting-started-with-the-snyk-cli.md#install-the-snyk-cli-and-authenticate-your-machine)
-* [Set the default Organization for all Snyk tests](broken-reference/) (code analysis)
+* [Set the default Organization for all Snyk tests](broken-reference) (code analysis)
 
 #### Code analysis
 
-To start testing your code using Snyk Code open your repository in a terminal and run the following command:
+To start testing your code using Snyk Code open your repository in a terminal and run the following  command:
 
 ```javascript
 snyk code test
@@ -32,15 +32,15 @@ To customize test options, run other commands, exclude directories and files, an
 
 * [Snyk CLI commands](../../snyk-cli/commands/#available-commands)
 * [Exclude directories and files from the Snyk tests](../../snyk-cli/scan-and-maintain-projects-using-the-cli/using-snyk-code-from-the-cli/excluding-directories-and-files-from-the-snyk-code-cli-test.md)
-* [Explore test results in a JSON or SARIF format in the terminal](broken-reference/)
-* [Exporting the test results to a JSON or SARIF file](broken-reference/)
+* [Explore test results in a JSON or SARIF format in the terminal ](broken-reference)
+* [Exporting the test results to a JSON or SARIF file](broken-reference)
 
 #### What's next?
 
-* [Open a Fix PR](apex.md#open-a-fix-pr)
+* [Open a Fix PR](apex.md#open-a-fix-pr)&#x20;
 * [Configure PR Checks](../../scan-using-snyk/run-pr-checks/configure-pr-checks.md)
 
-### Snyk integrations
+### Snyk integrations&#x20;
 
 :link: For integrated development environments, see [Use Snyk in your IDE](../../integrate-with-snyk/ide-tools/).
 
@@ -48,4 +48,4 @@ To customize test options, run other commands, exclude directories and files, an
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

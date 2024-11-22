@@ -6,11 +6,11 @@ Snyk imports a snapshot of your container image and then scans the snapshot for 
 
 If the tag for an image changes and the original tag is used for a different image, upon rescanning (daily or weekly), Snyk detects changes to the Linux package dependencies and creates a new snapshot of that Project, but it does not detect changes in the application dependencies and thus does not update the snapshot for application vulnerabilities.
 
-This means that if you frequently reuse a tag to refer to a different image, you must reimport the other image so that Snyk can update the application dependencies.
+This means that if you frequently reuse a tag to refer to a different image, you must reimport the other image so that Snyk can update the application dependencies.&#x20;
 
 ## Grouping of Container Projects
 
-Depending on how you import images (Snyk CLI, container registry integration, or Kubernetes integration), Projects are grouped differently in the **Projects** tab.
+Depending on how you import images (Snyk CLI, container registry integration, or Kubernetes integration), Projects are grouped differently in the **Projects** tab.&#x20;
 
 ### Project grouping when importing images with Snyk CLI
 
@@ -49,7 +49,7 @@ The following information is displayed:
   * **Image tag**
   * **Base Image**
   * Total dependencies with known vulnerabilities and the total number of vulnerabilities
-* Fix advice: If you included your Dockerfile for monitoring, available and actionable fix advice is displayed. To view all fix advice, click **Show more upgrade types**.
+* Fix advice: If you included your Dockerfile for monitoring, available and actionable fix advice is displayed. To view all fix advice, click **Show more upgrade types**.&#x20;
 
 The **Issues** tab provides a list of vulnerabilities, including origins and paths, as well as an overview of the vulnerabilities.
 
@@ -61,9 +61,10 @@ In the issues list, you can use the filters available for all supported Project 
 <figure><img src="../../../.gitbook/assets/image (195) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1).png" alt="Filters for binaries and images"><figcaption><p>Filters for OS binaries and image layers</p></figcaption></figure>
 
 {% hint style="info" %}
-The **OS BINARIES** filter does not appear if there is only one category of issues in your container, for example, Node binary vulnerabilities or OS packages.\\
+The **OS BINARIES** filter does not appear if there is only one category of issues in your container, for example, Node binary vulnerabilities or OS packages.\
 
-The **IMAGE LAYER** filter does not appear if there is no Dockerfile attached.
+
+The **IMAGE LAYER** filter does not appear if there is no Dockerfile attached.&#x20;
 {% endhint %}
 
 The **Dependencies** tab provides a tree view of the package hierarchy inside the image.

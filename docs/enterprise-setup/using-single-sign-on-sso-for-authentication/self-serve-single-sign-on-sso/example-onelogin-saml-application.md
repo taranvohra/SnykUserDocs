@@ -20,7 +20,7 @@ This example shows setting up a SAML application in OneLogin and connecting this
 
 <figure><img src="https://lh6.googleusercontent.com/Ar8VZnNLeqHKP0wgAZYFT4jNo87CTiiNkc4driJsI-ipg8vy13uN_z3CsFGmtnaxbJbpWciw7VH88nzLch68f-jiJOUqbPaiLHJxYZN7F6MZ374IJqzJC7Jj-_ijJefZ3zbvmPtOikZRzHpbln8EtZg" alt="Enter a display name and pick an icon"><figcaption><p>Enter a display name and pick an icon</p></figcaption></figure>
 
-6\. After the app is saved, go to the **configuration** page and enter the **Audience** (EntityID), **ACS URL,** and ACS URL Validator. Use the ACS URL value here as well. Copy the EntityID and ACS URL from step 2.
+6\. After the app is saved, go to the **configuration** page and enter the **Audience** (EntityID), **ACS URL,** and ACS URL Validator. Use the ACS URL value here as well. Copy the  EntityID and ACS URL from step 2.
 
 <figure><img src="https://lh4.googleusercontent.com/S11TB8rvOOs7abB3bOugmDB041wHIfyFzX9gByH6I12oDLiyiba7ZptPkheT_1wc2hR-QPhiCJgYd4swA_x4zqf1IW-zf2MF7Y4ClvDbgyyX42u12e77_VbQqOow8DPHRVoSFYcecFaHfBj8S3_MKxw" alt="Enter application details"><figcaption><p>Enter application details</p></figcaption></figure>
 
@@ -61,3 +61,4 @@ Choose the option you would like to use: **Group member, Org collaborator,** or 
 Finally, enter the **profile attributes** as you configured them in OneLogin (email, name, nickname), click **Save changes,** and verify you can log in, either with the direct URL at the top of step 3 or by going to the[ generic SSO login](https://app.snyk.io/login/sso).
 
 <figure><img src="https://lh4.googleusercontent.com/OIEztWL9xGSkLQ1yu2jS8IzU1dLWVuX7YJgfTyHYt3aV_pUn53WWc7qOCZvgK0b2M28SmNsTUDtJJZMdQhhA-5kNA2je71LM-AwHwvyd8UyBtPhfHFEnn0rlCmBEM4tppxVXsiLY78KOLJihIMids0E" alt="Enter profile attributes"><figcaption><p>Enter profile attributes</p></figcaption></figure>
+

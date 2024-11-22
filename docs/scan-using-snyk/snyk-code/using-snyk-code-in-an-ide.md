@@ -1,4 +1,4 @@
-# Use Snyk Code in your IDE
+# Use Snyk Code IDE
 
 IDE integrations use the fast analysis and response of Snyk Code, allowing you to spot an issue, understand and learn more about it, and fix it while you write the code before checking it in. In this way, you can find possible security flaws in your code as you write it on a line-by-line basis.
 

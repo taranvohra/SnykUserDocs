@@ -82,7 +82,7 @@ You can set the scan frequency for each Project. The default is daily testing. T
 
 ## **Supported container registries**
 
-The following container registries are supported:
+The following container registries are supported:&#x20;
 
 * Docker Hub
 * GCR

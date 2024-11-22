@@ -46,17 +46,17 @@ To check compliance for open source licenses, see [Getting Started with Snyk Lic
 
 ## Getting started with Snyk for Ruby across environments
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Prerequisites
 
 1. [Create a Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md)
 2. [Install Snyk CLI and authenticate your machine](../../snyk-cli/getting-started-with-the-snyk-cli.md#install-the-snyk-cli-and-authenticate-your-machine)
-3. [Set the default Organization for all Snyk tests](broken-reference/) (code analysis)
+3. [Set the default Organization for all Snyk tests](broken-reference) (code analysis)
 
 #### Code analysis
 
-To start testing your code using Snyk Code open your repository in a terminal and run the following command:
+To start testing your code using Snyk Code open your repository in a terminal and run the following  command:
 
 ```javascript
 snyk code test
@@ -66,8 +66,8 @@ To customize test options, run other commands, exclude directories and files, an
 
 * [Snyk CLI commands](../../snyk-cli/commands/#available-commands)
 * [Exclude directories and files from the Snyk tests](../../snyk-cli/scan-and-maintain-projects-using-the-cli/using-snyk-code-from-the-cli/excluding-directories-and-files-from-the-snyk-code-cli-test.md)
-* [Explore test results in a JSON or SARIF format in the terminal](broken-reference/)
-* [Exporting the test results to a JSON or SARIF file](broken-reference/)
+* [Explore test results in a JSON or SARIF format in the terminal](broken-reference)
+* [Exporting the test results to a JSON or SARIF file](broken-reference)
 
 #### Open source and licensing
 
@@ -106,22 +106,22 @@ When creating Fix PRs for Ruby Projects using private Gem sources, Snyk may need
 
 #### Supported Ruby versions
 
-| Ruby main version | Ruby specific version                                         |
-| ----------------- | ------------------------------------------------------------- |
-| **`2.3.X`**       | `2.3.1`, `2.3.6`                                              |
-| **`2.4.X`**       | `2.4.0`, `2.4.1`, `2.4.2`, `2.4.5`, `2.4.6`, `2.4.9`          |
-| **`2.5.X`**       | `2.5.0`, `2.5.1`, `2.5.3`                                     |
-| **`2.6.X`**       | `2.6.1`, `2.6.3`, `2.6.5`, `2.6.6`                            |
-| **`2.7.X`**       | `2.7.2`, `2.7.3`, `2.7.4`, `2.7.5`, `2.7.6`, `2.7.7`, `2.7.8` |
-| **`3.0.X`**       | `3.0.0`                                                       |
-| **`3.1.X`**       | `3.1.0`, `3.1.1`, `3.1.2`, `3.1.3`                            |
-| **`3.2.X`**       | `3.2.0`, `3.2.1`                                              |
+| Ruby main version           | Ruby specific version                                         |
+| --------------------------- | ------------------------------------------------------------- |
+| <h4><code>2.3.X</code></h4> | `2.3.1`, `2.3.6`                                              |
+| <h4><code>2.4.X</code></h4> | `2.4.0`, `2.4.1`, `2.4.2`, `2.4.5`, `2.4.6`, `2.4.9`          |
+| <h4><code>2.5.X</code></h4> | `2.5.0`, `2.5.1`, `2.5.3`                                     |
+| <h4><code>2.6.X</code></h4> | `2.6.1`, `2.6.3`, `2.6.5`, `2.6.6`                            |
+| <h4><code>2.7.X</code></h4> | `2.7.2`, `2.7.3`, `2.7.4`, `2.7.5`, `2.7.6`, `2.7.7`, `2.7.8` |
+| <h4><code>3.0.X</code></h4> | `3.0.0`                                                       |
+| <h4><code>3.1.X</code></h4> | `3.1.0`, `3.1.1`, `3.1.2`, `3.1.3`                            |
+| <h4><code>3.2.X</code></h4> | `3.2.0`, `3.2.1`                                              |
 
 ### Snyk Web UI (Git repository integration)
 
 Snyk for Ruby is not available at the moment for Snyk Web UI. You can use it with the [CLI,](ruby.md#snyk-cli) or with the available [Snyk integrations](ruby.md#snyk-integrations).
 
-### Snyk integrations
+### Snyk integrations&#x20;
 
 :link: For integrated development environments, see [Use Snyk in your IDE](../../integrate-with-snyk/ide-tools/).
 
@@ -129,4 +129,4 @@ Snyk for Ruby is not available at the moment for Snyk Web UI. You can use it wit
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

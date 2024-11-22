@@ -26,7 +26,7 @@ After Snyk builds the tree, Snyk uses the [vulnerability database](https://snyk.
 
 ## Getting started with Snyk for Elixir across environments
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Mix/Hex
 
@@ -61,7 +61,7 @@ Snyk also has limited support for `:path`, `:git` and `:github` dependencies, bu
 * `:path` dependencies appear in the dependency tree by name
 * `:git` and `:github` dependencies appear in the dependency tree by repository URL and version (either `:branch`, `:tag` or `:ref`, as defined in the `mix.exs` file)
 
-### Snyk integrations
+### Snyk integrations&#x20;
 
 :link: For integrated development environments, see [Use Snyk in your IDE](../../integrate-with-snyk/ide-tools/).
 
@@ -69,4 +69,4 @@ Snyk also has limited support for `:path`, `:git` and `:github` dependencies, bu
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

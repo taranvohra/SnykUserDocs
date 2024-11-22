@@ -24,3 +24,4 @@ Snyk handles data synchronization as follows:
 | Policies         | Policies are generally executed within one hour of policy creation. You can use the Run button to manually run a policy.                             | Run policies in the policy editor.                                  |
 | SCM Integrations | Snyk endeavors to refresh data from SCM integrations at least once within a 24 hour period.                                                          | Integrations can be refreshed manually using the Integrations page. |
 | Snyk Products    | Data from the Snyk organizations in the associated Snyk Group for a Snyk AppRisk tenant are synced, generally at least once within a 24 hour period. | N/A                                                                 |
+

@@ -18,3 +18,4 @@ Custom rules can be used to accomplish the following. This list provides example
 * Create regular expression scans to check for use of secrets and credentials that should not be part of the code.
 * Determine whether certain unwanted methods are being called within the code base that is deemed unsafe by the security teams.
 * After creating a query, test it against a [code snippet](run-query.md#run-query-on-a-code-snippet) or [repository](run-query.md#run-query-on-a-repository) you have previously imported to Snyk. This way, you can see the results of your query before you run regular scans. You can use this feature to validate a rule before pushing it to production and ensure that it provides the expected results.
+

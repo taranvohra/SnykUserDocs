@@ -45,7 +45,7 @@ You can edit the license severities and instructions.
 
 The updated severities or instructions or both are automatically updated on Snyk servers. When the next scheduled test runs or when a user re-tests a Project, updated results are delivered according to these changes. See [License policy results](license-policy-results.md) for details.
 
-## Set severity for the Unknown license type
+## Set severity for  the Unknown license type
 
 The `Unknown` license type indicates Snyk has not recognized a license for a given package version. You can set a severity level for **Unknown**, for example, to ensure these license issues are given a higher severity and so appear more prominently in results.
 

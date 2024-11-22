@@ -2,7 +2,7 @@
 
 Before using Snyk Code, you must activate it in the Snyk Web UI. To do this:
 
-1. [Enable the Snyk Code option in your Snyk Organization Settings.](enable-the-snyk-code-option.md)
+1. [Enable the Snyk Code option in your Snyk Organization Settings.](enable-the-snyk-code-option.md)&#x20;
 
 If you are using Snyk Code in your IDE or through the Snyk CLI with or without the Snyk API, this is the only step you need to do.
 
@@ -32,7 +32,7 @@ If your Snyk Account is already integrated with your SCM and contains imported r
 
 You may find this information about repositories and Snyk Code useful as you begin to work with Snyk Code results:
 
-* [Importing additional repositories to Snyk](broken-reference/)
+* [Importing additional repositories to Snyk](broken-reference)
 * [Excluding directories and files from the import process](../snyk-code-and-your-repositories/excluding-directories-and-files-from-the-import-process.md)
 * [Removing imported repositories from the Snyk Code test](../snyk-code-and-your-repositories/removing-imported-repositories-from-snyk-code-testing.md)
 

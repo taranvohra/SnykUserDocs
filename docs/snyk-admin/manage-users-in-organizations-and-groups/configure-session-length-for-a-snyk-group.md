@@ -27,3 +27,4 @@ When session length expiration is configured, tracking of session length starts 
 {% hint style="info" %}
 See the [Group general settings](../manage-settings/group-general-settings.md) documentation for more information about Group settings.
 {% endhint %}
+

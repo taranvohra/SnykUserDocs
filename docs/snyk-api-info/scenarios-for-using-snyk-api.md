@@ -204,8 +204,8 @@ API v1 [Import targets](https://snyk.docs.apiary.io/#reference/import-projects)
 Scenario: [Move projects between organisations](https://github.com/snyk-playground/cx-tools/blob/main/scripts/move-projects.md) (complete procedure)
 
 {% hint style="info" %}
-API token used must have Group Admin access.\
-If moving between orgs in different groups, a personal API token with Group Admin in both groups must be used - Service Accounts are not able to move projects between orgs in different groups.
+API token used must have Group Admin access. \
+If moving between orgs in different groups, a personal API token with Group Admin in both groups must be used - Service Accounts are not able to move projects between orgs in different groups.&#x20;
 {% endhint %}
 
 {% hint style="info" %}

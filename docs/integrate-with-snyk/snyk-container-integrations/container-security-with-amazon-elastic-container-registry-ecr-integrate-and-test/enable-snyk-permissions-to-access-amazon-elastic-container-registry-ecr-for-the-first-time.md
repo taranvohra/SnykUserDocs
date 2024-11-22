@@ -1,4 +1,4 @@
-# Enable Snyk permissions to access Amazon Elastic Container Registry (ECR) for the first time
+# Enable permissions to access Amazon Elastic Container Registry (ECR) for the first time
 
 This process explains how to set up a resource role in AWS and the necessary policies. For additional information, see the [Amazon ECR documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ecr\_managed\_policies.html).
 

@@ -3,7 +3,7 @@
 {% hint style="info" %}
 **Important!** The setup commands for running the Broker Client described in this section include the common commands used for all SCMs. However, some SCMs require additional parameters for the Broker Client setup.
 
-When such additional parameters are required, they are indicated in this section, but when you are setting up a Broker Client for a specific SCM, use also the section that is specific to that SCM. For more information, see [Snyk Broker integration setups](broken-reference/).
+When such additional parameters are required, they are indicated in this section, but when you are setting up a Broker Client for a specific SCM, use also the section that is specific to that SCM. For more information, see [Snyk Broker integration setups](broken-reference).
 {% endhint %}
 
 The following explains how to set up the Broker Client in a way that displays code snippets of the Snyk Code results on the Web UI:

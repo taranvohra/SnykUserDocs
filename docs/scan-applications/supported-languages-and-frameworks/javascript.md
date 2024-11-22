@@ -78,7 +78,7 @@ Snyk uses the Yarn lockfile (`yarn.lock`) to generate a representation of Projec
 
 The files Snyk relies on to scan a Project may change on version upgrades of the package manager. Snyk lists only versions verified internally as supported.
 
-If you are using a newer version of Yarn than is listed on this page, you may find Snyk performs as expected because Yarn is using a lockfile version that is already supported. That version of Yarn has likely not been evaluated and, thus, not added to this page.
+If you are using a newer version of Yarn than is listed on this page, you may find Snyk performs as expected because Yarn is using a lockfile version that is already supported. That version of Yarn has likely not been evaluated and, thus, not added to this page.&#x20;
 
 The following table shows the Yarn versions and Snyk features availability matrix.
 
@@ -124,17 +124,17 @@ To check compliance for open source licenses, see [Getting Started with Snyk Lic
 
 ## Getting started with Snyk for Javascript across environments
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Prerequisites
 
 * [Create a Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md)
 * [Install Snyk CLI and authenticate your machine](../../snyk-cli/getting-started-with-the-snyk-cli.md#install-the-snyk-cli-and-authenticate-your-machine)
-* [Set the default Organization for all Snyk tests](broken-reference/) (code analysis)
+* [Set the default Organization for all Snyk tests](broken-reference) (code analysis)
 
 #### Code analysis
 
-To start testing your code using Snyk Code open your repository in a terminal and run the following command:
+To start testing your code using Snyk Code open your repository in a terminal and run the following  command:
 
 ```javascript
 snyk code test
@@ -144,8 +144,8 @@ To customize test options, run other commands, exclude directories and files, an
 
 * [Snyk CLI commands](../../snyk-cli/commands/#available-commands)
 * [Exclude directories and files from the Snyk tests](../../snyk-cli/scan-and-maintain-projects-using-the-cli/using-snyk-code-from-the-cli/excluding-directories-and-files-from-the-snyk-code-cli-test.md)
-* [Explore test results in a JSON or SARIF format in the terminal](broken-reference/)
-* [Exporting the test results to a JSON or SARIF file](broken-reference/)
+* [Explore test results in a JSON or SARIF format in the terminal ](broken-reference)
+* [Exporting the test results to a JSON or SARIF file](broken-reference)
 
 #### Open source and licensing
 
@@ -155,10 +155,10 @@ The following table lists the steps to start scanning your dependencies. It cove
 To scan your dependencies, ensure you install the relevant package manager and that your Project contains the supported manifest files.
 {% endhint %}
 
-| Package manager | Getting started                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Description                                                                                                                                                                                                                                            |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| npm             | <ol><li>Install NPM.</li><li>Make sure you are in a directory with NPM Project files, that is, <code>package.json</code> and <code>package-lock.json</code>.</li><li>Run <code>npm install</code>.</li><li>Run <a href="../../snyk-cli/cli-commands-and-options-summary.md">Snyk commands</a>.</li><li>(Optional) Run command options for <a href="../../snyk-cli/commands/test.md#options-for-npm-projects">snyk test</a> and <a href="../../snyk-cli/commands/monitor.md#options-for-npm-projects">snyk monitor</a>.<br></li></ol> | <p>Snyk analyzes your <code>package.json</code> and <code>package-lock.json</code> files to build a fully structured dependency tree.</p><p>If the <code>package-lock.json</code> is missing, Snyk analyzes your <code>node_modules</code> folder.</p> |
-| Yarn            | <ol><li>Install Yarn.</li><li>Make sure you are in a directory with Yarn Project files, that is, <code>package.json</code> and <code>yarn.lock</code>.</li><li>Run <code>yarn</code></li><li>Run <a href="../../snyk-cli/cli-commands-and-options-summary.md">Snyk commands</a>.</li><li>(Optional) Run command options for <a href="../../snyk-cli/commands/test.md#options-for-yarn-projects">snyk test</a> and <a href="../../snyk-cli/commands/monitor.md#options-for-yarn-projects">snyk monitor</a>.</li></ol>                 | <p>Snyk analyzes your <code>package.json</code> and <code>yarn.lock</code> files to build a fully structured dependency tree.</p><p>If the <code>yarn.lock</code> is missing, Snyk analyzes your <code>node_modules</code> folder.</p>                 |
+| Package manager | Getting started                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Description                                                                                                                                                                                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| npm             | <ol><li>Install NPM.</li><li>Make sure you are in a directory with NPM Project files, that is, <code>package.json</code> and <code>package-lock.json</code>.</li><li>Run <code>npm install</code>.</li><li>Run <a href="../../snyk-cli/cli-commands-and-options-summary.md">Snyk commands</a>.</li><li>(Optional) Run command options for <a href="../../snyk-cli/commands/test.md#options-for-npm-projects">snyk test</a> and <a href="../../snyk-cli/commands/monitor.md#options-for-npm-projects">snyk monitor</a>.<br></li></ol> | <p>Snyk analyzes your <code>package.json</code> and <code>package-lock.json</code> files to build a fully structured dependency tree. </p><p></p><p>If the <code>package-lock.json</code> is missing, Snyk analyzes your <code>node_modules</code> folder.</p> |
+| Yarn            | <ol><li>Install Yarn.</li><li>Make sure you are in a directory with Yarn Project files, that is, <code>package.json</code> and <code>yarn.lock</code>.</li><li>Run <code>yarn</code></li><li>Run <a href="../../snyk-cli/cli-commands-and-options-summary.md">Snyk commands</a>.</li><li>(Optional) Run command options for <a href="../../snyk-cli/commands/test.md#options-for-yarn-projects">snyk test</a> and <a href="../../snyk-cli/commands/monitor.md#options-for-yarn-projects">snyk monitor</a>.</li></ol>                 | <p>Snyk analyzes your <code>package.json</code> and <code>yarn.lock</code> files to build a fully structured dependency tree. </p><p></p><p>If the <code>yarn.lock</code> is missing, Snyk analyzes your <code>node_modules</code> folder.</p>                 |
 
 #### Monorepo Projects
 
@@ -166,7 +166,7 @@ Snyk only scans one manifest file at a time. To scan all manifest files, you can
 
 **npm workspaces**
 
-NPM v7 introduced the concept of **workspaces**. See [lockfile version and Snyk feature availability matrix](javascript.md#npm).
+NPM v7 introduced the concept of **workspaces**. See [lockfile version and Snyk feature availability matrix](javascript.md#npm).&#x20;
 
 **Example**
 
@@ -184,7 +184,7 @@ snyk test --all-projects
 
 For Yarn Workspaces, you can use the following flags:
 
-* `--all-projects` : Test and monitor your packages with other Projects or `--yarn-workspaces` , scanning only Yarn Workspaces Projects. The root lock file is referenced when scanning all the packages.
+* `--all-projects` : Test and monitor your packages with other Projects or `--yarn-workspaces` , scanning only Yarn Workspaces Projects. The root lock file is referenced when scanning all the packages.&#x20;
 * `--detection-depth` : Find sub-folders that are not auto-discovered by default.
 * `--strict-out-of-sync=false` : Relax strict synchronization requirements for packages in a Yarn workspace. When set to `false` , you can run Snyk tests with unsynchronized `package.json` and the `package-lock.json` files without throwing errors. Using different dependency versions can introduce potential risks, such as compatibility issues or security vulnerabilities.
 * `--policy-path` : Specify the path to a policy used by Snyk during testing.
@@ -193,7 +193,7 @@ For Yarn Workspaces, you can use the following flags:
 For Yarn Workspaces, only the `package.json` file is updated for Snyk Fix PRs. The `yarn.lock` file is not updated.
 {% endhint %}
 
-**Examples**
+**Examples**&#x20;
 
 Scan the packages that belong to any discovered workspaces in this directory, five deep sub-directories, and any other Projects detected.
 
@@ -201,11 +201,15 @@ Scan the packages that belong to any discovered workspaces in this directory, fi
 snyk test --all-projects --strict-out-of-sync=false --detection-depth=6 
 ```
 
+
+
 Scan only the Yarn Workspace packages that belong to any discovered workspaces in this directory and five deep sub-directories.
 
 ```javascript
 snyk test --yarn-workspaces --strict-out-of-sync=false --detection-depth=6
 ```
+
+
 
 Use a common `.snyk` policy file, if you maintain ignores and patches in one place to be applied for all detected workspaces by using the policy path (see [The .snyk file](../../scan-using-snyk/policies/the-.snyk-file.md)).
 
@@ -224,14 +228,14 @@ You can import JavaScript repositories from any Git services (Source Control Man
 To import Projects from a Git repository integration:
 
 1. Open Snyk Web UI and go to your Group and Organization.
-2. Go to **Projects**.
+2. Go to **Projects**.&#x20;
 3. Click **Add Projects**, select the import source, and choose the repository\
    \
    If you have an integrated Git repository (GitHub) it shows up as an option to choose from.
 
 :link: [Import a Project](../../getting-started/quickstart/import-a-project.md)
 
-#### Configure language settings for open source
+#### Configure language settings for open source&#x20;
 
 Configure language settings for your open source and licensing at the Organization level. The configuration settings apply to all Projects in that Organization.
 
@@ -251,13 +255,13 @@ Configure language settings for your open source and licensing at the Organizati
 
 When creating a fix for vulnerabilities using npm v7+ Projects, Snyk will use the default npm `save-prefix` rather than inferring it from your Project.
 
-This means if you have dependencies using a range format other than the caret range (`^`), you may see additional changes to the `version` fields in the `package-lock.json` file.
+This means if you have dependencies using a range format other than the caret range (`^`), you may see additional changes to the `version` fields in the `package-lock.json` file.&#x20;
 
 These changes should not affect day-to-day functionality, as the ranges will be read from the `package.json`.
 
 #### Fix PRs for Yarn zero-installs users
 
-In Yarn v2, the [zero-installs](https://yarnpkg.com/features/zero-installs) feature was released, which allowed Yarn developers to work on a Project without having to run `yarn` to install dependencies on their machine.
+In Yarn v2, the [zero-installs](https://yarnpkg.com/features/zero-installs) feature was released, which allowed Yarn developers to work on a Project without having to run `yarn` to install dependencies on their machine.&#x20;
 
 Zero-installs achieved this by installing all the dependencies of a Project inside of the `.yarn/cache` directory and asking users to commit this to their version control system , allowing the next developer to pull any new dependencies directly from the repo.
 
@@ -267,10 +271,10 @@ If you use the **zero-installs** feature, Snyk Fix PRs do not update the **.yarn
 
 #### What's next?
 
-* [Open a Fix PR](javascript.md#open-a-fix-pr)
+* [Open a Fix PR](javascript.md#open-a-fix-pr)&#x20;
 * [Configure PR Checks](../../scan-using-snyk/run-pr-checks/configure-pr-checks.md)
 
-### Snyk integrations
+### Snyk integrations&#x20;
 
 :link: For integrated development environments, see [Use Snyk in your IDE](../../integrate-with-snyk/ide-tools/).
 
@@ -282,4 +286,4 @@ To apply best practices for Javascript environments, see [Best practices for Jav
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

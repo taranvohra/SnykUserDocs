@@ -12,6 +12,8 @@ Snyk tests and monitors Microsoft Azure Container Registry (ACR) container image
 1. Log in to your account and navigate to the relevant Group and Organization you want to manage.
 2.  Go to **Projects**, and click **Add projects**. The list of integrations already configured on your account opens, similar to the following:
 
+
+
     <figure><img src="../../../.gitbook/assets/uuid-dd01aab7-482f-0fc2-01de-c2427a14a0e0-en.png" alt="List of integrations configured in an account"><figcaption><p>List of integrations configured in an account</p></figcaption></figure>
 
 The view **Which images do you want to test?** opens, displaying all of the available images for the registry to which you connected, grouped by each of your repositories, similar to the following:
@@ -37,5 +39,5 @@ ACR files are indicated with a unique icon ![ACR](../../../.gitbook/assets/uuid-
 ACR integration works like other Snyk integrations. To continue to monitor, fix and manage your Projects, see the relevant pages in the Snyk user documentation.
 
 {% hint style="info" %}
-For **application** vulnerabilities within container images, any changes to the application will not be reflected with a manual or recurring retest. A re-import of the image is required. See [Detecting application vulnerabilities in container images ](../../../scan-using-snyk/snyk-container/use-snyk-container-from-the-web-ui/detect-application-vulnerabilities-in-container-images.md)for more information.
+For **application** vulnerabilities within container images, any changes to the application will not be reflected with a manual or recurring retest. A re-import of the image is required. See [Detecting application vulnerabilities in container images ](../../../scan-using-snyk/snyk-container/use-snyk-container-from-the-web-ui/detect-application-vulnerabilities-in-container-images.md)for more information.&#x20;
 {% endhint %}

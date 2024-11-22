@@ -6,7 +6,7 @@ Make sure to name custom rules in a way that reflects that they are custom rules
 
 ## **Rules are code**
 
-Custom queries and rules are code, meaning you can copy-paste, export, or import them and store them in any version management system.
+Custom queries and rules are code, meaning you can copy-paste, export, or import them and store them in any version management system. &#x20;
 
 ## **Test your query before making it a rule**
 
@@ -16,4 +16,4 @@ A query works at a point in time whenever you execute it, whereas a rule needs t
 
 Either use autocomplete to find the name of an object usable in queries or use a regex that covers pre and postfixes (`~”.*[object_name].*”`).
 
-\\
+\

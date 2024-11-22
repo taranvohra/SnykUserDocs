@@ -1,8 +1,8 @@
 # License policy results
 
-A newly assigned policy, or modifications to a policy, will apply after the next scheduled test runs for all of the licenses in the Organization.
+A newly assigned policy, or modifications to a policy, will apply after the next scheduled test runs for all of the licenses in the Organization.&#x20;
 
-If you change severity, results from scans are updated in the [Snyk Web UI](../../../getting-started/explore-snyk-through-the-web-ui.md), in [your IDE](../../../integrate-with-snyk/ide-tools/), or in Snyk [PR Checks](../../run-pr-checks/).
+If you change severity, results from scans are updated in the [Snyk Web UI](../../../getting-started/explore-snyk-through-the-web-ui.md), in [your IDE](../../../integrate-with-snyk/ide-tools/), or in Snyk [PR Checks](../../../scan-using-snyk/run-pr-checks/).
 
 Examples of results follow.
 

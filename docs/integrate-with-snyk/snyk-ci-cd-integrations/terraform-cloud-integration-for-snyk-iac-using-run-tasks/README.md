@@ -1,4 +1,4 @@
-# Terraform Cloud integration for Snyk IaC using Run Tasks
+# Terraform Cloud for IaC
 
 {% hint style="info" %}
 This feature is available for all Snyk plans.

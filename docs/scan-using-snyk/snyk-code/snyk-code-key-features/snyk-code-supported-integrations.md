@@ -3,7 +3,7 @@
 Snyk supports the integrations identified on this page.
 
 {% hint style="info" %}
-Snyk Code supports a wide range of languages. For details see [Snyk Code - Supported languages and frameworks](broken-reference/).
+Snyk Code supports a wide range of languages. For details see [Snyk Code - Supported languages and frameworks](broken-reference).
 {% endhint %}
 
 ## **IDE integrations**
@@ -48,3 +48,4 @@ You can query Code Projects and issues using the [Snyk REST API](https://apidocs
 ## Notification integration
 
 You can connect Snyk Code with your J[ira instance](../../../integrate-with-snyk/notification-and-ticketing-systems-integrations/jira-integration.md), allowing developers to export data to Jira issues easily.
+

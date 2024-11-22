@@ -29,6 +29,8 @@ To trigger a scan manually, either Save or manually rescan using the rescan icon
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-03-16 at 15.00.13.png" alt="Rescan icon"><figcaption><p>Rescan icon</p></figcaption></figure>
 
+
+
 If you need only ,the Code Quality, Code Security, Open Source Security or Configuration portion of the findings, you can disable the feature with the results you do not want to see or collapse the view:
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-03-16 at 14.28.48.png" alt="Open Source results open"><figcaption><p>Open Source results open</p></figcaption></figure>

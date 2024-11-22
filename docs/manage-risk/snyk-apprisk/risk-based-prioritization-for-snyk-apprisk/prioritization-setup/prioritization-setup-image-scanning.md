@@ -1,10 +1,10 @@
 # Prioritization setup: Image scanning
 
-To determine the risk factors and prioritize your Code, Open Source, and Container issues, you must scan your container images using [Snyk Container](../../../../scan-using-snyk/snyk-container/).
+To determine the risk factors and prioritize your Code, Open Source, and Container issues, you must scan your container images using [Snyk Container](../../../../scan-using-snyk/snyk-container/).&#x20;
 
 The container image is at the center of the application model that powers Snyk AppRisk. A container image includes your source code and dependencies, and it is deployed to your running environment, enabling Snyk AppRisk to use the container image to bridge the development and deployment states.\
 \
-Snyk AppRisk will identify any deployed container images using the [Kubernetes Connector](prioritization-setup-kubernetes-connector.md) and compare the deployed container images to the list of scanned images you have scanned using [Snyk Container](../../../../scan-using-snyk/snyk-container/).
+Snyk AppRisk will identify any deployed container images using the [Kubernetes Connector](prioritization-setup-kubernetes-connector.md) and compare the deployed container images to the list of scanned images you have scanned using [Snyk Container](../../../../scan-using-snyk/snyk-container/).&#x20;
 
 {% hint style="info" %}
 Snyk recommends that you scan each image using at least one of the Snyk Container integrations.
@@ -12,7 +12,7 @@ Snyk recommends that you scan each image using at least one of the Snyk Containe
 
 ## Snyk Container scanning with the CLI
 
-To ensure the image names match, specify the full name of the image as referenced in your Kubernetes deployment.
+To ensure the image names match, specify the full name of the image as referenced in your Kubernetes deployment.&#x20;
 
 Example:
 

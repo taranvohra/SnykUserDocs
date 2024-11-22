@@ -4,7 +4,7 @@
 
 To get value from Snyk AppRisk Essentials, you **should** an application where you are using [Snyk Container](../../../../scan-using-snyk/snyk-container/) to scan the images. You can get additional value by also scanning your open-source dependencies with [Snyk Open Source](../../../../scan-using-snyk/snyk-open-source/) and your source code with [Snyk Code](../../../../scan-using-snyk/snyk-code/).
 
-Snyk's risk-based prioritization product operates by providing you with three risk factors for your vulnerabilities:
+Snyk's risk-based prioritization product operates by providing you with three risk factors for your vulnerabilities:&#x20;
 
 * **OS condition**: Does this vulnerability apply to my operating system?
 * **Deployed**: Is my code and container image deployed anywhere?
@@ -37,8 +37,11 @@ The major steps in setting up risk-based prioritization are as follows:
 
 1. Grant users the Group Viewer role or the Organization Collaborator role. See [Prioritization setup: User permissions](prioritization-setup-user-permissions.md).
 2. Create the required Organization, roles, and permissions, and deploy the agent. See [Prioritization setup: Kubernetes Connector](prioritization-setup-kubernetes-connector.md).\
-   Note: The Kubernetes Connector is different from the Kubernetes Controller, Snyk-Monitor.
+   &#x20;Note: The Kubernetes Connector is different from the Kubernetes Controller, Snyk-Monitor.
 3. Scan your images properly so Snyk has access to the right data. See [Prioritization setup: Image scanning](prioritization-setup-image-scanning.md).
 4. Set up the required linking for the application on which you want to use risk-based prioritization. See [Prioritization setup: Associating Snyk Open Source, Code, and Container Projects](prioritization-setup-associating-snyk-open-source-code-and-container-projects.md).
 5. To ensure you have set up the prioritization capability properly, navigate to the **Set up Snyk AppRisk** tab on the **Insights** page and view the data Snyk has access to.\
    You can also filter relevant sections by Organization for a granular view of your progress.
+
+
+

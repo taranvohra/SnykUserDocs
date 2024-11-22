@@ -6,7 +6,7 @@ Snyk Code PR Checks are available only for Bitbucket DC/Server versions 7.0 and 
 
 For instructions on using the Snyk Broker Helm Chart, see [Install and configure Broker using Helm](../install-and-configure-broker-using-helm.md). The command to use follows. Refer to [BitBucket Server/Data Center - environment variables](bitbucket-server-data-center-environment-variables-for-snyk-broker.md) for Snyk Broker for definitions of the environment variables.
 
-in the Docker setup instructions.
+&#x20;in the Docker setup instructions.
 
 Note: for `bitbucket` and `bitbucketApi` values do not include `https://`
 

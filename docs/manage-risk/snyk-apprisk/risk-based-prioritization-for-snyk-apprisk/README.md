@@ -1,6 +1,6 @@
 # Risk-Based Prioritization for Snyk AppRisk
 
-Snyk AppRisk Essentials uses holistic application intelligence to help you better identify and prioritize your Container, Code, and Open Source issues based on the risk they pose to your application. Users can also prioritize their issues based on asset classification as defined in Snyk AppRisk policies.
+Snyk AppRisk Essentials uses holistic application intelligence to help you better identify and prioritize your Container, Code, and Open Source issues based on the risk they pose to your application. Users can also prioritize their issues based on asset classification as defined in Snyk AppRisk policies.&#x20;
 
 {% hint style="info" %}
 Currently, asset class prioritization is available only for Snyk Code issues within the Insights UI.
@@ -17,6 +17,6 @@ The Snyk approach looks holistically at your application to understand the follo
 
 Risk-based prioritization works as illustrated in this example:
 
-* Snyk Open Source has identified a high-severity Remote Code Exploit (RCE).
-* That RCE is built into a container image, which is deployed onto a production Kubernetes cluster, and the running container is configured to have access to the internet.
+* Snyk Open Source has identified a high-severity Remote Code Exploit (RCE).&#x20;
+* That RCE is built into a container image, which is deployed onto a production Kubernetes cluster, and the running container is configured to have access to the internet.&#x20;
 * The combination of an RCE in a running image with internet access enables Snyk to determine that this particular vulnerability poses more risk to your application than an RCE that is not deployed.

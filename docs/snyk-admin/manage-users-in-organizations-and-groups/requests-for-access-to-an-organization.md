@@ -1,4 +1,4 @@
-# Requests for access to an Organization
+# Request access to an Organization
 
 Users who are not members of a Snyk Organization can request access. Administrators are notified of a new request by email and can invite the user to join the Organization.
 
@@ -30,6 +30,6 @@ After the requester accepts the invitation, the requester has access to the Orga
 
 ## Enable the Request Access setting
 
-In your Organization, navigate to the **Settings** > **General** option and then to the **Requesting Access** section. Select **Enabled** or **Disabled** to stop allowing access requests.
+In your Organization, navigate to the  **Settings** > **General** option and then to the **Requesting Access** section. Select **Enabled** or **Disabled** to stop allowing access requests.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2022-09-27 at 09.44.52.png" alt="Request Access setting"><figcaption><p>Request Access setting</p></figcaption></figure>

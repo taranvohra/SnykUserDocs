@@ -1,6 +1,6 @@
 # Scan open-source libraries and licenses
 
-You can scan your open-source libraries using Snyk Open Source:
+You can scan your open-source libraries using Snyk Open Source:&#x20;
 
 * In the [Snyk Web UI](../../../getting-started/explore-snyk-through-the-web-ui.md)
 * With your [IDE](https://docs.snyk.io/integrations/ide-tools)

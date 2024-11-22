@@ -49,8 +49,8 @@ You can validate the correctness of your template by following the steps describ
 
 For the API configuration, you can validate the correctness of your template by following these steps:
 
-1. An error response is returned if there are any issues with the customized content. Fix the issues and wait to receive an API success response.
-2. Open a PR and verify that your customized inputs are being used.
+1. An error response is returned if there are any issues with the customized content. Fix the issues and wait to receive an API success response.&#x20;
+2. Open a PR and verify that your customized inputs are being used.&#x20;
 
 {% hint style="info" %}
 The Customize PRs feature is in closed beta. Any feedback on improving the functionality is welcome.
@@ -60,5 +60,5 @@ The Customize PRs feature is in closed beta. Any feedback on improving the funct
 
 You can validate the correctness of your template by following these steps:
 
-1. Adding the template file to your Project(repository).
-2. Opening a PR and verifying that your customized inputs are being used.
+1. Adding the template file to your Project(repository).&#x20;
+2. Opening a PR and verifying that your customized inputs are being used.&#x20;

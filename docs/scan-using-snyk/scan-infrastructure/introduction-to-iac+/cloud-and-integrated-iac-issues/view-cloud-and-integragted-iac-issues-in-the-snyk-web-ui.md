@@ -35,7 +35,7 @@ Each rule shows the following information:
 
 By default, when you expand a rule by selecting its **Expand row** (`>`) symbol, you see all the resources with an open issue associated with that rule. Each resource shows the following information:
 
-<figure><img src="../../../../.gitbook/assets/snyk-cloud-grouped-by-rule-resource-4.png" alt="A rule expanded to show resources"><figcaption><p>A rule expanded to show resources</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/snyk-cloud-grouped-by-rule-resource-4.png" alt="A rule expanded to show resources "><figcaption><p>A rule expanded to show resources</p></figcaption></figure>
 
 * Resource name
 * Environment kind (provider)

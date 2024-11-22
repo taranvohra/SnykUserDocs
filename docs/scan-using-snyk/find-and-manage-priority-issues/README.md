@@ -23,3 +23,6 @@ You can use many features of [Snyk Projects](../../snyk-admin/snyk-projects/) he
 * Look at [Project collections groupings](../../snyk-admin/snyk-projects/project-collections-groupings/).
 * [View Project issues, fixes, and dependencies](../../snyk-admin/snyk-projects/view-project-issues-fixes-and-dependencies.md).
 * [View Project settings](../../snyk-admin/snyk-projects/view-and-edit-project-settings.md).
+
+
+

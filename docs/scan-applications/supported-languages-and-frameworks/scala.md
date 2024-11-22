@@ -30,17 +30,17 @@ Snyk scans Scala projects by running `sbt` plugins or examining your `build.sbt`
 
 ## Getting started with Snyk for Scala across environments
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Prerequisites
 
 1. [Create a Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md)
 2. [Install Snyk CLI and authenticate your machine](../../snyk-cli/getting-started-with-the-snyk-cli.md#install-the-snyk-cli-and-authenticate-your-machine)
-3. [Set the default Organization for all Snyk tests](broken-reference/) (code analysis)
+3. [Set the default Organization for all Snyk tests](broken-reference) (code analysis)
 
 #### Code analysis
 
-To start testing your code using Snyk Code open your repository in a terminal and run the following command:
+To start testing your code using Snyk Code open your repository in a terminal and run the following  command:
 
 ```javascript
 snyk code test
@@ -50,8 +50,8 @@ To customize test options, run other commands, exclude directories and files, an
 
 * [Snyk CLI commands](../../snyk-cli/commands/#available-commands)
 * [Exclude directories and files from the Snyk tests](../../snyk-cli/scan-and-maintain-projects-using-the-cli/using-snyk-code-from-the-cli/excluding-directories-and-files-from-the-snyk-code-cli-test.md)
-* [Explore test results in a JSON or SARIF format in the terminal](broken-reference/)
-* [Exporting the test results to a JSON or SARIF file](broken-reference/)
+* [Explore test results in a JSON or SARIF format in the terminal](broken-reference)
+* [Exporting the test results to a JSON or SARIF file](broken-reference)
 
 #### Open source and licensing
 
@@ -72,7 +72,7 @@ Regardless of which `sbt` version you are using, you must use the following comm
 `addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.10.0-RC1")`
 
 {% hint style="warning" %}
-Do not use the`addDependencyTreePlugin` command which the`sbt-dependency-graph`plugin docs recommend for`sbt` 1.4+. This is incompatible with the Snyk CLI.\
+Do not use the`addDependencyTreePlugin` command which the`sbt-dependency-graph`plugin docs recommend for`sbt` 1.4+. This is incompatible with the Snyk CLI. \
 Use the`addSbtPlugin()` command as given above.
 {% endhint %}
 
@@ -102,7 +102,7 @@ You can’t declare versions of dependencies in a file that is not accessible to
 For more details, see [Scanning a remote repository using the Snyk Web UI.](https://docs.snyk.io/snyk-cli/test-for-vulnerabilities/differences-in-vulnerability-counts-across-environments#scanning-a-remote-repository-using-the-web-ui)
 {% endhint %}
 
-### Snyk integrations
+### Snyk integrations&#x20;
 
 :link: For integrated development environments, see [Use Snyk in your IDE](../../integrate-with-snyk/ide-tools/).
 
@@ -110,4 +110,4 @@ For more details, see [Scanning a remote repository using the Snyk Web UI.](http
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

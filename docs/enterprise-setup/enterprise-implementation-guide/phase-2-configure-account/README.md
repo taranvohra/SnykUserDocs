@@ -9,3 +9,4 @@ As part of this configuration, you will want to do the following:
 * [Configure SSO](configure-sso.md)
 * [Configure Organizations](set-visibility-and-configure-an-organization-template/), including [setting up integrations](set-visibility-and-configure-an-organization-template/configure-integrations.md)
 * [Configure license and security policies](apply-security-and-license-policies.md)
+

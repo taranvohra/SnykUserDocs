@@ -16,7 +16,7 @@ For additional information, see [What is container security?](https://snyk.io/le
 
 ### **Steps to enable permissions for GAR integration**
 
-1. Navigate to the Google Cloud Console [Credentials](https://console.cloud.google.com/apis/credentials) page.
+1. Navigate to the Google Cloud Console [Credentials](https://console.cloud.google.com/apis/credentials) page.&#x20;
 2. Select the Google project for which you are creating credentials if it is not already selected.
 3. Select the **Create Credentials** button and select **Service Account**.
 4. Give the new service account a unique name and ID and select **Create**.
@@ -45,3 +45,4 @@ Configure integration from Snyk with your Google Artifact Registry account to sc
 6. Select **Save**.
 
 Snyk checks the credentials, and upon success, the page reloads with a notification that the connection succeeded.
+

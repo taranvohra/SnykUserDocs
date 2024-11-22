@@ -24,7 +24,7 @@ The Policy Manager allows you to [create](create-and-edit-policies.md#create-a-p
 2. Change the [Organizations](apply-a-policy-to-organizations.md), [attributes](apply-a-policy-to-projects.md), and rules as you wish.
 3. Click **Submit** to save your changes.
 
-## **Duplicate or delete a policy**
+## **Duplicate or delete a policy**&#x20;
 
 Click the three dots on the right-hand side to duplicate or delete a policy:
 

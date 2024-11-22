@@ -25,7 +25,7 @@ In order for your custom image to be supported, it must:
 
 ## Use of user-defined custom images
 
-Providing a custom image gives you more control over your environments. For example, unless you use custom images, you cannot able to use an environment with Node LTS.
+Providing a custom image gives you more control over your environments. For example, unless you use custom images, you cannot  able to use an environment with Node LTS.
 
 ### How to create a custom image using Dockerfile
 

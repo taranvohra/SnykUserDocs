@@ -17,7 +17,7 @@ You can customize your AppRisk integrations from the **Integrations Hub** where 
 * Builds - only when using GitHub Actions.
 * Scans - only when using Code security.
 
-### Required parameters
+### Required parameters&#x20;
 
 * Organization Name - The GitHub organization name.
 * Profile name - The GitHub user used to read repositories.
@@ -66,9 +66,9 @@ Fine-grained personal access token is not supported.
 ### Pulled entities
 
 * Users
-* Repositories
+* Repositories&#x20;
 
-### Required parameters
+### Required parameters&#x20;
 
 * Host address - The IP/URL of the GitLab server.
 * Personal API token - Associated to a user account with permissions to fetch users and repositories. The URL should follow this example: `https://gitlab.com/-/profile/personal_access_tokens`.
@@ -136,7 +136,7 @@ Enable the following permissions:
 ### Required parameters
 
 * API URL - The URL of the Bitbucket API
-* Username - The [Bitbucket username](https://bitbucket.org/account/settings/)
+* Username - The [Bitbucket username](https://bitbucket.org/account/settings/)&#x20;
 * App password - Create an [API token](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#app-passwords) from your BitBucket account, with the following permissions:
   * **Workspace membership** - Read
   * **Account** - Read
@@ -147,9 +147,9 @@ Enable the following permissions:
 {% hint style="info" %}
 Create a BitBucket app password by following these steps:
 
-1. Open your BitBucket account
+1. Open your BitBucket account&#x20;
 2. Click the Settings option
-3. Click the Personal BitBucket settings option
+3. Click the Personal BitBucket settings option&#x20;
 4. Navigate to the App passwords sub-section from the ACCESS MANAGEMENT section.
 {% endhint %}
 
@@ -158,6 +158,7 @@ Create a BitBucket app password by following these steps:
 ### API version
 
 You can use the [BitBucket REST API V2](https://developer.atlassian.com/bitbucket/api/2/reference/resource/) repository to access information about the API.\
-\\
+\
 
-\\
+
+\

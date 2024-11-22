@@ -2,7 +2,7 @@
 
 ## Container image scans
 
-As defined by the [Open Container Initiative](https://opencontainers.org) (OCI) specifications, container images comprise a layered file system and associated metadata.
+As defined by the [Open Container Initiative](https://opencontainers.org) (OCI) specifications, container images comprise a layered file system and associated metadata.&#x20;
 
 Container images often include several layers containing third-party software from:
 
@@ -69,7 +69,7 @@ Snyk continuously discloses new vulnerabilities. Snyk can alert you to new vulne
 
 If you use an integration that saves a snapshot of the installed software on Snyk’s service and the image has not changed, Snyk Container automatically rescans without accessing the image, alerting you to new vulnerabilities.
 
-If the image has changed, you must reimport your image, so that Snyk can access the updated image and its metadata before rescanning it.
+If the image has changed, you must reimport your image, so that Snyk can access the updated image and its metadata before rescanning it.&#x20;
 
 {% hint style="info" %}
 Recurring scans do not detect updates to the dependencies of your applications. The recurring scans test for new vulnerabilities using a snapshot of your application dependencies at the time the application was imported.\

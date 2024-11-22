@@ -30,15 +30,15 @@ Enter the Jira account credentials in the Snyk Web UI: **Organization Settings >
 
 <figure><img src="../../.gitbook/assets/JiraSettings_nonBroker.png" alt="Jira settings"><figcaption><p>Jira settings</p></figcaption></figure>
 
-After the details have been entered into the integration, press **Save and continue**.
+After the details have been entered into the integration, press **Save and continue**.&#x20;
 
 {% hint style="info" %}
 If the connection is not successful, check that the Base URL starts with exactly `https://` It must not have capitals or be http.
 {% endhint %}
 
-If the connection is successful, you will see the connection details in orange at the top of the page, with options for configuring the default Project and issue type, as well as any fields to ignore.
+If the connection is successful, you will see the connection details in orange at the top of the page, with options for configuring the default Project and issue type, as well as any fields to ignore.&#x20;
 
-The default Project and issue type must be configured.
+The default Project and issue type must be configured.&#x20;
 
 <figure><img src="../../.gitbook/assets/JiraSettings.png" alt=""><figcaption><p>A successful connection</p></figcaption></figure>
 

@@ -8,14 +8,14 @@ When it is imported or rescanned, the image is analyzed and scanned for vulnerab
 
 * Image labels defining the Dockerfile location exist:
   * `org.opencontainers.image.source` - URL to the Project repository (mandatory)
-  * `io.snyk.containers.image.dockerfile` - path to the Dockerfile, for example, "/Dockerfile-prod" (optional)
+  * `io.snyk.containers.image.dockerfile` - path to the Dockerfile, for example,  "/Dockerfile-prod" (optional)
 * The Dockerfile Project exists in the same Organization, with a matching repository (and path or /Dockerfile) from the image labels.
 
 If these conditions apply, Snyk automatically creates a link between the image and the Dockerfile Project.
 
 ## View linked images
 
-You can see the linked images on the Project page, under **LINKED IMAGES.**
+You can see the linked images on the Project page, under **LINKED IMAGES.**&#x20;
 
 <figure><img src="../../../.gitbook/assets/mceclip3.png" alt="Project showing linked images"><figcaption><p>Project showing linked images</p></figcaption></figure>
 

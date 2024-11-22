@@ -47,17 +47,17 @@ To check compliance for open source licenses, see [Getting Started with Snyk Lic
 
 ## Getting started with Snyk for .NET across environments
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Prerequisites
 
 1. [Create a Snyk account](../../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md)
 2. [Install Snyk CLI and authenticate your machine](../../../snyk-cli/getting-started-with-the-snyk-cli.md#install-the-snyk-cli-and-authenticate-your-machine)
-3. [Set the default Organization for all Snyk tests](broken-reference/) (code analysis)
+3. [Set the default Organization for all Snyk tests](broken-reference) (code analysis)
 
 #### Code analysis
 
-To start testing your code using Snyk Code open your repository in a terminal and run the following command:
+To start testing your code using Snyk Code open your repository in a terminal and run the following  command:
 
 ```javascript
 snyk code test
@@ -67,8 +67,8 @@ To customize test options, run other commands, exclude directories and files, an
 
 * [Snyk CLI commands](../../../snyk-cli/commands/#available-commands)
 * [Exclude directories and files from the Snyk tests](../../../snyk-cli/scan-and-maintain-projects-using-the-cli/using-snyk-code-from-the-cli/excluding-directories-and-files-from-the-snyk-code-cli-test.md)
-* [Explore test results in a JSON or SARIF format in the terminal](broken-reference/)
-* [Exporting the test results to a JSON or SARIF file](broken-reference/)
+* [Explore test results in a JSON or SARIF format in the terminal ](broken-reference)
+* [Exporting the test results to a JSON or SARIF file](broken-reference)
 
 #### Open source and licensing
 
@@ -108,14 +108,14 @@ Examples of supported project files that resolve into **packages** include: **pa
 While you should also be able to run `snyk test` without previously installing dependencies this will result in less accurate vulnerability results.
 {% endhint %}
 
-#### **Nuget CLI options**
+#### **Nuget CLI options**&#x20;
 
-* For information about the `snyk test` options available for use with NuGet, see [Options for NuGet projects in the Test help](../../../snyk-cli/commands/test.md#options-for-nuget-projects).
+* For information about the `snyk test` options available for use with NuGet, see [Options for NuGet projects in the Test help](../../../snyk-cli/commands/test.md#options-for-nuget-projects).&#x20;
 * For the available `snyk monitor` options, see [Options for NuGet projects in the Monitor help](../../../snyk-cli/commands/monitor.md#options-for-nuget-projects).
 
 #### Paket **CLI options**
 
-* To use Paket, be sure a **paket.lock** file is present in combination with a **paket.dependencies** file.
+* To use Paket, be sure a **paket.lock** file is present in combination with a **paket.dependencies** file.&#x20;
 * Run `snyk test`.
 
 #### **CLI options for use with** other dependencies
@@ -161,9 +161,7 @@ You can also **update your language preferences.**
 2. Go to **Settings** and select settings for **.NET**. To scan all development dependencies, be sure that **Scan build dependencies** are checked.
 3.
 
-```
-<figure><img src="../../../.gitbook/assets/DotNet languages.png" alt=""><figcaption><p>Update your language preferences</p></figcaption></figure>
-```
+    <figure><img src="../../../.gitbook/assets/DotNet languages.png" alt=""><figcaption><p>Update your language preferences</p></figcaption></figure>
 
 #### Fixing vulnerabilities for .NET
 
@@ -178,7 +176,7 @@ The Fix PR feature is _only_ available across Snyk [SCM](../../../integrate-with
 
 If you are currently managing your Project dependencies with NuGet and leveraging [`PackageReference`](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) or [`packages.config`](https://docs.microsoft.com/en-us/nuget/reference/packages-config) Snyk can automatically update the dependency version in your manifest file, provided there is an actual fix for it. You can then review and merge your fixes.
 
-### Snyk integrations
+### Snyk integrations&#x20;
 
 :link: For integrated development environments, see [Use Snyk in your IDE](../../../integrate-with-snyk/ide-tools/).
 
@@ -187,3 +185,4 @@ If you are currently managing your Project dependencies with NuGet and leveragin
 ## Help
 
 For best practices and troubleshooting, see [Help](../../../scan-using-snyk/supported-languages-and-frameworks/.net/help-.net.md).
+

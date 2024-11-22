@@ -33,7 +33,7 @@ Follow these steps to connect Snyk with your GitHub repositories:
 
 1. Create a dedicated service account in GitHub Enterprise with a write level or higher scope for the repos you want to monitor with Snyk permissions.\
    See [Types of GitHub accounts](https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts) and [Required access scopes for the GitHub integration ](snyk-github-enterprise-integration.md#required-access-scopes-for-snyk-github-enterprise-integration)for details.\
-   Note that to create webhooks, which is required for PR checks, the repo permission for the account must be `Admin`. GitHub custom roles are not supported.
+   Note that to create webhooks, which is required for PR checks, the repo permission for the account must be `Admin`. GitHub custom roles are not supported.&#x20;
 2. [Generate a personal access token](snyk-github-enterprise-integration.md#how-to-generate-a-personal-access-token) for that account.
 3. [Authorize your personal access token and enable SSO.](snyk-github-enterprise-integration.md#how-to-authorize-your-personal-access-token-and-enable-sso)
 4. [Import your GitHub repositories](snyk-github-enterprise-integration.md#how-to-import-github-repositories).
@@ -142,13 +142,16 @@ To review and adjust the pull request test settings: In Snyk, navigate to Organi
 Disconnecting the Snyk GitHub Enterprise integration halts all scans for imported repositories, PR checks cannot be executed, and Projects are deactivated in the Snyk Web UI.
 {% endhint %}
 
-1.  Navigate to the Snyk GitHub Enterprise integration **Settings**.\\
+1.  Navigate to the Snyk GitHub Enterprise integration **Settings**.\
+
 
     <figure><img src="../../.gitbook/assets/2023-11-09_17-29-41.png" alt="Navigate to the Snyk GitHub Enterprise settings" width="373"><figcaption><p>Navigate to the Snyk GitHub Enterprise settings</p></figcaption></figure>
-2.  At the bottom of the page, select **Remove GitHub Enterprise.**\\
+2.  At the bottom of the page, select **Remove GitHub Enterprise.**\
+
 
     <figure><img src="../../.gitbook/assets/2023-11-09_15-57-57.png" alt="Remove GitHub Enterprise from your configured Snyk integrations" width="563"><figcaption><p>Remove GitHub Enterprise from your configured Snyk integrations</p></figcaption></figure>
-3.  A confirmation screen opens. To proceed, select **Disconnect GitHub Enterprise**. \\
+3.  A confirmation screen opens. To proceed, select **Disconnect GitHub Enterprise**. \
+
 
     <figure><img src="../../.gitbook/assets/2023-11-09_17-38-28.png" alt="Confirm disconnecting from GitHub Enterprise" width="375"><figcaption><p>Confirm disconnecting from GitHub Enterprise</p></figcaption></figure>
 

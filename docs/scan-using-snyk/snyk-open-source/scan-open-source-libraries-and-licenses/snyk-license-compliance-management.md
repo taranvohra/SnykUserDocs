@@ -68,6 +68,8 @@ Click the tree icon to view a full dependency tree. This shows the dependency th
 
 </div>
 
+
+
 ## **Resolve license issues**
 
 You can now take action to resolve the license issues identified during the scan, to help you build and deploy your application without outstanding licensing issues.

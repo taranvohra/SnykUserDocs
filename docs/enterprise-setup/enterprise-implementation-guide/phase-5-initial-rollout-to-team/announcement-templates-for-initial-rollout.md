@@ -1,4 +1,4 @@
-# Announcement templates for initial rollout
+# Announcement templates
 
 You can use these templates to communicate the Snyk rollout to the rest of the developers. Update the text in brackets with your own details, then send the message to the developers.
 
@@ -10,8 +10,8 @@ You can use these templates to communicate the Snyk rollout to the rest of the d
 
 ## Instant messaging template
 
-|                                                                                                                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snyk Dev-First Security Initiative: You’re invited to a brief “Intro to Snyk” and Q\&A session on \[insert date, time, Zoom info]. You’ll also have the opportunity to attend a developer training session on \[insert date/registration detail link] and get access to Snyk Learn \[hyperlink] for self-paced tutorials to help you get started. |
+|                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Snyk Dev-First Security Initiative: You’re invited to a brief  “Intro to Snyk” and Q\&A session on \[insert date, time, Zoom info]. You’ll also have the opportunity to attend a developer training session on \[insert date/registration detail link] and get access to Snyk Learn \[hyperlink] for self-paced tutorials to help you get started.  |
 
 ###

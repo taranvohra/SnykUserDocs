@@ -180,17 +180,17 @@ The analysis is available only for files with names shorter or equal to 255 char
 
 To support a specific framework, Snyk Code must both support the relevant language and be trained on Projects using the framework. The found patterns are then annotated by the security team and extended by curated content.
 
-Most framework are supported out of the box, as Snyk Code only need to parse the code to analyze it. In some cases, they might require specific rules, or it might require specific program analysis engine updates or both.
+Most framework are supported out of the box, as Snyk Code only need to parse the code to analyze it. In some cases, they might require specific rules, or it might require specific program analysis engine updates or both.&#x20;
 
 If you notice any gaps in a specific framework support, [contact our Support team](https://support.snyk.io/hc/en-us/requests/new).
 
-### How Snyk works for code analysis
+### How Snyk works for code analysis&#x20;
 
 Snyk scans your codebase following this sequence
 
 1. The source code is analyzed, generating an event graph. The event graph is similar to a code map that helps Snyk understand how different parts of the code are related. There are two node types, each node in the graph representing something that happens in the code. Some represent parts of the code, and others represent how the code is used.
 2. Rules are run against the event graph to find matches. The rules act as a checklist of known vulnerabilities that Snyk looks for in the event graph.
-3. If a match is found, Snyk looks for a vulnerability in the event graph, identifying where problems might be hiding in the code.
+3. If a match is found, Snyk looks for a vulnerability in the event graph, identifying where problems might be hiding in the code.&#x20;
 
 :link: See [Snyk Code AI Engine](../snyk-code/snyk-code-key-features/snyk-code-ai-engine.md).
 
@@ -218,4 +218,4 @@ The way Snyk analyzes and builds the graph varies depending on the language and 
 
 For more information, see [Supported languages, frameworks, and feature availability overview, Open Source section](../../scan-applications/supported-languages-and-frameworks/supported-languages-frameworks-and-feature-availability-overview.md#open-source-and-licensing-snyk-open-source).
 
-\\
+\

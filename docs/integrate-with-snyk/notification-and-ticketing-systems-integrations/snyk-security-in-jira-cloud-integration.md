@@ -1,5 +1,7 @@
 # Snyk Security in Jira Cloud Integration
 
+
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -20,15 +22,15 @@ To install and configure the Jira app, you must be a Jira Cloud administrator in
 
 To connect the Jira app to Snyk, you must be a [Snyk Organization administrator](../../snyk-admin/introduction-to-snyk-administration.md#member-user-types).
 
-To activate Security in Jira Cloud in Jira, navigate to **Project Settings > Features > Development > Security** and toggle **Security** **ON**.
+To activate Security in Jira Cloud in Jira, navigate to **Project Settings > Features > Development > Security** and toggle **Security** **ON**.&#x20;
 
 {% hint style="warning" %}
-Ensure that the project is _**not**_ of type **Classic**. If you are unable to find **Features** in your project settings, this may be because the project type is **Classic**. In this case, the project must be rebuilt or migrated to a newer version.
+Ensure that the project is _**not**_ of type **Classic**. If you are unable to find **Features** in your project settings, this may be because the project type is **Classic**. In this case, the  project must be rebuilt or migrated to a newer version.
 {% endhint %}
 
 Ensure you have the following permission scopes in Jira, which are required for the integration to operate.
 
-<table><thead><tr><th width="344.5">Required scope in Jira</th><th>Purpose</th></tr></thead><tbody><tr><td>Write data to the host application</td><td>Synchronize vulnerabilities in Snyk with Jira so they appear in the Security tab in Jira.</td></tr><tr><td>Read data from the host application</td><td>Read vulnerabilities from Jira to optimize the issues synchronization process.</td></tr><tr><td>Delete data from the host application</td><td>Remove vulnerabilities from Jira when a Snyk Organization is removed from Jira.</td></tr></tbody></table>
+<table><thead><tr><th width="344.5">Required scope in Jira</th><th>Purpose</th></tr></thead><tbody><tr><td>Write data to the host application</td><td>Synchronize vulnerabilities in Snyk with Jira so they appear in the Security tab in Jira.</td></tr><tr><td>Read data from the host application</td><td>Read vulnerabilities from Jira to optimize the issues synchronization process.</td></tr><tr><td>Delete data from the host application</td><td>Remove vulnerabilities from Jira when a Snyk Organization is removed from Jira. </td></tr></tbody></table>
 
 ## Install Snyk Security in Jira Cloud
 
@@ -44,7 +46,7 @@ Follow these steps to install [**Snyk Security in Jira Cloud**](https://marketpl
 
 1. Go to **Apps** > **Manage apps.**
 2. In the left menu, select **Snyk Security in Jira**.
-3. [Log in to your Snyk account](broken-reference/), or [sign up for a new Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md).
+3. [Log in to your Snyk account](broken-reference), or [sign up for a new Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md).
 4. In Snyk, select **Grant access** to allow Snyk to read your Jira Software account information.
 5. Select the specific Snyk Organizations to connect to your Jira site, and select **Grant app access**.
 
@@ -84,7 +86,7 @@ Ignored and closed vulnerabilities are not shown in the **Vulnerabilities** sect
 
 Select the title of a column in the table to sort all vulnerabilities by that attribute.
 
-### Create a Jira issue from a vulnerability
+### Create a Jira issue from a vulnerability&#x20;
 
 When triaging issues, you can add a Jira issue to the sprint or backlog to ensure the required work for resolving the vulnerability is planned and tracked.
 
@@ -109,3 +111,4 @@ To uninstall a Jira app, you must be an administrator in the site-admins, admini
 1. In Jira, navigate to **Apps** in the main menu and select **Manage your apps.**
 2. Select **Snyk Security in Jira.**
 3. Click the **Uninstall** button.
+

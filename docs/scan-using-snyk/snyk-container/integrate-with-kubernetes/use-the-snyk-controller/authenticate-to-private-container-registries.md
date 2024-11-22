@@ -1,14 +1,14 @@
 # Authenticate to private container registries
 
-If you are using private container registries, you must create a `dockercfg.json` file that contains the credentials to the registry. Then you must create a secret, which must be called `snyk-monitor`.
+If you are using private container registries, you must create a `dockercfg.json` file that contains the credentials to the registry. Then you must create a secret, which must be called `snyk-monitor`.&#x20;
 
-The `dockercfg.json` file is necessary to allow the monitor to look up images in private registries. Usually, your credentials are in `$HOME/.docker/config.json`. However, the credentials must also be added to the `dockercfg.json` file. The Snyk Controller is not able to access these registries if the credentials are only stored in `$HOME/.docker/config.json`
+The `dockercfg.json` file is necessary to allow the monitor to look up images in private registries. Usually, your credentials are in `$HOME/.docker/config.json`. However, the credentials must also be added to the `dockercfg.json` file.  The Snyk Controller is not able to access these registries if the credentials are only stored in `$HOME/.docker/config.json`
 
 The steps below explain how to authenticate to private container registries.
 
 ## Configure the dockercfg.json file
 
-Create a file named `dockercfg.json`. Store your credentials in this file.
+Create a file named `dockercfg.json`.  Store your credentials in this file.
 
 {% hint style="info" %}
 Ensure the file containing your credentials is named `dockercfg.json`. This filename is required by the `snyk-monitor`.
@@ -50,7 +50,7 @@ If your cluster does not run on `GKE`, or it runs on `GKE` and pulls images from
 
 #### For Nexus Repository
 
-If you are using Nexus Repository\*\*,\*\* your `dockercfg.json` file must contain:
+If you are using Nexus Repository**,** your `dockercfg.json` file must contain:
 
 ```json
 {
@@ -64,7 +64,7 @@ If you are using Nexus Repository\*\*,\*\* your `dockercfg.json` file must conta
 
 #### For Artifactory Container Registry
 
-If you are using Artifactory Container Registry to host multiple private repositories\*\*,\*\* your `dockercfg.json` file must contain:
+If you are using Artifactory Container Registry to host multiple private repositories**,** your `dockercfg.json` file must contain:
 
 ```json
 {
@@ -161,7 +161,7 @@ If your cluster runs on `AKS` and you're using `ACR`, add the following:
 In addition, for clusters running on AKS and using ACR, see [Azure AD Workload Identity service account](https://azure.github.io/azure-workload-identity/docs/topics/service-account-labels-and-annotations.html#service-account). It is possible that you are required to configure labels and annotations on the `snyk-monito`r ServiceAccount.
 {% endhint %}
 
-You can configure different credential helpers for different registries.
+You can configure different credential helpers for different registries.&#x20;
 
 ## Create the Kubernetes secret
 

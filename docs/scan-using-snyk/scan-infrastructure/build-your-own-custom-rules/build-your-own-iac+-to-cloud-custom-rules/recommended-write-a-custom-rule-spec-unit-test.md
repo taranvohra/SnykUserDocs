@@ -1,6 +1,6 @@
 # (Recommended) Write a Custom Rule Spec (Unit Test)
 
-Custom Rule Specs are unit tests for your Custom Rules. As you iterate on your Custom Rules, it is recommended that you maintain unit tests. These unit tests typically include sample terraform that represents valid and invalid test cases. The following is an example Custom Rule spec for a custom rule that enforces tag requirements:
+Custom Rule Specs are unit tests for your Custom Rules. As you iterate on your Custom Rules, it is recommended that you maintain unit tests. These unit tests typically include sample terraform that represents valid and invalid test cases. The following is an example Custom Rule spec for a custom rule that enforces tag requirements: &#x20;
 
 {% code title="/spec/rules/REQUIRED_S3_BUCKET_TAGS" %}
 ```
@@ -36,7 +36,7 @@ Use the following CLI command:
 snyk iac rules init
 ```
 
-This command introduces a series of interactive prompts and allows you to set up your Project, rule, rule spec (for testing), and resource relations. By selecting `rule spec`, you will get a series of interactive prompts to create the template for your rule spec. This results in a template based on Terraform, CloudFormation, Azure Resource Manager, or Kubernetes.
+This command introduces a series of interactive prompts and allows you to set up your Project, rule, rule spec (for testing), and resource relations. By selecting `rule spec`,  you will get a series of interactive prompts to create the template for your rule spec. This results in a template based on Terraform, CloudFormation, Azure Resource Manager, or Kubernetes.
 
 **Example output from interactive prompts:**
 

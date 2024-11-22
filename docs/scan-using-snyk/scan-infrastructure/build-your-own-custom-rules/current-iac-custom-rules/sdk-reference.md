@@ -151,7 +151,7 @@ Default: `wasm`
 
 `--registry`
 
-The registry location you want the bundle to be pushed to, for example, `docker.io/`example`/bundle.tar.gz`
+The registry location you want the bundle to be pushed to, for example,  `docker.io/`example`/bundle.tar.gz`
 
 ### Flags available across all commands
 

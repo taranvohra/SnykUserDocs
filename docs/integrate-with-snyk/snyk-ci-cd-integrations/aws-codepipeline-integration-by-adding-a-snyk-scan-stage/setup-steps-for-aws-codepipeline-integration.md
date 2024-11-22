@@ -1,4 +1,4 @@
-# Setup steps for AWS CodePipeline integration
+# Setup steps for AWS CodePipeline
 
 You can initiate Snyk AWS CodePipeline integration directly from the AWS CodePipeline console.
 

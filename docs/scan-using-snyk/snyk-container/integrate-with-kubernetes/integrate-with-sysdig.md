@@ -34,11 +34,11 @@ helm upgrade --install snyk-monitor snyk-charts/snyk-monitor \
   --set sysdig.enabled=true
 ```
 
-Your Snyk Controller now collects data from Sysdig every four hours.
+Your Snyk Controller now collects data from Sysdig every four hours.&#x20;
 
 ## Enrich Snyk vulnerability data and priority score
 
-To enrich the priority score of vulnerabilities it detects, Snyk uses packages executed at runtime. This allows Snyk to better prioritize which vulnerabilities to fix first. The priority score is available on both the **Project** page and in the [Snyk public API](https://snyk.docs.apiary.io/#reference/projects/aggregated-project-issues/list-all-aggregated-issues).
+To enrich the priority score of vulnerabilities it detects, Snyk uses packages executed at runtime.  This allows Snyk to better prioritize which vulnerabilities to fix first. The priority score is available on both the **Project** page and in the [Snyk public API](https://snyk.docs.apiary.io/#reference/projects/aggregated-project-issues/list-all-aggregated-issues).
 
 ![Packages executed at runtime](<../../../.gitbook/assets/image (113) (1) (2) (1) (1) (2) (1) (1) (1).png>)
 

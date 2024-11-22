@@ -1,10 +1,10 @@
 # Classification policy - Use case
 
-You can use the **Set Asset Class** action from the Policies view to classify the assets based on importance, where class A is the most important and class D is the least important.
+You can use the **Set Asset Class** action from the Policies view to classify the assets based on importance, where class A is the most important and class D is the least important.&#x20;
 
-You can set the asset class based on:
+You can set the asset class based on:&#x20;
 
-* the repository name
+* the repository name &#x20;
 * the asset tags
 
 {% hint style="info" %}
@@ -26,3 +26,4 @@ After you set up the filters, you need to apply a Class D asset classification t
 You can apply a similar pattern and create actions for Class A, B, and C assets, within the same policy.
 
 <figure><img src="../../../../.gitbook/assets/image (9).png" alt="AppRisk - Setting up multiple actions for a classification policy"><figcaption><p>Snyk AppRisk - Setting up multiple actions for a classification policy</p></figcaption></figure>
+

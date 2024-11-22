@@ -1,6 +1,6 @@
 # Scan using Snyk
 
-You can use Snyk to scan and secure your codebase and cloud infrastructure configurations, taking advantage of the Snyk capabilities in Static Application Security Testing (SAST), Software Composition Analysis (SCA), and Infrastructure as Code analysis.
+You can use Snyk to scan and secure your codebase and cloud infrastructure configurations, taking advantage of the Snyk capabilities in Static Application Security Testing (SAST), Software Composition Analysis (SCA), and  Infrastructure as Code analysis.
 
 ## Snyk Open Source
 
@@ -37,3 +37,4 @@ For more information, see [Working with Snyk in your environment](working-with-s
 Scan and automatically address potential vulnerabilities when you review pull requests, to prevent security issues in production.
 
 For details, see [Run PR checks](run-pr-checks/).
+

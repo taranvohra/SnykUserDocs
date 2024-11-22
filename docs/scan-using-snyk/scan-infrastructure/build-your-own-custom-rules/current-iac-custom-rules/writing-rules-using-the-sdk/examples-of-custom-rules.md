@@ -87,7 +87,7 @@ test_CUSTOM_RULE_1 {
 
 ## Example with logical AND
 
-Try and extend the preceding example and update the rule to allow all cases that satisfy two conditions:
+Try and extend the preceding example  and update the rule to allow all cases that satisfy two conditions:
 
 1. A resource has an “owner” tag\
    **AND**

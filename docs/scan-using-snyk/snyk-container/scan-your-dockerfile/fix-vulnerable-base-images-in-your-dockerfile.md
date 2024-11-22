@@ -23,7 +23,7 @@ Snyk opens an automatic fix PR when there is a change in the Dockerfile or when 
 
 The feature is available for all Snyk users. It is on by default for all users with free accounts and off by default for existing integrations of Snyk customers.
 
-You can enable automatic update PRs from the integration or Project settings page, under **Dockerfiles:**
+You can enable automatic update PRs from the integration or Project settings page, under  **Dockerfiles:**
 
 <div align="left">
 

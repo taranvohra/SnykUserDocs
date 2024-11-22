@@ -8,7 +8,7 @@ Not all features follow all these stages, and timelines for each feature to move
 
 ## Alpha
 
-<table><thead><tr><th width="240">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>Internal release only.</td><td>Snyk internal users, potentially some design partners.</td><td>Controlled</td><td>No docs provided.</td></tr></tbody></table>
+<table><thead><tr><th width="240">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>Internal release only.</td><td>Snyk internal users, potentially some design partners.</td><td>Controlled </td><td>No docs provided.</td></tr></tbody></table>
 
 ## Closed Beta
 
@@ -29,7 +29,7 @@ Not all features follow all these stages, and timelines for each feature to move
 
 ### Snyk features in Early Access
 
-* [Insights](broken-reference/)
+* [Insights](broken-reference)
 * [Snyk GitHub Cloud App](../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/snyk-github-cloud-app.md)
 * [Use Custom Base Image Recommendations](../scan-using-snyk/snyk-container/use-snyk-container-from-the-web-ui/use-custom-base-image-recommendations/)
 * [REST API endpoints: Test an SBOM document for vulnerabilities](../snyk-api/rest-api-endpoints-test-an-sbom-document-for-vulnerabilities.md)
@@ -47,16 +47,16 @@ Not all features follow all these stages, and timelines for each feature to move
 
 ## Deprecated
 
-<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>The feature is available, but use is discouraged.</td><td>Current users only</td><td>Available by default.</td><td>Full public docs, marked-up appropriately.</td></tr></tbody></table>
+<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>The feature is available, but use is discouraged. </td><td>Current users only</td><td>Available by default.</td><td>Full public docs, marked-up appropriately.</td></tr></tbody></table>
 
 ## Maintenance mode
 
-<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>No new development or updates will be made to the feature.</td><td>Current users only</td><td>Available by default.</td><td>Full public docs, marked-up appropriately.</td></tr></tbody></table>
+<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>No new development or updates will be made to the feature. </td><td>Current users only</td><td>Available by default.</td><td>Full public docs, marked-up appropriately.</td></tr></tbody></table>
 
 ## End of Support
 
-<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>No new support tickets will be answered.</td><td>Current users only</td><td>Available by default.</td><td>Full public docs, marked-up appropriately.</td></tr></tbody></table>
+<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>No new support tickets will be answered. </td><td>Current users only</td><td>Available by default.</td><td>Full public docs, marked-up appropriately.</td></tr></tbody></table>
 
 ### End of life
 
-<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>The feature is no longer available.</td><td>No users</td><td>Not available</td><td>No docs available</td></tr></tbody></table>
+<table><thead><tr><th width="256">Description</th><th>Available to</th><th>Access</th><th>Docs</th></tr></thead><tbody><tr><td>The feature is no longer available. </td><td>No users</td><td>Not available</td><td>No docs available</td></tr></tbody></table>

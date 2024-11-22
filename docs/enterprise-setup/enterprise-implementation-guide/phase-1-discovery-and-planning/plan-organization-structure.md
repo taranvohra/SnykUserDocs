@@ -44,4 +44,4 @@ By exploring these options and grasping your company's requirements, you can est
 
 ## Additional information
 
-See [Manage Organizations](../../../snyk-admin/manage-groups-and-organizations/manage-organizations.md) for more details.
+See [Manage Organizations](../../../snyk-admin/manage-groups-and-organizations/manage-organizations.md) for more details.&#x20;

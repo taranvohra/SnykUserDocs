@@ -3,7 +3,7 @@
 ## Requirements to run a custom rules query
 
 * If you re-imported Projects in Snyk, you must **Select new repo** in **Custom rules** or wait for the next automated scan cycle.\
-  For details, see [Re-importing existing repositories for the Snyk Code testing](broken-reference/).
+  For details, see [Re-importing existing repositories for the Snyk Code testing](broken-reference).
 * The query language is case-sensitive.
 
 ## Run a query on a repository
@@ -17,9 +17,9 @@ Run queries against a repository from your Snyk Project list. The list contains 
    * [Query Templates](how-custom-rules-work.md#query-templates): Pre-built templates of logical operators, conditions, and other components.
    * [Query Predicates](how-custom-rules-work.md#query-predicates): Predefined criteria and conditions to be included in the result.
 4. Go to **Run query on a repository** > **Repositories** and select a repo where you want to run the query.\
-   The repo is imported after you select it.
+   The repo is imported after you select it.&#x20;
 5. (Optional) If a repository is already selected, click **Select new repo** to run the query.
-6.  Write your query in the **Code query** panel with [suggestive AI support](how-custom-rules-work.md#suggestive-ai-support).
+6.  Write your query in the **Code query** panel with [suggestive AI support](how-custom-rules-work.md#suggestive-ai-support).&#x20;
 
     <figure><img src="../../../.gitbook/assets/writing_query (2).gif" alt="Writing a query"><figcaption><p>Writing a query</p></figcaption></figure>
 7. **Run query**.
@@ -50,4 +50,4 @@ You can run queries only on certain languages in the code snippet area. See the 
 
 When you run a query, the results show the matching parts of the tested code, highlighting which parts of the code are related to the query. Each match is shown when Snyk Code is testing a repository and can be triaged based on the finding.
 
-\\
+\

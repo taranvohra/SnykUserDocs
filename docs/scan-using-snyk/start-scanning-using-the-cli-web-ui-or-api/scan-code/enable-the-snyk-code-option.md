@@ -8,7 +8,7 @@ To enable **Snyk Code** in your Organization, you must have Admin permissions.
 
 You can enable Snyk Code when you [Set up an integration for the first time](../../../getting-started/quickstart/set-up-an-integration.md). Otherwise, you can verify if the **Snyk Code** option is enabled in your Organization settings before importing repositories.
 
-## Enable Snyk Code
+## Enable Snyk Code&#x20;
 
 1. In the Snyk Web UI, navigate to **Settings** > **Snyk Code**.
 2. In the **Enable Snyk Code** section, change the setting to **Enabled**:

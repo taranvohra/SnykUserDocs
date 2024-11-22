@@ -14,7 +14,7 @@ The Snyk GitHub integration is available for all Snyk customers regardless of pl
 
 ## Known limitations of the Snyk GitHub integration
 
-You cannot use the Snyk GitHub integration with a Snyk [Service Account](../../enterprise-setup/service-accounts/), as the GitHub integration is associated with your user account, not with the Snyk Organization.\
+You cannot use the Snyk GitHub integration with a Snyk [Service Account](../../enterprise-setup/service-accounts/), as the GitHub integration is associated with your user account, not with the Snyk Organization. \
 Use the [GitHub Enterprise integration](snyk-github-enterprise-integration.md) to import public and private Projects using the API with a Snyk Service Account.
 
 ## Snyk GitHub integration features
@@ -33,7 +33,7 @@ When you import a Snyk Project using your GitHub integration with the Snyk PR fu
 
 ## How to set up the Snyk GitHub integration
 
-To connect your GitHub repositories to Snyk for scanning, you need to set up the integration and then import Projects.
+To connect your GitHub repositories to Snyk for scanning, you need to set up the integration and then import Projects.&#x20;
 
 See [Set up an integration](../../getting-started/quickstart/set-up-an-integration.md) and [Import a Project](../../getting-started/quickstart/import-a-project.md) for details of this process.
 
@@ -56,7 +56,7 @@ You can then scroll down to the section required, and set the options accordingl
   * [Open Source security and licenses](../../scan-using-snyk/run-pr-checks/configure-pr-checks.md#configure-pr-checks-at-the-integration-level)
   * [Code analysis](../../scan-using-snyk/run-pr-checks/configure-pr-checks.md#configure-pr-checks-at-the-integration-level)
 * Dockerfiles
-  * [Detect Dockerfiles](broken-reference/)
+  * [Detect Dockerfiles](broken-reference)
   * [Update Dockerfile base images](../../scan-using-snyk/snyk-container/scan-your-dockerfile/fix-vulnerable-base-images-in-your-dockerfile.md)
 
 ## General Snyk GitHub integration settings
@@ -150,7 +150,7 @@ The table that follows provides a summary of the required access scopes for GitH
 | Importing new projects to Snyk                          | Used to present a list of all the available repos in the GitHub org in the **Add Projects** screen (import popup).                                                                                                                                    | _admin:read:org, repo (all)_       |
 | Snyk tests on pull requests - **initial configuration** | <p>Used to add SCM webhooks to the imported repos. Snyk uses these webhooks to:</p><ul><li>Track the state of Snyk pull requests when PRs are created, updated triggered, merged, and so on.</li><li>Send push events to trigger PR checks.</li></ul> | _admin:repo\_hooks (read & write)_ |
 
-In non-brokered GitHub integrations, operations that are triggered via the Snyk Web UI, for example, opening a Fix PR or re-testing a Project, are performed on behalf of the acting user.
+In non-brokered GitHub integrations, operations that are triggered via the Snyk Web UI, for example, opening a Fix PR or re-testing a Project, are performed on behalf of the acting user.&#x20;
 
 Therefore, a user who wants to perform this operation on GitHub via the Snyk UI must connect their GitHub account to Snyk with the required permission scope for the repositories where they want to perform these operations. See the [Required permissions scope for repositories](snyk-github-integration.md#h\_01eefvj14p8b3depeffvyvdwzj) section for details.
 
@@ -218,7 +218,7 @@ Users can either be manually specified, and all will be assigned, or automatical
 
 ### **Enable Auto-assign for all Projects in the GitHub integration**
 
-To configure the Auto-assign settings for all the Projects from an imported private repository, go to the Github integration settings via <img src="../../.gitbook/assets/cog_icon.png" alt="Settings" data-size="line"> Organization **Settings** **>** **Integrations > Source control > GitHub** and select **Enable pull request assignees**.
+To configure the Auto-assign settings for all the Projects from an imported private repository, go to the Github integration settings via <img src="../../.gitbook/assets/cog_icon.png" alt="Settings" data-size="line"> Organization **Settings** **>** **Integrations > Source control > GitHub** and select **Enable pull request assignees**.&#x20;
 
 You can then choose to assign PRs to the last user to change the manifest file or specified contributors.
 
@@ -274,5 +274,5 @@ Note that branch protection is active only after a PR has been raised.
 2. Ensure there are no **Status checks found in the last week for this repository.**
 
 {% hint style="info" %}
-A disconnected GitHub integration will still appear as configured in the Integrations menu of the Snyk UI. However, clicking on the integration settings will show that it is not connected. In this case, the "configured" integration can safely be ignored.
+A disconnected GitHub integration will still appear as configured in the Integrations menu of the Snyk UI. However, clicking on the integration settings will show that it is not connected. In this case, the "configured" integration can safely be ignored.&#x20;
 {% endhint %}

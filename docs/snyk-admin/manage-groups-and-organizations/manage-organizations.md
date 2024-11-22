@@ -42,7 +42,7 @@ Follow these steps to delete an Organization:
 
 1\. On the Snyk Web UI, open the Organization dropdown list on the top menu and select the Organization you want to delete.
 
-2\. After the selected Organization appears, click the **Org Settings** button on the Group menu.
+2\. After the selected Organization appears, click the **Org Settings** button on the  Group menu.
 
 3\. On the **Settings** page, select **Genera**l on the menu.
 

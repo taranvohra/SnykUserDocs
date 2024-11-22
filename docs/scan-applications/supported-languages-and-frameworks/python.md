@@ -20,15 +20,15 @@ Snyk Code supports the following frameworks:
 ### Open source and licensing
 
 {% hint style="info" %}
-Features may not be available, depending on your plan. See the [Plans and pricing ](https://snyk.io/plans/)page for more details.
+Features may not be available, depending on your plan. See the [Plans and pricing ](https://snyk.io/plans/) page for more details.
 {% endhint %}
 
-| Package managers / Features                 | CLI support | Git support | License scanning | Fix PRs |
-| ------------------------------------------- | ----------- | ----------- | ---------------- | ------- |
-| [Pip](https://pypi.org/project/pip/)        | ✔︎          | ✔︎          | ✔︎               | ✔︎      |
-| [Poetry](https://python-poetry.org)         | ✔︎          | ✔︎          | ✔︎               |         |
-| [Pipenv](https://pipenv.pypa.io/en/latest/) | ✔︎          | ✔︎          | ✔︎               |         |
-| setup.py                                    | ✔︎          |             | ✔︎               |         |
+| Package managers / Features                  | CLI support | Git support | License scanning | Fix PRs |
+| -------------------------------------------- | ----------- | ----------- | ---------------- | ------- |
+| [Pip](https://pypi.org/project/pip/)         | ✔︎          | ✔︎          | ✔︎               | ✔︎      |
+| [Poetry](https://python-poetry.org)          | ✔︎          | ✔︎          | ✔︎               |         |
+| [Pipenv](https://pipenv.pypa.io/en/latest/)  | ✔︎          | ✔︎          | ✔︎               |         |
+| setup.py                                     | ✔︎          |             | ✔︎               |         |
 
 Snyk builds a dependency tree and then uses the [vulnerability database](https://snyk.io/vuln) to find vulnerabilities in any of the dependencies in the tree.
 
@@ -40,19 +40,19 @@ To scan your Projects, you must first install the relevant package manager and e
 
 ## Getting started with Snyk for Python across environments
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Prerequisites
 
 1. [Create a Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md).
 2. [Install Snyk CLI and authenticate your machine](../../snyk-cli/getting-started-with-the-snyk-cli.md#install-the-snyk-cli-and-authenticate-your-machine).
-3. [Set the default Organization for all Snyk tests](broken-reference/) (code analysis).
+3. [Set the default Organization for all Snyk tests](broken-reference) (code analysis).
 4. Ensure you have installed the relevant package manager before you begin using the Snyk CLI (open source).
 5. Ensure you have included the relevant manifest files supported by Snyk before testing.
 
 #### Code analysis
 
-To start testing your code using Snyk Code open your repository in a terminal and run the following command:
+To start testing your code using Snyk Code open your repository in a terminal and run the following  command:
 
 ```javascript
 snyk code test
@@ -62,14 +62,14 @@ To customize test options, run other commands, exclude directories and files, an
 
 * [Snyk CLI commands](../../snyk-cli/commands/#available-commands)
 * [Exclude directories and files from the Snyk tests](../../snyk-cli/scan-and-maintain-projects-using-the-cli/using-snyk-code-from-the-cli/excluding-directories-and-files-from-the-snyk-code-cli-test.md)
-* [Explore test results in a JSON or SARIF format in the terminal](broken-reference/)
-* [Exporting the test results to a JSON or SARIF file](broken-reference/)
+* [Explore test results in a JSON or SARIF format in the terminal ](broken-reference)
+* [Exporting the test results to a JSON or SARIF file](broken-reference)
 
 #### Open source and licensing
 
 #### Snyk CLI options for Python
 
-For information about the `snyk test` options available for use with Python, see [Options for Python Projects](https://docs.snyk.io/snyk-cli/commands/test#options-for-python-projects) in the `test` command help.
+For information about the `snyk test` options available for use with Python, see [Options for Python Projects](https://docs.snyk.io/snyk-cli/commands/test#options-for-python-projects) in the `test` command help.&#x20;
 
 For the available `snyk monitor` options, see [Options for Python Projects](https://docs.snyk.io/snyk-cli/commands/monitor#options-for-python-projects) in the `monitor` command help.
 
@@ -92,7 +92,7 @@ To build the dependency tree for a Poetry application, Snyk uses `pyproject.toml
 If no `poetry.lock` file is present; you should run `poetry lock` to generate one before scanning.
 
 {% hint style="info" %}
-[PEP 621](https://peps.python.org/pep-0621/) is a standard for defining direct dependencies in `pyproject.toml` files, which is different from how Poetry does this.
+[PEP 621](https://peps.python.org/pep-0621/) is a standard for defining direct dependencies in `pyproject.toml` files, which is different from how Poetry does this.&#x20;
 
 Snyk does not currently support PEP 621.
 {% endhint %}
@@ -111,7 +111,7 @@ Run `pipenv install` to ensure the CLI can build an up-to-date, accurate depende
 
 To build the dependency tree, Snyk analyzes the `setup.py` file, and detects packages listed in the `install_requires` key.
 
-This file will not be discovered automatically by the CLI. It must be specified manually using the `--file` option, for example:
+This file will not be discovered automatically by the CLI. It must be specified manually using the  `--file` option, for example:
 
 ```python
 snyk test --file=setup.py
@@ -156,7 +156,7 @@ Poetry dev dependencies are not included in scans by default. To change this, mo
 1. Log in to your Snyk account and navigate to the relevant Group and Organization.
 2. Select **Settings**, then **Languages**.
 3. Select **Edit settings** for **Python**.
-4. Enable or disable the **Scan Poetry dev dependencies** option under the **Poetry dev dependencies** settings.
+4. Enable or disable the **Scan Poetry dev dependencies** option under the **Poetry dev dependencies** settings.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (145) (1).png" alt=""><figcaption><p>Poetry dev dependency settings</p></figcaption></figure>
 
@@ -171,7 +171,7 @@ To scan Pipenv Projects, Snyk analyzes your `Pipfile` and `Pipfile.lock` files u
 {% hint style="info" %}
 Private packages and those with non-Linux OS requirements may be unresolvable and omitted from the dependency tree.
 
-If a `Pipfile.lock` is present, any unresolved packages it contains are added to the top level of the dependency tree using versions from the lock file.
+If a `Pipfile.lock` is present, any unresolved packages it contains are added to the top level of the dependency tree using versions from the lock file.&#x20;
 {% endhint %}
 
 You can choose whether Snyk should include dependencies specified in `[dev-packages]` when scanning your Pipenv Projects.
@@ -181,13 +181,13 @@ Pipenv dev dependencies are not included in scans by default. To change this, mo
 1. Log in to your Snyk account and navigate to the relevant Group and Organization.
 2. Select **Settings**, then **Languages**.
 3. Select **Edit settings** for **Python**.
-4. Enable or disable the **Scan Pipenv dev dependencies** option under the **Pipenv** settings.
+4. Enable or disable the **Scan Pipenv dev dependencies** option under the **Pipenv** settings.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (146).png" alt=""><figcaption><p>Pipenv dev dependency settings</p></figcaption></figure>
 
 ### Python version support
 
-Some Python Projects may contain dependencies that require specific versions of Python.
+Some Python Projects may contain dependencies that require specific versions of Python.&#x20;
 
 Therefore, the version of Python used when scanning can affect the dependency tree Snyk generates.
 
@@ -322,7 +322,7 @@ There is no need to inform Snyk about Python versions for Poetry Projects.
 
 Poetry files contain sufficient information to build a full dependency tree without running native tooling.
 
-### Snyk integrations
+### Snyk integrations&#x20;
 
 If you are using any of the supported IDEs to write Python, there are some configurations you must add to scan Python manifest files properly.
 
@@ -334,4 +334,4 @@ If those directories each require a different virtual environment to run, the Sn
 
 ## Troubleshooting
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;

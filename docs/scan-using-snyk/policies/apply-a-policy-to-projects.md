@@ -36,7 +36,7 @@ If multiple tags are added to a policy, the Project needs to match with only one
 
 For example, if you have a policy applied to `Critical`, `External`, and `Frontend`, this policy is assigned to Projects that have the same attributes, but not to a Project with the attributes `Critical` and `External` only.
 
-An example policy follows. It is applied to an attribute in the **Business Criticality** section, `Critical`, and to attributes in the **Environment** section, `Frontend` and `External`. The policy also has two Project tags. The first tag has the key `PCI`, with the value of `Compliant`. The second tag has the key `owner`, with the value of `fred`.
+An example policy follows. It is applied to an attribute in the **Business Criticality** section, `Critical`, and to attributes in the **Environment** section,  `Frontend` and `External`. The policy also has two Project tags. The first tag has the key `PCI`, with the value of `Compliant`. The second tag has the key `owner`, with the value of `fred`.
 
 <div align="center" data-full-width="true">
 
@@ -62,7 +62,7 @@ The following Project will not inherit the policy, because the Project lacks the
 
 ## Assign multiple policies to a Project
 
-Multiple policies can be assigned to a Project. For example, you may have a policy applied to the attributes `Critical` and `External` and another policy applied to the attributes `Critical` and `Production`. If you have a Project with the attributes `Critical`, `External` and `Production`, both policies are assigned.
+Multiple policies can be assigned to a Project. For example, you may have a policy applied to the attributes `Critical` and `External` and another policy applied to the attributes `Critical` and `Production`. If you have a Project with the attributes `Critical`, `External` and `Production`,  both policies are assigned.
 
 When multiple policies are assigned to a Project, the order of the policies on the policy manager page determines precedence. The policy closest to the top of the list takes precedence over other assigned policies after it. To change the order of policies, either drag and drop the policies into the order you want or use the three dots on the right-hand side to move the policy up or down in the list.
 

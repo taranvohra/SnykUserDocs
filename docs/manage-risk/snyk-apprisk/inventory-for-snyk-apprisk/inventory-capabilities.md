@@ -12,7 +12,7 @@ Each inventory layout is presented in a table format, detailing the available ke
 
 The asset column incorporates the name of the repository asset, package or scanned artifact, and the Git remote URL, if available. Please note that scanned artifacts do not have a Git remote URL.
 
-An asset can be the parent of multiple items. Click on the arrow next to the parent asset name to expand the list of all contained items.
+An asset can be the parent of multiple items. Click on the arrow next to the parent asset name to expand the list of all contained items.&#x20;
 
 Learn more about any asset by clicking the name of the asset in the inventory layout. A pop-up screen is displayed with all relevant information on that specific asset.
 
@@ -45,7 +45,7 @@ The Controls logos can have one of the following states:
 | <img src="../../../.gitbook/assets/image (7) (4).png" alt="" data-size="original"> | The Snyk product was executed and failed with issues.                            |
 | <img src="../../../.gitbook/assets/image (8) (3).png" alt="" data-size="original"> | The Snyk product was executed and failed due to not being covered by the policy. |
 
-Click a Controls logo to see **Last test** details. This reflects the most recent time that the asset was scanned by a specific product.
+Click a Controls logo to see **Last test** details. This reflects the most recent time that the asset was scanned by a specific product.&#x20;
 
 <figure><img src="../../../.gitbook/assets/inventory5.png" alt="AppRisk - Controls"><figcaption><p>Snyk AppRisk - Controls</p></figcaption></figure>
 
@@ -72,9 +72,9 @@ You can see the list of all developers that worked on that specific asset. The d
 
 ## **Class**
 
-Reflects the business criticality of the asset from A (most critical) to D (least critical), as you defined it in the Policies view.
+Reflects the business criticality of the asset from A (most critical) to D (least critical), as you defined it in the Policies view.&#x20;
 
-You can manually change the business criticality of an asset. Click the criticality level and select another one from the list.
+You can manually change the business criticality of an asset. Click the criticality level and select another one from the list.&#x20;
 
 The Asset Class column is also available on the Insights UI for risk-based prioritization, and it has the same functionality as it does here. At the moment, the Asset Class column is available only for repository assets, and applicable only for Snyk Code.
 
@@ -88,4 +88,6 @@ The class value can be auto-generated with policies. You just need to create a p
 
 ###
 
-\\
+
+
+\

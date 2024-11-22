@@ -6,14 +6,14 @@ Ensure that the code in your repositories is in a supported language and platfor
 
 ## Prerequisites for scanning applications
 
-Regardless of how you use Snyk, ensure you have completed the steps in the [Quickstart](../../getting-started/quickstart/).
+Regardless of how you use Snyk, ensure you have completed the steps in the [Quickstart](../../getting-started/quickstart/).&#x20;
 
 In addition, if you are using Snyk Code or scanning container images, complete the following:
 
 * [Activate Snyk Code](../../scan-using-snyk/start-scanning-using-the-cli-web-ui-or-api/scan-code/activate-snyk-code-using-the-web-ui.md) to scan your application code.
 * [Set up integration with a supported container registry](../../getting-started/quickstart/set-up-an-integration.md) to scan container images.
 
-For general information about Snyk scans, see [Running scans](../../scan-using-snyk/working-with-snyk-in-your-environment/running-scans.md).
+For general information about Snyk scans, see [Running scans](../../scan-using-snyk/working-with-snyk-in-your-environment/running-scans.md).&#x20;
 
 ## Overview of ways to scan your Projects
 
@@ -27,7 +27,7 @@ Snyk provides multiple ways to scan Snyk Open Source, Snyk Code, and Snyk Contai
 | Incorporate into the CI/CD pipelines                                               | :heavy\_minus\_sign: | :heavy\_check\_mark: | :heavy\_minus\_sign: | :heavy\_minus\_sign: |
 | Obtain results precisely reflecting the Project vulnerabilities and configurations | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: |
 
-If you choose to use the CLI for scanning your Snyk Open Source, Snyk Code, and Snyk Container Projects, you can run the scans locally on your machine or incorporate them into your CI/CD pipelines, providing more control and flexibility over the scanning process.
+If you choose to use the CLI for scanning your Snyk Open Source, Snyk Code, and Snyk Container Projects, you can run the scans locally on your machine or incorporate them into your CI/CD pipelines, providing more control and flexibility over the scanning process.&#x20;
 
 In addition, using the CLI enables you to scan your code, open-source packages, and container images in their specific development environments, ensuring results that precisely reflect the dependencies and configurations of your Projects.
 
@@ -35,9 +35,9 @@ In addition, using the CLI enables you to scan your code, open-source packages, 
 
 Before initiating a scan using the CLI, ensure you follow all the installation, authentication, and getting started steps:
 
-* Follow the instructions on the [Install or update the Snyk CLI](../../snyk-cli/install-or-update-the-snyk-cli/) page and choose the installation method that best suits your needs.
+* Follow the instructions on the [Install or update the Snyk CLI](../../snyk-cli/install-or-update-the-snyk-cli/) page and choose the installation method that best suits your needs.&#x20;
 * After the CLI is installed, you must authenticate your machine by following the instructions on the [Authentication](../../snyk-cli/authenticate-the-cli-with-your-account.md) page.
-* You can test your installation by running `snyk --help` in the CLI.
+* You can test your installation by running `snyk --help` in the CLI.&#x20;
 * After the CLI setup in complete, you can start scanning. See [Getting started with the CLI ](../../snyk-cli/getting-started-with-the-snyk-cli.md)for more details.
 
 ### Initiate a scan
@@ -74,3 +74,10 @@ Using a Snyk integration, you can scan your Projects from the Web UI> Running PR
 ## Scan using the API
 
 The Snyk API v1 offers a set of endpoints to test your code. See the [API v1 Test docs](https://snyk.docs.apiary.io/#reference/test) for more information.
+
+
+
+
+
+
+

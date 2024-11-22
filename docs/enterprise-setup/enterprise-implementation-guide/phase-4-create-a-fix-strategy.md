@@ -10,7 +10,7 @@ In most cases, when you look across all of your Organizations and vulnerabilitie
 
 ## Decide important focus areas
 
-Before diving into specific vulnerabilities, consider your Organizations and repositories (Targets in Snyk) to identify any areas of specific importance. The discovery of business-critical applications you did in phase 1 can provide information that helps you prioritize during this phase. For example, if your Organizations match different products, you can initially focus on the one Organization (product) with the most users or where security matters most.
+Before diving into specific vulnerabilities, consider your Organizations and repositories (Targets in Snyk) to identify any areas of specific importance. The discovery of business-critical applications you did in phase 1 can provide information that helps you prioritize during this phase. For example, if your Organizations match different products, you can initially focus on the one Organization (product) with the most users or where security matters most.&#x20;
 
 In that Organization, you can consider the repositories that make up the application's different parts. Areas that handle sensitive data, or are public-facing, may be more important to secure, so this could be another way to narrow down your initial list of Projects to review.
 
@@ -24,27 +24,27 @@ After you have your reduced set of Projects to prioritize, you may want to split
 
 ## Fix based on prioritization methods
 
-Filters are available to help prioritize what issues need to be fixed urgently. The following search criteria are most commonly used when building a prioritization plan and can be used iteratively or in combination as you analyze results.
+Filters are available to help prioritize what issues need to be fixed urgently. The following search criteria are most commonly used when building a prioritization plan and can be used iteratively or in combination as you analyze results.&#x20;
 
 * Severity: start with **High** and **Critical**. It is common to filter by critical severity; however, if you are using Snyk Code and Snyk Open Source:
   * Filtering by Critical and High ensures Snyk Code issues are not filtered out
   * Alternatively, filtering on critical severity for Snyk Open Source, then filtering on high severity for Snyk Code independently, ensures you identify the most severe issues for each scan type.
 * [Exploit Maturity](https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly/): issues that are **Mature** or have **Proof of Concept** are more exploitable. By choosing this filter, you implicitly filter only open-source results.
-* Fixable: if there is a fix available by simply upgrading a package, fixing is faster than without an upgrade).
+* Fixable: if there is a fix available by simply upgrading a package, fixing is faster than without an upgrade).  &#x20;
 * CVSS Score for Open Source Vulnerabilities
 * [Priority Score](../../scan-using-snyk/find-and-manage-priority-issues/priority-score.md): CVSS Score is included in the calculation. One strategy is to eliminate the vulnerabilities with a score of 900-1000, and then move to vulnerabilities with a score of 800-900, and so on.
 
-When planning your fix strategy, decide which metrics will be used and get specific with your timeline. If you choose to fix by severity, for example, estimate the time it will take to resolve vulnerability per severity. It is recommended to be specific with your fix strategy.
+When planning your fix strategy, decide which metrics will be used and get specific with your timeline. If you choose to fix by severity, for example, estimate the time it will take to resolve vulnerability per severity. It is recommended to be specific with your fix strategy.&#x20;
 
 {% hint style="info" %}
 **Example fix strategy**
 
-If there are fifty Critical severity issues, and one hundred High severity issues, you may plan on two weeks to fix critical vulnerabilities and then four weeks to fix high severity, based on the size of your team and workload.
+If there are fifty Critical severity issues, and one hundred High severity issues,  you may plan on two weeks to fix critical vulnerabilities and then four weeks to fix high severity, based on the size of your team and workload.&#x20;
 {% endhint %}
 
 ## Fix by issue type
 
-Alternatively, you can fix based on issue type. It is common to focus initially on specific issue types, for example, open-source vulnerabilities, as then you can more easily compare issues across different Projects.
+Alternatively, you can fix based on issue type. It is common to focus initially on specific issue types, for example, open-source vulnerabilities, as then you can more easily compare issues across different Projects.&#x20;
 
 Examples of processes follow for fixes led by different types of teams.
 
@@ -70,7 +70,7 @@ DevSecOps-led implementation, focusing on securing your custom images and enviro
 
 ## Targeted vulnerabilities campaigns
 
-As you operationalize security testing in your development process, another option for your fix strategy is to have campaigns to eliminate vulnerability types, for example, SQ and injection. Using CWE filters can be very helpful in reporting to identify and log issues.
+When you operationalize security testing in your development process, another option for your fix strategy is to have campaigns to eliminate vulnerability types, for example, SQL injection. Using CWE filters can be very helpful in reporting to identify and log issues.
 
 ## Update your timeline
 

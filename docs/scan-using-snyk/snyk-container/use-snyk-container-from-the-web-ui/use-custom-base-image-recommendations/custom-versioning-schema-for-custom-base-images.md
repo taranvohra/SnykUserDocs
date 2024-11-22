@@ -40,7 +40,7 @@ snyk/example:1.3_V1
 
 Because this repository’s image tags do not follow the semantic versioning standard, it is necessary to describe the tags using a custom versioning schema.
 
-The `snyk/example` tag schema is defined by the following elements, in this order:
+The  `snyk/example` tag schema is defined by the following elements, in this order:
 
 1. A number whose value has the highest significance (MAJOR part)
 2. A period
@@ -132,13 +132,13 @@ Next is the date element. Sometimes dates are there only to provide more informa
 
 If the date element is important, decide how significant each date element is relative to the SemVer. For example, is the year more significant than a major version?
 
-To keep the significance order, use the regex:
+To keep the significance order, use the regex:&#x20;
 
 ```regex
 (?<C3>\d{4})(?<C4>\d{2})(?<C5>\d{2})(?<C6>\d{2})
 ```
 
-Since the date is ordered in such a way that the number produced by concatenating the year, month, day, and hour can be compared to another concatenated date correctly, the long regex above can be replaced with a simpler one:
+Since the date is ordered in such a way that the number produced by concatenating the year, month, day, and hour can be compared to another concatenated date correctly, the long regex above can be replaced with a simpler one:&#x20;
 
 ```regex
 (?<C3>\d{10})
@@ -149,7 +149,7 @@ Now the regex looks like this:
 <pre class="language-regex"><code class="lang-regex">(?&#x3C;C0>\d+)\.(?&#x3C;C1>\d+)\.(?&#x3C;C2>\d+)_(?&#x3C;M0>deb\d+)<a data-footnote-ref href="#user-content-fn-6">_(?&#x3C;C3>\d{10})</a>
 </code></pre>
 
-The optional flavor is last. Add another MATCH group here and make it optional:
+The optional flavor is last. Add another MATCH group here and make it optional:&#x20;
 
 ```regex
 (?:\_(?<M1>.*))?
@@ -157,7 +157,7 @@ The optional flavor is last. Add another MATCH group here and make it optional:
 
 This avoids getting `slim` recommended if it is not in use and only gets `slim` recommended if it is being used.
 
-The complete custom versioning schema expression looks like this:
+The complete custom versioning schema expression looks like this:&#x20;
 
 <pre class="language-regex"><code class="lang-regex">(?&#x3C;C0>\d+)\.(?&#x3C;C1>\d+)\.(?&#x3C;C2>\d+)_(?&#x3C;M0>deb\d+)_(?&#x3C;C3>\d{10})<a data-footnote-ref href="#user-content-fn-7">(?:\-(?&#x3C;M1>.*))?</a>
 </code></pre>
@@ -194,7 +194,7 @@ Since `1.3` and `1.3.5` have the same issue as `1.2` and `1.2.4`, the recommenda
 * CVS uses a subset of the ECMAScript regex. See the [guide on ECMAScript regex syntax by MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular\_Expressions).
 * Backreferences and lookahead assertions are not supported. Internally, Snyk uses the RE2 library. For a full list of unsupported features, see [Syntax on re2 GitHub](https://github.com/google/re2/wiki/Syntax).
 * Note that the regular expression string is parsed as an ECMAScript regex and then internally converted to RE2 syntax. For example, use the `(?<name>re)` syntax for grouping. `(?P<name>re)` will not parse correctly.
-* In the list of [supported features](https://github.com/google/re2/wiki/Syntax), take into consideration only the feature\*\*,\*\* not the syntax.
+* In the list of [supported features](https://github.com/google/re2/wiki/Syntax), take into consideration only the feature**,** not the syntax.
 
 ### Size limitations
 
@@ -232,6 +232,8 @@ In the example, change the capture group syntax from `(?P<C0>.*)` to `(?<C0>.*)`
 
 For information on the regex syntax, see [Regular expression syntax flavor](custom-versioning-schema-for-custom-base-images.md#regular-expression-syntax-flavor).
 
+
+
 `Use of an unsupported regex feature`
 
 #### Why does it occur?
@@ -246,6 +248,8 @@ There is no simple fix. The expression must be redesigned to work without such f
 
 See [supported features](https://github.com/google/re2/wiki/Syntax).
 
+
+
 `Group name format is incorrect`
 
 #### Why does it occur?
@@ -257,6 +261,8 @@ This error can happen if a named group exists that does not follow the format of
 #### How to fix it
 
 Change the group name to fit the format. If you need only a group, you can use non-capture groups.
+
+
 
 `Operator index is too big`
 
@@ -272,6 +278,8 @@ Take into consideration that each character does not require its own separate gr
 
 If you still require more than 100 groups, CVS might not be a great fit.
 
+
+
 `Group is missing a name`
 
 #### Why does it occur?
@@ -286,6 +294,8 @@ Often the solution is to explicitly define a non-capture group.
 
 The example `(debian)|(ubuntu)` becomes `(?:debian)|(?:ubuntu)`.
 
+
+
 `No groups were found`
 
 #### Why does it occur?
@@ -297,6 +307,8 @@ This error can happen if no named groups are found, in which case Snyk cannot co
 #### How to fix it
 
 See the [CVS expression guide](custom-versioning-schema-for-custom-base-images.md#cvs-expression-guide) to better understand how Snyk compares and filters out tags.
+
+
 
 `Expression length is not supported`
 
@@ -310,7 +322,7 @@ If your expression string is longer than 1,000 characters, Snyk is not able to p
 
 Shorten the string by using [character classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular\_Expressions/Character\_Classes) and [quantifiers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular\_Expressions/Quantifiers) instead of specific characters.
 
-If you still require more than 1,000 characters to describe your tags, CVS might not be a great fit.
+If you still require more than 1,000 characters to describe your tags, CVS might not be a great fit.&#x20;
 
 For information on other options, contact [Snyk support](https://support.snyk.io/hc/en-us/requests/new).
 

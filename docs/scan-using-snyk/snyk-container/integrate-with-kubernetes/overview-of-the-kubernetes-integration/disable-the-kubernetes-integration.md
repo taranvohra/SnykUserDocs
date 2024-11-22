@@ -14,4 +14,4 @@ You can then delete the release: `$ helm delete snyk-monitor`
 
 2. On the Organization integration settings page, click **Disconnect** . This invalidates the credentials used to import and synchronize new workloads.
 
-If you are not using Helm, remove the `snyk-monitor` namespace.
+&#x20;If you are not using Helm, remove the `snyk-monitor` namespace.&#x20;

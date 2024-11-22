@@ -10,7 +10,7 @@ Snyk Code supports the following:
   * Linux
   * Windows (limited)
 * Embedded systems: Linux
-* GUI Framework
+* GUI Framework&#x20;
 * Libraries: POSIX, C++ Standard Library, Boost, QT
 
 ### Open source and licensing
@@ -63,7 +63,7 @@ The supported archive formats are:
 ### Constraints and limitations
 
 {% hint style="info" %}
-The following constraints and limitations are by design. While Snyk may work on improvements in the future, they are not considered an issue.
+The following constraints and limitations are by design. While Snyk may work on improvements in the future, they are not considered an issue.&#x20;
 {% endhint %}
 
 ### **Source code dependencies need to be available in the scanned folder**
@@ -110,17 +110,17 @@ When you scan C++ Projects, the following data is collected and may be stored fo
 Example:\
 `./project-name/vendor/bzip2-1.0.6/blocksort.c`
 
-### Snyk CLI
+### Snyk CLI&#x20;
 
 #### Prerequisites
 
 1. [Create a Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md)
 2. [Install Snyk CLI and authenticate your machine](../../snyk-cli/getting-started-with-the-snyk-cli.md#install-the-snyk-cli-and-authenticate-your-machine)
-3. [Set the default Organization for all Snyk tests](broken-reference/) (code analysis)
+3. [Set the default Organization for all Snyk tests](broken-reference) (code analysis)
 
 #### Code analysis
 
-To start testing your code using Snyk Code open your repository in a terminal and run the following command:
+To start testing your code using Snyk Code open your repository in a terminal and run the following  command:
 
 ```javascript
 snyk code test
@@ -130,8 +130,8 @@ To customize test options, run other commands, exclude directories and files, an
 
 * [Snyk CLI commands](../../snyk-cli/commands/#available-commands)
 * [Exclude directories and files from the Snyk tests](../../snyk-cli/scan-and-maintain-projects-using-the-cli/using-snyk-code-from-the-cli/excluding-directories-and-files-from-the-snyk-code-cli-test.md)
-* [Explore test results in a JSON or SARIF format in the terminal](broken-reference/)
-* [Exporting the test results to a JSON or SARIF file](broken-reference/)
+* [Explore test results in a JSON or SARIF format in the terminal ](broken-reference)
+* [Exporting the test results to a JSON or SARIF file](broken-reference)
 
 #### Open source and licensing
 
@@ -365,7 +365,7 @@ Snyk Web UI supports only code analysis, using Snyk Code.
 
 No additional options are required. The Snyk plugin has views within the IDE for displaying results.
 
-**Snyk Open Source**
+**Snyk Open Source**&#x20;
 
 Under **Additional Parameters** in the IDE settings, enter the **--unmanaged** option to scan for C/C++ open source dependencies.
 

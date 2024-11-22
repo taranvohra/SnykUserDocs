@@ -44,7 +44,7 @@ To enable integration between Azure Repository and Snyk:
 * Set up your Azure Repos account and your Snyk account.
   * You must have an Azure project.
   * If you do not have a project yet, create one in [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops) or set one up in an [on-premise Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=azure-devops) instance.
-* Create a Personal Access Token (PAT). You must be a member of the [Project Administrators Group](https://docs.microsoft.com/en-us/azure/devops/organizations/security/change-project-level-permissions?view=azure-devops) so that the PAT has the `edit subscriptions permissions` required to enable webhooks.
+* &#x20;Create a Personal Access Token (PAT). You must be a member of the [Project Administrators Group](https://docs.microsoft.com/en-us/azure/devops/organizations/security/change-project-level-permissions?view=azure-devops) so that the PAT has the `edit subscriptions permissions` required to enable webhooks.
 
 ### **Integrate with your Azure Repository**
 
@@ -60,12 +60,12 @@ To enable integration between Azure Repository and Snyk:
 2. On the **Azure Repos** tile, click the settings icon to open **Organization Settings** > **Integrations** > **Azure Repos** > **Account credentials**.\
    <img src="../../.gitbook/assets/integrations -azure_repo_tile-11aug2022.png" alt="Azure Repos integration tile" data-size="original">
 3. Pay special attention to the instructions given on the **Account Credentials** page. Depending on your plan, you may need to enter just the Azure DevOps Organization, or you may need to enter the entire URL.
-   *   **Set your organization**: Enter the slug for your Organization only.\
+   *   **Set your organization**: Enter the slug for your Organization only. \
        For example, enter `your-azure-devops-org`
 
        <figure><img src="../../.gitbook/assets/image (345) (1).png" alt="If the Organization prompt appears, enter only the &#x27;org slug&#x27; found in your azure URL"><figcaption><p>If the Organization prompt appears, enter only the 'org slug' found in your azure URL</p></figcaption></figure>
-   *   **Set your host**: enter the entire url.\
-       For example, enter `https://dev.azure.com/your-azure-devops-org`\
+   *   **Set your host**: enter the entire url. \
+       For example, enter `https://dev.azure.com/your-azure-devops-org` \
        Alternatively, you may enter a custom url that is publicly reachable
 
        <figure><img src="../../.gitbook/assets/image (344).png" alt="Enterprise customers can provide a custom URL for an Azure Repos Server private instance that is publicly reachable"><figcaption><p>Enterprise customers can provide a custom URL for an Azure Repos Server private instance that is publicly reachable</p></figcaption></figure>
@@ -77,9 +77,11 @@ If the connection to Azure fails, a notification appears under the **Azure Repos
 
 <img src="../../.gitbook/assets/azure-no-connect_31july2022.png" alt="Could not connect to Azure Repos. Ensure you have entered your account credential correctly." data-size="original">
 
+
+
 ## Add Projects to Snyk for Azure Repos
 
-Snyk tests and monitors Azure Repos by evaluating root folders and custom file locations for the [languages that Snyk supports](broken-reference/).
+Snyk tests and monitors Azure Repos by evaluating root folders and custom file locations for the [languages that Snyk supports](broken-reference).
 
 To add a default Project:
 

@@ -18,7 +18,7 @@ After you make these decisions and configure your Snyk Organization, you can [in
 
 ## Where to implement Snyk in your SDLC
 
-As you prepare for your team to start adopting Snyk as part of a secure development workflow, decide where to use Snyk in your SDLC, and what you want to scan, for example, application code, open-source library dependencies, container registries, and so on.
+As you prepare for your team to start adopting Snyk as part of a secure development workflow, decide where to use Snyk in your SDLC, and what you want to scan, for example, application code, open-source library dependencies, container registries,  and so on.
 
 You will want to roll Snyk out in phases depending on how far you and your team have progressed with developer security: awareness, visibility, preventing issues, fixing the backlog, and optimizing.
 

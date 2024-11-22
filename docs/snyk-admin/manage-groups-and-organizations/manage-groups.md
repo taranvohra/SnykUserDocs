@@ -1,6 +1,6 @@
 # Manage Groups
 
-You can use Group-level options to view [reports](manage-groups.md#group-reports), [dependencies](manage-groups.md#group-dependencies), and [policies](manage-groups.md#group-policies) across all of the Organizations in your Group, configure your [Group settings](manage-groups.md#group-settings), and view all the [members](manage-groups.md#group-members) in a Group.
+You can use Group-level options to view [reports](manage-groups.md#group-reports), [dependencies](manage-groups.md#group-dependencies), and [policies](manage-groups.md#group-policies) across all of the  Organizations in your Group, configure your [Group settings](manage-groups.md#group-settings), and view all the [members](manage-groups.md#group-members) in a Group.
 
 <div align="left">
 
@@ -46,7 +46,7 @@ See [Policies](../../scan-using-snyk/policies/) for details.
 
 ## Group settings
 
-Select **Settings** to view and manage Group settings.
+Select **Settings** to view and manage Group settings.&#x20;
 
 See [Manage settings](../manage-settings/) for details.
 

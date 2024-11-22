@@ -32,7 +32,7 @@ For more information, see [Using Snyk Code via the CLI](../../../snyk-cli/scan-a
 
 ## Using custom rules in the IDE
 
-IDE integrations with Snyk support custom rules as long as you have the [.snyk file](../../policies/the-.snyk-file.md) to hold any custom rules that you have created using Snyk Web UI.
+IDE integrations with Snyk support custom rules as long as you have the [.snyk file](../../policies/the-.snyk-file.md) to hold any custom rules that you have created using Snyk Web UI.&#x20;
 
 For more information, see [Using Snyk Code via the IDE](../using-snyk-code-in-an-ide.md).
 

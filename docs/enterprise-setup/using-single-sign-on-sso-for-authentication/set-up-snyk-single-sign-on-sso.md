@@ -177,7 +177,7 @@ To complete your login:
 3. Log in with your identity provider as you would for other applications.
 4. Let Snyk Support know which user to promote as the Group administrator.
 
-## Resources for SSO setup
+## &#x20;Resources for SSO setup
 
 These worksheets include the information to enter in your Identity provider and the information you need to collect before submitting a ticket to Snyk Support to request single sign-on.
 

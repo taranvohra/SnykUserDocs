@@ -3,7 +3,7 @@
 After you have imported one or more Projects, you can see the results of your scans.
 
 {% hint style="info" %}
-In the Snyk Web UI, you see information specific to your Organization, such as your team), which is under a Group, such as your company. This allows your company to organize and collect data for the work your teams are doing. For more information, see [Manage users in an Organization](../../snyk-admin/manage-users-in-organizations-and-groups/manage-users-in-organizations.md).
+In the Snyk Web UI, you see information specific to your Organization, such as your team), which is under a Group, such as your company. This allows your company to organize and collect data for the work your teams are doing. For more information, see  [Manage users in an Organization](../../snyk-admin/manage-users-in-organizations-and-groups/manage-users-in-organizations.md).
 {% endhint %}
 
 ## View imports
@@ -86,6 +86,6 @@ If your Snyk Open Source scan shows no vulnerabilities in your open-source libra
 
 ## More information and next step
 
-Refer to the course [Introduction to the Snyk UI](https://learn.dev.snyk.io/lesson/intro-to-snyk-ui/) to learn more about reviewing results from open-source, code, container, and infrastructure file scans.
+Refer to the course [Introduction to the Snyk UI](https://learn.dev.snyk.io/lesson/intro-to-snyk-ui/) to learn more about reviewing results from open-source, code, container, and infrastructure file scans.&#x20;
 
 Now you understand the results you are seeing, you must [understand the vulnerabilities](understand-your-vulnerabilities.md) themselves.

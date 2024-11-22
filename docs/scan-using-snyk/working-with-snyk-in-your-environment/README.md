@@ -2,7 +2,7 @@
 
 {% hint style="info" %}
 **Feature availability**\
-Some features mentioned on this page may not be available depending on your Snyk plan or product. Each Snyk product provides key capabilities for the ecosystems you are working in.
+Some features mentioned on this page may not be available depending on your Snyk plan or product. Each Snyk product provides key capabilities for the ecosystems you are working in.&#x20;
 
 There is a monthly limit to the number of tests performed if a particular product is not purchased. See the [Pricing plans](https://snyk.io/plans) page for more details.
 {% endhint %}
@@ -11,10 +11,10 @@ Snyk takes a developer-first approach to securing your development work by integ
 
 The Snyk developer-first approach allows you to:
 
-* Use Snyk to focus on early enablement, not later enforcement.
+* Use Snyk to focus on early enablement, not later enforcement.&#x20;
 * Run scans while you are working on a Project to minimize rework by finding issues that require changes before you commit the code.
 * Add and test packages before writing the code that interfaces with each package.
-* After writing a major section of code, scan it to find issues before continuing work.
+* &#x20;After writing a major section of code, scan it to find issues before continuing work.
 
 Using Snyk begins with importing one or more Projects and scanning for issues.
 
@@ -40,7 +40,7 @@ Snyk Open Source and Snyk Code allow you to [run PR Checks](../run-pr-checks/) t
   * Check for license compliance (Snyk Open Source)
   * Address dependency upgrades by positioning updates to address technical debt (Snyk Open Source)
 
-As you start planning and designing your applications, and your code progresses through your development process to production, Snyk provides different capabilities at each stage to help you find and fix security issues.
+As you start planning and designing your applications, and your code progresses through your development process to production, Snyk provides different capabilities at each stage to help you find and fix security issues.&#x20;
 
 ## Plan and design your code
 
@@ -69,7 +69,7 @@ Before integrating your code into production, use the [`snyk monitor`](../../sny
 
 You can use the `snyk monitor` or `snyk container monitor` capabilities to identify issues introduced into open-source and container Projects. During implementation, monitoring helps you to gain recognition of vulnerabilities in your Projects. See [Deployment and rollout recommendations](./#deployment-and-rollout-recommendations) for details.
 
-Using the `snyk monitor` or `snyk container monitor` command allows you to push results from the CLI to the Snyk Web UI, where you can view the information to help in fixing issues. Use the `--org=` option to indicate the Organization that contains the Project, so you will use the test settings you intend and push the results to the correct Project.
+Using the `snyk monitor` or `snyk container monitor` command allows you to push results from the CLI to the Snyk Web UI, where you can view the information to help in fixing issues. Use the  `--org=` option to indicate the Organization that contains the Project, so you will use the test settings you intend and push the results to the correct Project.
 
 Snyk Enterprise plan customers can monitor container images and their open-source and Linux-based packages being used in production through Kubernetes integration to receive notifications of known vulnerabilities for applications in production.
 

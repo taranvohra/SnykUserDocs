@@ -1,6 +1,6 @@
 # Basic Usage
 
-Use Snyk Code custom rules to create queries with [suggestive AI support](../how-custom-rules-work.md#suggestive-ai-support). You can choose from provided [templates](../how-custom-rules-work.md#query-templates) and [predicates](../how-custom-rules-work.md#query-predicates). Alternatively, you can create your own predicates and [save them as a custom rule](../create-custom-rules.md).
+Use Snyk Code custom rules to create queries with [suggestive AI support](../how-custom-rules-work.md#suggestive-ai-support). You can choose from provided [templates](../how-custom-rules-work.md#query-templates) and [predicates](../how-custom-rules-work.md#query-predicates). Alternatively, you can create your own predicates and [save them as a custom rule](../create-custom-rules.md).&#x20;
 
 Consider the following query examples and rules to use with Snyk Code custom rules.
 
@@ -29,7 +29,7 @@ using var cmd = new NpgsqlCommand(sql, conn);
 
 Enter the following queries in the query window and press **Run Query** to see the results.
 
-1. Select `body` by using the query: `“body”`
+1. Select `body` by using the query: `“body”`&#x20;
 
 {% hint style="info" %}
 This query does not select the Body with a capital B. The query language is case-sensitive.
@@ -37,7 +37,7 @@ This query does not select the Body with a capital B. The query language is case
 
 2. Add `Body` to the findings so the query becomes `Or<”body”,”Body”>`.
 3. You can achieve the same outcome using a regex `~"body|Body"` or `~"[Bb]ody"`
-4. Do something more complex regex and query:\
+4. Do something more complex regex and query: \
    ``~"[a-z0-9!#$%&'*+/=?^_{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"``\
    It matches the hardcoded email address.
 
@@ -107,7 +107,7 @@ connectDb(client).then(() => {
 
 ```
 
-Snyk Code knows a list of possible sources of external data in the predicate `PRED:AnySource`. The following query shows you that `app.post()` is identified.
+Snyk Code knows a list of possible sources of external data in the predicate `PRED:AnySource`. The following query shows you that `app.post()` is identified.&#x20;
 
 Query `PRED:SqliSinks` shows you that `query()` is part of that list of SQL injection sinks. The query engine comes with many different predicates for various source, sink, and sanitizer types. Check the list of predicates to see them all.
 
@@ -125,7 +125,7 @@ There is nothing language-specific in the query. It would work on similar code i
 
 Create a new rule because Snyk is not aware of the proprietary source built in-house, resulting in missed findings.
 
-Use a data flow [template](../how-custom-rules-work.md#query-templates) known as `Taint` when [creating a data flow query](../run-query.md#run-query-on-a-repository).
+Use a data flow [template](../how-custom-rules-work.md#query-templates) known as `Taint` when [creating a data flow query](../run-query.md#run-query-on-a-repository).&#x20;
 
 <pre class="language-javascript"><code class="lang-javascript"><a data-footnote-ref href="#user-content-fn-1">Taint</a>&#x3C;PRED:"SourceFoo",PRED:XssSanitizer,PRED:XssSink>
 </code></pre>
@@ -142,11 +142,11 @@ With this query, you can look for the data flow that originates in `SourceFoo`. 
 
 ## **Extend a data flow rule**
 
-Recreate a Snyk rule and add a source to the current Snyk known vulnerable source list because they are not being taken into account in the scans, resulting in missed vulnerabilities.
+Recreate a Snyk rule and add a source to the current Snyk known vulnerable source list because they are not being taken into account in the scans, resulting in missed vulnerabilities.&#x20;
 
 Like the [Net new data flow rule](./#net-new-data-flow-rule), the `Taint` data flow template is used with an `Or` operator. Operators are available to create logical statements for your queries, such as `Or` or `And`.
 
-Run the data flow rule using both the Snyk known sources but also a custom source called `SourceFoo`_._
+Run the data flow rule using both the Snyk known sources but also a custom source called [`SourceFoo`](#user-content-fn-2)[^2]_._
 
 ```javascript
 Taint<Or<PRED:AnySource,"SourceFoo">,PRED:XssSanitizer,PRED:XssSink>
@@ -154,11 +154,11 @@ Taint<Or<PRED:AnySource,"SourceFoo">,PRED:XssSanitizer,PRED:XssSink>
 
 With this query, you look for the data flow that originates in a Snyk known source OR “`SourceFoo`” . A source unknown to Snyk ends up in a known vulnerable cross-site scripting (XSS) Sink and does not pass through a known cross-site scripting (XSS) Sanitizer. Therefore, the assumption is that the data is tainted.
 
-Any statement that uses an operator will be written within angle brackets _`< statement >`_.
+Any statement that uses an operator will be written within angle brackets  _`< statement >`_.&#x20;
 
 ## **Context added to data flow rule**
 
-Recreate a Snyk rule and remove a source from the current Snyk known vulnerable sources because this source is not vulnerable within the context of an application.
+Recreate a Snyk rule and remove a source from the current Snyk known vulnerable sources because this source is not vulnerable within the context of an application.&#x20;
 
 Like the [Net new data flow](./#net-new-data-flow-rule) and [Extend a data flow](./#extend-a-data-flow-rule) rules, the `Taint` data flow template is used with an `And` operator. A declarative negative statement (`Not`) is used to indicate the false case of the statement and not the true case.
 
@@ -190,4 +190,8 @@ PRED:AnySink
 
 Similarly, this query identifies and highlights every known sink within the code, providing a complete view of potential data endpoints.
 
+
+
 [^1]: C
+
+[^2]: 

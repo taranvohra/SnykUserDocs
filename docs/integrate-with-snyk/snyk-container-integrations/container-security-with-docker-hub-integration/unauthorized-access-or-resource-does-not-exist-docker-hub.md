@@ -2,7 +2,7 @@
 
 **Error:** Import fails when importing images from Docker Hub with the error with the error `Unauthorized access or Resource does not exist`_._
 
-![Unauthorized access or Resource does not exist](../../../.gitbook/assets/screen-shot-2021-04-28-at-2.13.11-am.png)
+![Unauthorized access or Resource does not exist ](../../../.gitbook/assets/screen-shot-2021-04-28-at-2.13.11-am.png)
 
 **Resolution:** This error occurs, because your image is private on your Docker Hub account. To resolve this, make your image public in the **settings > Visibility settings** section of your repository.
 

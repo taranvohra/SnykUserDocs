@@ -2,9 +2,9 @@
 
 You can run `snyk-to-html` as part of a `snyk test` command to create a readable build artifact as part of the output of a scan.
 
-You can also run a `snyk test` command with the option to export the results to a JSON file and then convert the JSON file to HTML using by using s`nyk-to-html`. You can also export Snyk Code results to a SARIF file and convert that file to HTML.
+You can also run a `snyk test` command with the option to export the results to a JSON file and then convert the JSON  file to HTML using by using  s`nyk-to-html`. You can also export Snyk Code results to a SARIF file and convert that file to HTML.
 
-When you run the `snyk-to-html` command, you can customize it with the [command options](run-the-snyk-to-html-command.md#snyk-to-html-command-options).
+When you run the `snyk-to-html` command, you can customize it with the [command options](run-the-snyk-to-html-command.md#snyk-to-html-command-options).&#x20;
 
 After you generate the results in an HTML file, open the file in a browser to view a full report of the scan results. For example, for Snyk Code, the results include the discovered vulnerabilities with their data flow and fix analysis information.
 
@@ -24,7 +24,7 @@ Follow these steps to create a build artifact by running `snyk-to-html` as part 
 
 2\. To test the repository, export the results to a JSON file, and convert that file to an HTML file called `results` appended with the snyk test you ran.
 
-Example commands for a JSON file for `snyk code tes`t follow:
+Example commands for a JSON file  for `snyk code tes`t follow:
 
 ```
 snyk code test --json | snyk-to-html > results-code.html
@@ -45,7 +45,7 @@ To run `snyk test` and then convert the output file to HTML, follow these steps:
 
 1\. Change the directory to the root folder of the repository you want to test.
 
-2\. Run the `test` command, `snyk code test` in this example, and export the results to a JSON OR SARIF file called, for example, `results-code`:
+2\. Run the `test` command, `snyk code test` in this example, and export the results to a JSON OR SARIF file called, for example,  `results-code`:
 
 ```
 snyk code test --json > results.json

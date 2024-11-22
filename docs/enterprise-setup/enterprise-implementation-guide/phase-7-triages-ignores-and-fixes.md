@@ -4,7 +4,7 @@
 
 After you implement a strategy to prevent new issues from entering your repositories, whether blocking builds or running in a non-blocking, advisory mode, the next step is to prioritize and start fixing issues in your backlog.
 
-* In [Phase 4: Create a Fix strategy](phase-4-create-a-fix-strategy.md), you created a plan for prioritizing your Projects and issues. To implement this, you can schedule regular meetings with development team leads to assist them with this process.
+* In [Phase 4: Create a Fix strategy](phase-4-create-a-fix-strategy.md), you created a plan for prioritizing your Projects and issues. To implement this, you can schedule regular meetings with development team leads to assist them with this process.&#x20;
 * In the [Snyk Tools](../../snyk-api-info/other-tools/) section, there is a tool called **jira-tickets-for-new-vulns,** which can be scheduled to run on a regular basis to automatically create Jira tickets for vulnerabilities that meet your specified criteria. Whether this process is automated or not, creating tickets for your developers to review can be a great way to help make issues identified by Snyk more visible.
 * If you use Jira Cloud, you can download and install the [Snyk Security in Jira Cloud](https://marketplace.atlassian.com/apps/1230482/snyk-security-in-jira-cloud) plugin from the Atlassian marketplace. This allows you to view information on your Snyk Vulnerabilities directly in Jira, and use Jira Automation to create new tickets when new vulnerabilities are identified.
 
@@ -17,10 +17,10 @@ When deciding your priority for fixing issues, you may see specific packages or 
 
 ## Use the ignore feature
 
-In each case, you can use the ignore feature to stop these issues from appearing each time you run a test.
+In each case, you can use the ignore feature to stop these issues from appearing each time you run a test.&#x20;
 
 {% hint style="info" %}
-Confirm an ignore with a Group Admin or Organization Admin. They may need to complete this step themselves.
+Confirm an ignore with a Group Admin or Organization Admin. They may need to complete this step themselves.&#x20;
 {% endhint %}
 
 When adding an ignore:
@@ -32,7 +32,7 @@ When adding an ignore:
 It is common to use the General Settings to limit access for users to permission to ignore an issue and to require a reason.
 {% endhint %}
 
-By default, the **Organization Collaborator** role has permission to ignore issues, but this can be controlled for each Organization on the settings page, that is, restricted to **Organization admins** only.
+By default, the **Organization Collaborator** role has permission to ignore issues, but this can be controlled for each Organization on the settings page, that is, restricted to **Organization admins** only.&#x20;
 
 See [Ignore issues](../../scan-using-snyk/find-and-manage-priority-issues/ignore-issues.md) for more details.
 

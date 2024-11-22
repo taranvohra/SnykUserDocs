@@ -17,7 +17,7 @@ The following rules are applied to automatic PR creation for vulnerabilities:
 
 <figure><img src="../../../.gitbook/assets/Project testing and PR Checks frequency (1).png" alt="Project test and automated PR Checks frequency setting"><figcaption><p>Project test and automated PR Checks frequency setting</p></figcaption></figure>
 
-To determine when your last 24-hour window began, check the Project issue card for **Snapshot taken by recurring test**.
+To determine when your last 24-hour window began, check the Project issue card for **Snapshot taken by recurring test**.&#x20;
 
 <figure><img src="../../../.gitbook/assets/Test information with a focus on the latest snapshot taken.png" alt="Snapshot taken by recurrint test 13 hours ago"><figcaption><p>Snapshot taken by recurrint test 13 hours ago</p></figcaption></figure>
 
@@ -64,3 +64,4 @@ You can configure Automatic fix PRs to work only for specific Projects rather th
 5. **Save changes**.
 
 <figure><img src="../../../.gitbook/assets/Automatic fix PRs settings at the Project level.png" alt="Automatic fix PRs settings at the Project level."><figcaption><p>Automatic fix PRs settings at the Project level</p></figcaption></figure>
+

@@ -25,7 +25,7 @@ Typically, within a large enterprise, importing everything using a repository in
 
 ### 2. Gain visibility with Git repository integration
 
-Next, set up Snyk integrations across your Git repositories to gain broad visibility into your security posture.
+Next, set up Snyk integrations across your Git repositories to gain broad visibility into your security posture.&#x20;
 
 {% hint style="warning" %}
 To reduce noise, disable notifications before import if you have onboarded all your users.
@@ -66,5 +66,6 @@ It's recommended to start with a few applications, especially during the pilot t
 
 Ensure there is an exception process in place and users are aware. For example:
 
-* If a pull request/merge request is failed by Snyk, let the users know who is the Snyk admin who can override it.
+* If a pull request/merge request is failed by Snyk, let the users know who is the Snyk admin who can override it.&#x20;
 * Similarly, if Snyk fails in CI/CD, let users know who can create an ignore rule or, authorize it to progress, or configure CI/CD to run without the Snyk `test` or set it to `monitor` only.
+

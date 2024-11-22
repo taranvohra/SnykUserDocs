@@ -1,5 +1,7 @@
 # Annotated import
 
+
+
 {% hint style="warning" %}
 This feature is deprecated, and Snyk no longer maintains it. For more information on workload auto-import and auto-delete, see [Automatically import and delete Kubernetes workload projects](automatically-import-and-delete-kubernetes-workload-projects.md).
 {% endhint %}

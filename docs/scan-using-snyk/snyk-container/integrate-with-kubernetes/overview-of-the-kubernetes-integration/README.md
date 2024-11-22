@@ -9,9 +9,9 @@ Snyk is able to integrate with Kubernetes, enabling you to import and scan your 
 
 ## **How the Kubernetes integration works**
 
-The Kubernetes integration follows the below process:
+The Kubernetes integration follows the below process:&#x20;
 
-1. Your administrator installs a controller on your cluster, authenticating the integration with a unique integration ID and a service account token with the needed permissions generated from the Snyk account. For more information, including the permissions needed, see [Prerequisites for installing the Snyk Controller](../use-the-snyk-controller/#prerequisites-for-installing-the-snyk-controller).
+1. Your administrator installs a controller **on your cluster**, authenticating the integration with a unique integration ID and a service account token with the needed permissions generated from the Snyk account. For more information, including the permissions needed, see [Prerequisites for installing the Snyk Controller](../use-the-snyk-controller/#prerequisites-for-installing-the-snyk-controller).
 2. You install the controller with one of the options:
    * [Install the Snyk Controller with Helm (Azure and Google Cloud Platform)](../use-the-snyk-controller/install-the-snyk-controller-with-helm-azure-and-google-cloud-platform.md)
    * [Install the Snyk Controller on Amazon Elastic Kubernetes Service (Amazon EKS)](../use-the-snyk-controller/install-the-snyk-controller-on-amazon-elastic-kubernetes-service-amazon-eks.md)
@@ -28,7 +28,7 @@ To maintain the health of the database, Snyk removes any information relating to
 If an image and its corresponding Project are removed, and you reimport the same workload during the eight days when the metadata still resides in the Snyk database, you can create the Project again.
 {% endhint %}
 
-## **The architecture of Snyk and Kubernetes integration**
+## **The architecture of Snyk and Kubernetes integration**&#x20;
 
 ![Kubernetes integration architecture diagram](<../../../../.gitbook/assets/System Diagram-Kubernetes integration (1).jpg>)
 
@@ -52,3 +52,4 @@ If you have an existing Red Hat Enterprise Agreement (or other negotiated agreem
 ## Kubernetes integration troubleshooting
 
 For troubleshooting information on the Kubernetes integration or the Snyk Controller, as well as for common onboarding errors, see the [Kubernetes integration troubleshooting](https://support.snyk.io/hc/en-us/articles/10342802571805-Kubernetes-Integration-troubleshooting) support page.
+

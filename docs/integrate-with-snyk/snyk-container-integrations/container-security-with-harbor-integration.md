@@ -35,7 +35,8 @@ If you are using a self-hosted Harbor registry, contact Snyk to provide you with
 
 <figure><img src="../../.gitbook/assets/mceclip1-8-.png" alt="Harbor Account credentials with Broker token"><figcaption><p>Harbor Account credentials with Broker token</p></figcaption></figure>
 
-Snyk tests the connection values, and the page reloads, now displaying Harbor integration information. The **Add your Harbor images to Snyk** button becomes available. If the connection to Harbor fails, a notification appears under the **Connected to Harbor** section.\\
+Snyk tests the connection values, and the page reloads, now displaying Harbor integration information. The **Add your Harbor images to Snyk** button becomes available. If the connection to Harbor fails, a notification appears under the **Connected to Harbor** section.\
+
 
 When the connection is successful, you can use Snyk to scan your images from Harbor.
 
@@ -72,3 +73,4 @@ Harbor imports are indicated with a unique icon. You can also filter to view onl
 {% hint style="info" %}
 For **application vulnerabilities within container images**, any changes to the application will not be reflected with a manual or recurring retest. A re-import of the image is required. For more information, see [Detecting application vulnerabilities in container images](../../scan-using-snyk/snyk-container/use-snyk-container-from-the-web-ui/detect-application-vulnerabilities-in-container-images.md).
 {% endhint %}
+

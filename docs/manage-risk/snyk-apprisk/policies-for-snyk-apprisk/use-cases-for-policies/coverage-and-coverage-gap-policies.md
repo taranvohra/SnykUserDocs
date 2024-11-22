@@ -3,7 +3,7 @@
 You can use the Coverage filter to verify if an asset has ever been tested by the product and the Coverage gap filter to verify if the asset meets the coverage requirements set in a Set coverage control policy.
 
 {% hint style="info" %}
-The Coverage Gap filter is not the opposite of the Coverage filter.
+The Coverage Gap filter is not the opposite of the Coverage filter.&#x20;
 
 An asset can be covered (if it was scanned a month ago) but, at the same time, can still have a coverage gap, if the requirement is a daily scan.
 {% endhint %}
@@ -16,7 +16,8 @@ An asset can be covered (if it was scanned a month ago) but, at the same time, c
 
 Identify assets that have been scanned by both Snyk Code and Snyk OS simultaneously. Identifying these assets does not mean that they meet the coverage requirements.
 
-\\
+\
+
 
 <figure><img src="https://lh7-us.googleusercontent.com/1aKKSl4O03NT8YL3qR0K1vpcfEMtlCw9pLYrKJ3Q2OdtVYTqdMbsbtWr7Jq32TzMBKEo1t53c7gaEndbiFVqLObxPcUcw7vmmaaSHO5K7UsgtjVu6FO3kLCp6cT_-CX1CzX5Anst0acYqVom89K9y14" alt=""><figcaption></figcaption></figure>
 
@@ -41,8 +42,10 @@ Identify the assets that don’t meet the coverage requirements of Snyk Code or 
 <figure><img src="https://lh7-us.googleusercontent.com/guCzWVv9SP7H1h6WYSFGwHEVvW3c0DVvg26mHAdxkorPgZI3gYCIH93QN0fXNl71ZDZxucfpROkkjruxuQ_vu5QCjS7_ImROEZlBTYIh-hxZnsM3comPaQpQbsy7s_3MDuFVEiljw2G8szWddXjqPgQ" alt=""><figcaption></figcaption></figure>
 
 \
-Identify assets that meet the coverage requirements of both Snyk Code and Snyk OS.
+Identify assets that meet the coverage requirements of both Snyk Code and Snyk OS.&#x20;
 
-\\
+\
+
 
 <figure><img src="https://lh7-us.googleusercontent.com/-Ys7HZ5UcthgyDyPbBNG572CTM04RJ_Tcc1JTa9GrltfSVUM5gvFLrxpNRlV6ZNqRJQOw5hL0QFworAAOVbGYCMM4J-H4z9G8L3BiU3-PEU79GqxAalKB5UvdXxKUIgNEszwH0jUN_7kpos8HLSXvo8" alt=""><figcaption></figcaption></figure>
+

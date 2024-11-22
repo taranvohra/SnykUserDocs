@@ -15,7 +15,7 @@ To check for open-source and licensing issues and code security, ensure that you
 * You have the Group Admin role so you have access to all integration settings. See [Member roles](../../snyk-admin/manage-permissions-and-roles/manage-member-roles.md).
 * You have [set up a Git repository integration](../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/). For help, see the Snyk Learn course [Source code manager configuration](https://learn.snyk.io/lesson/configure-snyk-scm/).
 * [Import a Project](../../getting-started/quickstart/import-a-project.md) to have a working Git repository.
-* For code security (Snyk Code), meet all of the above conditions and then contact your Snyk representative to enable the feature for you.
+* For code security (Snyk Code), meet all of the above conditions and then contact your Snyk representative to enable the feature for you.&#x20;
 
 {% hint style="info" %}
 PR Checks rely on webhooks from the SCM. Integration scope must include the ability to create webhooks.
@@ -25,11 +25,11 @@ PR Checks rely on webhooks from the SCM. Integration scope must include the abil
 
 You can analyze the changed code with PR Checks as follows:
 
-* (Beta) Snyk Code: Source code changes result in a vulnerability that exceeds a specified threshold. A full scan of the repository is done to determine if there are new vulnerabilities.
-* Snyk Open Source: Snyk analyzes dependency manifest or supported files for known security vulnerabilities that meet a threshold, such as exceeding severity, or checks to determine whether a fix is available.
+* (Beta) Snyk Code: Source code changes result in a vulnerability that exceeds a specified threshold. A full scan of the repository is done to determine if there are new vulnerabilities.&#x20;
+* Snyk Open Source: Snyk analyzes dependency manifest or supported files for known security vulnerabilities that meet a threshold, such as exceeding severity, or checks to determine whether a fix is available.&#x20;
 * Open Source license check: Snyk validates package licenses against the configured policy for license policy violations.
 
-PR Checks also support all programming languages and frameworks supported by the Snyk Code and Open Source engines. For more information, see programming language support for [Snyk Code](broken-reference/) and [Open Source](broken-reference/).
+PR Checks also support all programming languages and frameworks supported by the Snyk Code and Open Source engines. For more information, see programming language support for [Snyk Code](broken-reference) and [Open Source](broken-reference).
 
 ## How configuration of PR Checks works
 
@@ -47,13 +47,13 @@ The configuration settings apply to all Projects in that Organization. You can a
 1. In the Snyk Web UI, navigate to **Settings >** **Integrations** and select your connected source code manager to open the settings configuration.
 2. To check for code issues, configure and save the following changes:
 
-* [ ] **Code Analysis**: Enable this option to fail the PR on new vulnerabilities detected in your Git repository. If the severity is higher than your threshold, the PR is not merged into the main branch.
+* [ ] **Code Analysis**: Enable this option to fail the PR on new vulnerabilities detected in your Git repository. If the severity is higher than your threshold, the PR is not merged into the main branch.&#x20;
 * [ ] **Fail conditions**: Select the severity threshold at which the PR fails. For example, if you select **Medium**, the PR fails on issues found at this level or higher, while it is merged for **Low** severity issues.
 
 <figure><img src="../../.gitbook/assets/enable analyze code.png" alt="PR check settings to analyze code issues."><figcaption><p>PR check settings to analyze code issues</p></figcaption></figure>
 
 {% hint style="info" %}
-If you cannot see the **Code Analysis** section, ensure that your user has the Group Admin role assigned and that the feature is enabled for Snyk Code. See the [Prerequisites](configure-pr-checks.md#prerequisites).
+If you cannot see the **Code Analysis** section, ensure that your user has the Group Admin role assigned and that the feature is enabled for Snyk Code. See the  [Prerequisites](configure-pr-checks.md#prerequisites).
 {% endhint %}
 
 3. To check for open-source and licensing issues, configure and save the following changes:
@@ -63,7 +63,7 @@ If you cannot see the **Code Analysis** section, ensure that your user has the G
   * [ ] **Only fail when the PR is adding a dependency with issues**: Set this condition to fail PR when there is at least one dependency with security issues.
   * [ ] **Fail if the repo has any issues**: Set this condition to fail a PR for any security issues found in the Git repository.
 * [ ] **Only fail for high or critical severity issues**: Select additional failure conditions based on the severity threshold.
-* [ ] **Only fail when the issues found have a fix available**: Set this condition on for the PR check to fail when the PR introduces new vulnerabilities that are fixable by Snyk. PR checks don't fail on newly introduced vulnerabilities if Snyk is unable to fix them.
+* [ ] **Only fail when the issues found have a fix available**: Set this condition on for the PR check to fail when the PR introduces new vulnerabilities that are fixable by Snyk. PR checks don't fail on newly introduced vulnerabilities if Snyk is unable to fix them.&#x20;
 
 When switched on, this will cause the PR check to fail when the PR introduces new vulnerabilities that are fixable by Snyk. PR checks will not fail on newly introduced vulnerabilities if Snyk is unable to fix them.
 

@@ -4,7 +4,7 @@
 The information on this page applies to current IaC. If you are using IaC+, see [Getting started with IaC+](../../scan-using-snyk/scan-infrastructure/introduction-to-iac+/).
 {% endhint %}
 
-You can use Snyk IaC (Infrastructure as Code) in the [Snyk Web UI](broken-reference/) to find, view, and fix issues in configuration files. You can also use Snyk IaC in the Snyk CLI. For details, see [Snyk CLI for Infrastructure as Code](../../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-iac/).
+You can use Snyk IaC (Infrastructure as Code) in the [Snyk Web UI](broken-reference) to find, view, and fix issues in configuration files. You can also use Snyk IaC in the Snyk CLI. For details, see [Snyk CLI for Infrastructure as Code](../../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-iac/).
 
 On this page, you will find steps to find, view, and fix issues in configuration files for the supported environments: [Terraform](../../scan-using-snyk/scan-infrastructure/scan-your-iac-source-code/scan-terraform-files/), [AWS CloudFormation](../../scan-using-snyk/scan-infrastructure/scan-your-iac-source-code/scan-cloudformation-files/), [Kubernetes](../../scan-using-snyk/scan-infrastructure/scan-your-iac-source-code/scan-kubernetes-configuration-files/), including Helm, and [Azure Resource Manager (ARM)](../../scan-using-snyk/scan-infrastructure/scan-your-iac-source-code/scan-arm-configuration-files.md). These steps are specific to the current IaC. See also [Getting started with IaC+](../../scan-using-snyk/scan-infrastructure/introduction-to-iac+/).
 
@@ -31,7 +31,7 @@ You must use the Snyk CLI to scan ARM configuration files. See [Scan ARM configu
 You will start by importing [Projects](../../snyk-admin/snyk-projects/) you want to scan with Snyk. In these steps, you choose repositories for Snyk to test and re-test:
 
 1. Log in to Snyk and on your dashboard, select **Projects** from the navigation.
-2. On the Projects page, from the **Add projects** dropdown, select the SCM where the repositories and projects are that you want to scan, for example, select GitHub.
+2. On the Projects page, from the **Add projects** dropdown, select the SCM where the  repositories and projects are that you want to scan, for example, select GitHub.
 3. From the list of **Personal and Organization repositories**, select the Git respsitories and projects you want to import for scanning.\
    You can select one or more repositories or projects in a repository.
 4. Click **Add selected repositories** to import the selected SCM projects and repositories into Snyk.
@@ -64,7 +64,7 @@ If you encounter any errors during import, see the [Importing Projects](https://
 
 ## Issue card details for Snyk IaC
 
-Each issue card shows information about the resource and the path by which it was introduced.
+&#x20;Each issue card shows information about the resource and the path by which it was introduced.&#x20;
 
 <figure><img src="../../.gitbook/assets/Screenshot 2022-05-23 at 14.24.14.png" alt="Issue card details"><figcaption><p>Issue card details</p></figcaption></figure>
 
@@ -92,7 +92,7 @@ The steps to act on recommendations produced by Snyk IaC follow.
 
 1. On a Project detail page, select an issue to see the details for that issue and specific recommendations from Snyk IaC.
 2. Based on the recommendations, edit the configuration file to fix the issue identified and then commit the change.\
-   Snyk automatically rescans the changed file.
+   Snyk automatically rescans the changed file.&#x20;
 3. View the change reflected in the issue display.
 
 <figure><img src="../../.gitbook/assets/snyk-iac-getting-started-issue-card.png" alt="Example of an IaC issues that has been fixed"><figcaption><p>Example of an IaC issues that has been fixed</p></figcaption></figure>

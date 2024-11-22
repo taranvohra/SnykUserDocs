@@ -22,22 +22,22 @@ class Test {
 }
 ```
 
-You can match the method call for taking the current time by quoting its fully qualified name with the query `"java.time.LocalDate.now"`.
+You can match the method call for taking the current time by quoting its fully qualified name with the query `"java.time.LocalDate.now"`. &#x20;
 
-You can match both the function declaration _test_ and the string '`test`' by using the query `"test"`.
+You can match both the function declaration _test_ and the string '`test`' by using the query `"test"`.&#x20;
 
 The number value 123 can be matched by using the query `"123"`. Quotes are used to match elements regardless of their type, identifier, string, number, or other value. Elements can also be matched by using regular expressions. Regular expressions are identified by putting the symbol `~` in front of the quotes. For example, the program element `123` can be matched by the expression `~"12.*".` The print statements can be matched by queries such as: `"java.lang.System.out.println"` or `~".*\.println"`.
 
 To make sure that the correct, fully-qualified names of elements are used, the search interface provides autocompletion of the values for program elements that exist in the given code snippet or the provided repository.
 
-## **Predicate (**_**PRED**_**)**
+## **Predicate (**_**PRED**_**)**&#x20;
 
-A predicate matches program elements based on some predefined condition. The main advantage of predicates is that you can use them to leverage the existing Snyk Code knowledge base. For example, if you need to find all program locations where an HTTP server handles cookies, you can use the predefined predicate `PRED:SourceCookie`.
+A predicate matches program elements based on some predefined condition. The main advantage of predicates is that you can use them to leverage the existing Snyk Code knowledge base. For example, if you need to find all program locations where an HTTP server handles cookies, you can use the predefined predicate `PRED:SourceCookie`.&#x20;
 
 Similarly, there is a predicate `PRED:SqliSink` for matching all program locations where SQL queries are handled. To support discovering all available predicates, custom rules provide autocompletion capabilities. There are two special predicates `PRED:Any` and `PRED:None` that match all program elements or no program elements, respectively.
 
 {% hint style="info" %}
-When multiple matches are provided in a sequence, the result is a combination of all of them.
+When multiple matches are provided in a sequence, the result is a combination of all of them.&#x20;
 
 For example, using a query like: `PRED:SourceCookie ~"get.*"` will only match on methods that are both returning cookies and have a name that starts with `get` (logical AND of the two conditions that match elements).
 {% endhint %}
@@ -65,7 +65,7 @@ class Test {
 }
 ```
 
-Some templates encode logical relations, like the conjunction `And` and disjunctions `Or`. The following query finds all calls to `println` that receives the string literal test as the first argument: `And<"java.lang.System.out.println", HasArg1<StringLiteral<"test">>>`
+Some templates encode logical relations, like the conjunction `And` and disjunctions `Or`. The following query finds all calls to `println` that receives the string literal test as the first argument:  `And<"java.lang.System.out.println", HasArg1<StringLiteral<"test">>>`
 
 ## Formal syntax
 
@@ -93,10 +93,11 @@ Existing relations are queried via templates. Templates are essentially predefin
 
 As a result, the Snyk Code Query Language becomes a subset of Datalog, effectively disallowing computations that could have large time or memory complexity. As a result, Snyk Code Query Language is guaranteed to terminate and will produce its matches fast. In the experience of Snyk, the restrictions that Snyk Code Query Language puts on Datalog rarely affect its expressibility in security-scanning settings.
 
-\\
+\
+
 
 \
 \
 \
 \
-\\
+\

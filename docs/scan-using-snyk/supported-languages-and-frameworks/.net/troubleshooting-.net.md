@@ -6,7 +6,7 @@
 * `<ProjectReference>`elements are not currently supported.
 * Private dependency scanning is not supported for the SCM integration. You can scan private dependencies using the Snyk CLI.
 
-If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).
+If you need help, [contact Snyk Support](https://support.snyk.io/hc/en-us).&#x20;
 
 ## FAQ .NET
 

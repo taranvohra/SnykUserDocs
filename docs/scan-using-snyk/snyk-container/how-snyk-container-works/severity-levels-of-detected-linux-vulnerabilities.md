@@ -10,7 +10,7 @@ In certain cases, NVD assigns a different CVSS vector and severity score from th
 
 ## Relative importance feature
 
-Relative importance asserts a common severity for a vulnerability and shows the underlying detailed information for that severity based on multiple sources. This helps developers and analysts view a common level of importance and exposes the underlying information that helped form the given severity.
+Relative importance asserts a common severity for a vulnerability and shows the underlying detailed information for that severity based on multiple sources. This helps developers and analysts view a common level of importance and exposes the underlying information that helped form the given severity.&#x20;
 
 ## View relative importance
 

@@ -22,7 +22,7 @@ Follow these steps to [create an SBOM test run](https://apidocs.snyk.io/?version
 
 ## How to test an SBOM document
 
-### Create a test by sending an SBOM to Snyk
+### Create a test by sending an SBOM to Snyk&#x20;
 
 Testing your SBOM can be a long-running operation. Instead of waiting until the test results are ready, Snyk returns a `job_id` after your initial request to send the SBOM, and then processes the request asynchronously.
 
@@ -30,7 +30,7 @@ Follow these steps to test a SCOM:
 
 1. Log in to the Snyk Web UI and retrieve your Organization ID (UUID format), Project ID (UUID), and API key.\
    If you need help in finding these values, see [Group and Organization navigation](../snyk-admin/manage-groups-and-organizations/switch-between-groups-and-organizations.md), [View Project settings](../snyk-admin/snyk-projects/view-and-edit-project-settings.md), and [Authentication for API](../snyk-api-info/authentication-for-api.md).
-2. Use any HTTP client, for example, `curl` or Postman, to make a request to the endpoint [Create an SBOM test run](https://apidocs.snyk.io/?version=2023-10-24%7Ebeta#post-/orgs/-org\_id-/sbom\_tests).
+2. Use any HTTP client, for example, `curl` or Postman, to make a request to the endpoint [Create an SBOM test run](https://apidocs.snyk.io/?version=2023-10-24%7Ebeta#post-/orgs/-org\_id-/sbom\_tests).&#x20;
 
 {% hint style="info" %}
 The SBOM document is included as part of the request body as a JSON object. This request creates a test run for your SBOM document.
@@ -61,7 +61,7 @@ curl --request POST \
 ```
 {% endcode %}
 
-3. From the response, get the `job_id`, which is used in the next steps.\
+3. From the response, get the `job_id`, which is used in the next steps. \
    This is a unique identifier for the test run being performed on your SBOM document.
 
 {% code title="JSON response body" %}
@@ -84,9 +84,9 @@ curl --request POST \
 
 ### Check the status of the test (optional)
 
-You can check the status of the test at any time after the initial request.
+You can check the status of the test at any time after the initial request. &#x20;
 
-1. Using the `job_id` returned from the initial request to the [Create an SBOM test run endpoint](https://apidocs.snyk.io/?version=2023-10-24%7Ebeta#post-/orgs/-org\_id-/sbom\_tests), make a request to another endpoint to get the [SBOM test run status](https://apidocs.snyk.io/?version=2023-10-24%7Ebeta#get-/orgs/-org\_id-/sbom\_tests/-job\_id-).
+1. Using the `job_id` returned from the initial request to the [Create an SBOM test run endpoint](https://apidocs.snyk.io/?version=2023-10-24%7Ebeta#post-/orgs/-org\_id-/sbom\_tests), make a request to another endpoint to get the [SBOM test run status](https://apidocs.snyk.io/?version=2023-10-24%7Ebeta#get-/orgs/-org\_id-/sbom\_tests/-job\_id-).&#x20;
 2. A successful request to this endpoint returns the status of your test, which can either be `processing` or `finished`. If the call is not successful, an error will be returned.
 
 ```bash

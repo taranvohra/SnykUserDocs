@@ -8,14 +8,14 @@ To receive base image fix advice, including major, minor, and alternative upgrad
 * Have imported the repository that contains the relevant Dockerfile.
 
 {% hint style="info" %}
-You can add a single Dockerfile to each image that you have imported.
+You can add a single Dockerfile to each image that you have imported.&#x20;
 {% endhint %}
 
 ## **Add a Dockerfile**
 
 To add a Dockerfile for additional fix advice:
 
-1. In the **Projects** tab, find your Project by using a filter and navigate to the Project page.
+1. In the **Projects** tab, find your Project by using a filter and navigate to the Project page.&#x20;
 2. On the Project page, navigate to **Settings**.
 3. On the **Settings** page, under **Dockerfile**, click **Configure Dockerfile** and select the relevant Git repository from the dropdown.
 
@@ -25,7 +25,7 @@ To add a Dockerfile for additional fix advice:
 
 </div>
 
-4. On the page listing the available repositories, select the relevant repository which contains your Dockerfile.
+4. On the page listing the available repositories, select the relevant repository which contains your Dockerfile.&#x20;
 5. Under **Path to your Dockerfile**, add the relative path to your Dockerfile, in the following format: /path/dockerfile.
 
 <figure><img src="../../../.gitbook/assets/path_to_docker_file_update.png" alt="Enter the path to your Dockerfile"><figcaption><p>Add the path to your Dockerfile</p></figcaption></figure>

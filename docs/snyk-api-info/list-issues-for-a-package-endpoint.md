@@ -38,7 +38,7 @@ $ http \
   version==2023-09-12
 ```
 
-For operating system packages, a vendor must be specified in the namespace portion, and a `distro` qualifier must be specified. Supported vendors include: `debian`, `alpine`, `rhel`, `ubuntu`, `amzn`, `centos`, `oracle`, `rocky`, `sles`.
+For operating system packages, a vendor must be specified in the namespace portion, and a `distro` qualifier must be specified. Supported vendors include: `debian`, `alpine`, `rhel`, `ubuntu`, `amzn`, `centos`, `oracle`, `rocky`, `sles`.&#x20;
 
 An example using a valid url-encoded operating system purl follows:
 
@@ -49,7 +49,7 @@ $ http \
   version==2023-09-12
 ```
 
-The Snyk REST API supports pagination. This has a default page limit of **1000**, with a default offset of **0.** Current, next, and previous pages are returned as links in the response. The following parameters can be supplied as query parameters: `offset`, `limit`.
+The Snyk REST API supports pagination. This has a default page limit of **1000**, with a default offset of **0.** Current, next, and previous pages are returned as links in the response. The following  parameters can be supplied as query parameters: `offset`, `limit`.
 
 An example paginated request follows:
 
@@ -76,7 +76,7 @@ The response provides a list of the vulnerabilities found for the package identi
 `An attacker can exploit this vulnerability by sending a specially crafted malicious XML file that contains XML entities with URIs that resolve to documents outside of the intended sphere of control.`
 
 **`Remediation:`**\
-`Upgrade com.fasterxml.woodstox:woodstox-core to version 5.3.0 or higher.`
+`Upgrade com.fasterxml.woodstox:woodstox-core to version 5.3.0 or higher.`&#x20;
 
 **`References:`**\
 [`GitHub Commit`](https://github.com/FasterXML/woodstox/commit/7937f97c638ef8afd385ebf4a675a9b096ccdd57)\
@@ -89,13 +89,15 @@ The response is continuous, divided here to allow for explanations.
 
 **For each vulnerability**, the response provides the following:
 
-*   The Snyk issue ID and issue types\\
+*   The Snyk issue ID and issue types\
+
 
     ```json
     "id": "SNYK-JAVA-COMFASTERXMLWOODSTOX-3091135",
     "type": "issue",
     ```
-*   General metadata about the vulnerability, including title, timestamps relevant to the vulnerability such as publication and disclosure time, and description\\
+*   General metadata about the vulnerability, including title, timestamps relevant to the vulnerability such as publication and disclosure time, and description\
+
 
     ```json
     "title": "Denial of Service (DoS)",
@@ -104,7 +106,8 @@ The response is continuous, divided here to allow for explanations.
     "updated_at": "2023-03-03T12:57:36.731181Z",
     "description": ...
     ```
-*   The CVSS identifiers and source\\
+*   The CVSS identifiers and source\
+
 
     ```json
     "problems": [
@@ -114,7 +117,8 @@ The response is continuous, divided here to allow for explanations.
         }
     ],
     ```
-*   The severity or severities of the vulnerability \\
+*   The severity or severities of the vulnerability \
+
 
     ```json
     "severities": [
@@ -132,7 +136,8 @@ The response is continuous, divided here to allow for explanations.
         },
     ]
     ```
-*   Any fixes available for that vulnerability and the representation for vulnerable versions\\
+*   Any fixes available for that vulnerability and the representation for vulnerable versions\
+
 
     ```json
     "coordinates": [

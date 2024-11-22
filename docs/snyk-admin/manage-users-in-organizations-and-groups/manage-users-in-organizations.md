@@ -41,7 +41,8 @@ Inviting members to an Organization
 Follow these steps to cancel pending invites:
 
 1.  On the **Members** page, click the **Revoke pending invites link**, which appears when there is at least one pending invite.\
-    \\
+    \
+
 
     <figure><img src="../../.gitbook/assets/Revoke.png" alt="Revoke pending invites"><figcaption><p>Revoke pending invites</p></figcaption></figure>
 2. In the **Pending invites in \_your organization's name**\_ modal that appears, click the trash icon next to the name of the user to cancel the invite.

@@ -18,3 +18,4 @@ Snyk recommends introducing developers to this resource early on in the rollout 
 ## Snyk Learn Product Training
 
 [Snyk Learn Product Training](https://learn.snyk.io/catalog/product-training/?type=product-training) provides training on the Snyk Platform. Learning paths are available for Developers, Administrators, and other key roles. In addition, individual lessons are searchable from the main interface.
+

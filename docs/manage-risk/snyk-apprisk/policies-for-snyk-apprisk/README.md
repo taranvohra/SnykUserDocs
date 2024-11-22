@@ -18,7 +18,7 @@ Common use cases for policies include:
 
 ### New asset notifications
 
-Notify members of the AppSec team when new assets meeting certain criteria are discovered. For example, you may send a Slack message to the infra team if new repository assets that leverage Terraform as a technology are detected by Snyk AppRisk.
+&#x20;Notify members of the AppSec team when new assets meeting certain criteria are discovered. For example, you may send a Slack message to the infra team if new repository assets that leverage Terraform as a technology are detected by Snyk AppRisk.
 
 ### Asset classification
 
@@ -26,7 +26,7 @@ Classify repository assets according to their business criticality from A (most 
 
 ### Asset tagging
 
-Categorize and label repository assets with flexible tags, which can be used to filter the asset inventory.
+&#x20;Categorize and label repository assets with flexible tags, which can be used to filter the asset inventory.
 
 ### Security coverage
 

@@ -27,7 +27,7 @@ kubectl create namespace snyk-monitor
 ```
 
 {% hint style="info" %}
-As a good practice for Kubernetes applications, use a unique namespace to isolate the controller resources easily.
+As a good practice for Kubernetes applications, use a unique namespace to isolate the controller resources easily.&#x20;
 
 Ensure you remember the namespace `snyk-monitor`. You will use it when configuring other resources.
 {% endhint %}
@@ -101,7 +101,7 @@ helm upgrade --install snyk-monitor snyk-charts/snyk-monitor \
 By default, this value is set to an empty string, and it is not used as such.
 
 {% hint style="info" %}
-When using the system-managed identity with the `AcrPull` role assigned, setting this variable is not necessary.
+When using the system-managed identity with the `AcrPull` role assigned, setting this variable is not necessary.&#x20;
 {% endhint %}
 
 ## Update an existing installation

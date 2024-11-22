@@ -17,7 +17,7 @@ You can use Group options to view reports across all of the Organizations in you
 
 See [Manage Groups](manage-groups.md) for more information.
 
-As part of your onboarding, Snyk will set you up with a Group for your company. You can then add your current Organizations to this Group.
+As part of your onboarding, Snyk will set you up with a Group for your company. You can then add your current Organizations to this Group.&#x20;
 
 If you think your company will need multiple Groups, submit a request to [Snyk Support](https://snyk.zendesk.com/agent/dashboard).
 

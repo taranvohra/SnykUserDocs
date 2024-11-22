@@ -14,7 +14,7 @@ Snyk scans CloudFormation code for misconfigurations and security issues. After 
 ## Scan and fix configuration files
 
 * Log in to the account and navigate to the relevant Group and Organization.
-* If you imported your repositories for testing before the infrastructure as code feature was enabled by your administrator, from the Add project screen, re-import that repository in order to detect the CloudFormation code:
+* If you  imported your repositories for testing before the infrastructure as code feature was enabled by your administrator, from the Add project screen, re-import that repository in order to detect the CloudFormation code:
 
 <figure><img src="../../../../.gitbook/assets/screenshot_2020-07-09_at_12.44.03 (1) (1) (3) (3) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1)  (13).png" alt="Add project screen"><figcaption><p>Add project screen</p></figcaption></figure>
 

@@ -46,7 +46,8 @@ To install the Snyk App on your Bitbucket Cloud workspace, you must have **Admin
 
     <figure><img src="../../.gitbook/assets/bitbucket-cloud-permissions_10nov2022.png" alt="Allow Bitbucket Cloud access to your Snyk Organization" width="365"><figcaption><p>Allow Bitbucket Cloud access to your Snyk Organization<br></p></figcaption></figure>
 
-    After you allow access to the Snyk Organization, the Snyk **Organization Settings** page opens and confirms that the Bitbucket Cloud App is connected.\\
+    After you allow access to the Snyk Organization, the Snyk **Organization Settings** page opens and confirms that the Bitbucket Cloud App is connected.\
+
 
 After Snyk is integrated with Bitbucket Cloud, you can see the new Snyk security tab on the repository page and [import and explore the issues and vulnerabilities for your repository Projects](../../getting-started/quickstart/import-a-project.md) directly in Bitbucket.
 
@@ -108,7 +109,7 @@ To review and adjust the automatic fix pull request settings:
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/Screenshot 2023-05-02 at 11.19.09.png" alt="Automatic fix PR settings"><figcaption><p>Automatic fix PR settings</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Screenshot 2023-05-02 at 11.19.09.png" alt="Automatic fix PR settings "><figcaption><p>Automatic fix PR settings </p></figcaption></figure>
 
     </div>
 

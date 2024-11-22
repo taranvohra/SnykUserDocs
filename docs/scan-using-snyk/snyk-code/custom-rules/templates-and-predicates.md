@@ -4,7 +4,7 @@ This section provides an introduction to the Snyk Code Query Language standard l
 
 ## Methods, literals, and arguments
 
-A basic capability of Snyk Code is to find method calls and reason about their arguments. The goal here is to discover certain patterns of method calls and their arguments and to check if certain properties hold for these objects.
+A basic capability of Snyk Code is to find method calls and reason about their arguments. The goal here is to discover certain patterns of method calls and their arguments and to check if certain properties hold for these objects.&#x20;
 
 Consider the following Python program to be analyzed and searched. If a similar program is provided, the same examples will work for any other language Snyk Code supports. The code does not need to be compiled to be queried.
 
@@ -66,7 +66,7 @@ In all cases, the auto-completion for the rules should guide the search through 
 
 In many cases, you want to ensure that certain types of data have no way to flow to certain sensitive locations in the program. This is often done for security reasons, both to ensure compliance and correctness.
 
-The first important element to query is sensitive data sources. Snyk has built in the following set of hierarchical data sources that you can query:
+The first important element to query is sensitive data sources. Snyk has built in the following set of  hierarchical data sources that you can query:
 
 [AnySource](../custom-rules-beta/list-of-predefined-predicates-and-templates.md#anysource)
 
@@ -92,7 +92,8 @@ The first important element to query is sensitive data sources. Snyk has built i
 
 The first category of sources (SourceServer) is defined for programs that implement servers. These sources are typically fully user-controllable. This means that a malicious user can use them to launch an attack against the application or that one needs to handle such data with additional care. For example, you may want to check that authentication is always performed or that some other property is enforced.
 
-The non-server predicates also apply to programs that do not implement server functionality.\\
+The non-server predicates also apply to programs that do not implement server functionality.\
+
 
 Each of the predicates in the SourceServer category is returned by querying _`PRED:SourceServer`_ or _`PRED:AnySource`_. Consider the following TypeScript code example:
 
@@ -112,9 +113,9 @@ module.exports = function productReviews () {
 
 This implements a request handler for an express server. In this case, the code reads the user cookie and logs it on the console. This might be a security vulnerability and a compliance problem for many applications. The first capability of Snyk Code is that it can discover these cookie locations, and you can connect them to check a lot of properties about them. In this case, running a _`PRED:SourceCookie`_ query will find the first line of the request handler.
 
-You can now verify that cookies are handled correctly by the code. For example, you can check that cookies do not end up logged anywhere. You can try to use data flow or _`ForSameObject.`_ In this case, report if the cookie is logged as part of some other object, string concatenation, or other simple transformation.
+You can now verify that cookies are handled correctly by the code. For example, you can check that cookies do not end up logged anywhere. You can try to use data flow or _`ForSameObject.`_ In this case, report if the cookie is logged as part of some other object, string concatenation, or other simple transformation.&#x20;
 
-To achieve this, there is a taint analysis done with the `taint` predicate. This takes the following shape: `Taint< source, sanitizer, sink >` .
+To achieve this, there is a taint analysis done with the `taint` predicate. This takes the following shape: `Taint< source, sanitizer, sink >` .&#x20;
 
 _Source_ is the source of sensitive data, _sanitizer_ gives code patterns that would transform the data to be non-sensitive, and _sink_ is the location where the sensitive data should reach a report to be made. The report is then made at the sink location.
 
@@ -138,4 +139,6 @@ Of course, this assumes that any of the sources in _`AnySource`_ (see the hierar
 
 In addition to SQL injection, Snyk Code can detect tens of other vulnerabilities and has corresponding predicates accessible from search and custom rules. The number of predicates is growing over time, and more rules are getting open to modifications.
 
-\\
+
+
+\

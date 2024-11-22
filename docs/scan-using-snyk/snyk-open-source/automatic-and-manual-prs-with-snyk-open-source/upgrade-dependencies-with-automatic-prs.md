@@ -53,7 +53,7 @@ Follow these steps to configure automatic upgrade PRs for an entire Organization
 <figure><img src="../../../.gitbook/assets/Github-integrations-auto-dep-PRs.png" alt="Enabling Automatic dependency upgrade PFs"><figcaption><p>Enabling Automatic dependency upgrade PFs</p></figcaption></figure>
 
 5. To save and apply your changes, select one of the following from the **Save** dropdown:
-   * **Save** – your changes are saved and will be applied to all the Projects in the Organization that are configured to inherit these Settings from the Organization. Projects that have Custom Settings will not be influenced by this change.
+   * **Save**  – your changes are saved and will be applied to all the Projects in the Organization that are configured to inherit these Settings from the Organization. Projects that have Custom Settings will not be influenced by this change.
    * **Save changes and apply to all overridden Projects** – your changes are saved and will be applied to all the Projects in the Organization. Projects that have Custom Settings will inherit these Organization Settings, and their Custom Settings will be overridden.
 
 From now on, every time Snyk scans any Project in the Organization, it automatically submits Upgrade PRs if the scan discovers that an upgrade is available.
@@ -68,7 +68,8 @@ Follow these steps to configure automatic upgrade PRs for a specific Project:
 
 1. From the Snyk Web UI, open the Organization that includes the Project you want to configure.
 2. In the list of Projects, locate and expand the **Project** for which you want to enable automatic upgrade PRs.
-3.  Click the **Project settings** at the end of the Project row.\\
+3.  Click the **Project settings** at the end of the Project row.\
+
 
     <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-27 at 12.55.40.png" alt="Project settings on the Project jow"><figcaption><p>Project settings on the Project jow</p></figcaption></figure>
 4. On the **Project** **Settings** page, select the integration you are using.\

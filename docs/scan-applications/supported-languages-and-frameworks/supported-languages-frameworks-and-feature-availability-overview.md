@@ -22,7 +22,7 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:nuget`
 
-**Features**:
+**Features**:&#x20;
 
 * Fix PRs (NuGet)
 * License scanning
@@ -49,7 +49,7 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Package manager versions**: NA
 
-### [Dart and Flutter](../../scan-using-snyk/supported-languages-and-frameworks/dart.md)
+### [Dart and Flutter](../../scan-using-snyk/supported-languages-and-frameworks/dart.md)&#x20;
 
 **Package manager**: Pub
 
@@ -65,7 +65,7 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Package manager versions**: NA
 
-### [Elixir](../../scan-using-snyk/supported-languages-and-frameworks/elixir.md)
+### [Elixir](../../scan-using-snyk/supported-languages-and-frameworks/elixir.md)&#x20;
 
 **Package manager**: Hex
 
@@ -77,14 +77,14 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:hex`
 
-**Features**:
+**Features**:&#x20;
 
 * License scanning
 * Reports
 
 **Package manager versions**: NA
 
-### [Go](go.md)
+### [Go](go.md)&#x20;
 
 **Package manager**: Go Modules, dep
 
@@ -96,14 +96,14 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:golang`
 
-**Features**:
+**Features**:&#x20;
 
 * License scanning
 * Reports
 
 **Package manager versions**: NA
 
-### [Java and Kotlin](java-and-kotlin.md)
+### [Java and Kotlin](java-and-kotlin.md)&#x20;
 
 **Package manager**: Maven, Gradle
 
@@ -115,13 +115,13 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:maven`
 
-**Features**:
+**Features**:&#x20;
 
 * Fix PRs (Maven)
 * License scanning
 * Reports
 
-**Package manager versions**:
+**Package manager versions**:&#x20;
 
 * Maven
   * `3.*` For details, see the [Snyk Maven plugin readme](https://github.com/snyk/snyk-mvn-plugin#support).
@@ -129,7 +129,7 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
   * `4.*`, `5.*`, `6.*`, `7.*`\
     For more information, see the [Snyk Gradle plugin readme](https://github.com/snyk/snyk-gradle-plugin#support).
 
-### [JavaScript](javascript.md)
+### [JavaScript](javascript.md)&#x20;
 
 **Package manager**: npm, Yarn
 
@@ -141,13 +141,13 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:npm`
 
-**Features**:
+**Features**:&#x20;
 
-* Fix PRs
+* Fix PRs&#x20;
 * License scanning
 * Reports
 
-**Package manager versions**:
+**Package manager versions**:&#x20;
 
 * npm
   * `Lockfile 1, Lockfile 2, Lockfile 3, 7.*`\
@@ -167,14 +167,14 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:composer`
 
-**Features**:
+**Features**:&#x20;
 
 * License scanning
 * Reports
 
 **Package manager versions**: NA
 
-### [Python](python.md)
+### [Python](python.md)&#x20;
 
 **Package manager**: Pip, Poetry, pipenv, setup.py
 
@@ -186,19 +186,19 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:pypi`
 
-**Features**:
+**Features**:&#x20;
 
-* Fix PRs
+* Fix PRs&#x20;
 * License scanning
 * Reports
 
 **Package manager versions**: Suitable with `Python 2 -> 2.7.16`, and `Python 3 -> 3.7.4`.
 
-### [Ruby](ruby.md)
+### [Ruby](ruby.md)&#x20;
 
 **Package manager**: Bundler
 
-**Import your app through SCM**: Available
+**Import your app through SCM**: Available&#x20;
 
 **Test or monitor your app through CLI and IDE**: Available
 
@@ -206,9 +206,9 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:gem`
 
-**Features**:
+**Features**:&#x20;
 
-* Fix PRs
+* Fix PRs&#x20;
 * License scanning
 * Reports
 
@@ -218,7 +218,7 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Package manager**: Cargo
 
-**Import your app through SCM**: NA
+**Import your app through SCM**: NA&#x20;
 
 **Test or monitor your app through CLI and IDE**: NA
 
@@ -230,11 +230,11 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Package manager versions**: NA
 
-### [Scala](scala.md)
+### [Scala](scala.md)&#x20;
 
 **Package manager**: sbt
 
-**Import your app through SCM**: Available
+**Import your app through SCM**: Available&#x20;
 
 **Test or monitor your app through CLI and IDE**: Available
 
@@ -242,7 +242,7 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:maven`
 
-**Features**:
+**Features**:&#x20;
 
 * License scanning
 * Reports
@@ -261,7 +261,7 @@ Before scanning your Open Source Project for vulnerabilities, with limited excep
 
 **Test your app's packages**: Available, `pkg:swift`, `pkg:cocoapods`
 
-**Features**:
+**Features**:&#x20;
 
 * License scanning (CocoaPods)
 * Reports

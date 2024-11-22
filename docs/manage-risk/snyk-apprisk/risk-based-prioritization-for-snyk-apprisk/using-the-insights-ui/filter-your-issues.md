@@ -29,4 +29,4 @@ When you filter based on the Asset class and an issue is found in two different 
 
 When you want to split out Open Source and Snyk Code issues, use a product filter.
 
-![Add filter dropdown](<../../../../.gitbook/assets/Screenshot 2023-07-12 at 02.07.21.png>)\\
+![Add filter dropdown](<../../../../.gitbook/assets/Screenshot 2023-07-12 at 02.07.21.png>)\

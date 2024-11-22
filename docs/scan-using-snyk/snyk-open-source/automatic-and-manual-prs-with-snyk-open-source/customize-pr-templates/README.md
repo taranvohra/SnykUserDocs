@@ -2,11 +2,11 @@
 
 {% hint style="info" %}
 **Feature availability**\
-This feature is currently in [Closed Beta](../../../../more-info/snyk-feature-release-process.md). The functionality is likely to evolve based on feedback, and there will be breaking changes. Contact your account manager to get access to this feature.
+This feature is currently in [Closed Beta](../../../../more-info/snyk-feature-release-process.md). The functionality is likely to evolve based on feedback, and there will be breaking changes. Contact your account manager to get access to this feature.&#x20;
 {% endhint %}
 
 {% hint style="warning" %}
-After your account manager turns on the feature flag, you can activate this feature in the [Snyk Preview](../../../../snyk-admin/manage-settings/snyk-preview.md) settings.
+After your account manager turns on the feature flag, you can activate this feature in the [Snyk Preview](../../../../snyk-admin/manage-settings/snyk-preview.md) settings.&#x20;
 {% endhint %}
 
 {% hint style="info" %}
@@ -16,7 +16,7 @@ Customize your PR template automatically by making an API request; see [Create a
 
 ## Understand Customized PRs
 
-When you fix or upgrade Snyk Open Source and Container Projects imported using the [SCM integrations](../../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/), Snyk raises pull requests (PRs) against your repository.
+When you fix or upgrade Snyk Open Source and Container Projects imported using the [SCM integrations](../../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/), Snyk raises pull requests (PRs) against your repository.&#x20;
 
 Snyk has default templates for the title, description, commit message, and branch name. These indicate what packages are being changed, which issues are being fixed, and many other details.
 

@@ -22,7 +22,7 @@ When an image is scanned by Snyk Container, the information about which operatin
 
 ## Technical details for Insights OS condition risk factor
 
-Every hour, the data pipeline takes a snapshot of all Snyk Projects and data sources and extrapolates packages and images. This snapshot is used to determine which images and packages are known to Snyk for any given customer.
+Every hour, the data pipeline takes a snapshot of all Snyk Projects and data sources and extrapolates packages and images. This snapshot is used to determine which images and packages are known to Snyk for any given customer.&#x20;
 
 Snyk Project tags are used to enable the customer to relate image assets to packages. This information is extracted from the hourly data snapshot, and a basic composition graph is generated between images and packages.
 

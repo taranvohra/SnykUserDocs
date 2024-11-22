@@ -26,7 +26,7 @@ Below is another example of the timestamp logic. When you scan the images in the
 
 Snyk recommends the third image, as it was the last image marked as a custom base image.
 
-## Single Selection
+## Single Selection&#x20;
 
 This versioning schema allows only a single image to be given as a recommendation.
 

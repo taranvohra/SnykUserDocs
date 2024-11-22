@@ -64,7 +64,7 @@ To review and adjust the automatic fix pull request settings:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-05-02 at 11.19.09.png" alt="Automatic fix PR settings"><figcaption><p>Automatic fix PR settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-02 at 11.19.09.png" alt="Automatic fix PR settings"><figcaption><p>Automatic fix PR settings </p></figcaption></figure>
 
 </div>
 

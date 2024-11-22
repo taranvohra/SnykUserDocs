@@ -2,16 +2,16 @@
 
 Snyk tests and monitors Google Container Registry (GCR) container images by evaluating root folders and custom file locations.
 
-## **Prerequisites for adding images to Snyk from GCR**
+## **Prerequisites for adding images to Snyk from GCR**&#x20;
 
 * You must have an account with Snyk and be onboarded to your Organization by an administrator.
 * The integration must be configured between Snyk and your GCR repository.
 
-## Steps to add images to Snyk from GCR
+## Steps to add images to Snyk from GCR&#x20;
 
 Log in to your account and navigate to the relevant Group and Organization you want to manage.
 
-Go to **Projects** and click **Add projects**. The list of integrations already configured in your account opens, similar to the following:
+Go to **Projects** and click **Add projects**. The list of integrations already configured in your account opens, similar to the following:&#x20;
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-03-31 at 17.39.47.png" alt="Integrations configured in a Snyk account"><figcaption><p>Integrations configured in a Snyk account</p></figcaption></figure>
 

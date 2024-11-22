@@ -3,7 +3,7 @@
 To associate the Snyk CLI for use with your Snyk account, you must first authenticate your machine. No repository permissions are needed at this stage, only your email address. When you have authenticated, you can [get started](getting-started-with-the-snyk-cli.md) using the CLI.
 
 {% hint style="info" %}
-Free and Team users have access to personal tokens only. Personal tokens are recommended for use with IDEs and the local CLI.
+Free and Team users have access to personal tokens only. Personal tokens are recommended for use with IDEs and the local CLI.&#x20;
 
 Snyk recommends that Enterprise customers use a service token to authenticate with a CI/CD. Avoid using a service token with an IDE.
 
@@ -16,7 +16,7 @@ For details, see [How to obtain and authenticate with your Snyk API token](../ge
 If you are using Snyk on the EU and AU tenants, you must set your endpoints accordingly before running `snyk auth`. For more information, see [Regional hosting and data residency](../more-info/regional-hosting-and-data-residency.md#cli-and-ci-pipelines-urls).
 {% endhint %}
 
-You can authenticate by using the CLI `snyk auth` command to launch the authentication dialog in your browser. See the [Auth command help](commands/auth.md). This method is the default and recommended.
+You can authenticate by using the CLI `snyk auth` command to launch the authentication dialog in your browser.  See the [Auth command help](commands/auth.md). This method is the default and recommended.
 
 You can also authenticate by using the `SNYK_TOKEN` environment variable. For details, see [Configure the Snyk CLI](configure-the-snyk-cli/).
 

@@ -13,7 +13,7 @@ The Slack app provides the following benefits and more:
 * Support for overriding notifications at the Project level
 
 {% hint style="info" %}
-Vulnerabilities detected on initial import of Projects are not sent to Slack. Only newly disclosed vulnerabilities from imported Projects are sent to Slack.
+Vulnerabilities detected on initial import of Projects are not sent to Slack. Only newly disclosed vulnerabilities from imported Projects are sent to Slack.&#x20;
 {% endhint %}
 
 ## Overview of the Snyk app for Slack
@@ -67,7 +67,7 @@ To find the channel ID of a Slack Channel, open Slack, right-click on the channe
 {% hint style="info" %}
 To add the Snyk for Slack app to a private channel, you must first add the app manually to the channel from within Slack and then select the channel within the Snyk integration.
 
-In the Private channel, select **Channel settings - Integrations**, and then **Add an app**. Search for **Snyk for Slack** and select **add**.\
+In the Private channel, select **Channel settings - Integrations**, and then **Add an app**. Search for **Snyk for Slack** and select **add**. \
 After you have done this, the channel is displayed on the **Settings** page for the integration.
 {% endhint %}
 
@@ -77,8 +77,8 @@ If you are a Slack Admin, you can manually add the Snyk for Slack app to a priva
 
 ## Issue notifications
 
-After the Slack app has been configured, new issue notifications are forwarded to the selected Slack channel according to the desired severity level threshold.\
-New issue notifications may take up to an hour to start propagating to your Slack workspace after it is configured.
+After the Slack app has been configured, new issue notifications are forwarded to the selected Slack channel according to the desired severity level threshold. \
+New issue notifications may take up to an hour to start propagating to your Slack workspace after it is configured.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (113).png" alt="Example of a new critical vulnerability notification received in Slack"><figcaption><p>Example of a new critical vulnerability notification received in Slack</p></figcaption></figure>
 
@@ -100,9 +100,9 @@ To set a Project level override, find the ID of the Project for which you want t
 
 ### Add notification customizations
 
-1. Select `Add customization` to open the creation dialog from the Slack App integration page.
-2. Paste your previously copied Project ID value.
-3. Select the desired issue severity level and the Slack channel to target.
+1. Select `Add customization` to open the creation dialog from the Slack App integration page.&#x20;
+2. Paste your previously copied Project ID value.&#x20;
+3. Select the desired issue severity level and the Slack channel to target.&#x20;
 4. Save the customization.
 
 <div data-full-width="true">
@@ -145,7 +145,7 @@ GET [/orgs/{org\_id}/projects](https://apidocs.snyk.io/?version=2023-08-04#get-/
 
 After retrieving the `org_id`, `bot_id`, and `project_id` values, you can use the following create, read, update, and delete API operations:
 
-#### List all Slack notification customizations for Projects
+#### List all  Slack notification customizations for Projects
 
 GET [/orgs/{org\_id}/slack\_app/{bot\_id}/projects](https://apidocs.snyk.io/?version=2023-08-04#get-/orgs/-org\_id-/slack\_app/-bot\_id-/projects)
 

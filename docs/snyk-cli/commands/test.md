@@ -57,19 +57,19 @@ To perform the scan, resolve the error and scan again.
 
 Use with `--all-projects` or `--yarn-workspaces` to indicate how many subdirectories to search. `DEPTH` must be a number, 1 or greater; zero (0) is the current directory.
 
-Default: no limit.
+Default: 4 , the current working directory (0) and 4 subdirectories.
 
 Example: `--detection-depth=3` limits search to the specified directory (or the current directory if no `<PATH>` is specified) plus three levels of subdirectories; zero (0) is the current directory.
 
 ### `--exclude=<NAME>[,<NAME>]...>`
 
-Can be used with `--all-projects` and `--yarn-workspaces` to indicate directory names and file names to exclude. Must be comma-separated, and cannot include a path.
+Can be used with `--all-projects` and `--yarn-workspaces` to indicate directory names and file names to exclude. Must be comma-separated, and cannot include a path.&#x20;
 
 Example: `$ snyk test --all-projects --exclude=dir1,file2`
 
 This will exclude any directories and files named `dir1` and `file2` when scanning for project manifest files such as: `./dir1`, `./src/dir1`, `./file2`, `./src/file2` and so on.
 
-**Note**: `--exclude=dir1` will find both `./dir1`, and `./src/dir1`.\
+**Note**: `--exclude=dir1` will find both  `./dir1`, and `./src/dir1`.\
 However, `--exclude=./src/dir1` will result in an error because it includes a path.
 
 ### `--prune-repeated-subdependencies`, `-p`
@@ -89,8 +89,6 @@ Print the dependency tree before sending it for analysis.
 ### `--remote-repo-url=<URL>`
 
 Set or override the remote URL for the repository that you would like to monitor.
-
-Groups all Projects found under a single Target.
 
 ### `--dev`
 
@@ -114,15 +112,13 @@ Default: `<ORG_ID>` that is the current preferred Organization in your [Account 
 
 **Note:** You can also use `--org=<orgslugname>.` The `ORG_ID` works in both the CLI and the API. The Organization slug name works in the CLI, but not in the API.
 
-`orgslugname` must match the slug name as displayed in the URL of your org in the Snyk UI: `https://app.snyk.io/org/[orgslugname]`. The orgname does not work.
-
 For more information see the article [How to select the Organization to use in the CLI](https://docs.snyk.io/snyk-cli/scan-and-maintain-projects-using-the-cli/how-to-select-the-organization-to-use-in-the-cli)
 
 ### `--file=<FILE>`
 
 Specify a package file.
 
-When you are testing locally or monitoring a project, you can specify the file that Snyk should inspect for package information. When the file is not specified, Snyk tries to detect the appropriate file for your project.
+When testing locally or monitoring a project, you can specify the file that Snyk should inspect for package information. When the file is not specified, Snyk tries to detect the appropriate file for your project.
 
 See also the section on [Options for Python projects](https://docs.snyk.io/snyk-cli/commands/test#options-for-python-projects)
 
@@ -226,15 +222,13 @@ To fail on any Snyk-discoverable vulnerability (the default behavior), do not us
 
 ### `--maven-aggregate-project`
 
-Use `--maven-aggregate-project` instead of `--all-projects` when scanning Maven aggregate projects, that is, projects that use modules and inheritance.
+Use `--maven-aggregate-project` instead of `--all-projects` when scanning Maven aggregate projects, that is, ones that use modules and inheritance.
 
-Using `--maven-aggregate-project` instructs Snyk to perform a compilation step to ensure all modules within the project are resolvable by the Maven reactor. This ensures a comprehensive scan that includes dependencies of all sub-modules.
+When scanning these types of projects, Snyk performs a compile to ensure all modules are resolvable by the Maven reactor.
 
-Be sure to run the scan in the same directory as the root `pom.xml` file.
+Be sure to run the scan in the same directory as the root pom.xml file.
 
-Snyk reports the test results per individual `pom.xml` file within the aggregate project.
-
-**Note:** You can use `--all-projects` when scanning Maven aggregate projects, but you cannot use `--all-projects` with `--maven-aggregate-project`.
+Snyk reports test results per pom.xml file.
 
 ### `--scan-unmanaged`
 
@@ -244,7 +238,7 @@ To test individual JAR, WAR, and AAR files, use the following:
 
 ### `--scan-all-unmanaged`
 
-Auto-detect Maven, JAR, WAR, and AAR files recursively from the current folder.
+Auto-detect Maven, JAR, WAR, and AAR files recursively from the current folder.&#x20;
 
 `--scan-all-unmanaged`
 
@@ -252,7 +246,7 @@ Auto-detect Maven, JAR, WAR, and AAR files recursively from the current folder.
 
 ## Options for Gradle projects
 
-**Note:** If you see the invalid string length error, refer to [Invalid string length error when scanning projects](https://docs.snyk.io/snyk-cli/scan-and-maintain-projects-using-the-cli/invalid-string-length-error-when-scanning-projects)
+**Note:** If you see the invalid string length error, refer to I[nvalid string length error when scanning projects](https://docs.snyk.io/snyk-cli/scan-and-maintain-projects-using-the-cli/invalid-string-length-error-when-scanning-projects)
 
 ### `--sub-project=<NAME>`, `--gradle-sub-project=<NAME>`
 
@@ -260,9 +254,7 @@ For Gradle multi project configurations, test a specific sub-project.
 
 ### `--all-sub-projects`
 
-For multi project configurations, test all sub-projects.\
-\
-Both a build.gradle file and a settings.gradle file, or equivalent files, based on the package manager, must exist in the current directory.
+For multi project configurations, test all sub-projects.
 
 ### `--all-projects`
 
@@ -274,11 +266,9 @@ For Gradle monorepos Snyk looks only for root level **build.gradle / build.gradl
 
 This option is designed to be run in the root of your monorepo.
 
-For more details, see the following support article: [Scanning Gradle projects in CLI with `--exclude` option does not exclude sub-projects](https://support.snyk.io/hc/en-us/articles/22275760293661-Scanning-Gradle-projects-in-CLI-with-exclude-option-does-not-exclude-sub-projects)
-
 ### `--configuration-matching=<CONFIGURATION_REGEX>`
 
-Resolve dependencies using the first configuration that matches the specified Java regular expression.
+Resolve dependencies using only configuration(s) that match the specified Java regular expression.
 
 Example: `^releaseRuntimeClasspath$`
 
@@ -330,26 +320,6 @@ Example: `snyk monitor --file=my-project.sln --project-name-prefix=my-group/`
 
 This is useful when you have multiple projects with the same name in other `.sln` files.
 
-## Options for .NET projects
-
-### `--dotnet-runtime-resolution`
-
-**Note:** This option in in Early Access and may change until it is released.
-
-Required. You must use this option when you test .NET projects using [Runtime Resolution Scanning](https://docs.snyk.io/getting-started/supported-languages-and-frameworks/.net/improved-.net-scanning)
-
-Example: `snyk test --dotnet-runtime-resolution`
-
-### `--dotnet-target-framework`
-
-**Note:** This option in in Early Access and may change until it is released.
-
-Optional. You may use this option if your solution contains multiple `<TargetFramework>` directives. If you do not specify the option `--dotnet-target-framework`, all supported Target Frameworks will be scanned.
-
-The Target Framework specified with this option should be defined following the standard [naming convention](https://learn.microsoft.com/en-us/dotnet/standard/frameworks#supported-target-frameworks)
-
-Example: `snyk test --dotnet-runtime-resolution --dotnet-target-framework=net6.0`
-
 ## Options for npm projects
 
 **Note**: You can use the following options with npm projects:
@@ -357,28 +327,6 @@ Example: `snyk test --dotnet-runtime-resolution --dotnet-target-framework=net6.0
 `--dev`. See the [`--dev` option help](https://docs.snyk.io/snyk-cli/commands/test#dev)
 
 `--all-projects` to scan and detect npm projects and all other projects in the directory. See the [`--all-projects` option help](https://docs.snyk.io/snyk-cli/commands/test#all-projects)
-
-`--fail-on`. See the [--fail-on option help](https://docs.snyk.io/snyk-cli/commands/test#fail-on-less-than-all-or-upgradable-or-patchable-greater-than)
-
-`--prune-repeated-subdependencies, -p`. See the [`--prune-repeated subdependencies` option help](https://docs.snyk.io/snyk-cli/commands/test#prune-repeated-subdependencies-p)
-
-### `--strict-out-of-sync=true|false`
-
-Prevent testing out-of-sync lockfiles.
-
-If there are out-of-sync lockfiles in the project, the `test` command fails when `--strict-out-of-sync=true`.
-
-Default: true
-
-## Options for pnpm projects
-
-**Snyk CLI pnpm support is in Early Access**. To enable it, in your Snyk account navigate to Settings, select Snyk Preview, and install CLI v1.1293.0 or above.
-
-**Note**: You can use the following options with pnpm projects:
-
-`--dev`. See the [`--dev` option help](https://docs.snyk.io/snyk-cli/commands/test#dev)
-
-`--all-projects` to scan and detect pnpm projects and all other projects in the directory. See the [`--all-projects` option help](https://docs.snyk.io/snyk-cli/commands/test#all-projects)
 
 `--fail-on`. See the [--fail-on option help](https://docs.snyk.io/snyk-cli/commands/test#fail-on-less-than-all-or-upgradable-or-patchable-greater-than)
 
@@ -412,7 +360,7 @@ Default: true
 
 ### `--yarn-workspaces`
 
-Detect and scan only Yarn Workspaces when a lockfile is in the root.
+Detect and scan Yarn Workspaces only when a lockfile is in the root.
 
 You can specify how many sub-directories to search using `--detection-depth.`
 
@@ -438,7 +386,7 @@ Snyk uses Python in order to scan and find your dependencies. If you are using m
 
 Default: `python` This executes your default python version. Run `python -V` to find out what your default version is.
 
-Example: `snyk test --command=python3`
+Example: `snyk test--command=python3`
 
 ### `--skip-unresolved=true|false`
 
@@ -450,15 +398,9 @@ For a Python project, specify a particular file to test.
 
 Default: Snyk scans the requirements.txt file at the top level of the project.
 
-**Important:** When specifying a value for the `--file` parameter that is not the default file, you must also include the `--package-manager=pip` option. The test will fail without this parameter.
+Snyk can recognize any manifest files specified with this option based on `--file=req*.txt`. The `*` is a wildcard and `req` can appear anywhere in the file name.
 
-Always specify this parameter with the value `pip` when using a custom `--file` value. For example:
-
-```bash
-snyk test --file=requirements-dev.txt --package-manager=pip
-```
-
-This allows Snyk to correctly recognize and scan your specified manifest file, such as when you have renamed it to `requirements-dev.txt`.
+For example, Snyk recognizes your manifest file when you have renamed it to `requirements-dev.txt`.
 
 ### `--package-manager=pip`
 
@@ -470,7 +412,7 @@ For complete information about the command see [`--package-manager=<PACKAGE_MANA
 
 ## Options for Go projects
 
-The following options are not supported:
+Currently the following options are not supported:
 
 `--fail-on=<all|upgradable|patchable>`
 
@@ -510,7 +452,7 @@ To see how confident Snyk is about the identified dependency and its version, us
 
 ### `-- [<CONTEXT-SPECIFIC_OPTIONS>]`
 
-Use a double dash (`--`) after the complete Snyk command to pass additional options (arguments, flags) that follow directly to the build tool, for example, Gradle or Maven.
+Use a double dash (`--`) after the complete Snyk command to pass additional options (arguments, flags) that follow directly to the build tool, for example Gradle or Maven.
 
 The format is `snyk <command> -- [<context-specific_options>]`
 

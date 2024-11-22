@@ -1,9 +1,9 @@
 # Manage service accounts using the Snyk API
 
-You can manage service accounts using the [Snyk REST API](../../snyk-api/reference/serviceaccounts.md).
+You can manage service accounts using the [Snyk REST API](https://apidocs.snyk.io/?version=2023-09-07#tag--ServiceAccounts).
 
 {% hint style="info" %}
-Specific permissions are required to perform all these tasks. For more information, see [Service accounts-select a role](./#select-a-role).
+Specific permissions are required to perform all these tasks; see [Service Account permissions](../../snyk-admin/manage-permissions-and-roles/permissions-associated-with-each-pre-defined-role.md#service-account-management-permissions).
 {% endhint %}
 
 ## Service account attributes
@@ -18,7 +18,7 @@ Specific permissions are required to perform all these tasks. For more informati
 * `oauth_client_secret` - The service account uses an [OAuth 2.0 access token](./#service-accounts-using-oauth-2.0), which is retrieved with a client secret.
 * `oauth_private_key_jwt` - The service account uses an [OAuth 2.0 access token](./#service-accounts-using-oauth-2.0), which is retrieved with a JWT signed with a private key.
 
-`role_id` - The role of the service account, which defines the permissions it has. Available roles can be found using the endpoint [List all roles in a group](../../snyk-api/reference/groups-v1.md#group-groupid-roles).
+`role_id` - The role of the service account, which defines the permissions it has. Available roles can be found using the [List all roles in a group](https://snyk.docs.apiary.io/#reference/groups/list-all-roles-in-a-group/list-all-roles-in-a-group) Snyk API v1 endpoint.
 
 `jwks_url` - A JWKs URL hosting your public keys used to verify signed JWT requests; this must be `https`. Required only when `auth_type` is `oauth_private_key_jwt`.
 
@@ -30,23 +30,23 @@ Specific permissions are required to perform all these tasks. For more informati
 
 **Request**: `GET https://api.snyk.io/rest/groups/{groupId}/service_accounts`
 
-**API endpoint:** [Get a list of group service accounts](../../snyk-api/reference/serviceaccounts.md#groups-group\_id-service\_accounts-1)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#get-/groups/-group\_id-/service\_accounts](https://apidocs.snyk.io/?version=2023-09-07#get-/groups/-group\_id-/service\_accounts)
 
-This [paginated](../../snyk-api/rest-api/about-the-rest-api.md#pagination) call returns an array of objects, each describing a service account.
+This [paginated](../../snyk-api-info/using-snyk-api/links-for-pagination-in-snyk-rest-api.md) call returns an array of objects, each describing a service account.
 
 ### Create a service account for your Group
 
 **Request**: `POST https://api.snyk.io/rest/groups/{groupId}/service_accounts`
 
-**API endpoint:** [Create a service account for a group](../../snyk-api/reference/serviceaccounts.md#groups-group\_id-service\_accounts)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#post-/groups/-group\_id-/service\_accounts](https://apidocs.snyk.io/?version=2023-09-07#post-/groups/-group\_id-/service\_accounts)
 
-This call creates a new service account. You pass a `role_id` in the JSON-formatted body of the request, which defines the permissions a service account can use. This role id can be found using the endpoint [List all roles in a group](../../snyk-api/reference/groups-v1.md#group-groupid-roles). Roles can be re-used for multiple service accounts.
+This call creates a new service account. You pass a `role_id` in the JSON-formatted body of the request, which defines the permissions a service account can use. This role id can be found using the [List all roles in a group](https://snyk.docs.apiary.io/#reference/groups/list-all-roles-in-a-group/list-all-roles-in-a-group) Snyk API v1 endpoint. Roles can be re-used for multiple service accounts.
 
 ### Get a service account from your Group
 
 **Request**: `GET https://api.snyk.io/rest/groups/{groupId}/service_accounts/{serviceAccountId}`
 
-**API endpoint:** [Get a group service account](../../snyk-api/reference/serviceaccounts.md#groups-group\_id-service\_accounts-serviceaccount\_id-1)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#get-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-](https://apidocs.snyk.io/?version=2023-09-07#get-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-)
 
 This call returns details describing a specific service account.
 
@@ -54,7 +54,7 @@ This call returns details describing a specific service account.
 
 **Request**: `PATCH https://api.snyk.io/rest/groups/{groupId}/service_accounts/{serviceAccountId}`
 
-**API endpoint:** [Update a group service account](../../snyk-api/reference/serviceaccounts.md#groups-group\_id-service\_accounts-serviceaccount\_id)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#patch-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-](https://apidocs.snyk.io/?version=2023-09-07#patch-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-)
 
 This call updates the details of a specific service account, at this time, the name of the service account.
 
@@ -62,7 +62,7 @@ This call updates the details of a specific service account, at this time, the n
 
 **Request**: `DELETE https://api.snyk.io/rest/groups/{groupId}/service_accounts/{serviceAccountId}`
 
-**API endpoint:** [Delete a group service account](../../snyk-api/reference/serviceaccounts.md#groups-group\_id-service\_accounts-serviceaccount\_id-secrets)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#delete-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-](https://apidocs.snyk.io/?version=2023-09-07#delete-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-)
 
 This call permanently deletes the specified service account and revokes its credentials.
 
@@ -70,7 +70,7 @@ This call permanently deletes the specified service account and revokes its cred
 
 **Request**: `POST https://api.snyk.io/rest/groups/{groupId}/service_accounts/{serviceAccountId}/secrets`
 
-**API endpoint:** [Manage a group service account’s client secret](../../snyk-api/reference/serviceaccounts.md#groups-group\_id-service\_accounts-serviceaccount\_id-secrets)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#post-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-/secrets](https://apidocs.snyk.io/?version=2023-09-07#post-/groups/-group\_id-/service\_accounts/-serviceaccount\_id-/secrets)
 
 This call allows you to manage the client secret for `oauth_client_secret` service accounts. You can perform the following operations:
 
@@ -84,23 +84,23 @@ This call allows you to manage the client secret for `oauth_client_secret` servi
 
 **Request**: `GET https://api.snyk.io/rest/orgs/{orgId}/service_accounts`
 
-**API endpoint:** [Get a list of organization service accounts](../../snyk-api/reference/serviceaccounts.md#orgs-org\_id-service\_accounts-1)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#get-/orgs/-org\_id-/service\_accounts](https://apidocs.snyk.io/?version=2023-09-07#get-/orgs/-org\_id-/service\_accounts)
 
-This [paginate](../../snyk-api/rest-api/about-the-rest-api.md#pagination)[d](../../snyk-api/rest-api/about-the-rest-api.md#pagination) call returns an array of objects, each describing a service account.
+This [paginated](../../snyk-api-info/using-snyk-api/links-for-pagination-in-snyk-rest-api.md) call returns an array of objects, each describing a service account.
 
 ### Create a service account for your Organization
 
 **Request**: `POST https://api.snyk.io/rest/orgs/{orgId}/service_accounts`
 
-**API endpoint:** [Create a service account for an organization](../../snyk-api/reference/serviceaccounts.md#orgs-org\_id-service\_accounts)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#post-/orgs/-org\_id-/service\_accounts](https://apidocs.snyk.io/?version=2023-09-07#post-/orgs/-org\_id-/service\_accounts)
 
-This call creates a new service account. You pass a `role_id` in the JSON-formatted body of the request, which defines the permissions a service account can use. This `role id` can be found using the endpoint [List all roles in a group](../../snyk-api/reference/groups-v1.md#group-groupid-roles). Roles can be re-used for multiple service accounts.
+This call creates a new service account. You pass a `role_id` in the JSON-formatted body of the request, which defines the permissions a service account can use. This `role id` can be found using the [List all roles in a group](https://snyk.docs.apiary.io/#reference/groups/list-all-roles-in-a-group/list-all-roles-in-a-group) Snyk API v1 endpoint. Roles can be re-used for multiple service accounts.
 
 ### Get a service account from your Organization
 
 **Request**: `GET https://api.snyk.io/rest/orgs/{orgId}/service_accounts/{serviceAccountId}`
 
-**API endpoint:** [Get an organization service account](../../snyk-api/reference/serviceaccounts.md#orgs-org\_id-service\_accounts-serviceaccount\_id-1)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#get-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-](https://apidocs.snyk.io/?version=2023-09-07#get-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-)
 
 This call returns details describing a specific service account.
 
@@ -108,15 +108,15 @@ This call returns details describing a specific service account.
 
 **Request**: `PATCH https://api.snyk.io/rest/orgs/{orgId}/service_accounts/{serviceAccountId}`
 
-**API endpoint:** [Update an organization service account](https://apidocs.snyk.io/?version=2023-09-07#patch-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#patch-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-](https://apidocs.snyk.io/?version=2023-09-07#patch-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-)
 
-This call can update the details of a specific service account. The name of the service account is updated.
+This call updates the details of a specific service account, at this time, the name of the service account.
 
 ### Delete a service account from your Organization
 
 **Request**: `DELETE https://api.snyk.io/rest/orgs/{orgId}/service_accounts/{serviceAccountId}`
 
-**API endpoint:** [Delete a service account in an organization](../../snyk-api/reference/serviceaccounts.md#orgs-org\_id-service\_accounts-serviceaccount\_id-2)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#delete-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-](https://apidocs.snyk.io/?version=2023-09-07#delete-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-)
 
 This call permanently deletes the specified service account.
 
@@ -124,7 +124,7 @@ This call permanently deletes the specified service account.
 
 **Request**: `POST https://api.snyk.io/rest/orgs/{orgId}/service_accounts/{serviceAccountId}/secrets`
 
-**API endpoint:** [Manage an organization's service account's client secret](../../snyk-api/reference/serviceaccounts.md#orgs-org\_id-service\_accounts-serviceaccount\_id-secrets)
+**API documentation:** [https://apidocs.snyk.io/?version=2023-09-07#post-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-/secrets](https://apidocs.snyk.io/?version=2023-09-07#post-/orgs/-org\_id-/service\_accounts/-serviceaccount\_id-/secrets)
 
 This call allows you to manage the client secret for `oauth_client_secret` service accounts. You can perform the following operations:
 

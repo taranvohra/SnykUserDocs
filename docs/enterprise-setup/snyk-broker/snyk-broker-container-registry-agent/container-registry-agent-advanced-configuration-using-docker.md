@@ -1,6 +1,8 @@
 # Container Registry Agent advanced configuration using Docker
 
+{% hint style="info" %}
 For instructions on installation of the Broker Container Registry Agent using Docker, see [Snyk Broker - Container Registry Agent](./). See [Install Broker for Container Registry using Helm](install-broker-for-container-registry-agent-using-helm.md) for instructions on the Helm method.
+{% endhint %}
 
 ## Container Registry Agent server **HTTPS configuration**
 
@@ -21,9 +23,10 @@ docker run --restart=always \
 
 By default, the Container Registry Agent establishes HTTPS connections to the Container Registry and Broker Client. If your Container Registry or Broker Client is serving an internal certificate (signed by your own CA), you can provide the CA certificate to the Container Registry Agent. For example, if your CA certificate is at `./private/ca.cert.pem`, provide it to the Docker container by mounting the folder and using the `NODE_EXTRA_CA_CERTS` environment variable:
 
-<pre><code>docker run --restart=always \
-       -p 8081:8081 \
-<strong>       -e SNYK_PORT=8081 \
-</strong>       -e NODE_EXTRA_CA_CERTS=/private/ca.cert.pem \
-       snyk/container-registry-agent:latest
-</code></pre>
+```
+docker run --restart=always
+-p 8081:8081
+-e SNYK_PORT=8081
+-e NODE_EXTRA_CA_CERTS=/private/ca.cert.pem
+snyk/container-registry-agent:latest
+```

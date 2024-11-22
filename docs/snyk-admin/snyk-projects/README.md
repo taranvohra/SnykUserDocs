@@ -1,8 +1,6 @@
 # Snyk Projects
 
-Snyk Project information appears in the **Projects** listing, which you can display from the menu on the Snyk dashboard. The filters you can add depend on the **Group by** option you choose from the pulldown on the right. To filter by Origin or source, use an Integrations filter.
-
-Progress and error information on the state of your repository and container registry image imports are shown in the [Import Log](import-log.md).
+Snyk Project information appears in the **Projects** listing, which you can display from the menu on the Snyk dashboard. The filters that are visible (checkboxes appear on the left when you click the **Filters** button) depend on the **Group by** option you choose from the pulldown on the right.
 
 {% hint style="info" %}
 After filters have been applied to the Project listing page, you can bookmark the URL and share it with other users in the Organization. This allows all users to see the same view of the page.
@@ -10,7 +8,7 @@ After filters have been applied to the Project listing page, you can bookmark th
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-24 at 09.09.25.png" alt="Snyk Projects listing grouped by Target"><figcaption><p>Snyk Projects listing grouped by Target</p></figcaption></figure>
 
-Snyk Projects concepts include the following:
+**Snyk Projects concepts** include the following:
 
 * [Target](./#target)
 * [Origin](./#origin)
@@ -20,11 +18,9 @@ Snyk Projects concepts include the following:
 
 ## Target
 
-Projects are held in a Target. A Target represents an external resource Snyk has scanned: a code repository, a Kubernetes workload, or another scannable resource external to Snyk.
+Projects are held in a Target. A Target represents an external resource Snyk has scanned: a code repository, a Kubernetes workload, or other scannable resource external to Snyk. Snyk creates a Target when you request to import a Project or scan using the CLI. If the import fails or finds nothing, the Target will be empty.
 
-Snyk creates a Target when you request to import a Project or scan using the CLI. If the import fails or finds nothing, the Target will be empty.
-
-When you select **Group by target**, Snyk Targets appear in the **Projects** listing. You can also find Targets using the endpoints [Get targets by org ID](../../snyk-api/reference/targets.md#orgs-org\_id-targets) and [List all Projects for an Org with the given Org ID](../../snyk-api/reference/projects.md#orgs-org\_id-projects).
+When you select **Group by target**, Snyk Targets appear in the **Projects** listing. You can also find Targets using the Snyk REST API endpoint [Get targets by org ID](https://apidocs.snyk.io/?version=2022-12-21%7Ebeta#get-/orgs/-org\_id-/targets).
 
 Click the **dots** at the far right of each Target on the list to see the **available actions**; these include **deleting** a target.
 
@@ -40,7 +36,7 @@ Use **Sort by** (pull down on the far right) to sort the **Projects** listing by
 
 <figure><img src="../../.gitbook/assets/image (2) (5).png" alt="Sorting attributes available when grouping by Target"><figcaption><p>Sorting attributes available when grouping by Target</p></figcaption></figure>
 
-## Origin or source
+## Origin
 
 The Origin defines the Target ecosystem, such as CLI, GitHub, or Kubernetes. Origins are a property of Targets (see preceding section) and appear in the **Projects** listing as an icon next to the Target name.
 
@@ -82,7 +78,7 @@ Possible Origin values are:
 
 A Snyk Project defines the items, such as manifest files, that Snyk scans for a given Target, with configuration information defining how to run that scan.
 
-Projects appear in the **Projects** listing. You can also find Projects using the endpoint [List all Projects for an Org with the given Org ID](../../snyk-api/reference/projects.md#orgs-org\_id-projects).
+Projects appear in the **Projects** listing. You can also find Projects using the Snyk REST API endpoint [Get projects by org ID](https://apidocs.snyk.io/?version=2022-12-21%7Ebeta#get-/orgs/-org\_id-/projects).
 
 Use **Group by none** (ungrouped) for better Project visibility and to apply [filtering attributes at the Project level](project-attributes.md).
 
@@ -93,7 +89,7 @@ Use **Group by none** (ungrouped) for better Project visibility and to apply [fi
 The Targetfile is the specific item to scan in a Target, such as a `pom.xml` file in a GitHub repo.
 
 {% hint style="info" %}
-[Snyk Code](../../scan-with-snyk/snyk-code/) scans do not use Targetfiles.
+[Snyk Code](../../scan-using-snyk/snyk-code/) scans do not use Targetfiles.
 {% endhint %}
 
 ## Type

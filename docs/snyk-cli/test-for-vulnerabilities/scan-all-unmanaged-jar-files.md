@@ -1,10 +1,10 @@
 # Scan all unmanaged JAR files
 
-The Snyk CLI can scan unmanaged JAR files in [Java applications](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/#open-source-and-licensing) to identify which open-source package they contain.
+The Snyk CLI can scan unmanaged JAR files in [Java applications](broken-reference) to identify which open-source package they contain.
 
 The CLI identifies the package name, version, and vulnerabilities only if the package is available in Maven Central, and the JAR file hash matches the hash in Maven Central.
 
-**Prerequisite:** You must install a [supported version](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/#supported-frameworks-and-package-managers) of Maven to scan unmanaged JAR files.
+**Prerequisite:** You must install a [supported version](broken-reference) of Maven to scan unmanaged JAR files.
 
 ## Scanning all JAR files in a single folder and scanning each JAR file individually
 
@@ -26,7 +26,7 @@ Beginning with Snyk CLI 1.1176.0, by default you can scan all subfolders using t
 
 Java apps often have JAR files in a number of different folders within an application.
 
-The following is a Linux/Mac Bash script used with CLI versions before Snyk CLI 1.1176.0 that recurses through all subfolders starting with the current folder and tests each JAR file found.
+The following is a  Linux/Mac Bash script used with CLI versions before Snyk CLI 1.1176.0 that recurses through all subfolders starting with the current folder and tests each JAR file found.
 
 Setting a value for the `REMOTE_REPO_URL` variable is important; it is used to combine all scan results under a single Snyk Project in the UI using the `--remote-repo-url` parameter.
 
@@ -85,18 +85,14 @@ echo ""
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" 
 echo "Detected jars ($detected_count) - does not include transitive dependencies:"
 echo ""
-if [ ${detected_count} -gt 0 ]; then
-   printf "${detected_jars}"
-fi
+printf $detected_jars
 echo ""
 echo ""
 echo ""
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" 
 echo "Undetected jars ($undetected_count) - not found on Maven Central:"
 echo ""
-if [ ${undetected_count} -gt 0 ]; then
-   printf "${undetected_jars}"
-fi
+printf $undetected_jars
 ```
 
 The following is a Windows batch script for scanning JARs in all subfolders, run from a `scanjar.bat` file.

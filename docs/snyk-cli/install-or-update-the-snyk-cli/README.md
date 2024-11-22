@@ -4,43 +4,37 @@ You can install or update the [Snyk CLI](../) using the methods explained on thi
 
 After you install the Snyk CLI, you must [authenticate](../commands/auth.md). Then you can [get started](../getting-started-with-the-snyk-cli.md) testing and fixing your vulnerabilities, beginning with testing your installation.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Snyk recommends always keeping your CLI installation updated to the latest version. You can check which version of the Snyk CLI you have installed by running `snyk --version`.
 {% endhint %}
 
-For information about installing the CLI for an IDE, see the [IDE documentation](../../scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/). You can also install the CLI in a CI/CD environment. For details, see the [CI/CD documentation](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/).
+For information about installing the CLI for an IDE, see the IDE documentation.
 
 ## Install with standalone executables
 
-{% hint style="info" %}
-When you use this method, you must keep the Snyk CLI up to date manually.
-{% endhint %}
-
 Use [GitHub Releases](https://github.com/snyk/snyk/releases) to download a standalone executable (macOS, Linux, Windows) of Snyk CLI for your platform.
 
-Snyk also provides these standalone executables on the Snyk Content Delivery Network (CDN). See the latest `release.json` [file](https://downloads.snyk.io/cli/stable/release.json) for the download links. Examples for a specific version or platform follow:
+Snyk also provides these standalone executables on the Snyk Content Delivery Network (CDN). See the latest `release.json` [file](https://static.snyk.io/cli/latest/release.json) for the download links. Examples for a specific version or platform follow:
 
-* [https://downloads.snyk.io/cli/v1.666.0/release.json](https://downloads.snyk.io/cli/v1.666.0/release.json)
-* [https://downloads.snyk.io/cli/stable/snyk-macos](https://downloads.snyk.io/cli/stable/snyk-macos)
+* [https://static.snyk.io/cli/v1.666.0/release.json](https://static.snyk.io/cli/v1.666.0/release.json)
+* [https://static.snyk.io/cli/latest/snyk-macos](https://static.snyk.io/cli/latest/snyk-macos)
 
 For example, to download and run the latest Snyk CLI on macOS, you could run:
 
 ```bash
-curl --compressed https://downloads.snyk.io/cli/stable/snyk-macos -o snyk
+curl --compressed https://static.snyk.io/cli/latest/snyk-macos -o snyk
 chmod +x ./snyk
 mv ./snyk /usr/local/bin/
 ```
 
 You can also use these direct links to download the executables:
 
-| OS\Architecture | amd64                                                                | arm64                                                                       |
-| --------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| macOS           | [snyk-macos](https://downloads.snyk.io/cli/stable/snyk-macos)        | [snyk-macos-arm64](https://downloads.snyk.io/cli/stable/snyk-macos-arm64)   |
-| Linux           | [snyk-linux](https://downloads.snyk.io/cli/stable/snyk-linux)        | [snyk-linux-arm64](https://downloads.snyk.io/cli/stable/snyk-linux-arm64)   |
-| Alpine          | [snyk-alpine](https://downloads.snyk.io/cli/stable/snyk-alpine)      | [snyk-alpine-arm64](https://downloads.snyk.io/cli/stable/snyk-alpine-arm64) |
-| Windows         | [snyk-win.exe](https://downloads.snyk.io/cli/v1.1294.0/snyk-win.exe) | -                                                                           |
-
-You can rename the files for example snyk-win.exe to snyk.exe so you can run snyk commands as documented, for example, `snyk test`.
+* **macOS**: [https://static.snyk.io/cli/latest/snyk-macos](https://static.snyk.io/cli/latest/snyk-macos)
+* **Windows**: [https://static.snyk.io/cli/latest/snyk-win.exe](https://static.snyk.io/cli/latest/snyk-win.exe)\
+  You can rename the file to snyk.exe so you can run snyk commands as documented, for example, `snyk test`.
+* **Linux**: [https://static.snyk.io/cli/latest/snyk-linux](https://static.snyk.io/cli/latest/snyk-linux)
+* **Linux/arm64**: [https://static.snyk.io/cli/latest/snyk-linux-arm64](https://static.snyk.io/cli/latest/snyk-linux-arm64)
+* **Alpine**: [https://static.snyk.io/cli/latest/snyk-alpine](https://static.snyk.io/cli/latest/snyk-alpine)
 
 {% hint style="info" %}
 To use CLI releases before version 1.1230.0 on an Apple M1 or M2 machine, (darwin/arm64), see [Using CLI releases before version 1.1230.0 on an Apple M1 or M2 machine](using-cli-releases-before-version-1.1230.0-on-an-apple-m1-or-m2-machine.md).
@@ -48,6 +42,10 @@ To use CLI releases before version 1.1230.0 on an Apple M1 or M2 machine, (darwi
 To use the CLI with Alpine Linux, see [Prerequisites for CLI and Jenkins plugin on Alpine Linux operating system](prerequisites-for-cli-and-jenkins-plugin-on-alpine-linux-operating-system.md).
 
 For more information see [verify CLI standalone binaries](verifying-cli-standalone-binaries.md).
+{% endhint %}
+
+{% hint style="warning" %}
+The drawback of this method is that you must keep the Snyk CLI up to date manually.
 {% endhint %}
 
 ## Install with Homebrew (macOS, Linux)
@@ -105,7 +103,7 @@ docker run -it \
 This is an example for scanning a Maven project with `snyk/snyk`:
 
 ```
-docker run --rm \
+docker run --rm -r \
 -e SNYK_TOKEN=<YOUR_SNYK_TOKEN> \
 -v <PROJECT_DIRECTORY>:/app \
 -v <PROJECT_DIRECTORY>/settings.xml:/root/.m2/settings.xml \

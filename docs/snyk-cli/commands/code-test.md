@@ -6,7 +6,7 @@
 
 ## Description
 
-The `snyk code test` command tests source code for any known security issues (Static Application Security Testing).
+The `snyk code test` command tests for any known security issues using Static Code Analysis.
 
 ## Exit codes
 
@@ -37,11 +37,19 @@ Set a default to ensure all newly tested projects are tested under your default 
 
 Default: `<ORG_ID>` that is the current preferred Organization in your [Account settings](https://app.snyk.io/account)
 
-**Note:** You can also use `--org=<orgslugname>.` The `ORG_ID` works in both the CLI and the API. The Organization slug name works in the CLI, but not in the API.
+Note that you can also use `--org=<orgslugname>`. The `ORG_ID` works in both the CLI and the API. The Organization slug name works in the CLI, but not in the API.
 
-`orgslugname` must match the slug name as displayed in the URL of your org in the Snyk UI: `https://app.snyk.io/org/[orgslugname]`. The orgname does not work.
+### `--report`
 
-For more information see the article [How to select the Organization to use in the CLI](https://docs.snyk.io/snyk-cli/scan-and-maintain-projects-using-the-cli/how-to-select-the-organization-to-use-in-the-cli)
+Share results with the Snyk Web UI.
+
+This creates a project in your Snyk account with a snapshot of the current configuration issues or appends the snapshot to an existing project.
+
+After using this option, log in to the Snyk website and view your projects to see the snapshot.
+
+Example: `$ snyk code test --report --project-name="PROJECT_NAME"`
+
+For more information, see [Publish CLI results](https://docs.snyk.io/scan-application-code/snyk-code/cli-for-snyk-code/publishing-cli-results-to-a-snyk-project-and-ignoring-cli-results#publishing-cli-results-to-a-snyk-project)
 
 ### `--json`
 
@@ -55,7 +63,7 @@ Save test output as a JSON data structure directly to the specified file, regard
 
 Use to display the human-readable test output using stdout and, at the same time, save the JSON data structure output to a file.
 
-For SAST, if no issues are found, Snyk does not create a `json` file. In contrast, for open-source, Snyk creates a file whether or not issues are found.
+For SAST, if no issues are found, Snyk does not create a `json` file. In contrast, for open-source, Snyk creates a file whether or not issues are found.&#x20;
 
 Example: `$ snyk code test --json-file-output=vuln.json`
 
@@ -63,7 +71,7 @@ Example: `$ snyk code test --json-file-output=vuln.json`
 
 Return results in SARIF format.
 
-Example: `$ snyk code test --sarif`
+Example: `$ snyk code --sarif`
 
 ### `--sarif-file-output=<OUTPUT_FILE_PATH>`
 

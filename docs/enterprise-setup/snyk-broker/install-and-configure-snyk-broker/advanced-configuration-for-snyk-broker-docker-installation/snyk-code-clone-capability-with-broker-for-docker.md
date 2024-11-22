@@ -1,9 +1,9 @@
 # Snyk Code - Clone capability with Broker for Docker
 
 {% hint style="info" %}
-**Release status**&#x20;
+**Feature availability**
 
-The environment variable to enable Git clone capabilities is in Early Access and is available only with Enterprise plans. Snyk recommends it for Snyk Code analysis through the Broker. If you want to set it up in your Group or Organization, contact your Snyk account team.
+The environment variable to enable Git clone capabilities is in [Closed Beta](../../../../more-info/snyk-feature-release-process.md). However, it is the preferred way to run Snyk Code analysis through the Broker and is fully capable. Contact your Snyk account management team to find out more.&#x20;
 {% endhint %}
 
 Brokered Snyk Code enables the Broker to accept code files, and the Broker then scans between the SCM system and Snyk.

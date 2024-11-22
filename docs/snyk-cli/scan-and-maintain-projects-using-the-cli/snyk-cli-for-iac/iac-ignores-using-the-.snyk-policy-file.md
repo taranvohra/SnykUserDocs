@@ -1,10 +1,12 @@
 # IaC ignores using the .snyk policy file
 
-When you scan IaC configuration files using the Snyk CLI `iac test` command, you can ignore issues that are not relevant to you by using the [`.snyk` policy file](../../../manage-risk/policies/the-.snyk-file.md) **for current IaC only**. Snyk recommends that you store and version the `.snyk` file in the root of the working directory where you store your IaC configuration files. This file can be created with the `snyk ignore` command. For details see [Ignore vulnerabilities using Snyk CLI](../ignore-vulnerabilities-using-the-snyk-cli.md).
-
-{% hint style="info" %}
-You can use ignores through the Snyk Web UI for both current IaC and IaC+.
+{% hint style="warning" %}
+While Ignores via the Snyk UI are available for current IaC and IaC+, using ignores in the .snyk file is available only in current IaC at this time.&#x20;
 {% endhint %}
+
+When you scan IaC configuration files using the Snyk CLI `iac test` command, you can ignore issues that are not relevant to you by using the [`.snyk` policy file](../../../scan-using-snyk/policies/the-.snyk-file.md). Snyk recommends that you store and version the `.snyk` file in the root of the working directory where you store your IaC configuration files.
+
+This file can be created with the `snyk ignore` command. For details see [Ignore vulnerabilities using Snyk CLI](../ignore-vulnerabilities-using-the-snyk-cli.md).
 
 ## Ignore paths
 
@@ -18,10 +20,12 @@ Ignores in the `.snyk` file and ignores created in the Snyk UI are not synchroni
 
 ## `.snyk` file semantics
 
-The `.snyk` file has some limitations for IaC Projects. See [The `.snyk` file](../../../manage-risk/policies/the-.snyk-file.md) for standard functionality.
+{% hint style="info" %}
+The `.snyk` file has some limitations for IaC Projects. See [The `.snyk` file](../../../scan-using-snyk/policies/the-.snyk-file.md) for standard functionality.
 
 * The **patches** section is not yet supported and is ignored.
 * There are no IaC-supported **language settings**. This section is ignored.
+{% endhint %}
 
 When you run `snyk iac test` against a directory, either by passing in one or more directories or using the default argument of the current working directory, the Snyk CLI looks for a file named `.snyk` in each of those directories.
 

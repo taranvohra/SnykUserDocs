@@ -1,8 +1,12 @@
 # Troubleshooting Broker
 
 {% hint style="info" %}
+For more comprehensive troubleshooting information, see [Broker Troubleshooting FAQs](https://support.snyk.io/hc/en-us/articles/4404288846353-Broker-Troubleshooting).
+{% endhint %}
+
+{% hint style="warning" %}
 **Multi-tenant settings**\
-When you are setting up Broker and/or Code Agent for use in Multi-tenant environments, additional variables are required. See [Regional hosting and data residency](../../working-with-snyk/regional-hosting-and-data-residency.md) for details.
+When you are setting up Broker and/or Code Agent for use in Multi-tenant environments, additional variables are required. See [Regional hosting and data residency](../../more-info/regional-hosting-and-data-residency.md) for details.
 {% endhint %}
 
 This page has information and instructions for the following:
@@ -13,8 +17,6 @@ This page has information and instructions for the following:
 * [Support of big manifest files (> 1Mb) for GitHub and GitHub Enterprise](troubleshooting-broker.md#support-of-big-manifest-files-greater-than-1mb-for-github-and-github-enterprise)
 * [Troubleshooting Broker with Code Agent](troubleshooting-broker.md#troubleshooting-broker-with-code-agent)
 * [Ensuring your containers stay online when you log out of the host](troubleshooting-broker.md#containers-go-down-when-you-log-out-of-the-host)
-
-For more comprehensive troubleshooting information, see [Broker Troubleshooting FAQs](https://support.snyk.io/hc/en-us/articles/4404288846353-Broker-Troubleshooting).
 
 ## Logging with the Broker Client
 
@@ -29,10 +31,6 @@ To keep the logs concise in normal operation, Snyk produces minimal information 
 
 
 When you set `LOG_INFO_VERBOSE="true"`, the environment variable will add the headers in these log lines without requiring that you use debug.
-
-{% hint style="warning" %}
-If you override the default logging, some logs may be provided by other processes such as API requests, and may list credentials. Before you send any Broker logs with increased logging enabled, check for any passwords or tokens and redact them in bulk.
-{% endhint %}
 
 ## Monitoring: Healthcheck
 
@@ -115,20 +113,20 @@ Open Fix/Upgrade PRs or PR/recurring tests may fail because of fetching big mani
 
 ## Troubleshooting Broker with Code Agent
 
-<figure><img src="https://lh3.googleusercontent.com/r_qtONpOOEW35gdyoBcWDAiC6j04M76q8mh922SHor4bdNZdt83sj2kP7d5hbzYcWVXp4Q2hZEiCeAVOmcj4Bu1yFPdnyp3rK7kKeBK8DZEd9S133Xn3YdjddclVf5maEbP23Jor" alt="&#x22;&#x22;"><figcaption><p>Snyk Code Analysis workflow with Broker</p></figcaption></figure>
+<figure><img src="https://lh3.googleusercontent.com/r_qtONpOOEW35gdyoBcWDAiC6j04M76q8mh922SHor4bdNZdt83sj2kP7d5hbzYcWVXp4Q2hZEiCeAVOmcj4Bu1yFPdnyp3rK7kKeBK8DZEd9S133Xn3YdjddclVf5maEbP23Jor" alt="Snyk Code Analysis workflow with Broker"><figcaption><p>Snyk Code Analysis workflow with Broker</p></figcaption></figure>
 
 The best way to troubleshoot the Broker with the Code Agent is to understand the communication flow. Traffic travels from Snyk > Broker Client > Code Agent > On-premise Git > Code Agent > Snyk.
 
-The vast majority of problems with the Code Agent are due to traffic being interrupted at one of these points.
+The vast majority of problems with the Code aAgent are due to traffic being interrupted at one of these points.
 
 ### Troubleshooting the Code Agent
 
 As for Standalone Broker, in order to troubleshoot the code agent, you must generate logs. Do this by attempting to import a repository.
 
 1. Ensure that the Broker is functioning correctly and you can list the repositories. If this does not work, review the Standalone Broker troubleshooting steps.
-2. If, after attempting to import a repository, you see an error message `Bundle Creation Failed`, review the logs of the containers.
+2. If after attempting to import a repository, you see an error message `Bundle Creation Failed`, review the logs of the containers.
 3. Start with the Broker container. Run `docker logs <container id>`
-4. Look for the string `snykgit` . This is the API call from the Broker container to the Code Agent container. If you get anything other than a 200 code, there is some problem with the communication between the Broker and the Code Agent. Ensure you have the proper flags set in the docker run command. Also, ensure you have set up the Docker network
+4. Look for the string `snykgit` . This is the API call from the Broker container to the Code Agent container. If you get anything other than a 200 code, there is some problem with the communication between the Broker and the Code Agent. Ensure you have the proper flags set in the docker run command. Also ensure you have set up the docker network
 5. Review the logs of the Code Agent by running `docker logs <container id>`
 
 ### Common problems with the Code Agent

@@ -475,8 +475,7 @@
         "in": "query",
         "name": "completion_interval",
         "schema": {
-          "pattern": "^[\\d]{4}-[\\d]{2}-[\\d]{2}/[\\d]{4}-[\\d]{2}-[\\d]{2}$",
-          "type": "string"
+          "$ref": "#/components/schemas/DateInterval"
         }
       },
       "ConnectionTypeFilter": {
@@ -540,13 +539,7 @@
         "in": "query",
         "name": "cves",
         "schema": {
-          "items": {
-            "maxItems": 50,
-            "pattern": "^CVE-\\d+$",
-            "type": "string",
-            "uniqueItems": true
-          },
-          "type": "array"
+          "$ref": "#/components/schemas/Cves"
         }
       },
       "Cwes": {
@@ -554,13 +547,7 @@
         "in": "query",
         "name": "cwes",
         "schema": {
-          "items": {
-            "maxItems": 50,
-            "pattern": "^CWE-\\d+$",
-            "type": "string",
-            "uniqueItems": true
-          },
-          "type": "array"
+          "$ref": "#/components/schemas/Cwes"
         }
       },
       "EffectiveSeverityLevel": {
@@ -601,12 +588,7 @@
         "in": "query",
         "name": "emails",
         "schema": {
-          "items": {
-            "format": "email",
-            "type": "string"
-          },
-          "maxItems": 50,
-          "type": "array"
+          "$ref": "#/components/schemas/Emails"
         },
         "style": "form"
       },
@@ -924,7 +906,7 @@
         "style": "form"
       },
       "OrgId": {
-        "description": "Unique identifier for an organization",
+        "description": "The ID of the org",
         "in": "path",
         "name": "org_id",
         "required": true,
@@ -1240,17 +1222,21 @@
         }
       },
       "Status": {
-        "description": "Filter by progress status of the resources",
+        "description": "An issue's status",
+        "explode": false,
         "in": "query",
         "name": "status",
         "schema": {
-          "enum": [
-            "completed",
-            "inProgress",
-            "todo"
-          ],
-          "type": "string"
-        }
+          "items": {
+            "enum": [
+              "open",
+              "resolved"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "style": "form"
       },
       "StatusInQuery": {
         "description": "Filter environments by latest scan status (multi-value, comma-separated)",
@@ -1303,16 +1289,13 @@
         }
       },
       "Type": {
-        "description": "Filter by the learn catalog resource type",
+        "description": "An issue type to filter issues.",
         "in": "query",
         "name": "type",
         "schema": {
-          "enum": [
-            "learning_path",
-            "lesson"
-          ],
-          "type": "string"
-        }
+          "$ref": "#/components/schemas/TypeDef"
+        },
+        "style": "form"
       },
       "UpdatedAfter": {
         "description": "A filter to select issues updated after this date.",
@@ -4399,6 +4382,30 @@
         },
         "type": "object"
       },
+      "Cves": {
+        "items": {
+          "pattern": "^CVE-\\d+$",
+          "type": "string"
+        },
+        "maxItems": 50,
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      },
+      "Cwes": {
+        "items": {
+          "pattern": "^CWE-\\d+$",
+          "type": "string"
+        },
+        "maxItems": 50,
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      },
+      "DateInterval": {
+        "pattern": "^[\\d]{4}-[\\d]{2}-[\\d]{2}/[\\d]{4}-[\\d]{2}-[\\d]{2}$",
+        "type": "string"
+      },
       "DeleteAssignmentsRequest": {
         "properties": {
           "data": {
@@ -4581,6 +4588,19 @@
           "attributes"
         ],
         "type": "object"
+      },
+      "Emails": {
+        "example": [
+          "john.doe@example.com",
+          "jane.smith@example.com"
+        ],
+        "items": {
+          "format": "email",
+          "type": "string"
+        },
+        "maxItems": 50,
+        "minItems": 1,
+        "type": "array"
       },
       "Environment": {
         "properties": {
@@ -8093,6 +8113,14 @@
         ],
         "type": "object"
       },
+      "ProgressStatus": {
+        "enum": [
+          "completed",
+          "inProgress",
+          "todo"
+        ],
+        "type": "string"
+      },
       "ProjectAttributes": {
         "additionalProperties": false,
         "properties": {
@@ -9456,6 +9484,13 @@
         },
         "type": "object"
       },
+      "ResourceType": {
+        "enum": [
+          "learning_path",
+          "lesson"
+        ],
+        "type": "string"
+      },
       "Risk": {
         "additionalProperties": false,
         "description": "Risk prioritization information for an issue",
@@ -10734,17 +10769,63 @@
         "type": "string"
       },
       "User": {
+        "additionalProperties": false,
         "properties": {
           "attributes": {
-            "$ref": "#/components/schemas/UserAttributes"
+            "additionalProperties": false,
+            "properties": {
+              "active": {
+                "description": "Whether the user status is enabled or not",
+                "example": true,
+                "type": "boolean"
+              },
+              "email": {
+                "description": "The email of the user.",
+                "example": "user@someorg.com",
+                "type": "string"
+              },
+              "membership": {
+                "properties": {
+                  "created_at": {
+                    "description": "The date the membership was established.",
+                    "example": "2022-09-14T09:19:29.206Z",
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "strategy": {
+                    "description": "Whether the membership is a direct, or indirect membership.",
+                    "enum": [
+                      "direct",
+                      "indirect"
+                    ],
+                    "example": "direct",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "name": {
+                "description": "The name of the user.",
+                "example": "user",
+                "type": "string"
+              },
+              "username": {
+                "description": "The username of the user.",
+                "example": "username",
+                "type": "string"
+              }
+            },
+            "type": "object"
           },
           "id": {
+            "description": "The Snyk ID corresponding to this user",
+            "example": "55a348e2-c3ad-4bbc-b40e-9b232d1f4121",
+            "format": "uuid",
             "type": "string"
           },
           "type": {
-            "enum": [
-              "user"
-            ],
+            "description": "Content type.",
+            "example": "user",
             "type": "string"
           }
         },
@@ -10882,7 +10963,38 @@
       "UserRelationship": {
         "properties": {
           "data": {
-            "$ref": "#/components/schemas/User"
+            "properties": {
+              "attributes": {
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email",
+                  "username"
+                ],
+                "type": "object"
+              },
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "user"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "id",
+              "attributes"
+            ],
+            "type": "object"
           },
           "links": {
             "$ref": "#/components/schemas/PaginatedLinks"
@@ -16183,23 +16295,7 @@
             "$ref": "#/components/parameters/ScanItemType"
           },
           {
-            "description": "An issue type to filter issues.",
-            "in": "query",
-            "name": "type",
-            "schema": {
-              "description": "The type of an issue.",
-              "enum": [
-                "package_vulnerability",
-                "license",
-                "cloud",
-                "code",
-                "custom",
-                "config"
-              ],
-              "example": "cloud",
-              "type": "string"
-            },
-            "style": "form"
+            "$ref": "#/components/parameters/Type"
           },
           {
             "$ref": "#/components/parameters/UpdatedBefore"
@@ -16217,21 +16313,7 @@
             "$ref": "#/components/parameters/EffectiveSeverityLevel"
           },
           {
-            "description": "An issue's status",
-            "explode": false,
-            "in": "query",
-            "name": "status",
-            "schema": {
-              "items": {
-                "enum": [
-                  "open",
-                  "resolved"
-                ],
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "style": "form"
+            "$ref": "#/components/parameters/Status"
           },
           {
             "$ref": "#/components/parameters/Ignored"
@@ -18979,72 +19061,7 @@
                   "properties": {
                     "data": {
                       "items": {
-                        "additionalProperties": false,
-                        "properties": {
-                          "attributes": {
-                            "additionalProperties": false,
-                            "properties": {
-                              "active": {
-                                "description": "Whether the user status is enabled or not",
-                                "example": true,
-                                "type": "boolean"
-                              },
-                              "email": {
-                                "description": "The email of the user.",
-                                "example": "user@someorg.com",
-                                "type": "string"
-                              },
-                              "membership": {
-                                "properties": {
-                                  "created_at": {
-                                    "description": "The date the membership was established.",
-                                    "example": "2022-09-14T09:19:29.206Z",
-                                    "format": "date-time",
-                                    "type": "string"
-                                  },
-                                  "strategy": {
-                                    "description": "Whether the membership is a direct, or indirect membership.",
-                                    "enum": [
-                                      "direct",
-                                      "indirect"
-                                    ],
-                                    "example": "direct",
-                                    "type": "string"
-                                  }
-                                },
-                                "type": "object"
-                              },
-                              "name": {
-                                "description": "The name of the user.",
-                                "example": "user",
-                                "type": "string"
-                              },
-                              "username": {
-                                "description": "The username of the user.",
-                                "example": "username",
-                                "type": "string"
-                              }
-                            },
-                            "type": "object"
-                          },
-                          "id": {
-                            "description": "The Snyk ID corresponding to this user",
-                            "example": "55a348e2-c3ad-4bbc-b40e-9b232d1f4121",
-                            "format": "uuid",
-                            "type": "string"
-                          },
-                          "type": {
-                            "description": "Content type.",
-                            "example": "user",
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "type",
-                          "id",
-                          "attributes"
-                        ],
-                        "type": "object"
+                        "$ref": "#/components/schemas/User"
                       },
                       "type": "array"
                     },
@@ -19192,7 +19209,7 @@
     },
     "/groups/{group_id}/users/{id}": {
       "patch": {
-        "description": "Update a user's membership of the group. \n\nTo remove a user's membership, provide 'null' as the membership parameter (see example).\n\nAt present, only removing memberships is supported by this endpoint. To update a user's group membership, please use\nthe UI or legacy API.\n",
+        "description": "Update a user's membership of the group.\n\nTo remove a user's membership, provide 'null' as the membership parameter (see example).\n\nAt present, only removing memberships is supported by this endpoint. To update a user's group membership, please use\nthe UI or legacy API.\n",
         "operationId": "updateUser",
         "parameters": [
           {
@@ -19405,6 +19422,7 @@
             "$ref": "#/components/responses/500"
           }
         },
+        "security": [],
         "tags": [
           "OpenAPI"
         ]
@@ -19460,6 +19478,7 @@
             "$ref": "#/components/responses/500"
           }
         },
+        "security": [],
         "tags": [
           "OpenAPI"
         ]
@@ -41639,23 +41658,7 @@
             "$ref": "#/components/parameters/ScanItemType"
           },
           {
-            "description": "An issue type to filter issues.",
-            "in": "query",
-            "name": "type",
-            "schema": {
-              "description": "The type of an issue.",
-              "enum": [
-                "package_vulnerability",
-                "license",
-                "cloud",
-                "code",
-                "custom",
-                "config"
-              ],
-              "example": "cloud",
-              "type": "string"
-            },
-            "style": "form"
+            "$ref": "#/components/parameters/Type"
           },
           {
             "$ref": "#/components/parameters/UpdatedBefore"
@@ -41673,21 +41676,7 @@
             "$ref": "#/components/parameters/EffectiveSeverityLevel"
           },
           {
-            "description": "An issue's status",
-            "explode": false,
-            "in": "query",
-            "name": "status",
-            "schema": {
-              "items": {
-                "enum": [
-                  "open",
-                  "resolved"
-                ],
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "style": "form"
+            "$ref": "#/components/parameters/Status"
           },
           {
             "$ref": "#/components/parameters/Ignored"
@@ -42720,7 +42709,16 @@
             "$ref": "#/components/parameters/Limit"
           },
           {
-            "$ref": "#/components/parameters/Type"
+            "description": "Filter by the learn catalog resource type",
+            "in": "query",
+            "name": "type",
+            "schema": {
+              "enum": [
+                "learning_path",
+                "lesson"
+              ],
+              "type": "string"
+            }
           },
           {
             "$ref": "#/components/parameters/Title"
@@ -42818,13 +42816,32 @@
             "$ref": "#/components/parameters/Limit"
           },
           {
-            "$ref": "#/components/parameters/Type"
+            "description": "Filter by the learn catalog resource type",
+            "in": "query",
+            "name": "type",
+            "schema": {
+              "enum": [
+                "learning_path",
+                "lesson"
+              ],
+              "type": "string"
+            }
           },
           {
             "$ref": "#/components/parameters/Title"
           },
           {
-            "$ref": "#/components/parameters/Status"
+            "description": "Filter by progress status of the resources",
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "enum": [
+                "completed",
+                "inProgress",
+                "todo"
+              ],
+              "type": "string"
+            }
           },
           {
             "$ref": "#/components/parameters/Emails"
@@ -42897,14 +42914,7 @@
         "operationId": "listOrgMemberships",
         "parameters": [
           {
-            "description": "The ID of the org",
-            "in": "path",
-            "name": "org_id",
-            "required": true,
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/OrgId"
           },
           {
             "$ref": "#/components/parameters/StartingAfter"
@@ -43019,14 +43029,7 @@
         "operationId": "createOrgMembership",
         "parameters": [
           {
-            "description": "The ID of the org",
-            "in": "path",
-            "name": "org_id",
-            "required": true,
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/OrgId"
           },
           {
             "$ref": "#/components/parameters/Version"
@@ -43284,7 +43287,14 @@
             "$ref": "#/components/parameters/Version"
           },
           {
-            "$ref": "#/components/parameters/OrgId"
+            "description": "Unique identifier for an organization",
+            "in": "path",
+            "name": "org_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -43380,7 +43390,14 @@
             "$ref": "#/components/parameters/PackageUrl"
           },
           {
-            "$ref": "#/components/parameters/OrgId"
+            "description": "Unique identifier for an organization",
+            "in": "path",
+            "name": "org_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
           },
           {
             "description": "Specify the number of results to skip before returning results. Must be greater than or equal to 0. Default is 0.",
@@ -44346,7 +44363,14 @@
             "$ref": "#/components/parameters/Version"
           },
           {
-            "$ref": "#/components/parameters/OrgId"
+            "description": "Unique identifier for an organization",
+            "in": "path",
+            "name": "org_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
           },
           {
             "$ref": "#/components/parameters/ProjectId"
@@ -47489,72 +47513,7 @@
                 "schema": {
                   "properties": {
                     "data": {
-                      "additionalProperties": false,
-                      "properties": {
-                        "attributes": {
-                          "additionalProperties": false,
-                          "properties": {
-                            "active": {
-                              "description": "Whether the user status is enabled or not",
-                              "example": true,
-                              "type": "boolean"
-                            },
-                            "email": {
-                              "description": "The email of the user.",
-                              "example": "user@someorg.com",
-                              "type": "string"
-                            },
-                            "membership": {
-                              "properties": {
-                                "created_at": {
-                                  "description": "The date the membership was established.",
-                                  "example": "2022-09-14T09:19:29.206Z",
-                                  "format": "date-time",
-                                  "type": "string"
-                                },
-                                "strategy": {
-                                  "description": "Whether the membership is a direct, or indirect membership.",
-                                  "enum": [
-                                    "direct",
-                                    "indirect"
-                                  ],
-                                  "example": "direct",
-                                  "type": "string"
-                                }
-                              },
-                              "type": "object"
-                            },
-                            "name": {
-                              "description": "The name of the user.",
-                              "example": "user",
-                              "type": "string"
-                            },
-                            "username": {
-                              "description": "The username of the user.",
-                              "example": "username",
-                              "type": "string"
-                            }
-                          },
-                          "type": "object"
-                        },
-                        "id": {
-                          "description": "The Snyk ID corresponding to this user",
-                          "example": "55a348e2-c3ad-4bbc-b40e-9b232d1f4121",
-                          "format": "uuid",
-                          "type": "string"
-                        },
-                        "type": {
-                          "description": "Content type.",
-                          "example": "user",
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "type",
-                        "id",
-                        "attributes"
-                      ],
-                      "type": "object"
+                      "$ref": "#/components/schemas/User"
                     },
                     "jsonapi": {
                       "$ref": "#/components/schemas/JsonApi"
@@ -54262,8 +54221,7 @@
           "InternalJWT": {}
         }
       ]
-    },
-    "enableAccessAudit": true
+    }
   },
   "x-snyk-api-version": "2024-10-15"
 }

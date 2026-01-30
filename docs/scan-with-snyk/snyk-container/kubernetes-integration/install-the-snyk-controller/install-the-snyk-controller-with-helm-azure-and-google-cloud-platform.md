@@ -11,9 +11,9 @@ The installation steps cover:
 * Snyk integration for most Kubernetes platforms
 * Additional configuration steps for integration when using Amazon Elastic Container Registry (ECR) with your Amazon Elastic Kubernetes Service (EKS) clusters.
 
-## Mandatory installation steps for the Snyk Controller with Helm
+## Installing the Snyk Controller with Helm
 
-To install the Snyk Controller with Helm:
+To install the Snyk Controller with Helm, follow these mandatory steps:
 
 1. Access your Kubernetes environment. Run the following command to add the Snyk Charts repository to Helm:
 
@@ -38,9 +38,9 @@ Snyk monitor requires:
 * Service Account Token
 * dockercfg.json file.
 
-### Install a public container registry
+### Installing the Snyk Controller to scan images from a public container registry
 
-To install a public container registry, you must create a Kubernetes secret called `snyk-monitor`containing the Snyk Integration ID and the service account token.
+To install the Snyk Controller to scan images from a public container registry, you must create a Kubernetes secret called `snyk-monitor` containing the Snyk Integration ID and the service account token.
 
 To do this, run the following command:
 
@@ -115,7 +115,7 @@ If you are an existing customer and are updating your Snyk Controller:
 kubectl delete secret snyk-monitor -n snyk-monitor
 ```
 
-3. Follow the [mandatory installation steps](install-the-snyk-controller-with-helm-azure-and-google-cloud-platform.md#mandatory-installation-steps-for-the-snyk-controller-with-helm). To get the latest Helm chart version, run the following command:
+3. Follow the [mandatory installation steps](install-the-snyk-controller-with-helm-azure-and-google-cloud-platform.md#installing-the-snyk-controller-with-helm). To get the latest Helm chart version, run the following command:
 
 <pre><code><strong>helm repo add snyk-charts https://snyk.github.io/kubernetes-monitor --force-update
 </strong></code></pre>

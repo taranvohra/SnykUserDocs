@@ -1,6 +1,11 @@
 # API endpoints index and tips
 
-This index and notes section of the documentation provides, in addition to this index, \[solutions for specific use cases]\(solutions-for-specific-use-cases.md), \[scenarios for using Snyk APIs]\(scenarios-for-using-the-snyk-api.md), and pages with detailed information about using Snyk API endpoints:
+{% hint style="info" %}
+**How to find your `org_id`**\
+Log in to Snyk, navigate to your **Organization**, and then to your **Settings** > **General**. The **Organization ID** is on the General settings page, and you can copy it.
+{% endhint %}
+
+This index and notes section of the documentation provides, in addition to this index, [solutions for specific use cases](solutions-for-specific-use-cases.md), [scenarios for using Snyk APIs](scenarios-for-using-the-snyk-api.md), and pages with detailed information about using Snyk API endpoints:
 
 * [Organization and Group identification for Projects using the API](organization-and-group-identification-for-projects-using-the-api.md)
 * [Project issue paths V1 API endpoints](project-issue-paths-api-endpoints.md)
@@ -8,9 +13,9 @@ This index and notes section of the documentation provides, in addition to this 
 
 See also the following sections on specific APIs:
 
-* [How to use Snyk Apps APIs](../how-to-use-snyk-apps-apis/)
-* [How to use Snyk SBOM and List issues APIs](../how-to-use-snyk-sbom-and-list-issues-apis/)
-* [How to use Snyk webhooks APIs](../how-to-use-snyk-webhooks-apis/)
+* [How to use Snyk Apps APIs](../using-specific-snyk-apis/snyk-apps-apis/)
+* [How to use Snyk SBOM and List issues APIs](../using-specific-snyk-apis/sbom-apis/)
+* [How to use Snyk webhooks APIs](../using-specific-snyk-apis/webhooks-apis/)
 
 For additional information, see the [API support articles](https://support.snyk.io/s/topic/0TOPU00000BgWMv4AN/snyk-api).
 
@@ -22,7 +27,7 @@ This index includes the categories and names of REST GA and beta and V1 API endp
 
 ## Apps
 
-**More information:** [Snyk Apps](../how-to-use-snyk-apps-apis/)
+**More information:** [Snyk Apps](../using-specific-snyk-apis/snyk-apps-apis/)
 
 ### [Get a list of apps that act on your behalf](../reference/apps.md#self-apps)
 
@@ -42,13 +47,13 @@ This index includes the categories and names of REST GA and beta and V1 API endp
 
 **Replaced by:** Create a new Snyk App for an organization
 
-**More information:** [Create a Snyk App using the Snyk API](../how-to-use-snyk-apps-apis/create-a-snyk-app-using-the-snyk-api.md)
+**More information:** [Create a Snyk App using the Snyk API](../using-specific-snyk-apis/snyk-apps-apis/create-a-snyk-app-using-the-snyk-api.md)
 
 ### [Get a list of apps created by an organization](../reference/apps.md#orgs-org_id-apps-1)
 
 **Replaces:** DEPRECATED Get a list of apps created by an organization
 
-**More information:** [Manage App details](../how-to-use-snyk-apps-apis/manage-app-details.md)
+**More information:** [Manage App details](../using-specific-snyk-apis/snyk-apps-apis/manage-app-details.md)
 
 ### DEPRECATED [Update app attributes that are name, redirect URIs, and access token time to live](../reference/apps.md#orgs-org_id-apps-client_id)
 
@@ -72,7 +77,7 @@ This index includes the categories and names of REST GA and beta and V1 API endp
 
 **Replaces:** DEPRECATED Get a list of app bots authorized to an organization
 
-**More information:** [Slack app (Jira integration)](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md) (Find the Slack App Bot ID)
+**More information:** [Slack app (Jira integration)](../../integrations/jira-and-slack-integrations/slack-app.md) (Find the Slack App Bot ID)
 
 ### [Revoke app authorization for a Snyk organization](../reference/apps.md#orgs-org_id-apps-installs-install_id)
 
@@ -80,13 +85,13 @@ This index includes the categories and names of REST GA and beta and V1 API endp
 
 ### [Manage client secret for non-interactive Snyk App installations](../reference/apps.md#orgs-org_id-apps-installs-install_id-secrets)
 
-**More information:** [Manage App details](../how-to-use-snyk-apps-apis/manage-app-details.md)
+**More information:** [Manage App details](../using-specific-snyk-apis/snyk-apps-apis/manage-app-details.md)
 
 ### [Create a new Snyk App for an organization](../reference/apps.md#orgs-org_id-apps-creations)
 
 **Replaces:** DEPRECATED Create a new app for an organization
 
-**More information:** [Create a Snyk App using the Snyk API](../how-to-use-snyk-apps-apis/create-a-snyk-app-using-the-snyk-api.md)
+**More information:** [Create a Snyk App using the Snyk API](../using-specific-snyk-apis/snyk-apps-apis/create-a-snyk-app-using-the-snyk-api.md)
 
 ### DEPRECATED [Get a list of apps created by an organization](../reference/apps.md#orgs-org_id-apps-creations-1)
 
@@ -96,7 +101,7 @@ This index includes the categories and names of REST GA and beta and V1 API endp
 
 **Replaces:** DEPRECATED Update App attributes that are name, redirect URIs, and access token time to live
 
-**More information:** [Manage App details](../how-to-use-snyk-apps-apis/manage-app-details.md)
+**More information:** [Manage App details](../using-specific-snyk-apis/snyk-apps-apis/manage-app-details.md)
 
 ### [Get a Snyk APP by its App ID](../reference/apps.md#orgs-org_id-apps-creations-app_id)
 
@@ -106,17 +111,17 @@ This index includes the categories and names of REST GA and beta and V1 API endp
 
 **Replaces:** DEPRECATED Delete an app
 
-**More information:** [Manage App details](../how-to-use-snyk-apps-apis/manage-app-details.md)
+**More information:** [Manage App details](../using-specific-snyk-apis/snyk-apps-apis/manage-app-details.md)
 
 ### [Manage client secret for the Snyk App](../reference/apps.md#orgs-org_id-apps-creations-app_id-secrets)
 
-**More information:** [Manage App details](../how-to-use-snyk-apps-apis/manage-app-details.md)
+**More information:** [Manage App details](../using-specific-snyk-apis/snyk-apps-apis/manage-app-details.md)
 
 ### DEPRECATED [Get a list of app bots authorized to an organization](../reference/apps.md#orgs-org_id-app_bots)
 
 **Replaced by:** [Get a list of apps installed for an organization](https://apidocs.snyk.io/?#get-/orgs/-org_id-/apps/installs)
 
-**More information:** [Slack app](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md) (for Jira integration)
+**More information:** [Slack app](../../integrations/jira-and-slack-integrations/slack-app.md) (for Jira integration)
 
 ### DEPRECATED [Revoke app bot authorization](../reference/apps.md#orgs-org_id-app_bots-bot_id)
 
@@ -136,16 +141,16 @@ This index includes the categories and names of REST GA and beta and V1 API endp
 
 ## Audit Logs
 
-**More information**: [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-admin/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md);\
-[AWS CloudTrail Lake](../../integrate-with-snyk/event-forwarding/aws-cloudtrail-lake.md)
+**More information**: [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-platform-administration/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md);\
+[AWS CloudTrail Lake](../../integrations/event-forwarding/aws-cloudtrail-lake.md)
 
 ### [Search Organization audit logs](../reference/audit-logs.md#orgs-org_id-audit_logs-search)
 
-**More information:** [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-admin/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md), [AWS CloudTrail Lake](../../integrate-with-snyk/event-forwarding/aws-cloudtrail-lake.md)
+**More information:** [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-platform-administration/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md), [AWS CloudTrail Lake](../../integrations/event-forwarding/aws-cloudtrail-lake.md)
 
 ### [Search Group audit logs](../reference/audit-logs.md#groups-group_id-audit_logs-search)
 
-**More information:** [Filter through your audit logs more efficiently with the new GA REST version of the audit logs API](https://updates.snyk.io/filter-through-your-audit-logs-more-efficiently-with-the-new-ga-rest-version-of-the-audit-logs-api-and-api-access-is-now-opt-in-291850) (product update); [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-admin/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md)
+**More information:** [Filter through your audit logs more efficiently with the new GA REST version of the audit logs API](https://updates.snyk.io/filter-through-your-audit-logs-more-efficiently-with-the-new-ga-rest-version-of-the-audit-logs-api-and-api-access-is-now-opt-in-291850) (product update); [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-platform-administration/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md)
 
 ## Audit logs (v1)
 
@@ -183,7 +188,7 @@ Use [Search Organization audit logs](../reference/audit-logs.md#orgs-org_id-audi
 
 The View Project History permission is needed to use this API.
 
-**More information:** [Project collections groupings](../../snyk-admin/snyk-projects/project-collections-groupings/)
+**More information:** [Project collections groupings](../../snyk-platform-administration/snyk-projects/project-collections-groupings/)
 
 ### [Create a collection](../reference/collection.md#orgs-org_id-collections)
 
@@ -250,17 +255,17 @@ The View Project History permission is needed to use this API.
 
 ### [Delete a user from a Group SSO connection](https://apidocs.snyk.io/?version=2024-10-15#delete-/groups/-group_id-/sso_connections/-sso_id-/users/-user_id-)
 
-**More information:** [Remove members from Groups and Orgs using the API](../../snyk-admin/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md); [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-admin/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md)
+**More information:** [Remove members from Groups and Orgs using the API](../../snyk-platform-administration/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md); [Retrieve audit logs of user-initiated activity by API for an Org or Group](../../snyk-platform-administration/user-management-with-the-api/retrieve-audit-logs-of-user-initiated-activity-by-api-for-an-org-or-group.md)
 
 ## Groups (v1)
 
 ### [List all tags in a group](../reference/groups-v1.md#group-groupid-tags)
 
-**More information**: [Project tags](../../snyk-admin/introduction-to-snyk-projects/project-tags.md)
+**More information**: [Project tags](../../snyk-platform-administration/snyk-projects/project-tags.md)
 
 ### [Delete tag from group](../reference/groups-v1.md#group-groupid-tags-delete)
 
-**More information:** [Project tags](../../snyk-admin/introduction-to-snyk-projects/project-tags.md)
+**More information:** [Project tags](../../snyk-platform-administration/snyk-projects/project-tags.md)
 
 ### [Update group settings](../reference/groups-v1.md#group-groupid-settings)
 
@@ -268,13 +273,13 @@ The View Project History permission is needed to use this API.
 
 ### [List all roles in a group](../reference/groups-v1.md#group-groupid-roles)
 
-**More information:** [Update member roles using the API](../../snyk-admin/user-management-with-the-api/update-member-roles-using-the-api.md);\
-[Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Update member roles using the API](../../snyk-platform-administration/user-management-with-the-api/update-member-roles-using-the-api.md);\
+[Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [List all organizations in a group](../reference/groups-v1.md#group-groupid-orgs)
 
 **More information:** [Org and group identification for Projects](organization-and-group-identification-for-projects-using-the-api.md);\
-[Legacy custom mapping](../../enterprise-setup/single-sign-on-sso-for-authentication-to-snyk/custom-mapping/legacy-custom-mapping.md);\
+[Legacy custom mapping](../../implementation-and-setup/enterprise-setup/single-sign-on-sso-for-authentication-to-snyk/custom-mapping/legacy-custom-mapping.md);\
 [api-import Creating import targets data for import](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/creating-import-targets-data-for-import-command.md);\
 [Scenario: Retrieve a Project snapshot for every Project in a given Group](scenarios-for-using-the-snyk-api.md#retrieve-a-project-snapshot-for-every-project-in-a-given-group);\
 [Scenario: Find all Projects affected by a vulnerability](scenarios-for-using-the-snyk-api.md#find-all-projects-affected-by-a-vulnerability)
@@ -283,7 +288,7 @@ The View Project History permission is needed to use this API.
 
 ### [List all members in a group](../reference/groups-v1.md#group-groupid-members)
 
-**More information:** [Remove members from Groups and Orgs using the API](../../snyk-admin/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md);\
+**More information:** [Remove members from Groups and Orgs using the API](../../snyk-platform-administration/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md);\
 [Scenario: Assign all users in a given list to all the Organizations a company has (all Organizations in a Group)](scenarios-for-using-the-snyk-api.md#assign-all-users-in-a-given-list-to-all-the-organizations-a-company-has-all-organizations-in-a-group)
 
 ## Groups
@@ -302,19 +307,19 @@ The View Project History permission is needed to use this API.
 
 ### [Update the Infrastructure as Code Settings for an org](../reference/groups-v1.md#group-groupid-org-orgid-members)
 
-**More information:** [Use a remote IaC custom rules bundle](../../scan-with-snyk/snyk-iac/build-your-own-iac-custom-rules/current-iac-custom-rules/use-iac-custom-rules-with-cli/use-a-remote-iac-custom-rules-bundle.md)
+**More information:** [Use a remote IaC custom rules bundle](../../scan-with-snyk/snyk-iac/current-iac-custom-rules/use-iac-custom-rules-with-cli/use-a-remote-iac-custom-rules-bundle.md)
 
 ### [Get the Infrastructure as Code Settings for an org](../reference/iacsettings.md#orgs-org_id-settings-iac-1)
 
 ### [Update the Infrastructure as Code Settings for a group](../reference/iacsettings.md#groups-group_id-settings-iac)
 
-**More information:** [Use a remote IaC custom rules bundle](../../scan-with-snyk/snyk-iac/build-your-own-iac-custom-rules/current-iac-custom-rules/use-iac-custom-rules-with-cli/use-a-remote-iac-custom-rules-bundle.md), [IaC custom rules within a pipeline](../../scan-with-snyk/snyk-iac/build-your-own-iac-custom-rules/current-iac-custom-rules/iac-custom-rules-within-a-pipeline.md);[Use a remote IaC custom rules bundle](../../scan-with-snyk/snyk-iac/build-your-own-iac-custom-rules/current-iac-custom-rules/use-iac-custom-rules-with-cli/use-a-remote-iac-custom-rules-bundle.md)
+**More information:** [Use a remote IaC custom rules bundle](../../scan-with-snyk/snyk-iac/current-iac-custom-rules/use-iac-custom-rules-with-cli/use-a-remote-iac-custom-rules-bundle.md), [IaC custom rules within a pipeline](../../scan-with-snyk/snyk-iac/current-iac-custom-rules/iac-custom-rules-within-a-pipeline.md);[Use a remote IaC custom rules bundle](../../scan-with-snyk/snyk-iac/current-iac-custom-rules/use-iac-custom-rules-with-cli/use-a-remote-iac-custom-rules-bundle.md)
 
 ### [Get the Infrastructure as Code Settings for a group](../reference/iacsettings.md#groups-group_id-settings-iac-1)
 
 ## Ignores (v1)
 
-**More information:** [Snyk test and snyk monitor in CI/CD integration](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md)
+**More information:** [Snyk test and snyk monitor in CI/CD integration](../../developer-tools/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md)
 
 ### [List all ignores](../reference/ignores-v1.md#org-orgid-project-projectid-ignores)
 
@@ -330,7 +335,7 @@ The View Project History permission is needed to use this API.
 
 ## Import Projects (v1)
 
-Projects can be Git repositories, Docker images, containers, configuration files, and much more. For more information, see [Snyk Projects](../../snyk-admin/snyk-projects/); the page includes the [Targets definition](../../snyk-admin/snyk-projects/#target).
+Projects can be Git repositories, Docker images, containers, configuration files, and much more. For more information, see [Snyk Projects](../../snyk-platform-administration/snyk-projects/); the page includes the [Targets definition](../../snyk-platform-administration/snyk-projects/#target).
 
 A typical import starts with using the endpoint [Import targets](../reference/import-projects-v1.md#org-orgid-integrations-integrationid-import) to request a target to be processed. Then, use the endpoint [Get import job details](../reference/import-projects-v1.md#org-orgid-integrations-integrationid-import-jobid) to poll the Import Job AP I for further details on completion and resulting Snyk Projects.
 
@@ -338,7 +343,7 @@ A typical import starts with using the endpoint [Import targets](../reference/im
 
 Note that the `target.owner` is case-sensitive.
 
-For information on when and how you can use Import targets, see [Git integration on the Import Projects](../../implement-snyk/enterprise-implementation-guide/phase-3-gain-visibility/import-projects.md#git-integration) page in the Enterprise implementation guide.
+For information on when and how you can use Import targets, see [Git integration on the Import Projects](../../implementation-and-setup/enterprise-implementation-guide/phase-3-gain-visibility/import-projects.md#git-integration) page in the Enterprise implementation guide.
 
 If a call to the Import targets endpoint fails, use [Get import job detail](../reference/import-projects-v1.md#org-orgid-integrations-integrationid-import-jobid)s to help determine why. There are two types of failures:
 
@@ -356,17 +361,16 @@ The poll results return a message per manifest processed, either `success: true`
 [api-import Kicking off an import](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/kicking-off-an-import.md)
 
 **More information Import targets:**\
-[Configure integrations](../../implement-snyk/team-implementation-guide/phase-2-configure-your-organization/configure-integrations.md) (Enterprise implementation guide, Phase 2);\
-[Import Projects](../../implement-snyk/team-implementation-guide/phase-3-gain-visibility/import-projects.md) (Enterprise implementation guide, Phase 3);\
+[Configure integrations](../../implementation-and-setup/team-implementation-guide/phase-2-configure-your-organization/configure-integrations.md) (Enterprise implementation guide, Phase 2);\
+[Import Projects](../../implementation-and-setup/team-implementation-guide/phase-3-gain-visibility/import-projects.md) (Enterprise implementation guide, Phase 3);\
 [Tool: snyk-api-import](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/)\
 [api-import Creating import targets data for import](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/creating-import-targets-data-for-import-command.md)\
 [api-import Kicking off an import](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/kicking-off-an-import.md)\
 [Scenario:: Identify and import new repositories only](scenarios-for-using-the-snyk-api.md#identify-and-import-new-repositories-only)\
-[Scenario: Detect and import new Projects in a repository into a target](scenarios-for-using-the-snyk-api.md#detect-and-import-new-projects-in-a-repository-into-a-target)\
+[Scenario: Detect and import new Projects in a repository into a target](scenarios-for-using-the-snyk-api.md#detect-new-projects-files-in-repositories-and-import-them-into-a-target-in-snyk-on-a-regular-basis)\
 [Scenario: Detect new Projects (files) in repositories and import them into a Target in Snyk on a regular basis](scenarios-for-using-the-snyk-api.md#detect-new-projects-files-in-repositories-and-import-them-into-a-target-in-snyk-on-a-regular-basis)\
 [Import fresh container images](scenarios-for-using-the-snyk-api.md#import-fresh-container-images)\
-[Manage code vulnerabilities ](../../scan-with-snyk/snyk-code/manage-code-vulnerabilities/)(Use: Automate importing multiple repositories)\
-[Snyk Broker Code Agent](../../enterprise-setup/snyk-broker/snyk-broker-code-agent/)
+[Manage code vulnerabilities ](../../scan-with-snyk/snyk-code/manage-code-vulnerabilities/)(Use: Automate importing multiple repositories)
 
 **More information Get import job details:** [Scenario: Import fresh container images](scenarios-for-using-the-snyk-api.md#import-fresh-container-images);\
 [Tool: snyk-api-import](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/)\
@@ -374,8 +378,6 @@ The poll results return a message per manifest processed, either `success: true`
 [api-import Kicking off an import](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/kicking-off-an-import.md)
 
 ## Integrations (v1)
-
-**More information:** [Initial configuration of the Universal Broker](../../enterprise-setup/snyk-broker/universal-broker/initial-configuration-of-the-universal-broker.md)
 
 ### [Add new integration](../reference/integrations-v1.md#org-orgid-integrations)
 
@@ -390,7 +392,7 @@ The poll results return a message per manifest processed, either `success: true`
 
 ### [Update existing integration](../reference/integrations-v1.md#org-orgid-integrations-integrationid)
 
-**More information:** [Obtain the required tokens for setup](../../enterprise-setup/snyk-broker/snyk-broker-code-agent/install-snyk-broker-code-agent-using-docker/obtain-the-required-tokens-for-setup.md) (Snyk Broker Code Agent);\
+**More information:** [Obtain the required tokens for setup](../../enterprise-setup/snyk-broker/classic-broker/prepare-snyk-broker-for-deployment/obtain-the-tokens-required-to-set-up-snyk-broker.md);\
 [Scenario: For a specific event or time, disable all interactions (pull requests, tests) from Snyk to the code base (source control management](scenarios-for-using-the-snyk-api.md#for-a-specific-event-or-time-disable-all-interactions-pull-requests-tests-from-snyk-to-the-code-base); [Examples for the Update existing integration endpoint](examples-for-the-update-existing-integration-endpoint.md)
 
 ### [Update](../reference/integrations-v1.md#org-orgid-integrations-integrationid-settings)
@@ -399,8 +401,8 @@ The poll results return a message per manifest processed, either `success: true`
 
 ### [Clone an integration (with settings and credentials)](../reference/integrations-v1.md#org-orgid-integrations-integrationid-clone)
 
-**More information:** [Prepare Snyk Broker for deployment](../../enterprise-setup/snyk-broker/prepare-snyk-broker-for-deployment.md);\
-[Obtain the required tokens for setup](../../enterprise-setup/snyk-broker/snyk-broker-code-agent/install-snyk-broker-code-agent-using-docker/obtain-the-required-tokens-for-setup.md) (Snyk Broker Code Agent);\
+**More information:** [Prepare Snyk Broker for deployment](../../implementation-and-setup/enterprise-setup/snyk-broker/classic-broker/prepare-snyk-broker-for-deployment/);\
+[Obtain the required tokens for setup](../../enterprise-setup/snyk-broker/classic-broker/prepare-snyk-broker-for-deployment/obtain-the-tokens-required-to-set-up-snyk-broker.md);\
 Scenario: [Create multiple new Organizations that all have the same settings in a given Group](scenarios-for-using-the-snyk-api.md#create-multiple-new-organizations-that-all-have-the-same-settings-in-a-given-group)
 
 ### [Delete credentials](../reference/integrations-v1.md#org-orgid-integrations-integrationid-authentication)
@@ -409,7 +411,7 @@ Scenario: [Create multiple new Organizations that all have the same settings in 
 
 ### [Provision new broker token](../reference/integrations-v1.md#org-orgid-integrations-integrationid-authentication-provision-token)
 
-**More information:** [Obtain the required tokens for setup](../../enterprise-setup/snyk-broker/snyk-broker-code-agent/install-snyk-broker-code-agent-using-docker/obtain-the-required-tokens-for-setup.md) (Snyk Broker Code Agent)
+**More information:** [Obtain the required tokens for setup](../../enterprise-setup/snyk-broker/classic-broker/prepare-snyk-broker-for-deployment/obtain-the-tokens-required-to-set-up-snyk-broker.md)
 
 ## Invites
 
@@ -425,16 +427,18 @@ See also [Invite users](../reference/organizations-v1.md#org-orgid-invite).
 
 ### [List issues for a package](../reference/issues.md#orgs-org_id-packages-purl-issues)
 
-**More information:** [Dart and Flutter](../../supported-languages-package-managers-and-frameworks/dart-and-flutter.md);\
-[Rust](../../supported-languages-package-managers-and-frameworks/rust.md):\
-[Guidance for Snyk for C++ page, Alternate testing options section](../../supported-languages-package-managers-and-frameworks/c-c++/guidance-for-snyk-for-c-c++.md#alternate-testing-options);\
-[Guidance for Java and Kotlin](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/guidance-for-java-and-kotlin.md);\
-[Guidance for JavaScript and Node.js, Unmanaged JavaScript section](../../supported-languages-package-managers-and-frameworks/javascript/best-practices-for-javascript-and-node.js.md#unmanaged-javascript);\
-[List issues for a package page](../how-to-use-snyk-sbom-and-list-issues-apis/list-issues-for-a-package.md)
+**More information:** [Dart and Flutter](../../supported-languages/supported-languages-list/dart-and-flutter.md);\
+[Rust](../../supported-languages/supported-languages-list/rust.md):\
+[Guidance for Snyk for C++ page, Alternate testing options section](../../supported-languages/supported-languages-list/c-c++/guidance-for-snyk-for-c-c++.md#alternate-testing-options);\
+[Guidance for Java and Kotlin](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/);\
+[Guidance for JavaScript and Node.js](../../supported-languages/supported-languages-list/javascript/#unmanaged-javascript);\
+[List issues for a package page](../using-specific-snyk-apis/issues-list-issues-for-a-package.md)
 
 ### [List issues for a given set of packages](../reference/issues.md#orgs-org_id-packages-issues) (not available to all customers)
 
 ### [Get issues by org ID](../reference/issues.md#orgs-org_id-issues)
+
+As of April, 2025, you can retrieve Snyk Code issues using this endpoint. It has the primary file path and primary region in the `source_location` data in `representations` in `coordinates` for an issue.
 
 **More information:** [Scenario: Bulk ignore issues](scenarios-for-using-the-snyk-api.md#bulk-ignore-issues);\
 [List all issues including Snyk Code issues in all the Projects in an Organization](scenarios-for-using-the-snyk-api.md#list-all-issues-including-snyk-code-issues-in-all-the-projects-in-an-organization)
@@ -445,6 +449,8 @@ See also [Invite users](../reference/organizations-v1.md#org-orgid-invite).
 
 **Note:** Remedies are not included in the response.
 
+As of April, 2025, you can retrieve Snyk Code issues using this endpoint. It has the primary file path and primary region in the `source_location` data in `representations` in `coordinates` for an issue.
+
 Additional information: [Reachability](../../manage-risk/prioritize-issues-for-fixing/reachability-analysis.md)
 
 ### [Get an issue](../reference/issues.md#groups-group_id-issues-issue_id) (for a Group)
@@ -453,12 +459,12 @@ Additional information: [Reachability](../../manage-risk/prioritize-issues-for-f
 
 ### [List all jira issues](../reference/jira-v1.md#org-orgid-project-projectid-jira-issues)
 
-**More information:** [Jira integration](../../integrate-with-snyk/jira-and-slack-integrations/jira-integration.md); [Snyk test and snyk monitor in CI/CD integration](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md)
+**More information:** [Jira integration](../../integrations/jira-and-slack-integrations/jira-integration.md); [Snyk test and snyk monitor in CI/CD integration](../../developer-tools/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md)
 
 ### [Create jira issue](../reference/jira-v1.md#org-orgid-project-projectid-issue-issueid-jira-issuev)
 
-**More information:** [Jira integration](../../integrate-with-snyk/jira-and-slack-integrations/jira-integration.md);\
-[Snyk test and snyk monitor in CI/CD integration](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md)
+**More information:** [Jira integration](../../integrations/jira-and-slack-integrations/jira-integration.md);\
+[Snyk test and snyk monitor in CI/CD integration](../../developer-tools/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md)
 
 ## Licenses (v1)
 
@@ -468,11 +474,11 @@ Additional information: [Reachability](../../manage-risk/prioritize-issues-for-f
 
 ### [Monitor Dep Graph](../reference/monitor-v1.md)
 
-**More information:** [Dep Graph API (Bazel)](../../scan-with-snyk/snyk-open-source/bazel/#dep-graph-api)
+**More information:** [Dep Graph API (Bazel)](../../scan-with-snyk/snyk-open-source/snyk-for-bazel/dep-graph-api.md)
 
 ## Organizations (v1)
 
-**More information:** [Webhook events and payloads](../how-to-use-snyk-webhooks-apis/webhooks.md)
+**More information:** [Webhook events and payloads](../using-specific-snyk-apis/webhooks-apis/webhooks.md)
 
 ### [List all the organizations a user belongs to](../reference/organizations-v1.md#orgs)
 
@@ -481,7 +487,7 @@ Additional information: [Reachability](../../manage-risk/prioritize-issues-for-f
 
 ### [Create a new organization](../reference/organizations-v1.md#org)
 
-**More information:** [Set visibility and configure an Organization template](../../implement-snyk/enterprise-implementation-guide/phase-2-configure-account/set-visibility-and-configure-an-organization-template/) (Enterprise implementation guide Phase 2, Configure accounts);\
+**More information:** [Set visibility and configure an Organization template](../../implementation-and-setup/enterprise-implementation-guide/phase-2-configure-account/set-visibility-and-configure-an-organization-template/) (Enterprise implementation guide Phase 2, Configure accounts);\
 [api-import: Creating organizations in Snyk](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/creating-organizations-in-snyk.md);\
 [Scenario: Create multiple new Organizations that all have the same settings in a given Group](scenarios-for-using-the-snyk-api.md#create-multiple-new-organizations-that-all-have-the-same-settings-in-a-given-group)
 
@@ -499,16 +505,16 @@ The only editable attribute of Update organization settings is `requestAccess`.
 
 ### [Provision a user to the organization](../reference/organizations-v1.md#org-orgid-provision)
 
-**More information:** [Provision users to Organizations using the AP](../../snyk-admin/user-management-with-the-api/provision-users-to-organizations-using-the-api.md):\
+**More information:** [Provision users to Organizations using the AP](../../snyk-platform-administration/user-management-with-the-api/provision-users-to-organizations-using-the-api.md):\
 [Scenario: Add users to organizations at scale ahead of the first login](scenarios-for-using-the-snyk-api.md#add-users-to-organizations-at-scale-ahead-of-the-first-login)
 
 ### [List pending user provisions](../reference/organizations-v1.md#org-orgid-provision-1)
 
-**More information:** [Provision users to Organizations using the API](../../snyk-admin/user-management-with-the-api/provision-users-to-organizations-using-the-api.md)
+**More information:** [Provision users to Organizations using the API](../../snyk-platform-administration/user-management-with-the-api/provision-users-to-organizations-using-the-api.md)
 
 ### [Delete pending user provision](../reference/organizations-v1.md#org-orgid-provision-2)
 
-**More information:** [Provision users to Organizations using the API](../../snyk-admin/user-management-with-the-api/provision-users-to-organizations-using-the-api.md)
+**More information:** [Provision users to Organizations using the API](../../snyk-platform-administration/user-management-with-the-api/provision-users-to-organizations-using-the-api.md)
 
 ### [Set notification settings](../reference/organizations-v1.md#org-orgid-notification-settings)
 
@@ -519,31 +525,31 @@ The only editable attribute of Update organization settings is `requestAccess`.
 
 ### [List members](../reference/organizations-v1.md#org-orgid-members)
 
-**More information:** [Update member roles using the API](../../snyk-admin/user-management-with-the-api/update-member-roles-using-the-api.md); [Remove members from Groups and Orgs using the API](../../snyk-admin/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md)
+**More information:** [Update member roles using the API](../../snyk-platform-administration/user-management-with-the-api/update-member-roles-using-the-api.md); [Remove members from Groups and Orgs using the API](../../snyk-platform-administration/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md)
 
 ### [Update a member in the organization](../reference/organizations-v1.md#org-orgid-members-userid)
 
-**More information:** [User role management](../../snyk-admin/user-roles/user-role-management.md)
+**More information:** [User role management](../../snyk-platform-administration/user-roles/user-role-management.md)
 
 ### [Remove a member from the organization](../reference/organizations-v1.md#org-orgid-members-userid-1)
 
-**More information:** [Remove members from Groups and Orgs using the API](../../snyk-admin/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md);\
-[User role management](../../snyk-admin/user-roles/user-role-management.md)
+**More information:** [Remove members from Groups and Orgs using the API](../../snyk-platform-administration/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md);\
+[User role management](../../snyk-platform-administration/user-roles/user-role-management.md)
 
 ### [Update a member's role in the organization](../reference/organizations-v1.md#org-orgid-members-update-userid)
 
-**More information:** [User role management](../../snyk-admin/user-roles/user-role-management.md); [Update member roles using the API](../../snyk-admin/user-management-with-the-api/update-member-roles-using-the-api.md)
+**More information:** [User role management](../../snyk-platform-administration/user-roles/user-role-management.md); [Update member roles using the API](../../snyk-platform-administration/user-management-with-the-api/update-member-roles-using-the-api.md)
 
 ### [Invite users](../reference/organizations-v1.md#org-orgid-invite)
 
-**More information:** [Update member roles using the API](../../snyk-admin/user-management-with-the-api/update-member-roles-using-the-api.md);\
+**More information:** [Update member roles using the API](../../snyk-platform-administration/user-management-with-the-api/update-member-roles-using-the-api.md);\
 [Scenario: Assign all users in a given list to all the Organizations a company has (all Organizations in a Group)](scenarios-for-using-the-snyk-api.md#assign-all-users-in-a-given-list-to-all-the-organizations-a-company-has-all-organizations-in-a-group)
 
 ## Orgs (GA and beta)
 
 ### [List accessible organizations](../reference/orgs.md#orgs)
 
-**More information:** [Prerequisites for Snyk Apps](../how-to-use-snyk-apps-apis/prerequisites-for-snyk-apps.md);\
+**More information:** [Prerequisites for Snyk Apps](../using-specific-snyk-apis/snyk-apps-apis/prerequisites-for-snyk-apps.md);\
 [Organization and Group identification for Projects using the API](organization-and-group-identification-for-projects-using-the-api.md)
 
 ### [Update organization](../reference/orgs.md#orgs-org_id)
@@ -563,7 +569,7 @@ The only editable attribute of Update organization settings is `requestAccess`.
 ## Projects (v1)
 
 **More information:** [Project type responses from API](project-type-responses-from-the-api.md);\
-[Webhook events and payloads](../how-to-use-snyk-webhooks-apis/webhooks.md)
+[Webhook events and payloads](../using-specific-snyk-apis/webhooks-apis/webhooks.md)
 
 ### [Update a project](../reference/projects-v1.md#org-orgid-project-projectid)
 
@@ -573,16 +579,16 @@ The only editable attribute of Update organization settings is `requestAccess`.
 
 ### [Delete a project](../reference/projects-v1.md#org-orgid-project-projectid-2)
 
-More information: [Annotated import](../../scan-with-snyk/snyk-container/kubernetes-integration/annotated-import.md) (Kubernetes integration section); [Project type responses from the API](project-type-responses-from-the-api.md); [Scenario: Import fresh container images](scenarios-for-using-the-snyk-api.md#import-fresh-container-images)
+More information: [Project type responses from the API](project-type-responses-from-the-api.md); [Scenario: Import fresh container images](scenarios-for-using-the-snyk-api.md#import-fresh-container-images)
 
 ### [Add a tag to a project](../reference/projects-v1.md#org-orgid-project-projectid-tags)
 
-**More information:** [Project tags](../../snyk-admin/introduction-to-snyk-projects/project-tags.md); [Set up Insights: Associating Snyk Open Source, Code, and Container Projects](../../manage-risk/prioritize-issues-for-fixing/set-up-insights-for-snyk-apprisk/set-up-insights-associating-snyk-open-source-code-and-container-projects.md);\
+**More information:** [Project tags](../../snyk-platform-administration/snyk-projects/project-tags.md); [Set up Insights: Associating Snyk Open Source, Code, and Container Projects](../../manage-risk/prioritize-issues-for-fixing/set-up-insights/set-up-insights-associating-snyk-open-source-code-and-container-projects.md);\
 [Scenario: Rotate or change your Broker token for any reason](scenarios-for-using-the-snyk-api.md#rotate-or-change-your-broker-token-for-any-reason)
 
 ### [Remove a tag from a project](../reference/projects-v1.md#org-orgid-project-projectid-tags-remove)
 
-**More information:** [Project tags](../../snyk-admin/introduction-to-snyk-projects/project-tags.md)
+**More information:** [Project tags](../../snyk-platform-administration/snyk-projects/project-tags.md)
 
 ### [Update project settings](../reference/projects-v1.md#org-orgid-project-projectid-settings)
 
@@ -612,11 +618,11 @@ By using the API endpoint Applying attributes, you can set attributes for Snyk P
 * Parse the project IDs from the `projectURL` field.
 * Use the endpoint [Applying attributes](../reference/projects-v1.md#org-orgid-project-projectid-attributes) to set the project attributes.
 
-**More information:** [Project attributes](../../snyk-admin/snyk-projects/project-attributes.md)
+**More information:** [Project attributes](../../snyk-platform-administration/snyk-projects/project-attributes.md)
 
 ### [List all Aggregated (Project) issues](../reference/projects-v1.md#org-orgid-project-projectid-aggregated-issues)
 
-The Snyk V1 API endpoint [List all aggregated issues](https://snyk.docs.apiary.io/#reference/projects/aggregated-project-issues/list-all-aggregated-issues) returns an array of `ignoreReasons` for each vulnerability. This happens because ignores implemented using the CLI and API are path-based and thus potentially could have different `ignoreReasons` for different paths. Because List all aggregated issues returns only one issue for all paths, the entire set of reasons is returned. Snyk groups issues together by their identifier, so one response for the List all aggregated issues endpoint could correspond to the same issue across multiple paths. Thus the `ignoredReason` is across all issues that are aggregated and applies to that single grouped issue.
+The Snyk V1 API endpoint [List all aggregated issues](../reference/projects-v1.md#org-orgid-project-projectid-aggregated-issues) returns an array of `ignoreReasons` for each vulnerability. This happens because ignores implemented using the CLI and API are path-based and thus potentially could have different `ignoreReasons` for different paths. Because List all aggregated issues returns only one issue for all paths, the entire set of reasons is returned. Snyk groups issues together by their identifier, so one response for the List all aggregated issues endpoint could correspond to the same issue across multiple paths. Thus the `ignoredReason` is across all issues that are aggregated and applies to that single grouped issue.
 
 **More information:** [Scenario: List all issues including Snyk Code issues in all the Projects in an Organization](scenarios-for-using-the-snyk-api.md#list-all-issues-including-snyk-code-issues-in-all-the-projects-in-an-organization)
 
@@ -626,22 +632,22 @@ The Snyk V1 API endpoint [List all aggregated issues](https://snyk.docs.apiary.i
 
 ### [List all Projects for an Org with the given Org ID](../reference/projects.md#orgs-org_id-projects)
 
-The query-string parameter for types is optional. The endpoint does not enforce specific project types and will return `no matching projects` if you enter a string that does not match a project type.
+The query-string parameter for types is optional. The endpoint does not enforce specific project types and will return `no matching projects` if you enter a string that does not match a requested project type. See [Project type responses from the AP](project-type-responses-from-the-api.md)I for a list of project types.
 
-**More information:** [Slack app (for Jira integration)](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md) (Use: Find your Project ID);\
-[Snyk Projects](../../snyk-admin/snyk-projects/);\
-[Project information](../../snyk-admin/snyk-projects/project-information.md);\
-[Project attributes](../../snyk-admin/snyk-projects/project-attributes.md);\
+**More information:** [Slack app (for Jira integration)](../../integrations/jira-and-slack-integrations/slack-app.md) (Use: Find your Project ID);\
+[Snyk Projects](../../snyk-platform-administration/snyk-projects/);\
+[Project information](../../snyk-platform-administration/snyk-projects/project-information.md);\
+[Project attributes](../../snyk-platform-administration/snyk-projects/project-attributes.md);\
 [Scenario: Find all Projects affected by a vulnerability](scenarios-for-using-the-snyk-api.md#find-all-projects-affected-by-a-vulnerability);\
 [Scenario: List all issues including Snyk Code issues in all the Projects in an Organization](scenarios-for-using-the-snyk-api.md#list-all-issues-including-snyk-code-issues-in-all-the-projects-in-an-organization);\
 [Scenario: Bulk ignore issues](scenarios-for-using-the-snyk-api.md#bulk-ignore-issues);\
 [Scenario: Tag all Projects in Snyk](scenarios-for-using-the-snyk-api.md#tag-all-projects-in-snyk);\
 [Scenario: Import fresh container images](scenarios-for-using-the-snyk-api.md#import-fresh-container-images);\
-[Scenario: Detect and import new Projects in a repository into a target](scenarios-for-using-the-snyk-api.md#detect-and-import-new-projects-in-a-repository-into-a-target)
+[Scenario: Detect and import new Projects in a repository into a target](scenarios-for-using-the-snyk-api.md#detect-new-projects-files-in-repositories-and-import-them-into-a-target-in-snyk-on-a-regular-basis)
 
 ### [Updates project by project ID](../reference/projects.md#orgs-org_id-projects-project_id)
 
-**More information:** [View and edit Project settings](../../snyk-admin/snyk-projects/view-and-edit-project-settings.md);\
+**More information:** [View and edit Project settings](../../snyk-platform-administration/snyk-projects/view-and-edit-project-settings.md);\
 [Start scanning](../../scan-with-snyk/start-scanning.md) (Use: Set test frequency)
 
 ### [Get project by project ID](../reference/projects.md#orgs-org_id-projects-project_id-1)
@@ -660,7 +666,13 @@ The query-string parameter for types is optional. The endpoint does not enforce 
 
 ## Reporting API (v1)
 
-**More information:** [Legacy reports](../../manage-issues/reporting/legacy-reports/);\
+The V1 Reporting endpoints support only Snyk legacy reporting, not the latest release. Thus, these endpoints are not available in single-tenant implementations or in the multi-tenant regions US-02, EU, and AU. In those regions, use the [Issues](../reference/issues.md) REST API.
+
+The V1 Reporting API underlies Snyk legacy reporting. Using the V1 Reporting API, you can find answers to questions like how many issues your Organization has, or how many tests have been conducted in a given time period.
+
+The rate limit is up to 70 requests per minute, per user. For all requests above the limit, the response will have the status code `429: Too many requests`, until requests stop for the duration of the rate-limiting interval (one minute). For more information see [Rate limiting for V1 API](../v1-api.md#rate-limiting).
+
+**More information:** [Legacy reports](../../manage-risk/reporting/legacy-reports/);\
 [Dependencies and licenses](../../manage-risk/reporting/dependencies-and-licenses/)
 
 ### [Get list of issues](../reference/reporting-api-v1.md#reporting-issues)
@@ -690,87 +702,87 @@ To get a list of issues that have been fixed, use the endpoint [Get list of late
 
 ## SBOM (GA and beta)
 
-**More information:** [Rust](../../supported-languages-package-managers-and-frameworks/rust.md); [SBOM test endpoints](../how-to-use-snyk-sbom-and-list-issues-apis/rest-api-endpoint-test-an-sbom-document-for-vulnerabilities.md)
+**More information:** [Rust](../../supported-languages/supported-languages-list/rust.md); [SBOM test endpoints](../using-specific-snyk-apis/sbom-apis/rest-api-endpoint-test-an-sbom-document-for-vulnerabilities.md)
 
 ### [Get a project’s SBOM document](../reference/sbom.md)
 
-**More information:** [Get a project’s SBOM document](../how-to-use-snyk-sbom-and-list-issues-apis/rest-api-get-a-projects-sbom-document.md)
+**More information:** [Get a project’s SBOM document](../using-specific-snyk-apis/sbom-apis/rest-api-get-a-projects-sbom-document.md)
 
-### [Create an SBOM test run](ttps://apidocs.snyk.io/?version=2024-10-15#post-/orgs/-org_id-/sbom_tests) (beta)
+### [Create an SBOM test run](https://apidocs.snyk.io/?version=2024-10-15#post-/orgs/-org_id-/sbom_tests) (beta)
 
-**More information:** [Test an SBOM document for vulnerabilities](../how-to-use-snyk-sbom-and-list-issues-apis/rest-api-endpoint-test-an-sbom-document-for-vulnerabilities.md)
+**More information:** [Test an SBOM document for vulnerabilities](../using-specific-snyk-apis/sbom-apis/rest-api-endpoint-test-an-sbom-document-for-vulnerabilities.md)
 
 ### [Gets an SBOM test run status](https://apidocs.snyk.io/?version=2024-10-15#get-/orgs/-org_id-/sbom_tests/-job_id-) (beta)
 
 ### [Gets an SBOM test run result](https://apidocs.snyk.io/?version=2024-10-15#get-/orgs/-org_id-/sbom_tests/-job_id-/results) (beta)
 
-**More information:** [Test an SBOM document for vulnerabilities](../how-to-use-snyk-sbom-and-list-issues-apis/rest-api-endpoint-test-an-sbom-document-for-vulnerabilities.md)
+**More information:** [Test an SBOM document for vulnerabilities](../using-specific-snyk-apis/sbom-apis/rest-api-endpoint-test-an-sbom-document-for-vulnerabilities.md)
 
 ## SastSettings
 
 ### [Enable/Disable the Snyk Code settings for an org](../reference/sastsettings.md#orgs-org_id-settings-sast)
 
-**More information:** [Enable Snyk Code](../../implement-snyk/enterprise-implementation-guide/phase-2-configure-account/set-visibility-and-configure-an-organization-template/enable-snyk-code.md) (Enterprise implementation guide, Phase 2)
+**More information:** [Enable Snyk Code](../../implementation-and-setup/enterprise-implementation-guide/phase-2-configure-account/set-visibility-and-configure-an-organization-template/enable-snyk-code.md) (Enterprise implementation guide, Phase 2)
 
 ### [Retrieves the SAST settings for an org](../reference/sastsettings.md#orgs-org_id-settings-sast-1)
 
 ## ServiceAccounts
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md); [Choose a service account type to use with Snyk APIs](../../enterprise-setup/service-accounts/choose-a-service-account-type-to-use-with-snyk-apis.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md); [Choose a service account type to use with Snyk APIs](../../implementation-and-setup/enterprise-setup/service-accounts/choose-a-service-account-type-to-use-with-snyk-apis.md)
 
 ### [Create a service account for an organization](../reference/serviceaccounts.md#orgs-org_id-service_accounts)
 
-**More information:** [Service accounts using OAuth 2.0](../../enterprise-setup/service-accounts/service-accounts-using-oauth-2.0.md);\
-[Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Service accounts using OAuth 2.0](../../implementation-and-setup/enterprise-setup/service-accounts/service-accounts-using-oauth-2.0.md);\
+[Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Get a list of organization service accounts](../reference/serviceaccounts.md#orgs-org_id-service_accounts-1)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Update an organization service account](../reference/serviceaccounts.md#orgs-org_id-service_accounts-serviceaccount_id)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Get an organization service account](../reference/serviceaccounts.md#orgs-org_id-service_accounts-serviceaccount_id-1)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Delete a service account in an organization](../reference/serviceaccounts.md#orgs-org_id-service_accounts-serviceaccount_id-2)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Manage an organization service account’s client secret](../reference/serviceaccounts.md#orgs-org_id-service_accounts-serviceaccount_id-secrets)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Create a service account for a group](../reference/serviceaccounts.md#groups-group_id-service_accounts)
 
-**More information:** [Service accounts using OAuth 2.0](../../enterprise-setup/service-accounts/service-accounts-using-oauth-2.0.md);\
-[Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Service accounts using OAuth 2.0](../../implementation-and-setup/enterprise-setup/service-accounts/service-accounts-using-oauth-2.0.md);\
+[Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Get a list of group service accounts](../reference/serviceaccounts.md#groups-group_id-service_accounts-1)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Update a group service account](../reference/serviceaccounts.md#groups-group_id-service_accounts-serviceaccount_id)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Get a group service account](../reference/serviceaccounts.md#groups-group_id-service_accounts-serviceaccount_id-1)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Delete a group service account](../reference/serviceaccounts.md#groups-group_id-service_accounts-serviceaccount_id)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ### [Manage a group service account’s client secret](../reference/serviceaccounts.md#groups-group_id-service_accounts-serviceaccount_id-secrets)
 
-**More information:** [Manage service accounts using the Snyk API](../../enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
+**More information:** [Manage service accounts using the Snyk API](../../implementation-and-setup/enterprise-setup/service-accounts/manage-service-accounts-using-the-snyk-api.md)
 
 ## SlackSettings
 
-**More information:** [Slack app (for Jira integration)](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md)
+**More information:** [Slack app (for Jira integration)](../../integrations/jira-and-slack-integrations/slack-app.md)
 
 ### [Create new Slack notification default settings](../reference/slacksettings.md#orgs-org_id-slack_app-bot_id)
 
@@ -780,20 +792,20 @@ To get a list of issues that have been fixed, use the endpoint [Get list of late
 
 ### [Slack notification settings override for projects](../reference/slacksettings.md#orgs-org_id-slack_app-bot_id-projects)
 
-**More information:** [Slack app (JIra integration)](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md) (Use: List all Slack notification customizations for a project);\
+**More information:** [Slack app (JIra integration)](../../integrations/jira-and-slack-integrations/slack-app.md) (Use: List all Slack notification customizations for a project);\
 [api-import Creating orgnizations in Snyk](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/creating-organizations-in-snyk.md);\\
 
 ### [Create a new Slack settings override for a given project](../reference/slacksettings.md#orgs-org_id-slack_app-bot_id-projects-project_id)
 
-**More information:** [Slack app(for Jira integration)](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md) (Use: Create a Slack notification customization for a Project)
+**More information:** [Slack app(for Jira integration)](../../integrations/jira-and-slack-integrations/slack-app.md) (Use: Create a Slack notification customization for a Project)
 
 ### [Update Slack notification settings for a project](../reference/slacksettings.md#orgs-org_id-slack_app-bot_id-projects-project_id-1)
 
-**More information:** [Slack app (Jira integration)](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md) (Use: Update a Slack notification customization for a Project)
+**More information:** [Slack app (Jira integration)](../../integrations/jira-and-slack-integrations/slack-app.md) (Use: Update a Slack notification customization for a Project)
 
 ### [Remove Slack settings override for a project](../reference/slacksettings.md#orgs-org_id-slack_app-bot_id-projects-project_id-2)
 
-**More information:** [Slack app (for Jira integration)](../../integrate-with-snyk/jira-and-slack-integrations/slack-app.md) (Use: Delete a Slack notification customization for a Project)
+**More information:** [Slack app (for Jira integration)](../../integrations/jira-and-slack-integrations/slack-app.md) (Use: Delete a Slack notification customization for a Project)
 
 ## Slack
 
@@ -815,17 +827,21 @@ To get a list of issues that have been fixed, use the endpoint [Get list of late
 
 ### [Get targets by org ID](../reference/targets.md#orgs-org_id-targets)
 
-**More information:** [Target definition on the Snyk Projects page](../../snyk-admin/snyk-projects/#target);\
+**More information:** [Target definition on the Snyk Projects page](../../snyk-platform-administration/snyk-projects/#target);\
 [Scenario: Identify and import new repositories only](scenarios-for-using-the-snyk-api.md#detect-new-projects-files-in-repositories-and-import-them-into-a-target-in-snyk-on-a-regular-basis);\
 [Scenario: Detect new Projects (files) in repositories and import them into a Target in Snyk on a regular basis](scenarios-for-using-the-snyk-api.md#identify-and-import-new-repositories-only)
 
 ### [Get target by target ID](../reference/targets.md#orgs-org_id-targets-target_id)
 
+This endpoint retrieves a list of Snyk Targets, which is used if you want to delete Targets by target ID.
+
 ### [Delete target by target ID](../reference/targets.md#orgs-org_id-targets-target_id-1)
+
+This endpoint deletes the specified Targets and also deletes all the Projects in those Targets automatically.
 
 ## Test (v1)
 
-**More information:** [Guidance for Java and Kotlin](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/guidance-for-java-and-kotlin.md);\
+**More information:** [Guidance for Java and Kotlin](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/);\
 [Start scanning](../../scan-with-snyk/start-scanning.md);\
 [Scan open-source libraries and licenses](../../scan-with-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/)
 
@@ -847,13 +863,13 @@ To get a list of issues that have been fixed, use the endpoint [Get list of late
 
 ### [Test for issues in a public package by name and version](../reference/test-v1.md#test-npm-packagename-version) (npm)
 
-**More information:** [Guidance for JavaScript and Node.js, Unmanaged JavaScript section](../../supported-languages-package-managers-and-frameworks/javascript/best-practices-for-javascript-and-node.js.md#unmanaged-javascript)
+**More information:** [Guidance for JavaScript and Node.js](../../supported-languages/supported-languages-list/javascript/#unmanaged-javascript)
 
 ### [Test maven file](../reference/test-v1.md#test-maven)
 
 ### [Test for issues in a public package by group id, artifact id and version](../reference/test-v1.md#test-maven-groupid-artifactid-version) (Maven)
 
-**More information:** [Guidance for Java and Kotlin](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/guidance-for-java-and-kotlin.md)
+**More information:** [Guidance for Java and Kotlin](../../supported-languages-package-managers-and-frameworks/java-and-kotlin/)
 
 ### [Test gradle file](../reference/test-v1.md#test-gradle)
 
@@ -865,8 +881,8 @@ To get a list of issues that have been fixed, use the endpoint [Get list of late
 
 ### [Test Dep Graph](../reference/test-v1.md#test-dep-graph)
 
-**More information:** [Dep Graph API](../../scan-with-snyk/snyk-open-source/bazel/dep-graph-api.md) (Bazel);\
-[Unmanaged JavaScript](../../supported-languages-package-managers-and-frameworks/javascript/best-practices-for-javascript-and-node.js.md#unmanaged-javascript) (Guidance for JavaScript and Node.js);\
+**More information:** [Dep Graph API](../../scan-with-snyk/snyk-open-source/snyk-for-bazel/dep-graph-api.md) (Bazel);\
+[Unmanaged JavaScript](../../supported-languages/supported-languages-list/javascript/#unmanaged-javascript);\
 [Start scanning](../../scan-with-snyk/start-scanning.md)
 
 ### [Test composer.json & composer.lock file](../reference/test-v1.md#test-composer)
@@ -893,7 +909,7 @@ To get a list of issues that have been fixed, use the endpoint [Get list of late
 
 Note: Use this endpoint to remove users from a group.
 
-**More information:** [Remove members from Groups and Orgs using the API](../../snyk-admin/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md)
+**More information:** [Remove members from Groups and Orgs using the API](../../snyk-platform-administration/user-management-with-the-api/remove-members-from-groups-and-orgs-using-the-api.md)
 
 ### [Get user by ID](https://apidocs.snyk.io/?version=2024-10-15#get-/orgs/-org_id-/users/-id-) (beta)
 

@@ -21,7 +21,7 @@ This page explains how to set up GitHub Container registry integration in Snyk a
 2. Enter your GitHub Container registry username and password login credentials in the Account credentials section.
 3. In the **container registry name** fill in the full URL to the registry you want to integrate with. To finish, click **Save**.
 
-If you are using a self-hosted GitHub Container registry, [contact Snyk Support](https://support.snyk.io) to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
+If you are using a self-hosted GitHub Container registry, [contact Snyk Support](https://support.snyk.io) to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../implementation-and-setup/enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
 
 Snyk tests the connection values, and the page reloads, now displaying GitHub Container registry integration information. The **Add your GitHub container registry images to Snyk** button becomes available.
 
@@ -49,19 +49,19 @@ Follow these steps to add images from the GitHub container registry to Snyk.
    The list of integrations already configured on your account opens.
 3. Select the **GitHub container registry** option or **Other** if the **GitHub container registry** does not appear.
 4. The view titled **Which images do you want to test?** opens, displaying all available images for your connected registry grouped by each of your repositories.\
-   **Note**: GitHub Container Registry does not follow docker v2 API. Therefore, it is not possible to list images in repositories. Therefore you must specify the images you wish to scan manually.
+   Note that GitHub Container Registry does not follow docker v2 API. Therefore, it is not possible to list images in repositories. Therefore you must specify the images you wish to scan manually.
 5. Select single or multiple images to be imported to Snyk.\
    You can choose a specific image or an entire repository. You can also search by image name to find specific images to import.
 6. To finish, click **Add selected repositories** on the top-right.\
    A status bar appears at the top of the page as the images are imported; you can continue working in the meantime.
 7. When the import ends:
    * You can view the newly imported image, marked with a **NEW** tag, on the **Projects** page. Images are grouped by repository and are each linked individually to a detailed **Project** page.
-   * An **import log** becomes available; you can reach it at the top of the Projects list.
+   * An import log becomes available; you can reach it at the top of the Projects list.
    * To enrich the data and get recommendations regarding your base image, you can connect your Dockerfile to the image Project under **Settings**. For more information, see [Adding your Dockerfile and testing your base image](../scan-your-dockerfile/detect-vulnerable-base-images-from-your-dockerfile.md).
 
 GitHub container registry imports are designated with a unique icon. You can filter the integration in the **Projects** view to see GitHub container registry Projects only.
 
-<figure><img src="../../../.gitbook/assets/projects_github_container_registry.png" alt=""><figcaption><p>Example of a GitHub Project </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/container_registry_integrations_github.png" alt=""><figcaption><p>Example of a GitHub Project</p></figcaption></figure>
 
 {% hint style="info" %}
 For application vulnerabilities within container images, any changes to the application will not be reflected with a manual or recurring retest. A re-import of the image is required. For more information, see [Detecting application vulnerabilities in container images](../use-snyk-container/detect-application-vulnerabilities-in-container-images.md).

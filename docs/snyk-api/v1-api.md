@@ -7,7 +7,7 @@ The Snyk API is available only for Enterprise plans.
 
 For more information, see [Plans and pricing](https://snyk.io/plans).
 
-The V1 API will be sunset eventually, as further Snyk developments are now focused on the REST API.
+The V1 API will be deprecated eventually, as further Snyk developments are now focused on the REST API.
 {% endhint %}
 
 The V1 API enables you to test a package for issues as they are defined by Snyk, and to automate Snyk processes to accomplish your specific workflows. Customers and partners can perform functions including:
@@ -17,7 +17,7 @@ The V1 API enables you to test a package for issues as they are defined by Snyk,
 * Receiving remediation advice
 * Viewing user data to build custom security solutions
 
-The V1 API endpoints are available in the [Reference](reference/) in the Snyk user docs. Updates are made in the user docs. Endpoints migrated to the user docs remain [online](https://snyk.docs.apiary.io) also.
+The V1 API endpoints are available in the [Reference](reference/).&#x20;
 
 ## API URLs
 
@@ -31,7 +31,7 @@ This API is available only over HTTPS. Calling the API over HTTP will yield a 40
 
 ## Authorization
 
-To use this API, you must get your token from Snyk. You can find the token in your [personal account settings](https://snyk.io/account/) after you register with Snyk and log in. For details, see [Authentication for API](rest-api/authentication-for-api/).&#x20;
+To use this API, you must get your token from Snyk. You can find the token in your [personal account settings](https://snyk.io/account/) after you register with Snyk and log in. For details, see [Authentication for API](authentication-for-api/).&#x20;
 
 Provide the token in an `Authorization` header with the token, preceded by `token`:
 

@@ -24,7 +24,7 @@ This page explains how to set up Nexus Container Registry integration in Snyk an
 * In the **Account credentials** section, enter your Nexus username and password login credentials. In the **container registry name** fiel&#x64;**,** fill in the full URL to the registry you want to integrate with.
 * To finish, click **Save**.
 
-If you are using a self-hosted Nexus registry, [contact Snyk Support](https://support.snyk.io) to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
+If you are using a self-hosted Nexus registry, [contact Snyk Support](https://support.snyk.io) to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../implementation-and-setup/enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
 
 Snyk tests the connection values, and the page reloads, now displaying Nexus integration information. The **Add your Nexus images to Snyk** button becomes available.
 
@@ -61,7 +61,7 @@ Follow these steps to add images from Nexus to Snyk.
 
 Nexus imports are indicated with a unique icon. You can also filter to view only Nexus Projects.
 
-<figure><img src="../../../.gitbook/assets/mceclip0-18-.png" alt="Nexus Project in Projets listing"><figcaption><p>Nexus Project in Projects listing</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/container_registry_integrations_nexus.png" alt="Nexus Project in Projets listing"><figcaption><p>Example of a Nexus Project</p></figcaption></figure>
 
 {% hint style="info" %}
 For application vulnerabilities within container images, any changes to the application will not be reflected with a manual or recurring retest. A re-import of the image is required. For more information, see [Detecting application vulnerabilities in container images](../use-snyk-container/detect-application-vulnerabilities-in-container-images.md).

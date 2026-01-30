@@ -1,17 +1,17 @@
 # Snapshots (v1)
 
 {% hint style="info" %}
-This document uses the v1 API. For more details, see the [v1 API](../v1-api.md).
+This document uses the v1 API, which will eventually be deprecated, as further Snyk developments are now focused on the REST API. For more details, see the [v1 API](../v1-api.md).
 {% endhint %}
 
-{% swagger src="../../.gitbook/assets/v1-api-spec.yaml" path="/org/{orgId}/project/{projectId}/history" method="post" %}
+{% openapi src="../../.gitbook/assets/v1-api-spec.yaml" path="/org/{orgId}/project/{projectId}/history" method="post" %}
 [v1-api-spec.yaml](../../.gitbook/assets/v1-api-spec.yaml)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="../../.gitbook/assets/v1-api-spec.yaml" path="/org/{orgId}/project/{projectId}/history/{snapshotId}/issue/{issueId}/paths" method="get" %}
+{% openapi src="../../.gitbook/assets/v1-api-spec.yaml" path="/org/{orgId}/project/{projectId}/history/{snapshotId}/issue/{issueId}/paths" method="get" %}
 [v1-api-spec.yaml](../../.gitbook/assets/v1-api-spec.yaml)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="../../.gitbook/assets/v1-api-spec.yaml" path="/org/{orgId}/project/{projectId}/history/{snapshotId}/aggregated-issues" method="post" %}
+{% openapi src="../../.gitbook/assets/v1-api-spec.yaml" path="/org/{orgId}/project/{projectId}/history/{snapshotId}/aggregated-issues" method="post" %}
 [v1-api-spec.yaml](../../.gitbook/assets/v1-api-spec.yaml)
-{% endswagger %}
+{% endopenapi %}

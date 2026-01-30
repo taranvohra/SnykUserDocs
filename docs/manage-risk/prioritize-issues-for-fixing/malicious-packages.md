@@ -3,9 +3,7 @@
 Malicious packages are a popular and growing method of carrying out software supply chain attacks. This page explains what malicious packages are, how Snyk identifies them, and what customers should do if they have malicious packages in their Projects.
 
 {% hint style="warning" %}
-Snyk does not consider the provenance or origin of a scanned package. In some cases, Snyk may detect false positives when the ecosystem, name, and version of a scanned package match a malicious public package.
-
-Ensure you [verify the provenance of your packages](malicious-packages.md#verifying-the-provenance-of-packages).
+Snyk does not consider the provenance or origin of a scanned package. In some cases, Snyk may detect false positives when the ecosystem, name, and version of a scanned package match a malicious public package. Ensure you verify the provenance of your packages.
 {% endhint %}
 
 ## Introduction to malicious packages
@@ -18,9 +16,15 @@ Malicious packages are published as legitimate packages on popular package regis
 
 ### Malicious package curation process
 
-The Snyk security research team looks into dozens of data sources daily and triages and verifies vulnerabilities, including malicious packages.&#x20;
+Snyk Security Research team monitors multiple sources daily to identify, triage, and verify vulnerabilities, including malicious packages. This includes insights from blogs, social media, official package registry announcements, and in-house investigations using our internal research tools.
 
-This process is continually improved, adding new tools and sources to identify potential threats in a timely manner.
+\
+Snyk continuously refines the approach by integrating new detection techniques and data sources, ensuring a comprehensive understanding of emerging threats in the software ecosystem.\
+Here are some examples of the research conducted by Snyk on malicious packages:
+
+* [Snyk found 200+ malicious npm packages, including Cobalt Strike dependency confusion attacks](https://snyk.io/blog/snyk-200-malicious-npm-packages-cobalt-strike-dependency-confusion-attacks/)
+* [Snyk identified malicious code in 8 npm packages](https://snyk.io/blog/npm-security-malicious-code-in-oss-npm-packages/)
+* [Snyk uncovered a dependency confusion attack in npm](https://snyk.io/blog/npm-dependency-confusion-attack-gxm-reference/)
 
 ### No CVE ID for malicious packages
 
@@ -157,8 +161,8 @@ If you find evidence that a malicious package was installed in your environment,
 
 You can remediate specific cases of malicious packages by implementing the following tactics:
 
-* **Typosquatting**:  Remove the malicious package and switch to the correct safe package.
-* **Dependency confusion:** If you imported the public package, either by accident or by default in the CI, before it was placed in "security holding," be sure to remove it. Ensure your development environment and the CI pipeline are configured to use the private registry and install the same-name internal package instead.&#x20;
-* **Dependency hijacking** and **Compromised account**: A new safe version is typically released after identifying the malicious package. To resolve this type of attack, update the package to a new version.
+* Typosquatting:  Remove the malicious package and switch to the correct safe package.
+* Dependency confusion: If you imported the public package, either by accident or by default in the CI, before it was placed in "security holding," be sure to remove it. Ensure your development environment and the CI pipeline are configured to use the private registry and install the same-name internal package instead.&#x20;
+* Dependency hijacking and Compromised account: A new safe version is typically released after identifying the malicious package. To resolve this type of attack, update the package to a new version.
 
 It is important to assume that your environment has been infected and to conduct internal security drills. After removing the malicious package, be sure to check for any remnants of the malicious code.

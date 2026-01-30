@@ -1,41 +1,14 @@
 ---
-cover: .gitbook/assets/Snyk General Banner.webp
+description: >-
+  Scan, prioritize, and fix vulnerabilities in your code, open-source
+  dependencies, container images, and cloud configurations.
+icon: house
+cover: .gitbook/assets/Header.png
 coverY: 0
 ---
 
-# Snyk Documentation
+# Homepage
 
-{% hint style="info" %}
-Stay up to date with the [latest updates in Snyk documentation](whats-new-in-the-snyk-docs.md).
-{% endhint %}
+Check out the latest [updates in the Snyk user documentation](whats-new.md).
 
-## Start using Snyk&#x20;
-
-<table data-header-hidden><thead><tr><th></th><th width="164.33333333333331"></th><th width="188"></th><th></th></tr></thead><tbody><tr><td>​<a href="getting-started/">Getting started</a><br>Start running Snyk to secure your code</td><td><a href="enterprise-setup/">Enterprise configuration</a><br>Use Snyk in an enterprise system</td><td><a href="implement-snyk/">Implement Snyk</a><br>Set up Snyk to run in your business</td><td><a href="supported-languages-package-managers-and-frameworks/">Supported languages</a><br>Match your language and framework to Snyk</td></tr></tbody></table>
-
-## Integrate with Snyk <a href="#explore-snyk-products" id="explore-snyk-products"></a>
-
-<table data-header-hidden><thead><tr><th width="247"></th><th width="252"></th><th width="177"></th></tr></thead><tbody><tr><td><a href="scm-ide-and-ci-cd-integrations/snyk-scm-integrations/">Git repositories</a><br>Connect code repos to Snyk</td><td><a href="scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/">IDEs</a><br>Use Snyk in your dev environment</td><td><a href="scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/">CI/CD</a><br>Add Snyk to your CI/CD pipeline</td></tr></tbody></table>
-
-## Scan using Snyk <a href="#explore-snyk-products" id="explore-snyk-products"></a>
-
-| <p><a href="scan-with-snyk/">Scan with Snyk</a><br>Scan your code, open-source libraries, infrastructure, and containers</p> | <p><a href="snyk-cli/getting-started-with-the-snyk-cli.md">Scan with Snyk CLI</a><br>Scan with Snyk locally on your command line</p> |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-
-## Manage your risk
-
-<table data-header-hidden><thead><tr><th width="254"></th><th width="325"></th></tr></thead><tbody><tr><td><a href="manage-risk/">Manage risk</a><br>Prioritize and report on Snyk scan results</td><td><a href="scan-with-snyk/snyk-apprisk/">Snyk AppRisk</a> <br>Implement a high-performing developer security program</td></tr></tbody></table>
-
-## Configuration and administration <a href="#use-other-resources" id="use-other-resources"></a>
-
-<table data-header-hidden><thead><tr><th width="259"></th><th></th></tr></thead><tbody><tr><td><a href="snyk-api/">Snyk API</a><br>Extend Snyk functions with the Snyk API</td><td><a href="snyk-admin/">Snyk Admin</a><br>Manage your Snyk system</td></tr></tbody></table>
-
-## Learning and information
-
-| <p><a href="https://learn.snyk.io/catalog/product-training/?type=product-training">Snyk product training</a><br>Courses to help you use Snyk functions</p> | <p>​<a href="https://support.snyk.io">Snyk support</a><br>Access Support tickets and knowledgebase</p>       | <p>​<a href="https://snyk.io/advisor/">Snyk Advisor</a><br>Find the best package for your next project</p>         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| <p>​<a href="https://updates.snyk.io/">Snyk product updates</a><br>See the latest Snyk product information</p>                                             | <p>​<a href="https://security.snyk.io/">Snyk vulnerability DB</a><br>Our database for open source vulnerabilities</p> | <p><a href="https://status.snyk.io/">Snyk Status</a><br>Shows operational status and history for Snyk systems.</p> |
-
-{% hint style="success" %}
-[Sign up to use Snyk for free!](https://snyk.io/login?cta=sign-up\&loc=nav\&page=support_docs_page)
-{% endhint %}
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting started</strong></td><td><a href=".gitbook/assets/Getting started.png">Getting started.png</a></td><td><a href="discover-snyk/getting-started/">getting-started</a></td></tr><tr><td><strong>Setup Snyk in your team or enterprise</strong></td><td><a href=".gitbook/assets/Setup Snyk in your team or enterprise.png">Setup Snyk in your team or enterprise.png</a></td><td><a href="implementation-and-setup/enterprise-setup/">enterprise-setup</a></td></tr><tr><td><strong>Supported languages</strong></td><td><a href=".gitbook/assets/Supported languages.png">Supported languages.png</a></td><td><a href="supported-languages/supported-languages-package-managers-and-frameworks.md">supported-languages-package-managers-and-frameworks.md</a></td></tr><tr><td><strong>Integrate Snyk with your ecosystem</strong></td><td><a href=".gitbook/assets/Integrate Snyk in your ecosystem.png">Integrate Snyk in your ecosystem.png</a></td><td><a href="integrations/integrate-with-snyk.md">integrate-with-snyk.md</a></td></tr><tr><td><strong>Developer tools</strong></td><td><a href=".gitbook/assets/Developer tools-1.png">Developer tools-1.png</a></td><td><a href="developer-tools/overview.md">overview.md</a></td></tr><tr><td><strong>Find and fix vulnerabilities</strong></td><td><a href=".gitbook/assets/Find and fix vulnerabilities.png">Find and fix vulnerabilities.png</a></td><td><a href="scan-with-snyk/overview.md">overview.md</a></td></tr><tr><td><strong>Manage assets</strong></td><td><a href=".gitbook/assets/Manage assets.png">Manage assets.png</a></td><td><a href="manage-assets/manage-assets.md">manage-assets.md</a></td></tr><tr><td><strong>Manage your risk</strong></td><td><a href=".gitbook/assets/Manage risk.png">Manage risk.png</a></td><td><a href="manage-risk/manage-risk.md">manage-risk.md</a></td></tr><tr><td><strong>Snyk API</strong></td><td><a href=".gitbook/assets/Snyk API.png">Snyk API.png</a></td><td><a href="snyk-api/snyk-api.md">snyk-api.md</a></td></tr><tr><td><strong>Snyk platform administration</strong></td><td><a href=".gitbook/assets/Snyk platform administration.png">Snyk platform administration.png</a></td><td><a href="snyk-platform-administration/snyk-admin.md">snyk-admin.md</a></td></tr><tr><td><strong>Snyk data and governance</strong></td><td><a href=".gitbook/assets/Snyk data and governance.png">Snyk data and governance.png</a></td><td><a href="snyk-data-and-governance/overview.md">overview.md</a></td></tr></tbody></table>

@@ -1,26 +1,10 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
-# Data Share Data Dictionary
+# Data Share data dictionary
 
 Snyk Data Share is a comprehensive dataset encompassing various data pillars that support a wide range of use cases. You can use this dataset to present key security metrics such as issue backlog, aging, MTTR, SLA compliance, and test coverage, as well as to prioritize issues based on different factors, such as risk score, severity, CVSS, EPSS, and many more.
 
-This dictionary is designed to help you navigate the dataset efficiently, with clear explanations of each table's purpose and the specific data contained in each column, enabling you to leverage the X dataset to meet your data reporting needs.
+This dictionary is designed to help you navigate the dataset efficiently. It provides clear explanations of the purpose of each table and the specific data contained in each column, enabling you to leverage the dataset to meet your data reporting needs.
 
 ## Data Share Tables
-
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-08-12 at 1.43.10 PM.png" alt="A database diagram defining the objects listed in the data dictionary"><figcaption><p>A database diagram defining the objects listed in the data dictionary</p></figcaption></figure>
 
 The diagram above represents the objects listed in the data dictionary as a database diagram. It covers the following tables:
 
@@ -28,14 +12,17 @@ The diagram above represents the objects listed in the data dictionary as a data
 * [Orgs](data-share-data-dictionary.md#orgs)
 * [Projects](data-share-data-dictionary.md#projects)
 * [Issues](data-share-data-dictionary.md#issues)
+* [Dependencies](data-share-data-dictionary.md#dependencies)
 * [Usage events](data-share-data-dictionary.md#usage-events)
 * [Jira issues](data-share-data-dictionary.md#issue-jira-issues)
 
+<figure><img src="../../../.gitbook/assets/image (287).png" alt=""><figcaption><p>A database diagram defining the objects listed in the data dictionary</p></figcaption></figure>
+
 ### Groups
 
-> current version: v1.0
+> Version in use: v1.0
 
-The `GROUPS` table contains the main attributes of Snyk Groups. This data can be utilized for performing aggregations on the Group level or for zooming into the scope of specific Groups.
+The `GROUPS` table contains the main attributes of Snyk Groups. This data can be utilized to perform aggregations on the Group level or zoom into the scope of specific groups.
 
 | Column name    | Data type      | Description                                                                          |
 | -------------- | -------------- | ------------------------------------------------------------------------------------ |
@@ -49,9 +36,9 @@ The `GROUPS` table contains the main attributes of Snyk Groups. This data can be
 
 ### Orgs
 
-> current version: v1.0
+> Version in use: v1.0
 
-The `ORGS` table contains the main attributes of Snyk Organizations. This data can be utilized for performing aggregations on the organization level or for zooming into the scope of specific organizations.
+The `ORGS` table contains the main attributes of Snyk Organizations. This data can be utilized to perform aggregations on the organizational level or to zoom into the scope of specific organizations.
 
 {% hint style="info" %}
 The `group_public_id` column allows you to query organizations in specific groups.
@@ -70,9 +57,9 @@ The `group_public_id` column allows you to query organizations in specific group
 
 ### Projects
 
-> current version: v1.0
+> Version in use: v1.0
 
-The `PROJECTS` table contains main attributes of Snyk Projects, as well as the related target. Its data can be utilized for performing aggregations of filters on the project or target levels, including based on project collections, project tags or specific repo branches (using `target_ref`).
+ProjectThe `PROJECTS` table contains the main attributes of Snyk Projects and the related target. Its data can be utilized for performing aggregations of filters on the Project or target levels, including based on Project collections, Project tags, or specific repo branches (using `target_ref`).
 
 {% hint style="info" %}
 Snyk Reports only presents monitored projects that were not deleted. To match your results with Snyk Reports, filter your query with `IS_MONITORED = TRUE` and `DELETE IS NULL.`
@@ -96,6 +83,7 @@ Snyk Reports only presents monitored projects that were not deleted. To match yo
 | `target_source_type`               | varchar        | The hosting provider of a given target, for example, docker-hub, github, and so on.                                                                                                                                                        |
 | `target_source_type_display_value` | varchar        | A display value that represents the grouping for target sources, for example, Source Control, Container Registry, and so on.                                                                                                               |
 | `target_upstream_url`              | varchar        | The URL pointing to a target's upstream source, such as a URL for a GitHub repository.                                                                                                                                                     |
+| `target_file`                      | varchar        | The full file path within a project that Snyk is targeting for security scanning, such as /var/www/composer.lock, /app/package.json, or other dependency manifest files.                                                                   |
 | `criticalities`                    | array          | A project attribute that indicates business criticality. For example, low, medium, high, critical.                                                                                                                                         |
 | `lifecycles`                       | array          | A project attribute, for example, production, development, sandbox.                                                                                                                                                                        |
 | `environments`                     | array          | A project attribute, for example, frontend, backend, internal, external, mobile, saas, onprem, hosted, distributed.                                                                                                                        |
@@ -110,70 +98,91 @@ Snyk Reports only presents monitored projects that were not deleted. To match yo
 
 ### Issues
 
-> current version: v1.0
+> Version in use: v1.0
 
-The `ISSUES` table contains various attributes of Snyk Issues. Issues can be easily correlated with their originating project, target, org or group, utilizing the corresponding ID columns. On top of the issue's basic attributes, such as its introduction date, type, severity, score, etc., there are columns that elaborate on the vulnerability attributes, such as the CVSS score, EPSS Score, NVD Score, etc.
+The `ISSUES` table contains various attributes of Snyk Issues. Issues can be easily correlated with their originating Project, target, Organization or Group, utilizing the corresponding ID columns. On top of the issue's basic attributes, such as its introduction date, type, severity, score, there are columns that elaborate on the vulnerability attributes, such as the CVSS score, EPSS Score, NVD Score.
 
 Querying the issues table allows:
 
 * Concluding various metrics and KPIs, among issue backlog, aging, MTTR and SLA compliance.
-* Visualizing trends of identified, ignored, resolved issues over time
+* Visualizing trends of identified, ignored, and resolved issues over time
 * Prioritize issues based on multiple factors and considerations
 
 {% hint style="info" %}
-If you would like to match your results with Snyk Reports:&#x20;
+If you would like to match your results with Snyk Reports:
 
-* filter your query with `DELETED_AT IS NULL`, as Snyk Reports don't present deleted issues.
-* Join the Issues table with the Projects table and filter by `IS_MONITORED = TRUE`, as Snyk Reports doesn't present issues of deactivated projects
+* Filter your query with `DELETED_AT IS NULL`, as Snyk Reports do not present deleted issues.
+* Join the Issues table with the Projects table and filter by `IS_MONITORED = TRUE`, as Snyk Reports does not present issues of deactivated Projects.
 {% endhint %}
 
-| Column name                      | Data type      | Description                                                                                                                                                                                   |
-| -------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`                             | varchar        | A unique identifier, representing a unique instance of a given vulnerability in a project.                                                                                                    |
-| `problem_id`                     | varchar        | Snyk Vulnerability database ID that uniquely identifies the vulnerability.                                                                                                                    |
-| `project_public_id`              | varchar        | A universally unique identifier for a project, assigned in the record's source database.                                                                                                      |
-| `org_public_id`                  | varchar        | A universally unique identifier for an organization, assigned in the record's source database.                                                                                                |
-| `group_public_id`                | varchar        | A universally unique identifier for a group, assigned in the record's source database.                                                                                                        |
-| `product_name`                   | varchar        | The Snyk Product which initially identified this issue.                                                                                                                                       |
-| `problem_title`                  | varchar        | Name of the Snyk discovered vulnerability.                                                                                                                                                    |
-| `vuln_db_url`                    | varchar        | URL which directs to the Snyk's Public Vulnerability Database website.                                                                                                                        |
-| `issue_type`                     | varchar        | Indicates whether the issue is related to a vulnerability, license, or configuration.                                                                                                         |
-| `issue_sub_type`                 | varchar        | A more granular variation of issue type.                                                                                                                                                      |
-| `issue_url`                      | varchar        | URL which directs to the given's project's instance of this vulnerability on the Snyk Website.                                                                                                |
-| `issue_status`                   | varchar        | Indicates whether the issue is open, resolved, or ignored.                                                                                                                                    |
-| `issue_severity`                 | varchar        | Indicates the assessed level of risk, as Critical, High, Medium, or Low.                                                                                                                      |
-| `score`                          | float          | A score based on an analysis model. Priority score is released in General Availability, while Risk Score is in Early Access.                                                                  |
-| `cve`                            | array          | Mitre CVE ID(s)                                                                                                                                                                               |
-| `cwe`                            | array          | Mitre CWE ID(s)                                                                                                                                                                               |
-| `exploit_maturity`               | varchar        | Represents the existence and maturity of public exploits validated by Snyk, for example, Mature, Proof of concept.                                                                            |
-| `introduction_category`          | varchar        | A Snyk generated classification describing the nature of an issue's introduction in the context of Snyk product usage, for example, Baseline Issue, Non Preventable Issue, Preventable Issue. |
-| `snyk_cvss_score`                | number         | Snyk's recommended Common Vulnerability Scoring System (CVSS) score.                                                                                                                          |
-| `snyk_cvss_vector`               | varchar        | The vector string of the metric values used to determine the CVSS score.                                                                                                                      |
-| `nvd_severity`                   | varchar        | The vulnerability's severity as rated by NVD.                                                                                                                                                 |
-| `nvd_score`                      | number         | The vulnerability's score as calculated by NVD.                                                                                                                                               |
-| `epss_score`                     | number         | The probability of exploitation in the wild in the next 30 days.                                                                                                                              |
-| `epss_percentile`                | number         | The proportion of all vulnerabilities with the same or lower EPSS score.                                                                                                                      |
-| `computed_fixability`            | varchar        | Indicates whether the issue can be fixed based on the vulnerability remediation paths.                                                                                                        |
-| `fixed_in_available`             | boolean        | Is the given vulnerability fixed in a different version of responsible source.                                                                                                                |
-| `fixed_in_version`               | variant        | The first version in which a given vulnerability was fixed.                                                                                                                                   |
-| `semver_vulnerable_range`        | variant        | The vulnerable range of package versions (based on semantic versioning).                                                                                                                      |
-| `vulnerability_publication_date` | date           | The date a given vulnerability was first published by Snyk.                                                                                                                                   |
-| `first_introduced`               | timestamp\_ntz | The timestamp of the first scan that identified the issue.                                                                                                                                    |
-| `last_introduced`                | timestamp\_ntz | The most recent instance of an issue having been introduced (or reintroduced).                                                                                                                |
-| `last_ignored`                   | timestamp\_ntz | The most recent instance of an issue having been ignored within Snyk's product.                                                                                                               |
-| `last_resolved`                  | timestamp\_ntz | The most recent instance of an issue having been resolved.                                                                                                                                    |
-| `reachability`                   | varchar        | Indicates whether the issue is related to functions that are being called by the application and thus has a greater risk of exploitability.                                                   |
-| `package_name_and_version`       | varchar        | The vulnerability's associated package name and version.                                                                                                                                      |
-| `deleted_at`                     | timestamp\_ntz | When this record was deleted from Snyk.                                                                                                                                                       |
-| `__updated_at`                   | timestamp\_ntz | When the data share data transformation last updated this record.                                                                                                                             |
+| Column name                      | Data type      | Description                                                                                                                                                                                                                       |
+| -------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `asset_finding_id`               | varchar        | A unique issue ID in the level of repository, only applicable for Snyk Code issue                                                                                                                                                 |
+| `code_region`                    | varchar        | The line numbers and columns range where the issues was found within a file                                                                                                                                                       |
+| `code_region_display_value`      | varchar        | The display representation of the line numbers and columns range where the issues was found within a file.                                                                                                                        |
+| `commit_id`                      | varchar        | Refers to the unique ID that Git assigns to commits so those can be uniquely identified. Currently, Snyk provide Commit ID only for Snyk Code issues                                                                              |
+| `computed_fixability`            | varchar        | Indicates whether the issue can be fixed based on the vulnerability remediation paths.                                                                                                                                            |
+| `cve`                            | array          | CVE ID(s                                                                                                                                                                                                                          |
+| `cwe`                            | array          | CWE ID(s)                                                                                                                                                                                                                         |
+| `deleted_at`                     | timestamp\_ntz | When this record was deleted from Snyk.                                                                                                                                                                                           |
+| `epss_percentile`                | number         | The proportion of all vulnerabilities with the same or lower EPSS score.                                                                                                                                                          |
+| `epss_score`                     | number         | The probability of exploitation in the wild in the next 30 days.                                                                                                                                                                  |
+| `exploit_maturity`               | varchar        | Represents the existence and maturity of public exploits validated by Snyk, as defined by Snyk. Values: No data, No known exploit, Proof of concept, Mature.                                                                      |
+| `exploit_maturity_cvss_v4`       | varchar        | Represents the existence and maturity of public exploits validated by Snyk, as defined by [CVSS v4.0](https://www.first.org/cvss/v4-0/specification-document#Exploit-Maturity-E). Values: Not Defined, Proof of Concept, Attacked |
+| `file_path`                      | varchar        | The path to the file where Snyk Code identified the specific issue.                                                                                                                                                               |
+| `first_introduced`               | timestamp\_ntz | The timestamp of the first scan that identified the issue.                                                                                                                                                                        |
+| `fixed_in_available`             | boolean        | Is the given vulnerability fixed in a different version of responsible source.                                                                                                                                                    |
+| `fixed_in_version`               | variant        | The first version in which a given vulnerability was fixed.                                                                                                                                                                       |
+| `group_public_id`                | varchar        | A universally unique identifier for a group, assigned in the record's source database.                                                                                                                                            |
+| `id`                             | varchar        | A unique identifier, representing a unique instance of a given security issue in a project.                                                                                                                                       |
+| `introduction_category`          | varchar        | A Snyk generated classification describing the nature of an issue's introduction in the context of Snyk product usage, for example, Baseline Issue, Non Preventable Issue, Preventable Issue.                                     |
+| `issue_severity`                 | varchar        | Indicates the assessed level of risk, as Critical, High, Medium, or Low.                                                                                                                                                          |
+| `issue_status`                   | varchar        | Indicates whether the issue is open, resolved, or ignored.                                                                                                                                                                        |
+| `issue_sub_type`                 | varchar        | A more granular variation of issue type.                                                                                                                                                                                          |
+| `issue_type`                     | varchar        | Indicates whether the issue is related to a vulnerability, license, or configuration.                                                                                                                                             |
+| `issue_url`                      | varchar        | URL which directs to the given's project's instance of this vulnerability on the Snyk Website.                                                                                                                                    |
+| `last_ignored`                   | timestamp\_ntz | The most recent instance of an issue having been ignored within Snyk's product.                                                                                                                                                   |
+| `last_introduced`                | timestamp\_ntz | The most recent instance of an issue having been introduced (or reintroduced).                                                                                                                                                    |
+| `last_resolved`                  | timestamp\_ntz | The most recent instance of an issue having been resolved.                                                                                                                                                                        |
+| `nvd_score`                      | number         | The vulnerability's score as calculated by NVD.                                                                                                                                                                                   |
+| `nvd_severity`                   | varchar        | The vulnerability's severity as rated by NVD.                                                                                                                                                                                     |
+| `org_public_id`                  | varchar        | A universally unique identifier for an organization, assigned in the record's source database.                                                                                                                                    |
+| `package_name_and_version`       | varchar        | The vulnerability's associated package name and version.                                                                                                                                                                          |
+| `problem_id`                     | varchar        | Snyk Vulnerability database ID that uniquely identifies the vulnerability.                                                                                                                                                        |
+| `problem_title`                  | varchar        | Name of the Snyk discovered vulnerability.                                                                                                                                                                                        |
+| `product_name`                   | varchar        | The Snyk Product which initially identified this issue.                                                                                                                                                                           |
+| `project_public_id`              | varchar        | A universally unique identifier for a project, assigned in the record's source database.                                                                                                                                          |
+| `reachability`                   | varchar        | Indicates whether the issue is related to functions that are being called by the application and thus has a greater risk of exploitability.                                                                                       |
+| `score`                          | float          | A score based on an analysis model. Priority score is released in General Availability, while Risk Score is in Early Access.                                                                                                      |
+| `semver_vulnerable_range`        | variant        | The vulnerable range of package versions (based on semantic versioning).                                                                                                                                                          |
+| `snyk_cvss_score`                | number         | Snyk's recommended Common Vulnerability Scoring System (CVSS) score.                                                                                                                                                              |
+| `snyk_cvss_vector`               | varchar        | The vector string of the metric values used to determine the CVSS score.                                                                                                                                                          |
+| `vulnerability_publication_date` | date           | The date a given vulnerability was first published by Snyk.                                                                                                                                                                       |
+| `vuln_db_url`                    | varchar        | URL which directs to the Snyk's Public Vulnerability Database website.                                                                                                                                                            |
+| `__updated_at`                   | timestamp\_ntz | When the data share data transformation last updated this record.                                                                                                                                                                 |
+
+### Dependencies
+
+> Version in use: v1.0
+
+The `Dependencies` table allows you to identify issues based on their availability in direct dependencies.
+
+| Column name                   | Data type | Description                                                                                                                       |
+| ----------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `issue_id`                    | varchar   | A unique identifier, representing a unique instance of a given security issue in a project.                                       |
+| `problem_id`                  | varchar   | Snyk Vulnerability database ID that uniquely identifies the vulnerability.                                                        |
+| `project_public_id`           | varchar   | A universally unique identifier for a project, assigned in the record's source database.                                          |
+| `org_public_id`               | varchar   | A universally unique identifier for an organization, assigned in the record's source database.                                    |
+| `group_public_id`             | varchar   | A universally unique identifier for a group, assigned in the record's source database.                                            |
+| `exists_in_direct_dependency` | boolean   | Indicates if the vulnerability exists in a direct dependency. If false, the vulnerability only exists in transitive dependencies. |
 
 ### Usage Events
 
-> current version: v1.0
+> Version in use: v1.0
 
-The `USAGE_EVENTS` table contains CLI interactions data that is collected from Snyk's CLI interfaces (CLI, IDE plugins, CI/CD pipeline tools). The CLI interaction events can be correlated with the execution context, such as their target, org or group, utilizing the corresponding ID columns.
+The `USAGE_EVENTS` table contains CLI interaction data that is collected from Snyk's CLI interfaces (CLI, IDE plugins, CI/CD pipeline tools). The CLI interaction events can be correlated with the execution context, such as their target, Organization, or Group, utilizing the corresponding ID columns.
 
-Querying the `USAGE_EVENTS` table allows to measure:
+Querying the `USAGE_EVENTS` table allows you to measure:
 
 * Developers' usage and adoption of Snyk IDE plugins
 * Snyk tests in CI/CD pipelines
@@ -181,7 +190,7 @@ Querying the `USAGE_EVENTS` table allows to measure:
 
 | Column name                               | Data type      | Description                                                                                                                                                                                                                                                                                                                          |
 | ----------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `id`                                      | varchar        | The client-generated ID of the interaction event in the form of `urn:snyk:interaction:00000000-0000-0000-0000-000000000000`                                                                                                                                                                                                          |
+| `id`                                      | varchar        | A unique identifier for an interaction event                                                                                                                                                                                                                                                                                         |
 | `org_public_id`                           | varchar        | A universally unique identifier for an organization, assigned in the record's source database.                                                                                                                                                                                                                                       |
 | `group_public_id`                         | varchar        | A universally unique identifier for a group, assigned in the record's source database.                                                                                                                                                                                                                                               |
 | `product_display_name`                    | varchar        | The Snyk product used during this interaction, for example, Snyk Open Source, Snyk IaC, Snyk Code, Snyk Container.                                                                                                                                                                                                                   |
@@ -205,14 +214,13 @@ Querying the `USAGE_EVENTS` table allows to measure:
 | `runtime_performance_duration_ms`         | number         | The duration in milliseconds of the interaction                                                                                                                                                                                                                                                                                      |
 | `user_email`                              | varchar        | The email of the user who was authenticated during the interaction.                                                                                                                                                                                                                                                                  |
 | `user_name`                               | varchar        | The name of the user who was authenticated during the interaction.                                                                                                                                                                                                                                                                   |
-| `deleted`                                 | timestamp\_ntz | When this record was deleted from Snyk.                                                                                                                                                                                                                                                                                              |
 | `__updated_at`                            | timestamp\_ntz | When the data share data transformation last updated this record.                                                                                                                                                                                                                                                                    |
 
 ### Issue Jira Issues
 
-> current version: v1.0
+> Version in use: v1.0
 
-The `ISSUE_JIRA_ISSUES` table allows to correlate between Snyk issues and assigned Jira issues. As Snyk enables more than one type of Jira integration, it's important to emphasize that the Jira issues that are available in the dataset are originated from the Jira integration that is explained in [this](https://docs.snyk.io/integrate-with-snyk/jira-and-slack-integrations/jira-integration) article.
+The `ISSUE_JIRA_ISSUES` table allows correlation between Snyk issues and assigned Jira issues. As Snyk enables more than one type of Jira integration, it is important to emphasize that the Jira issues that are available in the dataset originated from this [Jira integration](../../../integrations/jira-and-slack-integrations/jira-integration.md).
 
 | Object name            | Data type     | Description                                                                                    |
 | ---------------------- | ------------- | ---------------------------------------------------------------------------------------------- |

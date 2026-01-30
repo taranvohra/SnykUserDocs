@@ -5,7 +5,7 @@ Each rule includes the following information.
 * **Rule Name**: The Snyk name of the rule.
 * **CWE(s):** The [CWE numbers](https://cwe.mitre.org/) that are covered by this rule.
 * **Security Categories**: The [OWASP Top 10 ](https://owasp.org/Top10/)(2021 edition) category to which the rule belongs to, if any, and if it is included in [SANS 25](https://www.sans.org/top25-software-errors/).
-* **Autofixable**: Security rules that are autofixable by DeepCode AI Fix. This information is included only for the supported programming languages.
+* **Autofixable**: Security rules that are autofixable by Snyk Agent Fix. This information is included only for the supported programming languages.
 
 | Rule Name                                                                  | CWE(s)           | Security Categories    | Autofixable |
 | -------------------------------------------------------------------------- | ---------------- | ---------------------- | ----------- |
@@ -44,6 +44,7 @@ Each rule includes the following information.
 | Arbitrary File Write via Archive Extraction (Tar Slip)                     | CWE-22           | Sans Top 25, OWASP:A01 | No          |
 | Origin Validation Error                                                    | CWE-942, CWE-346 | OWASP:A05, OWASP:A07   | No          |
 | Cryptographic Issues                                                       | CWE-310          | OWASP:A02              | No          |
+| Use of Insufficiently Random Values                                        | CWE-330          | OWASP:A02              | No          |
 | Python 2 source code                                                       | CWE-1104         | OWASP:A06              | No          |
 | Selection of Less-Secure Algorithm During Negotiation (SSL instead of TLS) | CWE-757          | OWASP:A02              | No          |
 | Sensitive Cookie Without 'HttpOnly' Flag                                   | CWE-1004         | OWASP:A05              | Yes         |

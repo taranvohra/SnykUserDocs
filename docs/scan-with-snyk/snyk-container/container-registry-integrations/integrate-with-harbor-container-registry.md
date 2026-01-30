@@ -20,18 +20,16 @@ Follow these instructions to set up Harbor integration in Snyk and start managin
 
 ### **Configure Harbor integration**
 
-1. In your Snyk account, navigate to **Integrations**, and under the **Container Registries** section, select the Harbor option.
+1. In your Snyk account, navigate to **Integrations**, and under the **Container Registries** section, select **Harbor**.
 2. In the **Account credentials** section, enter your Harbor username and password login credentials.
 3. In the **Container registry name** fill in the full URL to the registry you want to integrate with.
 4. To finish, select **Save**.
 
-If you are using a self-hosted Harbor registry, contact Snyk to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
+If you are using a self-hosted Harbor registry, contact Snyk to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../implementation-and-setup/enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
 
 {% hint style="info" %}
-To set up the integration, the Harbor user should be an admin user. The integration uses /v2/\_catalog endpoint for listing repositories.
+Integration setup requires a Harbor user with sufficient permissions to access the repository list via the `/v2/_catalog` endpoint. You can use an admin user or a system Robot account with Read Catalog permissions granted.
 {% endhint %}
-
-<figure><img src="../../../.gitbook/assets/mceclip1-8-.png" alt="Harbor Account credentials with Broker token"><figcaption><p>Harbor Account credentials with Broker token</p></figcaption></figure>
 
 Snyk tests the connection values, and the page reloads, now displaying Harbor integration information. The **Add your Harbor images to Snyk** button becomes available. If the connection to Harbor fails, a notification appears under the **Connected to Harbor** section.
 
@@ -60,7 +58,7 @@ Follow these instructions to add images from Harbor to Snyk.
    A status bar appears at the top of the page as the images are imported; you can continue working in the meantime.
 7. When the import ends:
    1. You can view the newly imported image, marked with a **NEW** tag, on the **Projects** page. Images are grouped by repository and are each linked individually to a detailed Projects page.
-   2. An **import log** becomes available; you can reach it from the top of the Projects list.
+   2. An import log becomes available; you can reach it from the top of the Projects list.
    3. To enrich the data and get recommendations regarding your base image, under **Settings,** you can connect your Dockerfile to the image Project. For more information, see [Adding your Dockerfile and testing your base image](../scan-your-dockerfile/detect-vulnerable-base-images-from-your-dockerfile.md).
 
 Harbor imports are indicated with a unique icon. You can also filter to view only the Harbor Projects:
@@ -70,4 +68,3 @@ Harbor imports are indicated with a unique icon. You can also filter to view onl
 {% hint style="info" %}
 For application vulnerabilities within container images, any changes to the application will not be reflected with a manual or recurring retest. A re-import of the image is required. For more information, see [Detecting application vulnerabilities in container images](../use-snyk-container/detect-application-vulnerabilities-in-container-images.md).
 {% endhint %}
-

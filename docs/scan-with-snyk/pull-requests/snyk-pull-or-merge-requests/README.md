@@ -3,7 +3,7 @@
 In addition to fixing advice, Snyk can automatically create pull requests (PRs) on your behalf to upgrade your dependencies based on the scan results. To create PRs automatically in implementations with Snyk Broker, your administrator should first upgrade to v4.55.0 or later.
 
 {% hint style="info" %}
-For the basic steps in fixing vulnerabilities, see  [Fix your vulnerabilities](../../snyk-open-source/manage-vulnerabilities/fix-your-vulnerabilities.md). To ensure your language is supported, see [Languages supported for Fix Pull Requests or Merge Requests](../../snyk-open-source/manage-vulnerabilities/troubleshoot-fixing-vulnerabilities-with-snyk-open-source.md#languages-supporting-fix-pull-requests-or-merge-requests) and [Supported browsers](../../../getting-started/#supported-browsers) pages.
+For the basic steps in fixing vulnerabilities, see [Fix your vulnerabilities](../../snyk-open-source/manage-vulnerabilities/fix-your-vulnerabilities.md). To ensure your language is supported, see [Languages supported for Fix Pull Requests or Merge Requests](../../snyk-open-source/manage-vulnerabilities/troubleshoot-fixing-vulnerabilities-with-snyk-open-source.md#languages-supported-for-fix-pull-requests-or-merge-requests) and [Supported browsers](../../../discover-snyk/getting-started/#supported-browsers) pages.
 {% endhint %}
 
 {% hint style="info" %}
@@ -15,7 +15,7 @@ Snyk provides actionable fix advice for vulnerabilities in your Open Source libr
 * [#automated-snyk-prs](./#automated-snyk-prs "mention"): automatic pull and merge requests
 * [#manual-snyk-prs](./#manual-snyk-prs "mention"): manual pull and merge requests
 
-## **Automated Snyk PRs**
+## Automated Snyk PRs
 
 For Projects imported through an SCM integration, Snyk offers the following types of automated pull and merge requests:
 
@@ -27,9 +27,9 @@ For Projects imported through an SCM integration, Snyk offers the following type
 
 Follow these steps to generate a PR or MR directly from your Project in the Snyk Web UI:
 
-1. Navigate to your Project from the Project list
+1. Navigate to your Project from the Project list.
 2. Select the Project.
-3. Select **Open a Fix PR/MR** or **Fix this vulnerability.** A preview screen appears, showing you what fixes will be applied.
+3. Select **Open a Fix PR/MR** or **Fix this vulnerability**. A preview screen appears, showing you what fixes will be applied.
 4. Click **Open a Fix PR** on this screen to generate the pull request.
 
 {% hint style="info" %}
@@ -52,9 +52,13 @@ Click the Issue link from the table to view all details for the specified vulner
 
 After you have reviewed the pull request, you can approve the merge.
 
+## Generated Pull Requests report
+
+Snyk provides a report which for Enterprise plan customers that gives an overview of how [Fix](create-automatic-prs-for-new-fixes-fix-prs.md), [Backlog](create-automatic-prs-for-backlog-issues-and-known-vulnerabilities-backlog-prs.md), and [Upgrade PRs](upgrade-dependencies-with-automatic-prs-upgrade-prs/) are used and highlights the efficiency of PR merges. For more information, see [Snyk Generated Pull Requests report](../../../manage-risk/reporting/available-snyk-reports.md#snyk-generated-pull-requests).
+
 ## Snyk SCM webhooks
 
-To track pull request events, Snyk adds webhooks to your imported repositories. For more information, see the [GitHub and Git repository integrations](../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/).
+To track pull request events, Snyk adds webhooks to your imported repositories. For more information, see the [GitHub and Git repository integrations](../../../developer-tools/scm-integrations/organization-level-integrations/).
 
 Snyk uses these webhooks to:
 

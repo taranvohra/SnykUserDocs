@@ -18,7 +18,7 @@ Integration with Quay is available for all Snyk users.
 1. In your Snyk account, navigate to **Integrations.** Under the **Container Registries** section, find the **Quay** option and click it.
 2. In the **Account credentials** section, enter your Quay username and password login credentials. In the **container registry name**, enter the full URL to the registry you want to integrate with. This can be a cloud-based Quay or a private host. To finish, click **Save**.
 
-If you are using a self-hosted Quay registry, [contact Snyk Support](https://support.snyk.io) to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
+If you are using a self-hosted Quay registry, [contact Snyk Support](https://support.snyk.io) to provide you with a token. For more information, see [Snyk Container for self-hosted container registries (with Broker)](../../../implementation-and-setup/enterprise-setup/snyk-broker/snyk-broker-container-registry-agent/integrate-with-self-hosted-container-registries-broker.md).
 
 {% hint style="info" %}
 [Quay.io](https://quay.io/) deprecated the use of Quay login in June 2021. The credentials can no longer be Quay username and password, but must be Quay robot account credentials (username and token) that have at least 'read' permissions to the desired repository.
@@ -55,8 +55,6 @@ Snyk tests and monitors your Quay container images by evaluating the tags in you
    2. To enrich the data and get recommendations regarding your base image, from the **Settings** you can connect your Dockerfile to the image Project. For more information, see [Adding your Dockerfile and testing your base image](../scan-your-dockerfile/detect-vulnerable-base-images-from-your-dockerfile.md).
 
 Quay imports are designated with a unique icon. You can filter to view only Quay Projects.
-
-<figure><img src="../../../.gitbook/assets/mceclip1-11-.png" alt="Quay Project in Projects listing"><figcaption><p>Quay Project in Projects listing</p></figcaption></figure>
 
 {% hint style="info" %}
 For application vulnerabilities within container images, any changes to the application will not be reflected with a manual or recurring retest. A re-import of the image is required. For more information, see [Detecting application vulnerabilities in container images](../use-snyk-container/detect-application-vulnerabilities-in-container-images.md).

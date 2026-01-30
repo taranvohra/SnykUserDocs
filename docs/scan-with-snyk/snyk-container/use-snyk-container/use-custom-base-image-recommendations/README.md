@@ -12,7 +12,11 @@ When scanning a container image, Snyk provides recommendations based on the base
 
 Customers often maintain their own internal base images, built on top of Docker Official Images or other upstream images. These are provided as a service to a wider set of development teams. For example: `somecompany/base-python:3.12.1`.
 
-The Custom Base Image Recommendation feature (CBIR) allows Snyk to recommend an image upgrade from a pool of your internal images. This allows teams to be notified of newer and more secure versions of their internal base images.
+The Custom Base Image Recommendation feature (CBIR) allows Snyk to recommend an image upgrade from a pool of your internal images. This allows teams to be notified of newer versions of their internal base images, along with a vulnerability count, in order to help with image selection.\
+\
+Snyk does not use the vulnerability data in order to detemine which version to display. All versions in the pool of images to recommend that are considered upgrades to the current image are offered. This provides users with the most control over what images to recommend and which not.\
+\
+You can remove images that must not be recommended by disabling the **Include in recommendations** option. For more information, see [Mark the created Project as a custom base image](./#mark-the-created-project-as-a-custom-base-image).
 
 ## How CBIR works
 
@@ -26,11 +30,29 @@ As opposed to public Docker Official Images, Snyk can detect a custom base image
 
 All custom base image recommendations are considered minor upgrades, regardless of the image tag.
 
-To determine the latest version of a base image across Projects imported into the same repository, Snyk allows configuring a [versioning schema](versioning-schema-for-custom-base-images.md).
+To determine the latest version of a base image across Projects imported into the same repository, Snyk allows configuring a versioning schema. For more information, see [Versioning schemas for custom base images.](versioning-schema-for-custom-base-images.md)
 
 The Custom Base Image Recommendation feature supports Automatic fix PRs. If you are not using the latest version of the base image, then immediately after image import Snyk automatically issues a fix pull request against your Dockerfile to upgrade to the latest available custom base image version.
 
-## **Enable CBIR:** configure an image as a custom base image
+## Special considerations
+
+The recommendations provided by the CBIR feature rely on versioned tags that comply with the versioning schema configured.&#x20;
+
+{% hint style="info" %}
+It is possible to add the "latest" tag to this pool as a single selection, or as part of a custom versioning scheme. However, Snyk does not recommend doing this, as it negates the benefits of the CBIR feature. The following information considers that the recommendations are not configured with the "latest" tag included in recommendations.
+{% endhint %}
+
+### Latest and other rolling image tags
+
+Snyk recommends that you do not add the "latest" tag to the versioning schema pool along with other tags, so that Snyk does not provide this as an update. The same is true for other similar rolling tags.
+
+For any image that uses the "latest" tag, Snyk recommends moving to the current latest image (by versioned tag) in that repository. This is because when the container that Snyk scans was built using the "latest" tag, this tag may or may not have referenced the same image that is considered the latest image.
+
+### **Recommendations for upgrading the base image**
+
+The **Recommendations for upgrading the base image** view does not show vulnerabilities for base images if they are not in the pool of CBIR tags. This is generally the case for images that have a "latest" image tag or other rolling tags, or other images that are not in the recommendation pool. This does not mean that the base image itself is free from vulnerabilities. To determine what vulnerabilities an image contains, view the scan results for that image.&#x20;
+
+## Enable CBIR: configure an image as a custom base image
 
 The following steps explain how to configure custom base images. The team that is responsible for creating and maintaining custom base images for the Organization performs these steps.
 
@@ -91,7 +113,7 @@ You can modify previously imported container Projects in order to attach a Docke
 
 On the Project page for the application image, navigate to **Settings** and configure the Dockerfile by clicking **Configure Dockerfile** and selecting your source control system from the dropdown.
 
-<figure><img src="../../../../.gitbook/assets/configure_project_dockerfile (1).png" alt=""><figcaption><p>Configure the Project Dockerfile</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/configure_project_dockerfile.png" alt=""><figcaption><p>Configure the Project Dockerfile</p></figcaption></figure>
 
 Choose the Dockerfile repository and add the path to your Dockerfile. Click **Update Dockerfile**.
 

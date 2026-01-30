@@ -2,7 +2,7 @@
 
 ## Overview
 
-With Snyk AppRisk policies, you can easily automate the process of adding business context and receiving notifications.&#x20;
+With Policies, you can easily automate the process of adding business context and receiving notifications.&#x20;
 
 {% hint style="info" %}
 After a policy is created, it is run in a maximum of 3 hours after creation, then once every 3 hours.&#x20;
@@ -10,31 +10,31 @@ After a policy is created, it is run in a maximum of 3 hours after creation, the
 If your policy is set to run daily, then the policy is run 3 hours after the 24-hour period ends. You can always manually run a policy by using the Run button.
 {% endhint %}
 
-Access the Snyk AppRisk policies by positioning yourself at the Group level, selecting **Policies**, then **Assets**.
+Access the Snyk Essentials policies by positioning yourself at the Group level, selecting **Policies**, then **Assets**.
 
 The following video presents an overview of the types of policies you can create from the Policies view.
 
-{% embed url="https://youtu.be/79oz_hgMrCE" %}
-Liked the video? Checkout the rest of the course on [Snyk Learn](https://learn.snyk.io/lesson/snyk-apprisk-essentials/)!
+{% embed url="https://res.cloudinary.com/snyk/video/upload/v1737656954/snyk-learn/product-training-videos/Snyk_Essentials_and_Snyk_AppRisk_-5a_-_v1_-_Policy_Overview.mp4" %}
+Overview of asset policies
 {% endembed %}
 
 {% hint style="info" %}
-[Manage assets](../../../manage-assets/) and [assets policies](./) are interconnected. Before setting up any new policy, ensure you have reviewed and filtered your assets from the Inventory menu.
+[Manage assets](../../../manage-assets/manage-assets.md) and [assets policies](./) are interconnected. Before setting up any new policy, ensure you have reviewed and filtered your assets from the Inventory menu.
 {% endhint %}
 
-## **Use Cases**
+## Use Cases
 
 You can create policies for organizing the assets, classifying them, and always being up to date with the latest information about an asset.\
 Common use cases for policies include:
 
-* [New asset notifications](use-cases-for-policies/notification-policy-use-case.md)
-* [Asset classification](use-cases-for-policies/classification-policy-use-case.md)
-* [Asset tagging](use-cases-for-policies/tagging-policy-use-case.md)
-* [Coverage control](use-cases-for-policies/coverage-control-policy-use-case.md)
+* [New asset notifications](use-cases-for-policies/notification-policy.md)
+* [Asset classification](use-cases-for-policies/classification-policy.md)
+* [Asset tagging](use-cases-for-policies/tagging-policy.md)
+* [Coverage control](use-cases-for-policies/coverage-control-policy.md)
 
 ### New asset notifications
 
-&#x20;Notify members of the AppSec team when new assets meeting certain criteria are discovered. For example, you may send a Slack message to the infra team if new repository assets that leverage Terraform as a technology are detected by Snyk AppRisk.
+&#x20;Notify members of the AppSec team when new assets meeting certain criteria are discovered. For example, you may send a Slack message to the infra team if new repository assets that leverage Terraform as a technology are detected by Snyk Essentials.
 
 When setting up a notification action (email or Slack) for a policy, you can include a link to the relevant assets. Each notification will list all the assets impacted by the policy. You can view the assets individually, or you can see a summary of all the assets by clicking the **Click Here** option in the notification. The list of assets displayed in the email notification is automatically generated.
 
@@ -44,7 +44,11 @@ Classify repository assets according to their business criticality from A (most 
 
 ### Asset tagging
 
-&#x20;Categorize and label repository assets with flexible tags, which can be used to filter the asset inventory.
+Categorize and label repository assets with [asset tags](../../../manage-assets/assets-inventory-components.md#tags) to filter the asset inventory.&#x20;
+
+* **GitHub custom properties** - lists the GitHub custom properties associated with your GitHub repository as a tag
+* **User-defined tags** are customizable, as you can define their logic through [Assets Policies](./). For example, you can set tags to label a repository that comes from a specific source, such as GitHub. Tags associated with assets are identified in the UI with the **Asset policy tags** name.
+* **System tags** are automatically assigned by Snyk based on asset names or detected keywords (for example, `codeowners`).
 
 ### Security coverage
 

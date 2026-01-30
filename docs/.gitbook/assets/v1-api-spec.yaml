@@ -24,22 +24,13 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/GetUserDetailsresponse'
@@ -52,7 +43,7 @@ paths:
           description: The provided `id` is not in a valid format.
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
                 description: The provided `id` is not in a valid format.
@@ -62,7 +53,7 @@ paths:
           description: '`API_KEY` is invalid.'
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
                 description: '`API_KEY` is invalid.'
@@ -72,7 +63,7 @@ paths:
           description: The requested user could not be found or caller does not have sufficient permissions.
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
                 description: The requested user could not be found or caller does not have sufficient permissions.
@@ -86,23 +77,12 @@ paths:
       summary: Get My Details
       description: Retrieves information about the the user making the request.
       operationId: GetMyDetails
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/GetMyDetailsresponse'
@@ -115,7 +95,7 @@ paths:
           description: '`API_KEY` is invalid.'
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
                 description: '`API_KEY` is invalid.'
@@ -138,22 +118,13 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Notificationsettingsresponse'
@@ -172,6 +143,12 @@ paths:
                       weekly-report:
                         enabled: true
                         inherited: false
+                      request-updates:
+                        enabled: true
+                        inherited: false
+                      pending-requests:
+                        enabled: true
+                        inherited: false
               example:
                 new-issues-remediations:
                   enabled: true
@@ -185,6 +162,12 @@ paths:
                   enabled: true
                   inherited: false
                 weekly-report:
+                  enabled: true
+                  inherited: false
+                request-updates:
+                  enabled: true
+                  inherited: false
+                pending-requests:
                   enabled: true
                   inherited: false
       deprecated: false
@@ -206,7 +189,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/Notificationsettingsrequest'
@@ -221,6 +204,10 @@ paths:
                       enabled: true
                     weekly-report:
                       enabled: true
+                    request-updates:
+                      enabled: true
+                    pending-requests:
+                      enabled: true
             example:
               new-issues-remediations:
                 enabled: true
@@ -232,13 +219,17 @@ paths:
                 enabled: true
               weekly-report:
                 enabled: true
+              request-updates:
+                enabled: true
+              pending-requests:
+                enabled: true
         required: true
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Notificationsettingsresponse'
@@ -255,6 +246,12 @@ paths:
                         enabled: true
                         inherited: false
                       weekly-report:
+                        enabled: true
+                        inherited: false
+                      request-updates:
+                        enabled: true
+                        inherited: false
+                      pending-requests:
                         enabled: true
                         inherited: false
               example:
@@ -297,22 +294,13 @@ paths:
           schema:
             type: string
             example: 6d5813be-7e6d-4ab8-80c2-1e3e2a454545
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Notificationsettingsresponse'
@@ -373,7 +361,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/Modifyprojectnotificationsettingsrequest'
@@ -410,22 +398,13 @@ paths:
           schema:
             type: string
             example: b61bc07c-27c6-42b3-8b04-0f228ed31a67
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Groupsettings'
       deprecated: false
@@ -465,7 +444,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Groupsettings'
@@ -494,22 +473,13 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: array
                 items:
@@ -612,16 +582,7 @@ paths:
             type: number
             format: double
             example: 1
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
@@ -633,7 +594,7 @@ paths:
                     type: string
                   example: <https://api.snyk.io/v1/group/4a18d42f-0706-4ad0-b127-24078731fbed/tags?page=3&perPage=10>; rel=last, <https://api.snyk.io/v1/group/4a18d42f-0706-4ad0-b127-24078731fbed/tags?page=2&perPage=10>; rel=next
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Listalltagsinagroupresponse'
@@ -719,7 +680,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Deletetagbody'
@@ -774,22 +735,13 @@ paths:
           schema:
             type: string
             example: my
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Listallorganizationsinagroupresponse'
@@ -826,22 +778,13 @@ paths:
           schema:
             type: string
             example: a060a49f-636e-480f-9e14-38e773b2a97f
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: array
                 items:
@@ -880,31 +823,18 @@ paths:
 
         The organization determines the access rights, licenses policy and is the unit of billing for private projects.
 
-
         An organization should be given as a query parameter named `org`, with the public identifier given to this org. The list of organizations and their corresponding public ids can be found with the organization resource
 
         #### Required permissions
 
-
         - `View Organization`
-      operationId: Listalltheorganizationsauserbelongsto
-      parameters:
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+      operationId: Listalltheorganizationsauserbelongsto        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Listalltheorganizationsauserbelongstoresponse'
       deprecated: false
@@ -937,7 +867,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Createaneworganizationresponse'
@@ -1018,22 +948,13 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Notificationsettingsresponse'
@@ -1052,6 +973,12 @@ paths:
                       weekly-report:
                         enabled: true
                         inherited: false
+                      request-updates:
+                        enabled: true
+                        inherited: false
+                      pending-requests:
+                        enabled: true
+                        inherited: false
               example:
                 new-issues-remediations:
                   enabled: true
@@ -1065,6 +992,12 @@ paths:
                   enabled: true
                   inherited: false
                 weekly-report:
+                  enabled: true
+                  inherited: false
+                request-updates:
+                  enabled: true
+                  inherited: false
+                pending-requests:
                   enabled: true
                   inherited: false
       deprecated: false
@@ -1095,7 +1028,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/Notificationsettingsrequest'
@@ -1110,6 +1043,10 @@ paths:
                       enabled: true
                     weekly-report:
                       enabled: true
+                    request-updates:
+                      enabled: true
+                    pending-requests:
+                      enabled: true
             example:
               new-issues-remediations:
                 enabled: true
@@ -1121,13 +1058,17 @@ paths:
                 enabled: true
               weekly-report:
                 enabled: true
+              request-updates:
+                enabled: true
+              pending-requests:
+                enabled: true
         required: true
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Notificationsettingsresponse'
@@ -1193,7 +1134,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/Inviteusersrequest'
@@ -1241,22 +1182,13 @@ paths:
           schema:
             type: boolean
             example: true
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: array
                 items:
@@ -1295,22 +1227,13 @@ paths:
           schema:
             type: string
             example: 25065eb1-109c-4c3e-9503-68fc56ef6f44
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Orgsettingsresponse'
@@ -1320,12 +1243,14 @@ paths:
                       ignores:
                         reasonRequired: false
                         autoApproveIgnores: false
+                        approvalWorkflowEnabled: false
               example:
                 requestAccess:
                   enabled: true
                 ignores:
                   reasonRequired: false
                   autoApproveIgnores: false
+                  approvalWorkflowEnabled: false
       deprecated: false
     put:
       tags:
@@ -1355,7 +1280,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               type: string
               example: + Attributes (Org settings request)
@@ -1366,7 +1291,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Orgsettingsresponse'
@@ -1380,7 +1305,7 @@ paths:
           description: If provided a setting that the `API_KEY` has no edit permission for.
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
                 description: If provided a setting that the `API_KEY` has no edit permission for.
@@ -1418,7 +1343,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/Updateamemberintheorganizationrequest'
@@ -1468,16 +1393,7 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
@@ -1517,7 +1433,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/Updateamembersroleintheorganizationrequest'
@@ -1555,22 +1471,14 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '204':
           description: ''
           headers: {}
           content: {}
       deprecated: false
+
   /org/{orgId}/provision:
     post:
       tags:
@@ -1580,7 +1488,6 @@ paths:
         This endpoint allows Snyk Admins to provision user access to Snyk Orgs prior to the user login to the Snyk platform, and does not send out invitation emails to the Snyk platform. When the provisioned user logs into Snyk for the first time, the user will automatically be granted the appropriate Snyk org access and role permissions specified in the API call. This endpoint can be called multiple times to provision a user to multiple Snyk orgs. The API token used requires Org Admin permisisons, and must be part of a Snyk group with a valid SSO connection.  Service accounts are restricted from invoking this API. As this endpoint can only be used to provision new users, if a user has already logged into Snyk, this endpoint will not work to provision user access
 
         #### Required permissions
-
 
         - `Provision User`
       operationId: Provisionausertotheorganization
@@ -1594,46 +1501,57 @@ paths:
             type: string
             example: 25065eb1-109c-4c3e-9503-68fc56ef6f44
       requestBody:
-        description: ''
+        description: 'Details for user to be provisioned'
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
-              type: string
-              example: >-
-                + Attributes (object)
-                    + email (string, required) - The email of the user.
-                    + rolePublicId (string) - ID of the role to grant this user.
-                    + role (string) - Deprecated. Name of the role to grant this user. Must be one of `ADMIN`, `COLLABORATOR`, or `RESTRICTED_COLLABORATOR`. This field is invalid if `rolePublicId` is supplied with the request.
-            example: >-
-              + Attributes (object)
-                  + email (string, required) - The email of the user.
-                  + rolePublicId (string) - ID of the role to grant this user.
-                  + role (string) - Deprecated. Name of the role to grant this user. Must be one of `ADMIN`, `COLLABORATOR`, or `RESTRICTED_COLLABORATOR`. This field is invalid if `rolePublicId` is supplied with the request.
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: The email of the user.
+                  example: 'example@snyk.io'
+                rolePublicId:
+                  type: string
+                  description: ID of the role to grant this user.
+                  example: ''
+                role: 
+                  type: string
+                  description: Deprecated. Name of the role to grant this user. Must be one of `ADMIN`, `COLLABORATOR`, or `RESTRICTED_COLLABORATOR`. This field is invalid if `rolePublicId` is supplied with the request.
+                  example: ''
+              required: 
+                - email
         required: true
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Provisionausertotheorganizationresponse'
-                  - example:
-                      email: ''
-                      role: ''
-                      rolePublicId: ''
-                      created: ''
-              example:
-                email: ''
-                role: ''
-                rolePublicId: ''
-                created: ''
+                type: object
+                properties:
+                  email:
+                    type: string
+                    description: The email of the user.
+                    example: ''
+                  role:
+                    type: string
+                    description: Name of the role granted for this user.
+                    example: ''
+                  rolePublicId:
+                    type: string
+                    description: ID of the role to granted for this user.
+                    example: ''
+                  created:
+                    type: string
+                    description: Timestamp of when this provision record was created.
+                    example: ''
         '403':
           description: Provided `API_KEY` has no user provision permission or does not have permissions in role being provisioned.
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
                 description: Provided `API_KEY` has no user provision permission or does not have permissions in role being provisioned.
@@ -1647,7 +1565,6 @@ paths:
 
         #### Required permissions
 
-
         - `Provision User`
       operationId: Listpendinguserprovisions
       parameters:
@@ -1659,42 +1576,22 @@ paths:
           schema:
             type: string
             example: 25065eb1-109c-4c3e-9503-68fc56ef6f44
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: array
                 items:
                   $ref: '#/components/schemas/Listpendinguserprovisionsresponse'
                 description: ''
-                example:
-                  - email: ''
-                    role: ''
-                    rolePublicId: ''
-                    created: ''
-              example:
-                - email: ''
-                  role: ''
-                  rolePublicId: ''
-                  created: ''
         '403':
           description: Provided `API_KEY` has no user provision permission or does not have permissions in role being provisioned.
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
                 description: Provided `API_KEY` has no user provision permission or does not have permissions in role being provisioned.
@@ -1708,7 +1605,6 @@ paths:
 
         #### Required permissions
 
-
         - `Provision User`
       operationId: Deletependinguserprovision
       parameters:
@@ -1720,29 +1616,19 @@ paths:
           schema:
             type: string
             example: 25065eb1-109c-4c3e-9503-68fc56ef6f44
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Deletependinguserprovisionresponse'
-                  - example:
-                      ok: false
-              example:
-                ok: false
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    description: Deletion succeeded.
+                    example: false
         '403':
           description: Provided `API_KEY` has no user provision permission or does not have permissions in role being provisioned.
           headers: {}
@@ -1756,9 +1642,7 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
-
 
         - `View Integrations`
       operationId: List
@@ -1771,28 +1655,21 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: object
-                example:
-                  github: 9a3e5d90-b782-468a-a042-9a2073736f0b
-                  gitlab: 1b3e3d90-c678-347a-n232-6a3453738h1e
-                  bitbucket-cloud: 6jje4c92-e7rn-t59a-f456-8n5675432fe9
+                properties:
+                  github:
+                    type: string
+                  gitlab:
+                    type: string
+                  bitbucket-cloud:
+                    type: string
               example:
                 github: 9a3e5d90-b782-468a-a042-9a2073736f0b
                 gitlab: 1b3e3d90-c678-347a-n232-6a3453738h1e
@@ -1805,15 +1682,11 @@ paths:
       description: >-
         Add new integration for given organization.
 
-
         #### Required permissions
-
 
         - `View Organization`
 
-
         - `View Integrations`
-
 
         - `Edit Integrations`
       operationId: Addnewintegration
@@ -1827,23 +1700,23 @@ paths:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
       requestBody:
-        description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
-              $ref: '#/components/schemas/Addnewintegrationrequest'
+              oneOf:
+                - $ref: '#/components/schemas/AddNewIntegrationWithCredentialsRequest'
+                - $ref: '#/components/schemas/AddNewIntegrationWithBrokerRequest'
         required: true
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Addnewintegrationresponse'
-                  - example:
-                      id: 9a3e5d90-b782-468a-a042-9a2073736f0b
+                $ref: '#/components/schemas/Addnewintegrationresponse'
+              example:
+                id: 9a3e5d90-b782-468a-a042-9a2073736f0b
       deprecated: false
   /org/{orgId}/integrations/{integrationId}:
     put:
@@ -1851,32 +1724,23 @@ paths:
         - Integrations
       summary: Update existing integration
       description: >-
-        + Update integration's credentials for given organization. Integration must be **not brokered**
+        - Update integration’s credentials for given organization. Integration must be **not brokered**
 
-
-        + Enable or disable brokered integration for given organization. *Credentials required for disabling brokered integration*
-
+        - Enable or disable brokered integration for given organization. *Credentials required for disabling brokered integration*
 
         Examples:
 
-
         - [Set up a broker for an existing integration](https://docs.snyk.io/snyk-api/api-endpoints-index-and-tips/examples-for-the-update-existing-integration-endpoint#set-up-broker-for-an-existing-integration)
 
-
         - [Update credentials for an existing non-brokered integration](https://docs.snyk.io/snyk-api/api-endpoints-index-and-tips/examples-for-the-update-existing-integration-endpoint#update-credentials-for-an-existing-non-brokered-integration)
-
-
+        
         - [Disable broker for an existing integration](https://docs.snyk.io/snyk-api/api-endpoints-index-and-tips/examples-for-the-update-existing-integration-endpoint#disable-broker-for-an-existing-integration)
-
 
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Integrations`
-
 
         - `Edit Integrations`
       operationId: Updateexistingintegration
@@ -1900,14 +1764,12 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
-              allOf:
+              oneOf:
                 - $ref: '#/components/schemas/Updateexistingintegrationrequest'
-                - example:
-                    type: github
-                    broker:
-                      enabled: true
+                - $ref: '#/components/schemas/Updateexistingintegrationrequest1'
+                - $ref: '#/components/schemas/Updateexistingintegrationrequest2'
             examples:
               setupExistingIntegration:
                 summary: Set up a broker for an existing integration
@@ -1935,7 +1797,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Updateexistingintegrationresponse'
@@ -1951,15 +1813,11 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
-
 
         - `View Integrations`
 
-
         - `Edit Integrations`
-
 
         Removes any credentials set for this integration. If this is a brokered connection the operation will have no effect.
       operationId: Deletecredentials
@@ -1980,16 +1838,6 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -2004,21 +1852,15 @@ paths:
       description: >-
         Issue a new and unique provisional broker token for the brokered integration.
 
-
         Used for zero down-time token rotation with the Snyk Broker. Once provisioned, the token can be used to initialize a new broker client before using the switch API to update the token in use by the integration.
-
 
         The new provisional token will fail to be created if the integration, or any other integration in the same group, already has one provisioned.
 
-
         #### Required permissions
-
 
         - `View Organization`
 
-
         - `View Integrations`
-
 
         - `Edit Integrations`
       operationId: Provisionnewbrokertoken
@@ -2039,28 +1881,17 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Provisionnewbrokertokenresponse'
-                  - example:
-                      id: 9a3e5d90-b782-468a-a042-9a2073736f0b
-                      provisionalBrokerToken: 4a18d42f-0706-4ad0-b127-24078731fbed
+                $ref: '#/components/schemas/Provisionnewbrokertokenresponse'
+              example:
+                id: 9a3e5d90-b782-468a-a042-9a2073736f0b
+                provisionalBrokerToken: 4a18d42f-0706-4ad0-b127-24078731fbed
       deprecated: false
   /org/{orgId}/integrations/{integrationId}/authentication/switch-token:
     post:
@@ -2074,15 +1905,11 @@ paths:
 
         This action will fail if there is no token provisioned for this integration or any integration in the same group.
 
-
         #### Required permissions
-
 
         - `View Organization`
 
-
         - `View Integrations`
-
 
         - `Edit Integrations`
       operationId: Switchbetweenbrokertokens
@@ -2103,16 +1930,6 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -2129,18 +1946,13 @@ paths:
 
         This API supports both brokered and non-brokered integrations.
 
-
         Use this API for when you want to share a Broker token between several Snyk organizations (integrations).
-
 
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Integrations`
-
 
         - `Edit Integrations`
       operationId: Cloneanintegration(withsettingsandcredentials)
@@ -2166,10 +1978,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Cloneanintegrationwithsettingsandcredentialsrequest'
-                - example:
-                    destinationOrgPublicId: 9a3e5d90-b782-468a-a042-9a2073736f0b1
+              $ref: '#/components/schemas/Cloneanintegrationwithsettingsandcredentialsrequest'
             example:
               destinationOrgPublicId: 9a3e5d90-b782-468a-a042-9a2073736f0b1
         required: true
@@ -2178,12 +1987,9 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Cloneanintegrationwithsettingsandcredentialsresponse'
-                  - example:
-                      newIntegrationId: 9a3e5d90-b782-468a-a042-9a2073736f0b
+                $ref: '#/components/schemas/Cloneanintegrationwithsettingsandcredentialsresponse'
               example:
                 newIntegrationId: 9a3e5d90-b782-468a-a042-9a2073736f0b
       deprecated: false
@@ -2196,6 +2002,7 @@ paths:
         #### Required permissions
 
         - `View Organization`
+
         - `View Integrations`
       operationId: Getexistingintegrationbytype
       parameters:
@@ -2213,31 +2020,16 @@ paths:
           required: true
           style: simple
           schema:
-            allOf:
-              - $ref: '#/components/schemas/IntegrationType'
-              - description: Integration type.
-                example: github
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+            $ref: '#/components/schemas/IntegrationType'
+          example: github
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Getexistingintegrationbytyperesponse'
-                  - example:
-                      id: 9a3e5d90-b782-468a-a042-9a2073736f0b
+                $ref: '#/components/schemas/Getexistingintegrationbytyperesponse'
               example:
                 id: 9a3e5d90-b782-468a-a042-9a2073736f0b
       deprecated: false
@@ -2245,13 +2037,11 @@ paths:
     get:
       tags:
         - Integrations
-      summary: Retrieve
+      summary: Get Integration Settings
       description: >-
         #### Required permissions
 
-
         - `View Organization`
-
 
         - `View Integrations`
       operationId: Retrieve
@@ -2272,38 +2062,25 @@ paths:
           schema:
             type: string
             example: 9a3e5d90-b782-468a-a042-9a2073736f0b
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Integrationsettings'
       deprecated: false
     put:
       tags:
         - Integrations
-      summary: Update
+      summary: Update Integration Settings
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Integrations`
-
 
         - `Edit Integrations`
       operationId: Update
@@ -2327,27 +2104,9 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Integrationsettings'
-                - example:
-                    autoDepUpgradeLimit: 2
-                    autoDepUpgradeIgnoredDependencies: []
-                    autoDepUpgradeEnabled: false
-                    autoDepUpgradeMinAge: 21
-                    pullRequestTestEnabled: true
-                    pullRequestFailOnAnyVulns: false
-                    pullRequestFailOnlyForHighSeverity: true
-                    pullRequestAssignment: '{"enabled":true,"type":"manual","assignees":["username"]}'
-                    autoRemediationPrs:
-                      backlogPrsEnabled: false
-                      backlogPrStrategy: vuln
-                      freshPrsEnabled: true
-                      usePatchRemediation: false
-                    manualRemediationPrs:
-                      useManualPatchRemediation: false
-                    dockerfileSCMEnabled: true
+              $ref: '#/components/schemas/Integrationsettings'
             example:
               autoDepUpgradeLimit: 2
               autoDepUpgradeIgnoredDependencies: []
@@ -2371,27 +2130,9 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Integrationsettings'
-                  - example:
-                      autoDepUpgradeLimit: 2
-                      autoDepUpgradeIgnoredDependencies: []
-                      autoDepUpgradeEnabled: false
-                      autoDepUpgradeMinAge: 21
-                      pullRequestTestEnabled: true
-                      pullRequestFailOnAnyVulns: false
-                      pullRequestFailOnlyForHighSeverity: true
-                      pullRequestAssignment: '{"enabled":true,"type":"manual","assignees":["username"]}'
-                      autoRemediationPrs:
-                        backlogPrsEnabled: false
-                        backlogPrStrategy: vuln
-                        freshPrsEnabled: true
-                        usePatchRemediation: false
-                      manualRemediationPrs:
-                        useManualPatchRemediation: false
-                      dockerfileSCMEnabled: true
+                $ref: '#/components/schemas/Integrationsettings'
               example:
                 autoDepUpgradeLimit: 2
                 autoDepUpgradeIgnoredDependencies: []
@@ -2415,7 +2156,7 @@ paths:
       tags:
         - Import Projects
       summary: Import targets
-      description: Request a [target](https://docs.snyk.io/getting-started/introduction-to-snyk-projects#targets) to be analyzed for supported Snyk projects via a configured [integration](https://docs.snyk.io/integrations). See the [Integrations API](https://snyk.docs.apiary.io/#reference/integrations) to configure a new integration.
+      description: Request a [target](https://docs.snyk.io/getting-started/introduction-to-snyk-projects#targets) to be analyzed for supported Snyk projects via a configured [integration](https://docs.snyk.io/integrations). See the [Integrations API](https://docs.snyk.io/snyk-api/reference/integrations-v1) to configure a new integration.
       operationId: Importtargets
       parameters:
         - name: orgId
@@ -2437,36 +2178,29 @@ paths:
       requestBody:
         description: 'Note: Importing targets through a Github (Cloud) integration requires the use of a [Snyk personal access/api token](https://app.snyk.io/account).'
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Importtargetsrequest'
-                - description: 'Note: Importing targets through a Github (Cloud) integration requires the use of a [Snyk personal access/api token](https://app.snyk.io/account).'
-                  example:
-                    target:
-                      owner: org-security
-                      name: goof
-                      branch: main
-                    files:
-                      - path: example/package.json
-            example:
-              target:
-                owner: org-security
-                name: goof
-                branch: main
-              files:
-                - path: example/package.json
+              oneOf:
+                - $ref: '#/components/schemas/GithubAndGithubEnterpriseImportRequest'
+                - $ref: '#/components/schemas/AzureReposImportRequest'
+                - $ref: '#/components/schemas/GitLabImportRequest'
+                - $ref: '#/components/schemas/BitbucketCloudImportRequest'
+                - $ref: '#/components/schemas/BitbucketServerImportRequest'
+                - $ref: '#/components/schemas/HerokoImportRequest'
+                - $ref: '#/components/schemas/AWSLambdaImportRequest'
+                - $ref: '#/components/schemas/CloudFoundryPivotalIBMCloudImportRequest'
+                - $ref: '#/components/schemas/DockerHubImportRequest'
+                - $ref: '#/components/schemas/AzureCRElasticCRArtifactoryCRNexusImportRequest'
+                - $ref: '#/components/schemas/GoogleCRGoogleARHarborDigitalOceanCRQuayGitlabCRGithubCRImportRequest'
         required: true
       responses:
         '201':
           description: ''
           headers:
             Location:
-              content:
-                text/plain:
-                  schema:
-                    type: string
-                  example: URL for the status API call of the import
+              schema:
+                type: string
+              example: URL for the status API call of the import
           content: {}
       deprecated: false
   /org/{orgId}/integrations/{integrationId}/import/{jobId}:
@@ -2474,7 +2208,7 @@ paths:
       tags:
         - Import Projects
       summary: Get import job details
-      description: ''
+      description: 'Get import job details'
       operationId: Getimportjobdetails
       parameters:
         - name: orgId
@@ -2501,48 +2235,14 @@ paths:
           schema:
             type: string
             example: 1a325d9d-b782-468a-a242-9a2073734f0b
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Getimportjobdetailsresponse'
-                  - example:
-                      id: dce061f7-ce0f-4ccf-b49b-4335d1205bd9
-                      status: pending
-                      created: 2018-07-23T15:21:10.611Z
-                      logs:
-                        - name: org1/repo1
-                          created: 2018-07-23T15:21:10.643Z
-                          status: failed
-                          projects: []
-                        - name: org2/repo2
-                          created: 2018-07-23T15:21:10.644Z
-                          status: complete
-                          projects:
-                            - targetFile: package.json
-                              success: true
-                              projectUrl: https://api.snyk.io/v1/org/org-name/project/7eeaee25-5f9b-4d05-8818-4cca2c9d9adc
-                        - name: org3/repo3
-                          created: 2018-07-23T15:21:10.643Z
-                          status: pending
-                          projects:
-                            - targetFile: package.json
-                              success: true
-                              projectUrl: https://api.snyk.io/v1/org/org-name/project/0382897c-0617-4429-86df-51187dfd42f6
+                $ref: '#/components/schemas/Getimportjobdetailsresponse'
               example:
                 id: dce061f7-ce0f-4ccf-b49b-4335d1205bd9
                 status: pending
@@ -2567,6 +2267,7 @@ paths:
                         success: true
                         projectUrl: https://api.snyk.io/v1/org/org-name/project/0382897c-0617-4429-86df-51187dfd42f6
       deprecated: false
+
   /org/{orgId}/project/{projectId}:
     get:
       tags:
@@ -2575,12 +2276,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: Retrieveasingleproject
@@ -2601,22 +2299,12 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Project'
       deprecated: false
@@ -2627,12 +2315,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Edit Project`
       operationId: Updateaproject
@@ -2658,12 +2343,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Updateaprojectrequest'
-                - example:
-                    owner:
-                      id: 1acd4d09-5602-4d04-9640-045fe928aaea
-                    branch: main
+              $ref: '#/components/schemas/Updateaprojectrequest'
             example:
               owner:
                 id: 1acd4d09-5602-4d04-9640-045fe928aaea
@@ -2674,7 +2354,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Project'
       deprecated: false
@@ -2685,12 +2365,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Remove Project`
       operationId: Deleteaproject
@@ -2711,16 +2388,6 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -2731,31 +2398,23 @@ paths:
     post:
       tags:
         - Projects
-      summary: Deactivate
+      summary: Deactivate a project
       description: >-
         Deactivating a project will:
 
-
         - Disable pull request tests for new vulnerabilities.
-
 
         - Disable Fix pull request from being opened for newly disclosed vulnerabilities.
 
-
         - Disable recurring tests - email alerts about newly disclosed vulnerabilities will be turned off.
-
 
         - If the repository has no other active projects, then remove any webhooks related to the project.
 
-
         #### Required permissions
-
 
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Project Status`
       operationId: Deactivate
@@ -2776,16 +2435,6 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -2796,31 +2445,23 @@ paths:
     post:
       tags:
         - Projects
-      summary: Activate
+      summary: Activate a project
       description: >-
         Activating a project will:
 
-
         - Add a repository webhook for supported integrations.
-
 
         - Enable pull request tests for new vulnerabilities.
 
-
         - Open Fix pull request for newly disclosed vulnerabilities.
-
 
         - Enable recurring tests, sending email alerts about newly disclosed vulnerabilities.
 
-
         #### Required permissions
-
 
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Project Status`
       operationId: Activate
@@ -2841,16 +2482,6 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -2865,9 +2496,7 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: ListallAggregatedissues
@@ -2893,11 +2522,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Aggregatedprojectissuesfilters'
-                - example:
-                    includeDescription: false
-                    includeIntroducedThrough: false
+              $ref: '#/components/schemas/Aggregatedprojectissuesfilters'
             example:
               includeDescription: false
               includeIntroducedThrough: false
@@ -2907,7 +2532,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Aggregatedprojectissues'
       deprecated: false
@@ -2919,9 +2544,7 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: Listallprojectissuepaths
@@ -2976,16 +2599,6 @@ paths:
             type: number
             format: double
             example: 2
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
@@ -2997,52 +2610,9 @@ paths:
                     type: string
                   example: <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/issue/SNYK-JS-LODASH-590103?snapshotId=6d5813be-7e6d-4ab8-80c2-1e3e2a454553&page=1&perPage=3>; rel=prev, <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/issue/SNYK-JS-LODASH-590103?snapshotId=6d5813be-7e6d-4ab8-80c2-1e3e2a454553&page=3&perPage=3>; rel=next, <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/issue/SNYK-JS-LODASH-590103?snapshotId=6d5813be-7e6d-4ab8-80c2-1e3e2a454553&page=4&perPage=3>; rel=last
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Issuepaths'
-                  - example:
-                      snapshotId: 6d5813be-7e6d-4ab8-80c2-1e3e2a454553
-                      paths:
-                        - - name: tap
-                            version: 11.1.5
-                          - name: nyc
-                            version: 11.9.0
-                          - name: istanbul-lib-instrument
-                            version: 1.10.1
-                          - name: babel-traverse
-                            version: 6.26.0
-                          - name: lodash
-                            version: 4.17.10
-                        - - name: tap
-                            version: 11.1.5
-                            fixVersion: 11.1.5
-                          - name: nyc
-                            version: 11.9.0
-                          - name: istanbul-lib-instrument
-                            version: 1.10.1
-                          - name: babel-template
-                            version: 6.26.0
-                          - name: lodash
-                            version: 4.17.10
-                        - - name: tap
-                            version: 11.1.5
-                            fixVersion: 11.1.6
-                          - name: nyc
-                            version: 11.9.0
-                          - name: istanbul-lib-instrument
-                            version: 1.10.1
-                          - name: babel-generator
-                            version: 6.26.1
-                          - name: babel-types
-                            version: 6.26.0
-                          - name: lodash
-                            version: 4.17.10
-                      total: 10
-                      links:
-                        prev: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/issue/SNYK-JS-LODASH-590103?snapshotId=6d5813be-7e6d-4ab8-80c2-1e3e2a454553&page=1&perPage=3
-                        next: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/issue/SNYK-JS-LODASH-590103?snapshotId=6d5813be-7e6d-4ab8-80c2-1e3e2a454553&page=3&perPage=3
-                        last: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/issue/SNYK-JS-LODASH-590103?snapshotId=6d5813be-7e6d-4ab8-80c2-1e3e2a454553&page=4&perPage=3
+                $ref: '#/components/schemas/Issuepaths'
               example:
                 snapshotId: 6d5813be-7e6d-4ab8-80c2-1e3e2a454553
                 paths:
@@ -3067,19 +2637,6 @@ paths:
                       version: 6.26.0
                     - name: lodash
                       version: 4.17.10
-                  - - name: tap
-                      version: 11.1.5
-                      fixVersion: 11.1.6
-                    - name: nyc
-                      version: 11.9.0
-                    - name: istanbul-lib-instrument
-                      version: 1.10.1
-                    - name: babel-generator
-                      version: 6.26.1
-                    - name: babel-types
-                      version: 6.26.0
-                    - name: lodash
-                      version: 4.17.10
                 total: 10
                 links:
                   prev: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/issue/SNYK-JS-LODASH-590103?snapshotId=6d5813be-7e6d-4ab8-80c2-1e3e2a454553&page=1&perPage=3
@@ -3096,12 +2653,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: Listallprojectsnapshots
@@ -3145,11 +2699,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Projectsnapshotsfilters'
-                - example:
-                    filters:
-                      imageId: sha256:a368cbcfa6789bc347345f6d78902afe138b62ff5373d2aa5f37120277c90a67
+              $ref: '#/components/schemas/Projectsnapshotsfilters'
             example:
               filters:
                 imageId: sha256:a368cbcfa6789bc347345f6d78902afe138b62ff5373d2aa5f37120277c90a67
@@ -3165,51 +2715,9 @@ paths:
                     type: string
                   example: <https://api.snyk.io/v1/org/2d5c4d0c-c6d6-4658-a703-c2721c135b26/project/84dc70ad-eea9-468d-ae43-f0966ba12c99/history?page=3&perPage=100>; rel=last, <https://api.snyk.io/v1/org/2d5c4d0c-c6d6-4658-a703-c2721c135b26/project/84dc70ad-eea9-468d-ae43-f0966ba12c99/history?page=2&perPage=100>; rel=next
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Projectsnapshots'
-                  - example:
-                      snapshots:
-                        - id: 6d5813be-7e6d-4ab8-80c2-1e3e2a454545
-                          created: 2019-02-05T06:21:00.000Z
-                          totalDependencies: 438
-                          issueCounts:
-                            vuln:
-                              low: 8
-                              medium: 15
-                              high: 13
-                              critical: 0
-                            license:
-                              low: 8
-                              medium: 15
-                              high: 13
-                              critical: 0
-                          imageId: sha256:a368cbcfa6789bc347345f6d78902afe138b62ff5373d2aa5f37120277c90a67
-                          imageTag: latest
-                          imagePlatform: linux/amd64
-                          baseImageName: fedora:32
-                          method: web-test
-                        - id: 6d5813be-7e6d-4ab8-80c2-1e3e2a454553
-                          created: 2019-02-04T06:19:00.000Z
-                          totalDependencies: 438
-                          issueCounts:
-                            vuln:
-                              low: 8
-                              medium: 15
-                              high: 13
-                              critical: 0
-                            license:
-                              low: 8
-                              medium: 15
-                              high: 13
-                              critical: 0
-                          imageId: sha256:a368cbcfa6789bc347345f6d78902afe138b62ff5373d2aa5f37120277c90a67
-                          imageTag: latest
-                          imagePlatform: linux/amd64
-                          baseImageName: fedora:32
-                          method: web-test
-                      total: 2
+                $ref: '#/components/schemas/Projectsnapshots'
               example:
                 snapshots:
                   - id: 6d5813be-7e6d-4ab8-80c2-1e3e2a454545
@@ -3231,26 +2739,7 @@ paths:
                     imagePlatform: linux/amd64
                     baseImageName: fedora:32
                     method: web-test
-                  - id: 6d5813be-7e6d-4ab8-80c2-1e3e2a454553
-                    created: 2019-02-04T06:19:00.000Z
-                    totalDependencies: 438
-                    issueCounts:
-                      vuln:
-                        low: 8
-                        medium: 15
-                        high: 13
-                        critical: 0
-                      license:
-                        low: 8
-                        medium: 15
-                        high: 13
-                        critical: 0
-                    imageId: sha256:a368cbcfa6789bc347345f6d78902afe138b62ff5373d2aa5f37120277c90a67
-                    imageTag: latest
-                    imagePlatform: linux/amd64
-                    baseImageName: fedora:32
-                    method: web-test
-                total: 2
+                total: 1
       deprecated: false
   /org/{orgId}/project/{projectId}/history/{snapshotId}/aggregated-issues:
     post:
@@ -3262,12 +2751,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: Listallprojectsnapshotaggregatedissues
@@ -3301,11 +2787,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Aggregatedprojectissuesfilters'
-                - example:
-                    includeDescription: false
-                    includeIntroducedThrough: false
+              $ref: '#/components/schemas/Aggregatedprojectissuesfilters'
             example:
               includeDescription: false
               includeIntroducedThrough: false
@@ -3315,7 +2797,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Aggregatedprojectissues'
       deprecated: false
@@ -3329,12 +2811,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: Listallprojectsnapshotissuepaths
@@ -3389,73 +2868,18 @@ paths:
             type: number
             format: double
             example: 2
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
           headers:
             Link:
-              content:
-                text/plain:
-                  schema:
-                    type: string
-                  example: <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=1&perPage=3>; rel=prev, <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=3&perPage=3>; rel=next, <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=4&perPage=3>; rel=last
-          content:
-            application/json; charset=utf-8:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Issuepaths'
-                  - example:
-                      snapshotId: 6d5813be-7e6d-4ab8-80c2-1e3e2a454553
-                      paths:
-                        - - name: tap
-                            version: 11.1.5
-                          - name: nyc
-                            version: 11.9.0
-                          - name: istanbul-lib-instrument
-                            version: 1.10.1
-                          - name: babel-traverse
-                            version: 6.26.0
-                          - name: lodash
-                            version: 4.17.10
-                        - - name: tap
-                            version: 11.1.5
-                            fixVersion: 11.1.5
-                          - name: nyc
-                            version: 11.9.0
-                          - name: istanbul-lib-instrument
-                            version: 1.10.1
-                          - name: babel-template
-                            version: 6.26.0
-                          - name: lodash
-                            version: 4.17.10
-                        - - name: tap
-                            version: 11.1.5
-                            fixVersion: 11.1.6
-                          - name: nyc
-                            version: 11.9.0
-                          - name: istanbul-lib-instrument
-                            version: 1.10.1
-                          - name: babel-generator
-                            version: 6.26.1
-                          - name: babel-types
-                            version: 6.26.0
-                          - name: lodash
-                            version: 4.17.10
-                      total: 10
-                      links:
-                        prev: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=1&perPage=3
-                        next: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=3&perPage=3
-                        last: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=4&perPage=3
+                type: string
+              example: <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=1&perPage=3>; rel=prev, <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=3&perPage=3>; rel=next, <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=4&perPage=3>; rel=last
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Issuepaths'
               example:
                 snapshotId: 6d5813be-7e6d-4ab8-80c2-1e3e2a454553
                 paths:
@@ -3480,19 +2904,6 @@ paths:
                       version: 6.26.0
                     - name: lodash
                       version: 4.17.10
-                  - - name: tap
-                      version: 11.1.5
-                      fixVersion: 11.1.6
-                    - name: nyc
-                      version: 11.9.0
-                    - name: istanbul-lib-instrument
-                      version: 1.10.1
-                    - name: babel-generator
-                      version: 6.26.1
-                    - name: babel-types
-                      version: 6.26.0
-                    - name: lodash
-                      version: 4.17.10
                 total: 10
                 links:
                   prev: https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/project/6d5813be-7e6d-4ab8-80c2-1e3e2a454545/history/6d5813be-7e6d-4ab8-80c2-1e3e2a454553/issue/SNYK-JS-LODASH-590103?page=1&perPage=3
@@ -3507,12 +2918,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: GetProjectdependencygraph
@@ -3533,66 +2941,17 @@ paths:
           schema:
             type: string
             example: 6d5813be-7e6d-4ab8-80c2-1e3e2a454545
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: >-
             * A reference implementation of the graph, as well as conversion functions to/from legacy tree format, can be found at: https://github.com/snyk/dep-graph.
 
-
             * The object might contain additional fields in the future, in a backward-compatible way (`schemaVersion` will change accordingly).
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Projectdependencygraph'
-                  - description: >-
-                      * A reference implementation of the graph, as well as conversion functions to/from legacy tree format, can be found at: https://github.com/snyk/dep-graph.
-
-
-                      * The object might contain additional fields in the future, in a backward-compatible way (`schemaVersion` will change accordingly).
-                    example:
-                      depGraph:
-                        schemaVersion: 1.1.0
-                        pkgManager:
-                          name: npm
-                        pkgs:
-                          - id: demo-app-for-test@1.1.1
-                            info:
-                              name: demo-app-for-test
-                              version: 1.1.1
-                          - id: express@4.4.0
-                            info:
-                              name: express
-                              version: 4.4.0
-                          - id: ws@1.0.0
-                            info:
-                              name: ws
-                              version: 1.0.0
-                        graph:
-                          rootNodeId: root-node
-                          nodes:
-                            - nodeId: root-node
-                              pkgId: demo-app-for-test@1.1.1
-                              deps:
-                                - nodeId: express@4.4.0
-                                - nodeId: ws@1.0.0
-                            - nodeId: express@4.4.0
-                              pkgId: express@4.4.0
-                              deps: []
-                            - nodeId: ws@1.0.0
-                              pkgId: ws@1.0.0
-                              deps: []
+                $ref: '#/components/schemas/Projectdependencygraph'
               example:
                 depGraph:
                   schemaVersion: 1.1.0
@@ -3636,17 +2995,15 @@ paths:
       description: >-
         Ignores from `.snyk` files are not included here.
 
-        Ignores from Policies are not included here.Temporary ignores include an `expires` attribute, while permanent ignores do not.
+        Ignores from Policies are not included here.
 
+        Temporary ignores include an `expires` attribute, while permanent ignores do not.
 
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Ignores`
       operationId: Listallignores
@@ -3667,22 +3024,12 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Allignores'
       deprecated: false
@@ -3694,15 +3041,13 @@ paths:
         category: Ignores
       summary: Retrieve ignore
       description: >-
-        It is possible to modify/retrieve ignored [vulnerability](https://snyk.docs.apiary.io/#introduction/overview-and-entities/vulnerability) or [license](https://snyk.docs.apiary.io/#introduction/overview-and-entities/license-issue) issues for a given organization and project.
+        It is possible to modify/retrieve ignored vulnerability or license issues for a given organization and project.
 
         Ignores from `.snyk` files are not included here
 
         #### Required permissions
 
-
         - `View Project`
-
 
         - `View Project Ignores`
       operationId: Retrieveignore
@@ -3730,23 +3075,13 @@ paths:
           style: simple
           schema:
             type: string
-            example: npm:qs:20140806-1
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+            example: SNYK-JS-QS-10019
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Ignore'
       deprecated: false
@@ -3757,18 +3092,15 @@ paths:
         category: Ignores
       summary: Add ignore
       description: >-
-        It is possible to modify/retrieve ignored [vulnerability](https://snyk.docs.apiary.io/#introduction/overview-and-entities/vulnerability) or [license](https://snyk.docs.apiary.io/#introduction/overview-and-entities/license-issue) issues for a given organization and project.
+        It is possible to modify/retrieve ignored vulnerability or license issues for a given organization and project.
 
         Ignores from `.snyk` files are not included here
 
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project Ignores`
-
 
         - `Create new project ignores`
       operationId: Addignore
@@ -3796,20 +3128,13 @@ paths:
           style: simple
           schema:
             type: string
-            example: npm:qs:20140806-1
+            example: SNYK-JS-QS-10019
       requestBody:
         description: ''
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Ignorerule'
-                - example:
-                    ignorePath: ''
-                    reason: ''
-                    reasonType: not-vulnerable
-                    disregardIfFixable: false
-                    expires: ''
+              $ref: '#/components/schemas/Ignorerule'
             example:
               ignorePath: ''
               reason: ''
@@ -3822,7 +3147,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Ignore'
       deprecated: false
@@ -3833,18 +3158,15 @@ paths:
         category: Ignores
       summary: Replace ignores
       description: >-
-        It is possible to modify/retrieve ignored [vulnerability](https://snyk.docs.apiary.io/#introduction/overview-and-entities/vulnerability) or [license](https://snyk.docs.apiary.io/#introduction/overview-and-entities/license-issue) issues for a given organization and project.
+        It is possible to modify/retrieve ignored vulnerability or license issues for a given organization and project.
 
         Ignores from `.snyk` files are not included here
 
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project Ignores`
-
 
         - `Edit Project Ignores`
       operationId: Replaceignores
@@ -3872,7 +3194,7 @@ paths:
           style: simple
           schema:
             type: string
-            example: npm:qs:20140806-1
+            example: SNYK-JS-QS-10019
       requestBody:
         description: ''
         content:
@@ -3881,13 +3203,6 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/Ignorerules'
-              description: ''
-              example:
-                - ignorePath: ''
-                  reason: ''
-                  reasonType: not-vulnerable
-                  disregardIfFixable: false
-                  expires: ''
             example:
               - ignorePath: ''
                 reason: ''
@@ -3900,12 +3215,11 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: array
                 items:
                   $ref: '#/components/schemas/Ignore'
-                description: ''
       deprecated: false
     delete:
       tags:
@@ -3914,18 +3228,15 @@ paths:
         category: Ignores
       summary: Delete ignores
       description: >-
-        It is possible to modify/retrieve ignored [vulnerability](https://snyk.docs.apiary.io/#introduction/overview-and-entities/vulnerability) or [license](https://snyk.docs.apiary.io/#introduction/overview-and-entities/license-issue) issues for a given organization and project.
+        It is possible to modify/retrieve ignored vulnerability or license issues for a given organization and project.
 
         Ignores from `.snyk` files are not included here
 
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project Ignores`
-
 
         - `Remove Project Ignores`
       operationId: Deleteignores
@@ -3953,17 +3264,7 @@ paths:
           style: simple
           schema:
             type: string
-            example: npm:qs:20140806-1
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+            example: SNYK-JS-QS-10019
       responses:
         '200':
           description: ''
@@ -3980,14 +3281,11 @@ paths:
       description: >-
         If you have configured an integration with Jira, it is possible to create Jira issues for project vulnerabilities or license issues directly from the Snyk API.
 
-
         The Jira integration is available to customers on the pro or enterprise plan.
-
 
         At the moment, the usage of the Jira integration via the API is not supported for Snyk Infrastructure as Code
 
         #### Required permissions
-
 
         - `View Jira issues`
       operationId: Listalljiraissues
@@ -4008,22 +3306,12 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Alljiraissues'
       deprecated: false
@@ -4037,14 +3325,11 @@ paths:
       description: >-
         If you have configured an integration with Jira, it is possible to create Jira issues for project vulnerabilities or license issues directly from the Snyk API.
 
-
         The Jira integration is available to customers on the pro or enterprise plan.
-
 
         At the moment, the usage of the Jira integration via the API is not supported for Snyk Infrastructure as Code
 
         #### Required permissions
-
 
         - `Create Jira issues`
       operationId: Createjiraissue
@@ -4078,13 +3363,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Jiraissuerequest'
-                - example:
-                    fields:
-                      project: {}
-                      issuetype: {}
-                      summary: ''
+              $ref: '#/components/schemas/Jiraissuerequest'
             example:
               fields:
                 project: {}
@@ -4096,14 +3375,9 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Jiraissue'
-                  - example:
-                      jiraIssue:
-                        id: '10001'
-                        key: EX-1
+                $ref: '#/components/schemas/Jiraissue'
               example:
                 jiraIssue:
                   id: '10001'
@@ -4117,9 +3391,7 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
-
 
         - `View Project`
       operationId: Listprojectsettings
@@ -4140,38 +3412,14 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '200':
           description: The response will contain only attributes that can be updated (see `ATTRIBUTES` section in `Update project settings`) and that have been previously set.
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Projectsettings'
-                  - description: The response will contain only attributes that can be updated (see `ATTRIBUTES` section in `Update project settings`) and that have been previously set.
-                    example:
-                      autoDepUpgradeLimit: 2
-                      autoDepUpgradeIgnoredDependencies:
-                        - tap
-                        - ava
-                      autoDepUpgradeEnabled: false
-                      autoDepUpgradeMinAge: 21
-                      pullRequestFailOnAnyVulns: false
-                      pullRequestFailOnlyForHighSeverity: true
-                      pullRequestTestEnabled: true
-                      pullRequestAssignment: '{"enabled":true,"type":"manual","assignees":["username"]}'
-                      autoRemediationPrs: '{"freshPrsEnabled":true,"backlogPrsEnabled":false,"usePatchRemediation":true}'
+                $ref: '#/components/schemas/Projectsettings'
               example:
                 autoDepUpgradeLimit: 2
                 autoDepUpgradeIgnoredDependencies:
@@ -4192,12 +3440,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Edit Project`
       operationId: Updateprojectsettings
@@ -4223,20 +3468,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Projectsettings'
-                - example:
-                    autoDepUpgradeLimit: 2
-                    autoDepUpgradeIgnoredDependencies:
-                      - tap
-                      - ava
-                    autoDepUpgradeEnabled: false
-                    autoDepUpgradeMinAge: 21
-                    pullRequestFailOnAnyVulns: false
-                    pullRequestFailOnlyForHighSeverity: true
-                    pullRequestTestEnabled: true
-                    pullRequestAssignment: '{"enabled":true,"type":"manual","assignees":["username"]}'
-                    autoRemediationPrs: '{"freshPrsEnabled":true,"backlogPrsEnabled":false,"usePatchRemediation":false}'
+              $ref: '#/components/schemas/Projectsettings'
             example:
               autoDepUpgradeLimit: 2
               autoDepUpgradeIgnoredDependencies:
@@ -4255,23 +3487,9 @@ paths:
           description: The response will contain the attributes and values that have been sent in the request and successfully updated.
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Projectsettings'
-                  - description: The response will contain the attributes and values that have been sent in the request and successfully updated.
-                    example:
-                      autoDepUpgradeLimit: 2
-                      autoDepUpgradeIgnoredDependencies:
-                        - tap
-                        - ava
-                      autoDepUpgradeEnabled: false
-                      autoDepUpgradeMinAge: 21
-                      pullRequestTestEnabled: true
-                      pullRequestFailOnAnyVulns: false
-                      pullRequestFailOnlyForHighSeverity: true
-                      pullRequestAssignment: '{"enabled":true,"type":"manual","assignees":["username"]}'
-                      autoRemediationPrs: '{"freshPrsEnabled":true,"backlogPrsEnabled":false,"usePatchRemediation":false}'
+                $ref: '#/components/schemas/Projectsettings'
               example:
                 autoDepUpgradeLimit: 2
                 autoDepUpgradeIgnoredDependencies:
@@ -4292,15 +3510,11 @@ paths:
       description: >-
         Deleting project settings will set the project to inherit default settings from its integration.
 
-
         #### Required permissions
-
 
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Edit Project`
       operationId: Deleteprojectsettings
@@ -4321,16 +3535,6 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
       responses:
         '204':
           description: ''
@@ -4345,15 +3549,11 @@ paths:
       description: >-
         Note: when moving a project to a new organization, the historical data used for reporting does not move with it.
 
-
         #### Required permissions
-
 
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Move Project`
       operationId: Moveprojecttoadifferentorganization
@@ -4379,10 +3579,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Projectmove'
-                - example:
-                    targetOrgId: 4a18d42f-0706-4ad0-b127-24078731fbed
+              $ref: '#/components/schemas/Projectmove'
             example:
               targetOrgId: 4a18d42f-0706-4ad0-b127-24078731fbed
         required: true
@@ -4391,14 +3588,9 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Moveprojecttoadifferentorganizationresponse'
-                  - example:
-                      originOrg: 4a18d42f-0706-4ad0-b127-24078731fbed
-                      destinationOrg: 4a18d42f-0706-4ad0-b127-24078731fbed
-                      movedProject: 463c1ee5-31bc-428c-b451-b79a3270db08
+                $ref: '#/components/schemas/Moveprojecttoadifferentorganizationresponse'
               example:
                 originOrg: 4a18d42f-0706-4ad0-b127-24078731fbed
                 destinationOrg: 4a18d42f-0706-4ad0-b127-24078731fbed
@@ -4410,11 +3602,7 @@ paths:
         - Projects
       summary: Add a tag to a project
       description: >-
-        ​
-
-
         #### Required permissions
-
 
         - Group Admin
       operationId: Addatagtoaproject
@@ -4440,11 +3628,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Tag'
-                - example:
-                    key: example-tag-key
-                    value: example-tag-value
+              $ref: '#/components/schemas/Tag'
             example:
               key: example-tag-key
               value: example-tag-value
@@ -4454,14 +3638,9 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Addatagtoaprojectresponse'
-                  - example:
-                      tags:
-                        - key: example-tag-key
-                          value: example-tag-value
+                $ref: '#/components/schemas/Addatagtoaprojectresponse'
               example:
                 tags:
                   - key: example-tag-key
@@ -4474,7 +3653,6 @@ paths:
       summary: Remove a tag from a project
       description: >-
         #### Required permissions
-
 
         - Group Admin
       operationId: Removeatagfromaproject
@@ -4500,11 +3678,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Tag'
-                - example:
-                    key: example-tag-key
-                    value: example-tag-value
+              $ref: '#/components/schemas/Tag'
             example:
               key: example-tag-key
               value: example-tag-value
@@ -4514,14 +3688,9 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Removeatagfromaprojectresponse'
-                  - example:
-                      tags:
-                        - key: example-tag-key
-                          value: example-tag-value
+                $ref: '#/components/schemas/Removeatagfromaprojectresponse'
               example:
                 tags:
                   - key: example-tag-key
@@ -4558,7 +3727,9 @@ paths:
 
         |                      |    hosted   |                 |
 
-        |                      | distributed |                 |Applies an attribute to the provided project.
+        |                      | distributed |                 |
+
+        Applies an attribute to the provided project.
 
         It is possible to assign multiple values to each attribute, but you can only assign values to one of the predefined attribute categories, using the predefined options for this category.
 
@@ -4574,12 +3745,9 @@ paths:
 
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `Edit Project Attributes`
       operationId: Applyingattributes
@@ -4605,15 +3773,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Projectattributes'
-                - example:
-                    criticality:
-                      - high
-                    environment:
-                      - backend
-                    lifecycle:
-                      - development
+              $ref: '#/components/schemas/Projectattributes'
             example:
               criticality:
                 - high
@@ -4627,18 +3787,9 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Applyingattributesresponse'
-                  - example:
-                      attributes:
-                        criticality:
-                          - high
-                        environment:
-                          - backend
-                        lifecycle:
-                          - development
+                $ref: '#/components/schemas/Applyingattributesresponse'
               example:
                 attributes:
                   criticality:
@@ -4654,14 +3805,15 @@ paths:
         - Dependencies
       summary: List all dependencies
       description: >-
-        #### Required permissions
+        Dependencies are packages/modules that your projects depend on.
 
+        Current rate limit is up to 150 requests per minute, per user.
+
+        #### Required permissions
 
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: Listalldependencies
@@ -4680,19 +3832,15 @@ paths:
           style: form
           explode: true
           schema:
-            allOf:
-              - $ref: '#/components/schemas/sortBy'
-              - description: The field to sort results by.
-                example: dependency
+            $ref: '#/components/schemas/sortBy'
+          example: dependency
         - name: order
           in: query
           description: The direction to sort results by.
           style: form
           explode: true
           schema:
-            allOf:
-              - $ref: '#/components/schemas/order'
-              - description: The direction to sort results by.
+            $ref: '#/components/schemas/order'
         - name: page
           in: query
           description: The page of results to fetch.
@@ -4714,36 +3862,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Dependenciesfilters'
-                - example:
-                    filters:
-                      languages:
-                        - cpp
-                        - dockerfile
-                        - dotnet
-                        - elixir
-                        - golang
-                        - helm
-                        - java
-                        - javascript
-                        - kubernetes
-                        - linux
-                        - php
-                        - python
-                        - ruby
-                        - scala
-                        - swift
-                        - terraform
-                      projects: []
-                      dependencies: []
-                      licenses: []
-                      severity:
-                        - critical
-                        - high
-                        - medium
-                        - low
-                      depStatus: ''
+              $ref: '#/components/schemas/Dependenciesfilters'
             example:
               filters:
                 languages:
@@ -4778,41 +3897,13 @@ paths:
           description: ''
           headers:
             Link:
-              content:
-                text/plain:
-                  schema:
-                    type: string
-                  example: <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/dependencies?order=asc&page=1&perPage=20&sortBy=dependency>; rel=last
-          content:
-            application/json; charset=utf-8:
               schema:
-                allOf:
-                  - $ref: '#/components/schemas/Dependencies'
-                  - example:
-                      results:
-                        - id: gulp@3.9.1
-                          name: gulp
-                          version: 3.9.1
-                          latestVersion: 4.0.0
-                          latestVersionPublishedDate: 2018-01-01T01:29:06.863Z
-                          firstPublishedDate: 2013-07-04T23:27:07.828Z
-                          isDeprecated: false
-                          deprecatedVersions:
-                            - 0.0.1
-                            - 0.0.2
-                            - 0.0.3
-                          licenses:
-                            - id: snyk:lic:npm:gulp:MIT
-                              title: MIT license
-                              license: MIT
-                          dependenciesWithIssues:
-                            - minimatch@2.0.10
-                            - minimatch@0.2.14
-                          type: npm
-                          projects:
-                            - name: atokeneduser/goof
-                              id: 6d5813be-7e6d-4ab8-80c2-1e3e2a454545
-                      total: 1
+                type: string
+              example: <https://api.snyk.io/v1/org/4a18d42f-0706-4ad0-b127-24078731fbed/dependencies?order=asc&page=1&perPage=20&sortBy=dependency>; rel=last
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Dependencies'
               example:
                 results:
                   - id: gulp@3.9.1
@@ -4847,12 +3938,9 @@ paths:
       description: >-
         #### Required permissions
 
-
         - `View Organization`
 
-
         - `View Project`
-
 
         - `View Project Snapshot`
       operationId: Listalllicenses
@@ -4889,23 +3977,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/Licensesfilters'
-                - example:
-                    filters:
-                      languages:
-                        - node
-                        - ruby
-                        - java
-                        - cpp
-                      projects: []
-                      dependencies: []
-                      licenses: []
-                      severity:
-                        - none
-                        - high
-                        - medium
-                        - low
+              $ref: '#/components/schemas/Licensesfilters'
             example:
               filters:
                 languages:
@@ -4927,7 +3999,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Licenses'
@@ -4983,22 +4055,13 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Listallentitlementsresponse'
@@ -5046,22 +4109,13 @@ paths:
               - $ref: '#/components/schemas/entitlementKey'
               - description: The entitlement to query.
                 example: reports
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 type: string
                 example: 'true'
@@ -5125,22 +4179,13 @@ paths:
           schema:
             type: string
             example: https://repo1.maven.org/maven2
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testforissuesinapublicpackagebygroupidartifactidandversionresponse'
@@ -5350,7 +4395,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Testmavenfileresponse'
       deprecated: false
@@ -5396,22 +4441,13 @@ paths:
           schema:
             type: string
             example: 0.7.0
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testforissuesinapublicpackagebynameandversionresponse'
@@ -5670,7 +4706,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/npmrequestpayload'
@@ -5694,7 +4730,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Testpackage.jsonpackage-lock.jsonFileresponse'
       deprecated: false
@@ -5727,7 +4763,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/golangdeprequestpayload'
@@ -5751,7 +4787,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/TestGopkg.tomlGopkg.lockFileresponse'
@@ -5995,7 +5031,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/govendorrequestpayload'
@@ -6015,7 +5051,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testvendor.jsonFileresponse'
@@ -6423,7 +5459,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/yarnrequestpayload'
@@ -6447,7 +5483,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Testpackage.jsonyarn.lockFileresponse'
       deprecated: false
@@ -6493,22 +5529,13 @@ paths:
           schema:
             type: string
             example: 1.0.3
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testforissuesinapublicgembynameandversionresponse'
@@ -6587,7 +5614,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/rubygemsrequestpayload'
@@ -6607,7 +5634,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testgemfile.lockfileresponse'
@@ -7147,22 +6174,13 @@ paths:
           schema:
             type: string
             example: 4.7.2
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testforissuesinapublicpackagebygroupnameandversionresponse'
@@ -7365,7 +6383,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testgradlefileresponse'
@@ -7541,22 +6559,13 @@ paths:
           schema:
             type: string
             example: 4.7.2
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/sbt_Testforissuesinapublicpackagebygroupidartifactidandversionresponse'
@@ -7759,7 +6768,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Testsbtfileresponse'
       deprecated: false
@@ -7805,22 +6814,13 @@ paths:
           schema:
             type: string
             example: '3.3'
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/pip_Testforissuesinapublicpackagebynameandversionresponse'
@@ -7955,7 +6955,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/piprequestpayload'
@@ -7975,7 +6975,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testrequirements.txtfileresponse'
@@ -8279,7 +7279,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/composerrequestpayload'
@@ -8303,7 +7303,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Testcomposer.jsoncomposer.lockfileresponse'
@@ -10867,7 +9867,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/graphrequestpayload'
@@ -10925,7 +9925,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/TestDepGraphresponse'
@@ -11050,10 +10050,18 @@ paths:
           schema:
             type: string
             example: 9695cbb1-3a87-4d6f-8ae1-61a1c37ee9f7
+        - name: prune-dep-graph
+          in: query
+          description: Will prune large dep-graphs by removing identical sub-graphs under a top level dependency. If you receive a 422 error, it's likely that your dep-graph is too large to monitor. Pruning can help reduce the number of repetative paths but still retain at least one fully resolved path to ensure vulnerablities are not missed.
+          style: form
+          explode: true
+          schema:
+            type: boolean
+            example: true
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/monitorgraphpayload'
@@ -11111,7 +10119,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/MonitorDepGraphresponse'
@@ -11286,14 +10294,14 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Issues'
         '400':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ErrorResponse'
@@ -11497,14 +10505,14 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Issues'
         '400':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ErrorResponse'
@@ -11637,7 +10645,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/IssueCounts'
@@ -11663,7 +10671,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ErrorResponse'
@@ -11814,7 +10822,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/IssueCounts'
@@ -11868,7 +10876,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ErrorResponse'
@@ -11956,7 +10964,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ProjectCounts'
@@ -11972,7 +10980,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ErrorResponse'
@@ -12077,7 +11085,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ProjectCounts'
@@ -12101,7 +11109,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ErrorResponse'
@@ -12190,7 +11198,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/TestCounts'
@@ -12210,7 +11218,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/ErrorResponse'
@@ -12246,6 +11254,8 @@ paths:
 
         - `Create Outbound Webhooks`
       operationId: Createawebhook
+      security:
+        - APIToken: []
       parameters:
         - name: orgId
           in: path
@@ -12258,7 +11268,7 @@ paths:
       requestBody:
         description: ''
         content:
-          application/json; charset=utf-8:
+          application/json:
             schema:
               allOf:
                 - $ref: '#/components/schemas/request'
@@ -12274,7 +11284,7 @@ paths:
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Createawebhookresponse'
@@ -12297,6 +11307,8 @@ paths:
 
         - `View Outbound Webhooks`
       operationId: Listwebhooks
+      security:
+        - APIToken: []
       parameters:
         - name: orgId
           in: path
@@ -12306,22 +11318,13 @@ paths:
           schema:
             type: string
             example: 4a18d42f-0706-4ad0-b127-24078731fbed
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json; charset=utf-8
-            type: string
-            example: application/json; charset=utf-8
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Listwebhooksresponse'
@@ -12350,6 +11353,8 @@ paths:
 
         - `View Outbound Webhooks`
       operationId: Retrieveawebhook
+      security:
+        - APIToken: []
       parameters:
         - name: orgId
           in: path
@@ -12367,22 +11372,13 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
           headers: {}
           content:
-            application/json; charset=utf-8:
+            application/json:
               schema:
                 allOf:
                   - $ref: '#/components/schemas/Retrieveawebhookresponse'
@@ -12406,6 +11402,8 @@ paths:
 
         - `Remove Outbound Webhooks`
       operationId: Deleteawebhook
+      security:
+        - APIToken: []
       parameters:
         - name: orgId
           in: path
@@ -12423,16 +11421,7 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
@@ -12453,6 +11442,8 @@ paths:
 
         - `View Outbound Webhooks`
       operationId: Pingawebhook
+      security:
+        - APIToken: []
       parameters:
         - name: orgId
           in: path
@@ -12470,16 +11461,7 @@ paths:
           schema:
             type: string
             example: 463c1ee5-31bc-428c-b451-b79a3270db08
-        - name: Content-Type
-          in: header
-          description: ''
-          required: true
-          style: simple
-          schema:
-            enum:
-              - application/json
-            type: string
-            example: application/json
+        
       responses:
         '200':
           description: ''
@@ -12487,6 +11469,12 @@ paths:
           content: {}
       deprecated: false
 components:
+  securitySchemes:
+    APIToken:
+      description: API key value must be prefixed with "Token ".
+      in: header
+      name: 'Authorization'
+      type: apiKey
   schemas:
     Groupsettings:
       title: Groupsettings
@@ -12644,7 +11632,6 @@ components:
         - github
         - github-cr
         - github-enterprise
-        - github-cloud-app
         - gitlab
         - gitlab-cr
         - google-artifact-cr
@@ -12935,9 +11922,7 @@ components:
           type: number
           description: The total number of results
         links:
-          allOf:
-            - $ref: '#/components/schemas/issuePathsLinks'
-            - description: Onward links from this record
+          $ref: '#/components/schemas/issuePathsLinks'
     Projectsnapshots:
       title: Projectsnapshots
       type: object
@@ -12963,9 +11948,7 @@ components:
       type: object
       properties:
         depGraph:
-          allOf:
-            - $ref: '#/components/schemas/depGraph'
-            - description: The dependency-graph object
+          $ref: '#/components/schemas/depGraph'
     Projectissuesfilters:
       title: Projectissuesfilters
       type: object
@@ -12990,9 +11973,7 @@ components:
       type: object
       properties:
         ignorePath:
-          allOf:
-            - $ref: '#/components/schemas/ignorePath'
-            - description: The path that should be ignored. Wildcards can be specified with a `*`.
+          $ref: '#/components/schemas/ignorePath'
     Ignorerule:
       title: Ignorerule
       required:
@@ -13032,9 +12013,7 @@ components:
       type: object
       properties:
         jiraIssue:
-          allOf:
-            - $ref: '#/components/schemas/jiraIssue1'
-            - description: The details about the jira issue.
+          $ref: '#/components/schemas/jiraIssue1'
     Jiraissuerequest:
       title: Jiraissuerequest
       type: object
@@ -13831,6 +12810,24 @@ components:
           $ref: '#/components/schemas/Simplenotificationsettingrequest'
         weekly-report:
           $ref: '#/components/schemas/Simplenotificationsettingrequest'
+        request-updates:
+          required:
+            - enabled
+          type: object
+          properties:
+            enabled:
+              type: boolean
+              description: Whether Ignore Approval Workflow Request Update notifications should be sent
+              example: true
+        pending-requests:
+          required:
+            - enabled
+          type: object
+          properties:
+            enabled:
+              type: boolean
+              description: Whether Ignore Approval Workflow Pending Requests notifications should be sent
+              example: true
     Notificationsettingsresponse:
       title: Notificationsettingsresponse
       type: object
@@ -13842,6 +12839,10 @@ components:
         test-limit:
           $ref: '#/components/schemas/Simplenotificationsettingresponse'
         weekly-report:
+          $ref: '#/components/schemas/Simplenotificationsettingresponse'
+        request-updates:
+          $ref: '#/components/schemas/Simplenotificationsettingresponse'
+        pending-requests:
           $ref: '#/components/schemas/Simplenotificationsettingresponse'
     Newissuesnotificationsettingrequest:
       title: Newissuesnotificationsettingrequest
@@ -13997,8 +12998,8 @@ components:
           items:
             $ref: '#/components/schemas/Tag'
           description: Tags now applied to the project
-    Addnewintegrationrequest:
-      title: Addnewintegrationrequest
+    AddNewIntegrationWithCredentialsRequest:
+      title: Add New Integration With Credentials Request
       required:
         - type
         - credentials
@@ -14008,8 +13009,8 @@ components:
           $ref: '#/components/schemas/IntegrationType'
         credentials:
           $ref: '#/components/schemas/IntegrationCredentials'
-    Addnewintegrationrequest1:
-      title: Addnewintegrationrequest1
+    AddNewIntegrationWithBrokerRequest:
+      title: Add New Integration With Broker Request
       required:
         - type
         - broker
@@ -14085,11 +13086,11 @@ components:
     AzureReposCredentials:
       title: AzureReposCredentials
       required:
-        - username
+        - token
         - url
       type: object
       properties:
-        username:
+        token:
           type: string
         url:
           type: string
@@ -14208,13 +13209,6 @@ components:
         - medium
         - low
       type: string
-    Deletependinguserprovisionresponse:
-      title: Deletependinguserprovisionresponse
-      type: object
-      properties:
-        ok:
-          type: boolean
-          description: Deletion succeeded.
     dependencies1:
       title: dependencies1
       required:
@@ -14249,18 +13243,14 @@ components:
           type: string
           description: The scheme version of the depGraph object
         pkgManager:
-          allOf:
-            - $ref: '#/components/schemas/pkgManager2'
-            - description: The package manager of the project
+          $ref: '#/components/schemas/pkgManager2'
         pkgs:
           type: array
           items:
             $ref: '#/components/schemas/pkgs'
           description: A list of dependencies in the project
         graph:
-          allOf:
-            - $ref: '#/components/schemas/graph2'
-            - description: A directional graph of the packages in the project
+          $ref: '#/components/schemas/graph2'
       description: The dependency-graph object
     deps:
       title: deps
@@ -14490,21 +13480,13 @@ components:
             $ref: '#/components/schemas/ComposerLock'
           description: a lockfile encoded according the the "encoding" field.
       description: 'The manifest files:'
-    files10:
-      title: files10
+    ImportFiles:
+      title: ImportFiles
       type: object
       properties:
         path:
           type: string
           description: relative path to the file
-          example: example/package.json
-    files12:
-      title: files12
-      type: object
-      properties:
-        path:
-          type: string
-          description: path to the file
           example: example/package.json
     filters:
       title: filters
@@ -14560,9 +13542,7 @@ components:
           type: boolean
           description: If set to `true`, only include issues which are patched, if set to `false`, only include issues which are not patched (Non-IaC projects only)
         priority:
-          allOf:
-            - $ref: '#/components/schemas/priority1'
-            - description: The priority to filter the issues by (Non-IaC projects only)
+          $ref: '#/components/schemas/priority1'
     filters2:
       title: filters2
       type: object
@@ -15519,13 +14499,9 @@ components:
           type: string
           description: The reason that the issue was ignored.
         reasonType:
-          allOf:
-            - $ref: '#/components/schemas/reasonType'
-            - description: The classification of the ignore.
+          $ref: '#/components/schemas/reasonType'
         ignoredBy:
-          allOf:
-            - $ref: '#/components/schemas/ignoredBy'
-            - description: The person who ignored the issue.
+          $ref: '#/components/schemas/ignoredBy'
         disregardIfFixable:
           type: boolean
           description: Only ignore the issue if no upgrade or patch is available.
@@ -15550,127 +14526,134 @@ components:
           allOf:
             - $ref: '#/components/schemas/source'
             - description: The place where the ignore rule was applied from
-    Importtargetsrequest:
-      title: Importtargetsrequest
+    GithubAndGithubEnterpriseImportRequest:
+      title: Github and Github Enterprise Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target7'
+          $ref: '#/components/schemas/GithubAndGithubEnterpriseRepoTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files10'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
         exclusionGlobs:
           type: string
           description: a comma-separated list of up to 10 folder names to exclude from scanning (each folder name must not exceed 100 characters). If not specified, it will default to "fixtures, tests, \_\_tests\_\_, node_modules". If an empty string is provided - no folders will be excluded. This attribute is only respected with Open Source and Container scan targets.
-    Importtargetsrequest1:
-      title: Importtargetsrequest1
+      example:
+        target:
+          owner: org-security
+          name: goof
+          branch: main
+        files:
+          - path: example/package.json
+    AzureReposImportRequest:
+      title: Azure Repos Target Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target8'
+          $ref: '#/components/schemas/AzureReposTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files10'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
         exclusionGlobs:
           type: string
           description: a comma-separated list of up to 10 folder names to exclude from scanning (each folder name must not exceed 100 characters). If not specified, it will default to "fixtures, tests, \_\_tests\_\_, node_modules". If an empty string is provided - no folders will be excluded. This attribute is only respected with Open Source and Container scan targets.
-    Importtargetsrequest2:
-      title: Importtargetsrequest2
+    GitLabImportRequest:
+      title: GitLab Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target9'
+          $ref: '#/components/schemas/GitLabRepoTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files12'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
         exclusionGlobs:
           type: string
           description: a comma-separated list of up to 10 folder names to exclude from scanning. If not specified, it will default to "fixtures, tests, \_\_tests\_\_, node_modules". If an empty string is provided - no folders will be excluded. This attribute is only respected with Open Source and Container scan targets.
-    Importtargetsrequest3:
-      title: Importtargetsrequest3
+    BitbucketCloudImportRequest:
+      title: Bitbucket Cloud and Bitbucket Cloud App Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target10'
+          $ref: '#/components/schemas/BitbucketCloudTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files10'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
         exclusionGlobs:
           type: string
           description: a comma-separated list of up to 10 folder names to exclude from scanning (each folder name must not exceed 100 characters). If not specified, it will default to "fixtures, tests, \_\_tests\_\_, node_modules". If an empty string is provided - no folders will be excluded. This attribute is only respected with Open Source and Container scan targets.
-    Importtargetsrequest4:
-      title: Importtargetsrequest4
+    BitbucketServerImportRequest:
+      title: Bitbucket Server Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target11'
+          $ref: '#/components/schemas/BitbucketServerTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files12'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
         exclusionGlobs:
           type: string
           description: a comma-separated list of up to 10 folder names to exclude from scanning. If not specified, it will default to "fixtures, tests, \_\_tests\_\_, node_modules". If an empty string is provided - no folders will be excluded. This attribute is only respected with Open Source and Container scan targets.
-    Importtargetsrequest5:
-      title: Importtargetsrequest5
+    HerokoImportRequest:
+      title: Heroku Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target12'
+          $ref: '#/components/schemas/HerokuTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files12'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
-    Importtargetsrequest6:
-      title: Importtargetsrequest6
+    AWSLambdaImportRequest:
+      title: AWS Lambda Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target13'
+          $ref: '#/components/schemas/AWSLambdaTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files12'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
-    Importtargetsrequest7:
-      title: Importtargetsrequest7
+    CloudFoundryPivotalIBMCloudImportRequest:
+      title: CloudFoundry, Pivotal & IBM Cloud Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target14'
+          $ref: '#/components/schemas/CloudFoundryPivotalIBMCloudTarget'
         files:
           type: array
           items:
-            $ref: '#/components/schemas/files12'
+            $ref: '#/components/schemas/ImportFiles'
           description: an array of file objects
-    Importtargetsrequest8:
-      title: Importtargetsrequest8
+    DockerHubImportRequest:
+      title: DockerHub Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target15'
-    Importtargetsrequest9:
-      title: Importtargetsrequest9
+          $ref: '#/components/schemas/DockerHubTarget'
+    AzureCRElasticCRArtifactoryCRNexusImportRequest:
+      title: Azure Container Registry, Elastic Container Registry, Artifactory Container Registry, Nexus Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target16'
-    Importtargetsrequest10:
-      title: Importtargetsrequest10
+          $ref: '#/components/schemas/AzureContainerRegistryElasticContainerRegistryArifactoryContainerRegistryNexusTarget'
+    GoogleCRGoogleARHarborDigitalOceanCRQuayGitlabCRGithubCRImportRequest:
+      title: Google Container Registry, Google Artifact Registry, Harbor, DigitalOcean Container Registry, Quay, GitLab Container Registry, GitHub Container Registry Import Request
       type: object
       properties:
         target:
-          $ref: '#/components/schemas/target17'
+          $ref: '#/components/schemas/GoogleCRGoogleARHarborDigitalOceanCRQuayGitlabCRGithubCR'
     importingUser:
       title: importingUser
       type: object
@@ -18528,9 +17511,7 @@ components:
       type: object
       properties:
         score:
-          allOf:
-            - $ref: '#/components/schemas/score'
-            - description: Include issues where the priority score is between min and max
+          $ref: '#/components/schemas/score'
       description: The priority to filter the issues by (Non-IaC projects only)
     priorityScore2:
       title: priorityScore2
@@ -18629,22 +17610,6 @@ components:
         projectId:
           type: string
           description: the Snyk project publicId
-    Provisionausertotheorganizationresponse:
-      title: Provisionausertotheorganizationresponse
-      type: object
-      properties:
-        email:
-          type: string
-          description: The email of the user.
-        role:
-          type: string
-          description: Name of the role granted for this user.
-        rolePublicId:
-          type: string
-          description: ID of the role to granted for this user.
-        created:
-          type: string
-          description: Timestamp of when this provision record was created.
     Provisionnewbrokertokenresponse:
       title: Provisionnewbrokertokenresponse
       required:
@@ -18691,7 +17656,6 @@ components:
           description: >-
             Recommended upgrades to apply to the project
 
-
             (object)
                 + upgradeTo (string, required) - `package@version` to upgrade to
                 + upgrades (array[string], required) -  List of `package@version` that will be upgraded as part of this upgrade
@@ -18700,7 +17664,6 @@ components:
           type: object
           description: >-
             Recommended patches to apply to the project
-
 
             (object)
                paths (array) - List of paths to the vulnerable dependency that can be patched
@@ -18775,6 +17738,10 @@ components:
         reasonRequired:
           type: boolean
           description: Whether a reason is required for creating ignores.
+          example: false
+        approvalWorkflowEnabled:
+          type: boolean
+          description: Whether Ignore Approval Workflow is enabled.
           example: false
       description: Will only be returned if `API_KEY` has read access to ignore settings.
     requestAccess2:
@@ -19390,8 +18357,8 @@ components:
           type: string
           example: ''
       description: the `composer.json` file, encoded according the the "encoding" field.
-    target7:
-      title: target7
+    GithubAndGithubEnterpriseRepoTarget:
+      title: GithubAndGithubEnterpriseRepoTarget
       required:
         - owner
         - name
@@ -19410,8 +18377,8 @@ components:
           type: string
           description: default branch of the repo (Please contact support if you want to import a non default repo branch)
           example: main
-    target8:
-      title: target8
+    AzureReposTarget:
+      title: AzureReposTarget
       required:
         - owner
         - name
@@ -19430,8 +18397,8 @@ components:
           type: string
           description: default branch of the repo (Please contact support if you want to import a non default repo branch)
           example: main
-    target9:
-      title: target9
+    GitLabRepoTarget:
+      title: GitLabRepoTarget
       required:
         - id
         - branch
@@ -19445,8 +18412,8 @@ components:
           type: string
           description: repo branch
           example: develop
-    target10:
-      title: target10
+    BitbucketCloudTarget:
+      title: BitbucketCloudTarget
       required:
         - owner
         - name
@@ -19460,8 +18427,8 @@ components:
           type: string
           description: name of the repo
           example: goof
-    target11:
-      title: target11
+    BitbucketServerTarget:
+      title: BitbucketServerTarget
       required:
         - projectKey
         - repoSlug
@@ -19481,8 +18448,8 @@ components:
         branch:
           type: string
           description: target branch name
-    target12:
-      title: target12
+    HerokuTarget:
+      title: HerokuTarget
       required:
         - appId
         - slugId
@@ -19494,8 +18461,8 @@ components:
         slugId:
           type: string
           description: ID of the slug
-    target13:
-      title: target13
+    AWSLambdaTarget:
+      title: AWSLambdaTarget
       required:
         - functionId
       type: object
@@ -19503,8 +18470,8 @@ components:
         functionId:
           type: string
           description: ID of the app
-    target14:
-      title: target14
+    CloudFoundryPivotalIBMCloudTarget:
+      title: CloudFoundryPivotalIBMCloudTarget
       required:
         - appId
       type: object
@@ -19512,8 +18479,8 @@ components:
         appId:
           type: string
           description: ID of the app
-    target15:
-      title: target15
+    DockerHubTarget:
+      title: DockerHubTarget
       required:
         - name
       type: object
@@ -19522,8 +18489,8 @@ components:
           type: string
           description: image name including tag prefixed by organization name
           example: organization/repository:tag
-    target16:
-      title: target16
+    AzureContainerRegistryElasticContainerRegistryArifactoryContainerRegistryNexusTarget:
+      title: AzureContainerRegistryElasticContainerRegistryArifactoryContainerRegistryNexusTarget
       required:
         - name
       type: object
@@ -19532,8 +18499,8 @@ components:
           type: string
           description: image name including tag
           example: repository:tag
-    target17:
-      title: target17
+    GoogleCRGoogleARHarborDigitalOceanCRQuayGitlabCRGithubCR:
+      title: GoogleCRGoogleARHarborDigitalOceanCRQuayGitlabCRGithubCR
       required:
         - name
       type: object
@@ -23544,18 +22511,15 @@ components:
       type: object
       properties:
         owner:
-          allOf:
-            - $ref: '#/components/schemas/owner'
-            - description: Set to `null` to remove all ownership. User must be a member of the same organization as the project.
+          $ref: '#/components/schemas/owner'
         branch:
           type: string
           description: The branch that this project should be monitoring
           example: main
     Updateexistingintegrationrequest:
-      title: Updateexistingintegrationrequest
+      title: Setup Broker for Existing Integration
       required:
         - type
-        - broker
       type: object
       properties:
         type:
@@ -23563,7 +22527,7 @@ components:
         broker:
           $ref: '#/components/schemas/BrokerSettings'
     Updateexistingintegrationrequest1:
-      title: Updateexistingintegrationrequest1
+      title: Update credentials for an existing non-brokered integration
       required:
         - type
         - credentials
@@ -23574,7 +22538,7 @@ components:
         credentials:
           $ref: '#/components/schemas/IntegrationCredentials'
     Updateexistingintegrationrequest2:
-      title: Updateexistingintegrationrequest2
+      title: Disable broker for an existing integration
       required:
         - type
         - broker
@@ -24980,7 +23944,7 @@ tags:
 
       Current rate limit is up to 150 requests per minute, per user.
 
-      For more information about rate-limiting see: [https://snyk.docs.apiary.io/#introduction/rate-limiting](https://snyk.docs.apiary.io/#introduction/rate-limiting)
+      For more information about rate-limiting see: [https://docs.snyk.io/snyk-api/v1-api#rate-limiting](https://docs.snyk.io/snyk-api/v1-api#rate-limiting)
   - name: Licenses
     description: >-
       The licenses which the packages/modules in your projects use.
@@ -25011,7 +23975,7 @@ tags:
 
       All requests above the limit will get a response with status code `429` - `Too many requests` until requests stop for the duration of the rate-limiting interval (currently a minute).
 
-      For more information about rate-limiting see: [https://snyk.docs.apiary.io/#introduction/rate-limiting](https://snyk.docs.apiary.io/#introduction/rate-limiting)
+      For more information about rate-limiting see: [https://docs.snyk.io/snyk-api/v1-api#rate-limiting](https://docs.snyk.io/snyk-api/v1-api#rate-limiting)
   - name: Webhooks
     description: >-
       ## Intro

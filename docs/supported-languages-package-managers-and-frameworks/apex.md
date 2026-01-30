@@ -1,36 +1,34 @@
 # Apex
 
-## Applicability
+## Applicability and integration
 
-Snyk for Apex is supported **only for Snyk Code**.
+{% hint style="info" %}
+Apex is supported only for Snyk Code.
+{% endhint %}
 
-Check the language availability to be imported as an application, tested, or monitored using the Snyk products.
+Available integrations:
 
-Available functions:
+* SCM import
+* CLI and IDE: test or monitor your app. For more information, see [Snyk CLI for Snyk Code](../developer-tools/snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/).
 
-* SCM import.
-* Test or monitor your app through CLI and IDE.
+## Technical specifications
 
-For information on using the Snyk CLI for code analysis, see [Snyk CLI for Snyk Code](../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/).
+### Supported file formats
 
-## Package managers and supported file extensions
+Apex Standard Library is fully supported. Snyk supports the following file formats for Snyk Code: `.cls`, `.trigger`, `.tgr`
 
-Snyk for Apex does not support any package managers but supports the following file formats:
+### Supported features
 
-* Snyk Open Source: N/A
-* Snyk Code: `.cls`, `.trigger`, `.tgr`
-
-## Frameworks and libraries
-
-The following frameworks and libraries are supported in Snyk for Apex: Apex Standard Library is fully supported.
-
-## Features
-
-The following features are supported in Snyk for Apex:
+Snyk supports the following features for Apex:
 
 * Support for Interfile analysis
 * Custom rules
 * Reports
 * Interfile analysis
 
-If you need help, [contact Snyk Support](https://support.snyk.io).
+{% hint style="info" %}
+The **Snyk fix PR** feature is not available for Apex. This means that you will not be notified if the PR checks fail when the following conditions are met:
+
+* The **PR checks** feature is enabled and configured to **Only fail when the issues found have a fix available.**
+* "**Fixed in" available** is set to **Yes.**
+{% endhint %}

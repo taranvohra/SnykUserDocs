@@ -1,11 +1,11 @@
-# Nexus Repository Manager for Maven
+# Nexus repository manager for Maven
 
 {% hint style="info" %}
 **Feature availability**\
 Package repository integrations are available with Enterprise plans. For more information, see [plans and pricing](https://snyk.io/plans/).
 
 **Supported projects**\
-The Nexus Repository Manager integration supports [Node.js](../../../../supported-languages-package-managers-and-frameworks/javascript/#supported-frameworks-and-package-managers) (npm and Yarn) and [Maven](../../../../supported-languages-package-managers-and-frameworks/java-and-kotlin/#supported-frameworks-and-package-managers) Projects.  For [Improved Gradle SCM scanning](../../../../supported-languages-package-managers-and-frameworks/java-and-kotlin/git-repositories-with-maven-and-gradle.md#improved-gradle-scm-scanning-early-access), use the Maven settings.
+The Nexus Repository Manager integration supports [Node.js](../../../../supported-languages/supported-languages-list/javascript/#supported-package-managers-and-package-registries) (npm and Yarn) and [Maven](../../../../supported-languages-package-managers-and-frameworks/java-and-kotlin/#supported-package-managers-and-package-registries) Projects. For [Improved Gradle SCM scanning](../../../../supported-languages-package-managers-and-frameworks/java-and-kotlin/git-repositories-with-maven-and-gradle.md#improved-gradle-scm-scanning), use the Maven settings.
 {% endhint %}
 
 Snyk can use Nexus Repository Manager with Maven Projects.
@@ -14,7 +14,7 @@ This enables Snyk to resolve all direct and transitive dependencies of packages 
 
 Maven Projects can be configured to mirror all requests through a custom package repository, or you can specify additional repositories to use alongside Maven Central.
 
-## **Setup custom Maven package registries**
+The following explains how to set up custom Maven package registries
 
 If authentication is required to access your Nexus registry, you must first configure the Nexus Repository Manager integration. See [Nexus Repository Manager setup](./).
 
@@ -22,7 +22,7 @@ You can choose to use Nexus as a mirror or as an additional repository where you
 
 These settings are very similar to what you have in `~/.m2/settings.xml`.
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2022-07-15 at 15.10.52.png" alt="Set up for Mirrors"><figcaption><p>Set up for Mirrors</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (245).png" alt=""><figcaption><p>Set up for Mirrors</p></figcaption></figure>
 
 Choose a value for the Type, either **Direct** or, if you are using using authentication, **Integration**.
 
@@ -50,6 +50,6 @@ If the URL is `http://nexus.company.io/nexus/content/repositories/releases`, Rep
 {% endtab %}
 {% endtabs %}
 
-Alternatively, you can configure repositories  will be used as additional locations to check for artifacts.
+Alternatively, you can configure repositories will be used as additional locations to check for artifacts.
 
-Repositories are configured in the same way as [Mirrors](nexus-repository-manager-for-maven.md#mirrors), but do not require **Mirror Of**.
+Repositories are configured in the same way as Mirrors, but do not require **Mirror Of**.

@@ -3,21 +3,22 @@
 {% hint style="info" %}
 **Feature availability**
 
-* The **Automatic Fix PRs for known vulnerabilities (Backlog PRs)** feature is supported for the following SCM integrations: GitHub, GitHub Enterprise, GitHub Cloud App, Bitbucket Server, Bitbucket Cloud, Bitbucket Connect, GitLab, and Azure Repos.
-* The **Automatic Fix PR** settings may vary depending on the integration.
+* The Automatic Fix PRs for known vulnerabilities (Backlog PRs) feature is supported for the following SCM integrations: GitHub, GitHub Enterprise, GitHub Cloud App, Bitbucket Server, Bitbucket Cloud, Bitbucket Connect, GitLab, and Azure Repos.
+* The Automatic Fix PR settings may vary depending on the integration.
 {% endhint %}
 
 When Snyk creates automatic PRs for vulnerabilities, the following rules are applied:
 
 * If you select **Retest now** for the Project, a scan is run manually, and the 24-hour window is marked as having had a scan run. No automatic PR is created until the next automated scan runs.
-* One pull request is created per Project with a [priority score](../../../manage-risk/prioritize-issues-for-fixing/priority-score.md) of **700 and above**.
+* One pull request is created per Project with a [priority score](../../../manage-risk/prioritize-issues-for-fixing/priority-score.md) of 700 and above.
+* Fixing a vulnerability by upgrading a package may sometimes introduce a new vulnerability. Snyk will only automatically create such a pull request if the fixed vulnerabilities are a higher severity than any new ones introduced.
 * Pull requests are created based on the **Test & Automated Pull Request Frequency** settings.
   * To update the **Test & Automated Pull Request Frequency**, navigate to **Projects** and select your Open Source Project.
   * Navigate to **Settings** and select an option from the pulldown list.
 
 <figure><img src="../../../.gitbook/assets/project-settings-test-pull-request-frequency (1).png" alt="Project test and automated PR Checks frequency setting"><figcaption><p>Project test and automated PR Checks frequency setting</p></figcaption></figure>
 
-To determine when your last 24-hour window began, check the Project issue card for **Snapshot taken by recurring test**.&#x20;
+To determine when your last 24-hour window began, check the Project issue card for **Snapshot taken by recurring test**.
 
 <figure><img src="../../../.gitbook/assets/project-snapshot-taken.png" alt="Snapshot taken by recurrint test 13 hours ago"><figcaption><p>Snapshot taken by recurring test 13 hours ago</p></figcaption></figure>
 
@@ -33,7 +34,7 @@ Enabling **Automatic Fix PRs** can result in larger version jumps.
 
 The configuration settings apply to all Projects in that Organization. You can also extend the configuration to Projects with custom settings.
 
-1. Open Snyk Web UI and navigate to **Settings >** **Integrations**.
+1. Open Snyk Web UI and navigate to **Settings** > **Integrations**.
 2. Select a Git repository integration (SCM). For this example, GitHub is configured.
 3. Under **Automatic Fix PRs,** enable **Known vulnerabilities (backlog)**.\
    This retrieves previously declared vulnerabilities from the Project's backlog.
@@ -47,13 +48,13 @@ The configuration settings apply to all Projects in that Organization. You can a
 
 5. Click **Save**.
 6. (Optional) Select **Save changes and apply to all overridden Projects** to extend the current configuration to Projects with custom settings.\
-   Use this option to apply the same configuration to all Projects. Selecting this option updates all of the individual Project settings for **Automatic fix PRs**. For Projects that previously had their own settings for automatic fix full requests, selecting this option overrides the Project setting with the global setting.
+   Use this option to apply the same configuration to all Projects. Selecting this option updates all of the individual Project settings for Automatic fix PRs. For Projects that previously had their own settings for automatic fix full requests, selecting this option overrides the Project setting with the global setting.
 
 ## Configure Automatic Fix PRs at the Project level
 
 You can configure Automatic fix PRs to work only for specific Projects rather than having Projects inherit the settings from the global integration.
 
-1. Navigate to **Projects** and expand the [target](../../../snyk-admin/snyk-projects/#target) containing your Open Source Project.
+1. Navigate to **Projects** and expand the [target](../../../snyk-platform-administration/snyk-projects/#target) containing your Open Source Project.
 2. Navigate to **Settings** and select an integration, for example, GitHub.
 3. In the **Automatic fix pull requests** section:
    * Select **Customize for only this project**
@@ -62,4 +63,3 @@ You can configure Automatic fix PRs to work only for specific Projects rather th
 5. Click **Save changes**.
 
 <figure><img src="../../../.gitbook/assets/project-settings-github-integration-automatic-fix-pull-requests.png" alt="Automatic fix PRs settings at the Project level."><figcaption><p>Automatic Fix PRs settings at the Project level</p></figcaption></figure>
-

@@ -83,7 +83,7 @@ redirects:
   manage-risk/insights/insights-setup/insights-setup-associating-snyk-open-source-code-and-container-projects: manage-risk/snyk-apprisk/risk-based-prioritization-for-snyk-apprisk/prioritization-setup/prioritization-setup-associating-snyk-open-source-code-and-container-projects.md
   snyk-admin/groups-and-organizations/groups/use-group-level-options: snyk-admin/groups-and-organizations/groups/README.md
   scan-with-snyk/snyk-code/custom-rules/cwe-312-query-example: scan-with-snyk/snyk-code/snyk-code-custom-rules/create-query.md
-  snyk-admin/snyk-broker/snyk-broker-code-agent/setting-up-the-code-agent-broker-client-deployment/step-1-obtaining-the-required-tokens-for-the-setup-procedure/obtaining-your-broker-token: enterprise-configuration/snyk-broker/snyk-broker-code-agent/install-snyk-broker-code-agent-using-docker/obtain-the-required-tokens-for-setup.md
+  snyk-admin/snyk-broker/snyk-broker-code-agent/setting-up-the-code-agent-broker-client-deployment/step-1-obtaining-the-required-tokens-for-the-setup-procedure/obtaining-your-broker-token: enterprise-setup/snyk-broker/classic-broker/prepare-snyk-broker-for-deployment/obtain-the-tokens-required-to-set-up-snyk-broker.md
   manage-risk/snyk-apprisk/risk-based-prioritization-for-snyk-apprisk: manage-risk/snyk-apprisk/prioritization-with-insights-for-snyk-apprisk/README.md
   manage-risk/snyk-apprisk/risk-based-prioritization-for-snyk-apprisk/how-risk-based-prioritization-works: manage-risk/snyk-apprisk/prioritization-with-insights-for-snyk-apprisk/how-risk-based-prioritization-works.md
   scan-application-code/snyk-open-source/snyk-open-source-supported-languages-and-package-managers: scan-using-snyk/supported-languages-frameworks-and-feature-availability-overview/README.md
@@ -122,5 +122,89 @@ redirects:
   getting-started/snyk-learn/product-training-on-snyk-learn: getting-started/snyk-learn/README.md
   features/snyk-broker/broker-introduction: enterprise-setup/snyk-broker/README.md
   scan-using-snyk/supported-languages-and-frameworks: supported-languages-package-managers-and-frameworks/README.md
-  snyk-admin: admin/README.md
   snyk-api/rest-api/authentication-for-api/authenticate-for-the-api: snyk-api/rest-api/authentication-for-api/README.md
+  scan-cloud-deployment/snyk-cloud/getting-started-with-snyk-cloud-aws/snyk-cloud-for-aws-web-ui/step-1-download-iam-role-iac-template-web-ui: scan-with-snyk/snyk-iac/cloud-platform-integrations/aws-integration/README.md
+  scan-cloud-deployment/snyk-cloud/getting-started-with-snyk-cloud-azure: scan-with-snyk/snyk-iac/cloud-platform-integrations/azure-integration-for-cloud-configurations/README.md
+  scan-cloud-deployment/snyk-cloud/getting-started-with-snyk-cloud-google/snyk-cloud-for-google-web-ui/step-1-download-service-account-iac-template-web-ui: scan-with-snyk/snyk-iac/cloud-platform-integrations/google-cloud-integration/README.md
+  implement-snyk/enterprise-implementation-guide/prerequisites-project-plan-templates: /implement-snyk/enterprise-implementation-guide/prerequisites/README.md
+  snyk-api/rest-api/authentication-for-api/authenticating: snyk-api/rest-api/authentication-for-api/README.md
+  getting-started/snyk-learn/snyk-learn-assignments: snyk-learn/snyk-learn-assignments.md
+  getting-started/snyk-learn/your-learning/claiming-cpe-credits-with-snyk-learn: snyk-learn/your-learning/claiming-cpe-credits-with-snyk-learn.md
+  getting-started/snyk-learn/snyk-learn-reports: snyk-learn/snyk-learn-reports.md
+  getting-started/snyk-learn/snyk-learn-access-controls: snyk-learn/snyk-learn-access-controls.md
+  getting-started/snyk-learn/snyk-learn-api: snyk-learn/snyk-learn-api.md
+  enterprise-setup/snyk-broker/universal-broker/initial-configuration-of-the-universal-broker: enterprise-setup/snyk-broker/universal-broker/basic-steps-to-install-and-configure-universal-broker.md
+  enterprise-setup/snyk-broker/classic-broker/snyk-broker-apprisk: enterprise-setup/snyk-broker/classic-broker/snyk-broker-essentials.md
+  enterprise-setup/snyk-broker/classic-broker/snyk-broker-apprisk-1: enterprise-setup/snyk-broker/universal-broker/snyk-broker-apprisk.md
+  enterprise-setup/snyk-broker/classic-broker/install-and-configure-snyk-broker/custom-docker-images-for-broker-client-integrations-and-container-registry-agent: enterprise-setup/snyk-broker/classic-broker/install-and-configure-snyk-broker/install-and-configure-broker-using-docker.md
+  integrate-with-snyk/vulnerability-management-tools/appnovi-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/atlassian-compass-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/bright-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/brinqa-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/escape-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/leen-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/mobb-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/nucleus-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/opsera-integratio: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/opslevel-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/opus-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/panther-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/phoenix-security-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/phylum: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/port-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/pulumi-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/security-compass-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/sentinelone-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/servicenow-avr-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/servicenow-sbom-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/stackhawk-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/sysdig-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/tines-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/torq-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/vanta-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/vulcan-integration: integrate-with-snyk/partner-integrations.md
+  integrate-with-snyk/vulnerability-management-tools/wabbi-integration: integrate-with-snyk/partner-integrations.md
+  scan-containers/image-scanning-library/ecr-image-scanning/amazon-elastic-container-registry-ecr-configure-your-integration-with-snyk: scan-with-snyk/snyk-container/container-registry-integrations/integrate-with-amazon-elastic-container-registry-ecr/README.md
+  docs/ignoring-issues: manage-risk/prioritize-issues-for-fixing/ignore-issues/README.md
+  scm-ide-and-ci-cd-integrations/snyk-scm-integrations/introduction-to-git-repository-integrations: scm-integrations/README.md
+  scm-integrations/snyk-scm-integrations: /scm-integrations/organization-level-integrations/README.md
+  snyk-admin: /snyk-platform-administration/overview.md
+  snyk-api: /snyk-api/overview.md
+  manage-risk: /manage-risk/overview.md
+  manage-assets: /manage-assets/overview.md
+  supported-languages-package-managers-and-frameworks/apex: /supported-languages/supported-languages-list/apex.md
+  supported-languages-package-managers-and-frameworks/c-c++: /supported-languages/supported-languages-list/c-c++.md
+  supported-languages-package-managers-and-frameworks/dart-and-flutter: /supported-languages/supported-languages-list/dart-and-flutter.md
+  supported-languages-package-managers-and-frameworks/elixir: /supported-languages/supported-languages-list/elixir.md
+  supported-languages-package-managers-and-frameworks/go: /supported-languages/supported-languages-list/go.md
+  supported-languages-package-managers-and-frameworks/groovy: /supported-languages/supported-languages-list/groovy.md
+  supported-languages-package-managers-and-frameworks/java-and-kotlin: /supported-languages/supported-languages-list/java-and-kotlin.md
+  supported-languages-package-managers-and-frameworks/javascript: /supported-languages/supported-languages-list/javascript.md
+  supported-languages-package-managers-and-frameworks/php.net: /supported-languages/supported-languages-list/php.net.md
+  supported-languages-package-managers-and-frameworks/python: /supported-languages/supported-languages-list/python.md
+  supported-languages-package-managers-and-frameworks/ruby: /supported-languages/supported-languages-list/ruby.md
+  supported-languages-package-managers-and-frameworks/scala: /supported-languages/supported-languages-list/scala.md
+  supported-languages-package-managers-and-frameworks/swift-and-objective-c: /supported-languages/supported-languages-list/swift-and-objective-c.md
+  supported-languages-package-managers-and-frameworks/typescript: /supported-languages/supported-languages-list/typescript.md
+  supported-languages-package-managers-and-frameworks/vb.net: /supported-languages/supported-languages-list/vb.net.md
+  cli-ide-and-ci-cd-integrations/snyk-cli/developer-guardrails-for-agentic-workflows/snyk-mcp-early-access: integrations/agentic-integrations-snyk-mcp-server/README.md
+  scan-with-snyk/scanning-overview: /scan-with-snyk/overview.md
+  integrations/agentic-integrations-snyk-mcp-server/snyk-mcp-early-access: integrations/agentic-integrations-snyk-mcp-server/README.md
+  supported-languages-package-managers-and-frameworks/go/go-for-open-source: /supported-languages-package-managers-and-frameworks/go.md
+  supported-languages/supported-languages-list/swift-and-objective-c/swift-and-objective-c-for-open-source: supported-languages/supported-languages-list/swift-and-objective-c.md
+  supported-languages/supported-languages-list/swift-and-objective-c/swift-for-code-analysis: supported-languages/supported-languages-list/swift-and-objective-c.md
+  supported-languages/supported-languages-list/php/php-for-code-analysis: /supported-languages/supported-languages-list/php.md
+  supported-languages/supported-languages-list/php/php-for-open-source: /supported-languages/supported-languages-list/php.md
+  snyk-api/reference/assets: snyk-api/reference/asset.md
+  snyk-api/rest-api/authentication-for-api/revoke-and-regenerate-a-snyk-api-token: snyk-api/authentication-for-api/revoke-and-regenerate-a-snyk-api-token.md
+  products/snyk-code/snyk-code-language-and-framework-support: supported-languages/supported-languages-package-managers-and-frameworks.md
+  supported-languages/supported-languages-list/java-and-kotlin/java-and-kotlin-for-code-analysis: supported-languages/supported-languages-list/java-and-kotlin/README.md
+  supported-languages/supported-languages-list/java-and-kotlin/java-and-kotlin-for-open-source: supported-languages/supported-languages-list/java-and-kotlin/README.md
+  supported-languages/supported-languages-list/java-and-kotlin/guidance-for-java-and-kotlin: supported-languages/supported-languages-list/java-and-kotlin/README.md
+  supported-languages/supported-languages-list/java-and-kotlin/snyk-workflow-with-java-and-kotlin: supported-languages/supported-languages-list/java-and-kotlin/README.md
+  supported-languages/supported-languages-list/java-and-kotlin/more-information-about-java-support: supported-languages/supported-languages-list/java-and-kotlin/README.md
+  developer-tools/snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/publish-snyk-code-cli-results: developer-tools/snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/scan-source-code-with-snyk-code-using-the-cli.md
+  integrations/connect-a-third-party-integration: /integrations/integrate-with-snyk.md
+  supported-languages/supported-languages-list/javascript/javascript-for-code-analysis: supported-languages/supported-languages-list/javascript/README.md
+  supported-languages/supported-languages-list/javascript/javascript-for-open-source: supported-languages/supported-languages-list/javascript/README.md
+  supported-languages/supported-languages-list/javascript/best-practices-for-javascript-and-node.js: supported-languages/supported-languages-list/javascript/README.md

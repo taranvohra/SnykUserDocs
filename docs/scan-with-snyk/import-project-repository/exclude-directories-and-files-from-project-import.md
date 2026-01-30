@@ -16,7 +16,7 @@ When you import a repository to be tested by Snyk Code, you can exclude certain 
 Consider excluding directories and files only if you do not publish or compile them into production. If a trace goes through an excluded file or directory with existing vulnerabilities, Snyk might miss potential issues.
 {% endhint %}
 
-You can also use the instructions in this section to exclude directories and files from the [Snyk Code CLI test](../../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/scan-source-code-with-snyk-code-using-the-cli.md), by creating the `.snyk` file in your tested repository.
+You can also use the instructions in this section to exclude directories and files from the [Snyk Code CLI test](../../developer-tools/snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/scan-source-code-with-snyk-code-using-the-cli.md), by creating the `.snyk` file in your tested repository.
 
 ## **Exclusion syntax of the .snyk file**
 
@@ -49,6 +49,7 @@ You can use `global` or `code`. Either will exclude the specified directories an
 ### **Considerations in creating the `.snyk` file**
 
 * The path in the rule should be relative to the `.snyk` file location.
+* Do not use paths starting with `./`.
 * All rules must have a preceding dash to be valid: `- <exclusion_rule>`
 * For rules beginning with special characters and patterns, such as an asterisk character `*`, you must wrap them in double quotes (`" "`). This ensures they are treated as a single entity, avoiding potential misinterpretation or unintended behavior. For example, `"*/src"`
 * The following are considerations in using indentations:
@@ -94,7 +95,7 @@ exclude:
 
 <figure><img src="../../.gitbook/assets/code_analysis_retest_now.png" alt="Clicking the retest now option"><figcaption><p>Retest now option</p></figcaption></figure>
 
-* If the repository was not imported yet to Snyk, [import the repository](../snyk-code/import-project-with-snyk-code.md#import-repository-to-snyk).
+* If the repository was not imported yet to Snyk, [import the repository](../snyk-code/import-project-with-snyk-code.md).
 
 Your repository is imported to Snyk, without the directories and/or files you selected to exclude.
 
@@ -114,7 +115,7 @@ Now you want to exclude the `app.js` and `db.js` files from the Snyk Code analys
 
 <figure><img src="../../.gitbook/assets/Snyk Code - Exlude from Import - Example - Command.png" alt=".snyk file commands"><figcaption><p><code>.snyk</code> file commands</p></figcaption></figure>
 
-3\. You retest the **snyk-goof** repository by clicking the **Retest now** option on the **Code Analysis** page for the repository.
+3\. You retest the "snyk-goof" repository by clicking **Retest now** on the **Code Analysis** page for the repository.
 
 The `app.js` and `db.js` files are excluded from the retest and, therefore, are not tested by Snyk Code and do not appear in the Code Analysis results. Now, only five vulnerability issues are detected:
 

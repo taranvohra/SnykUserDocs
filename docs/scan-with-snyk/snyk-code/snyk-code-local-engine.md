@@ -1,10 +1,6 @@
 # Snyk Code Local Engine
 
-{% hint style="info" %}
-**Release status**&#x20;
-
-Snyk Code Local Engine is in Early Access and available only with Enterprise plans. If you want to set it up in your Group or Organization, contact your Snyk account team.
-{% endhint %}
+{% include "../../.gitbook/includes/release-status-snyk-code-local-engine.md" %}
 
 Snyk Code Local Engine (SCLE) is a fully contained version of the Snyk Code Engine that allows you to avoid uploading your code to the internet. When you use the Local Engine, only the scan is performed locally. Your scan results are uploaded to Snyk so you can view them on the Snyk Web UI.
 
@@ -17,7 +13,7 @@ This high-level architecture diagram shows the components and their interactions
 The core requirements to deploy the Snyk Code Local Engine are:
 
 * Kubernetes version 1.21.0 - 1.28.0:
-  * _Recommended:_ a dedicated Kubernetes cluster
+  * Recommended: a dedicated Kubernetes cluster
   *   Outbound HTTPS connections supporting WebSockets from the cluster to \*.snyk.io
 
       This connection is needed for all flows (CLI, IDE, SCM, and PR Checks)
@@ -51,9 +47,9 @@ The total required resources for each flavor of the Snyk Code Local Engine are i
 
 To use the Snyk CLI and IDEs with Snyk Code Local Engine, provide your Snyk account team with your Snyk Code Local Engine URL, the URL of the Snyk Code Local Engine running on your premises.\
 \
-After your CSM has configured the URL for your Organization, you can view it from **Settings** --> **Snyk Code:**
+After your CSM has configured the URL for your Organization, you can view it from **Settings** > **Snyk Code:**
 
-<figure><img src="../../.gitbook/assets/Snyk Code Local Engine settings showing Local Engine URL (1) (1).png" alt="Snyk Code Local Engine settings Local Engine URL"><figcaption><p>Snyk Code Local Engine settings Local Engine URL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Snyk Code Local Engine settings showing Local Engine URL.png" alt="Snyk Code Local Engine settings Local Engine URL"><figcaption><p>Snyk Code Local Engine settings Local Engine URL</p></figcaption></figure>
 
 ## Configure and deploy the Local Engine
 

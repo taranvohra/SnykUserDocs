@@ -1,6 +1,6 @@
-# Pull Request Checks
+# Pull Request checks
 
-## Introduction to automated security scans with PR Checks
+## Introduction to automated security scans with PR checks
 
 The [Snyk PR Checks](configure-pull-request-checks.md) feature allows developers to auto-scan their PRs for issues before merging their code. As Snyk acts as an automated pseudo-team member (an “expert security reviewer”), it finds potential issues, leaving review notes on your PR before the code is committed.
 
@@ -35,7 +35,7 @@ You can analyze PR Checks results in your SCM to test for dependency and licensi
 
 The following diagram explains how Snyk Checks PRs in your development workflow.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2022-09-20 at 11.27.44 (1) (1).png" alt="Where Snyk checks for pull requests in the development workflow."><figcaption><p>Where Snyk checks for pull requests in the development workflow</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2022-09-20 at 11.27.44.png" alt="Where Snyk checks for pull requests in the development workflow."><figcaption><p>Where Snyk checks for pull requests in the development workflow</p></figcaption></figure>
 
 PR checks proceed as follows:
 

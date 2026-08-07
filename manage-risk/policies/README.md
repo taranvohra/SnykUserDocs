@@ -1,23 +1,18 @@
 # Policies
 
 {% hint style="info" %}
-**Feature availability**\
-This feature is available to Enterprise customers. See [pricing plans](https://snyk.io/plans/) for more details.
+**Feature availability**
 
-Snyk policies apply only to Snyk Open Source scans.
+Policies are available only with Snyk Enterprise plans and apply only to Snyk Open Source scans. For more information, see [plans and pricing](https://snyk.io/plans/).
+
+The `.snyk` file is a policy file that Snyk uses to define specific analysis behaviors for Open Source, Snyk Code, and Snyk IaC. and to specify patches for the CLI and CI/CD plugins. See [The .snyk file](the-.snyk-file.md) for details.
 {% endhint %}
 
-Snyk policies contain rules to define how Snyk behaves when encountering specific types of issues. With policies, you can identify types of issues based on conditions, such as `no exploit available`, and then apply actions to these issues, such as changing the severity. Thus by using customizable Snyk policies, you can define actions for specific types of issues encountered in scanning.
+Snyk policies contain rules to define how Snyk behaves when encountering specific types of Open Source issues. With policies, you can identify types of issues based on conditions, such as `no exploit available`, and then apply actions to these issues, such as changing the severity. Thus by using customizable Snyk policies, you can define actions for specific types of issues encountered in scanning.
 
-<div align="left">
+<div align="left"><figure><img src="../../.gitbook/assets/image (112) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1) (2) (1).png" alt="Snyk Policy manager"><figcaption><p>Snyk Policy manager</p></figcaption></figure></div>
 
-<figure><img src="../../.gitbook/assets/image (112) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2) (1) (2) (3).png" alt="Snyk Policy manager"><figcaption><p>Snyk Policy manager</p></figcaption></figure>
-
-</div>
-
-Using the Snyk Policy Manager, you can [view](view-policies.md), [create, and edit](create-and-edit-policies.md) policies.
-
-The `.snyk` file is a policy file that Snyk uses to define certain analysis behaviors and to specify patches for the CLI and CI/CD plugins. See [The .snyk file](the-.snyk-file.md) for details
+Using the Snyk Policy Manager, you can view, create, and edit policies. For details, see [View, create, and modify policies](view-create-and-modify-policies.md).
 
 ## Benefits of Snyk policies
 
@@ -38,5 +33,5 @@ Snyk has security and license policies.
 
 Different applications may need to be scanned according to different policies. Mission-critical applications are likely to need more control than internal applications in a sandbox environment. You can establish the needed control by assigning policies to:
 
-* [Projects](apply-a-policy-to-projects.md), after applying attributes to Projects and policies to attributes
-* [Organizations](apply-a-policy-to-organizations.md) in a Snyk Group
+* [Projects](assign-policies-to-projects.md), after applying attributes to Projects and policies to attributes
+* [Organizations](assign-a-policy-to-an-organization.md) in a Snyk Group
